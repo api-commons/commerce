@@ -1,7 +1,7 @@
 provider: famous
 apis_io: https://apis.io/providers/famous/
 context: commerce
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   category:
     path_segment:

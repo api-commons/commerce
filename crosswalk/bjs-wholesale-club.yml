@@ -1,7 +1,7 @@
 provider: bjs-wholesale-club
 apis_io: https://apis.io/providers/bjs-wholesale-club/
 context: commerce
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   product:
     path_segment:

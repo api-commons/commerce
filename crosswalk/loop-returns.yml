@@ -1,7 +1,7 @@
 provider: loop-returns
 apis_io: https://apis.io/providers/loop-returns/
 context: commerce
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   cart:
     path_segment:

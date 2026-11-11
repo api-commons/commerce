@@ -1,7 +1,7 @@
 provider: zalando
 apis_io: https://apis.io/providers/zalando/
 context: commerce
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   order:
     path_segment:

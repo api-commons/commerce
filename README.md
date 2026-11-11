@@ -26,7 +26,7 @@ of providers.
 | shipment | 24 | 19 | id 68%, status 63%, tracking_number 63% | shipments 11, fulfillments 7, shipment 5, fulfillment 2 |
 | inventory | 46 | 35 |  | inventory 30, stock 8, inventory_levels 4, inventories 4 |
 
-Cohort: 401 providers with harvested OpenAPI, 254 crosswalks. Of the providers exposing a product: 67% create, 87% list, 80% fetch, 48% update, 44% delete. Generated 2026-11-10 by build.py.
+Cohort: 401 providers with harvested OpenAPI, 254 crosswalks. Of the providers exposing a product: 67% create, 87% list, 80% fetch, 48% update, 44% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

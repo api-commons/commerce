@@ -1,0 +1,48 @@
+arazzo: 1.0.1
+info:
+  title: Commerce workflows (API Commons)
+  version: 0.1.0-draft.20261111
+  summary: Reference workflows over the common Commerce operations.
+  description: 'Reference compositions of the operations this context''s providers share. Not measured: every step
+    is a core- or extended-tier operation of the common OpenAPI, so the workflow runs against any provider that
+    implements those operations (see crosswalk/).'
+sourceDescriptions:
+- name: commerce
+  url: ./openapi.yml
+  type: openapi
+workflows:
+- workflowId: place-order
+  summary: Create a customer and place an order for them, then read back its items
+  description: Create a customer and place an order for them, then read back its items.
+  steps:
+  - stepId: customer
+    operationId: createCustomer
+    description: Create a customer -- a core-tier operation (78% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+  - stepId: order
+    operationId: createOrder
+    description: Create an order -- a core-tier operation (65% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    requestBody:
+      contentType: application/json
+      payload:
+        customer_id: $steps.customer.outputs.id
+  - stepId: items
+    operationId: listItems
+    description: List items -- a core-tier operation (55% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    parameters:
+    - name: order_id
+      in: path
+      value: $steps.order.outputs.id
+  x-commons-tiers:
+  - core

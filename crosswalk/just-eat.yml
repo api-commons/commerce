@@ -1,7 +1,7 @@
 provider: just-eat
 apis_io: https://apis.io/providers/just-eat/
 context: commerce
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   product_variant:
     path_segment:

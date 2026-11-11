@@ -1,7 +1,7 @@
 provider: axlehire
 apis_io: https://apis.io/providers/axlehire/
 context: commerce
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   customer:
     path_segment:

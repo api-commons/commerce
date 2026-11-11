@@ -173,3 +173,11 @@ duplicates:
   optimizely: [zaius]
   keap: [infusionsoft]
   webflow: [webflow-api-and-documentation-webflow]
+
+workflows:
+  - id: place-order
+    summary: Create a customer and place an order for them, then read back its items
+    steps:
+      - {op: createCustomer, id: customer}
+      - {op: createOrder, id: order, link: {customer_id: "$steps.customer.outputs.id"}}
+      - {op: listItems, id: items, path: {"{order_id}": "$steps.order.outputs.id"}}

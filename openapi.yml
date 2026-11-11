@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Commerce (API Commons)
-  version: 0.1.0-draft.20261110
+  version: 0.1.0-draft.20261111
   description: 'The common Commerce interface, distilled from the harvested OpenAPI of 401 providers in the APIs.io
     catalog. Not a product: no one serves this API. It is the shape the market already shares, measured, so that
     providers, agents and integrators can map to one vocabulary. See profile.yml.'
@@ -104,7 +104,7 @@ paths:
     parameters:
     - $ref: '#/components/parameters/product_id'
     get:
-      operationId: listProductVariants
+      operationId: listVariants
       summary: List variants
       tags:
       - Product Variants
@@ -568,7 +568,7 @@ paths:
           application/json:
             schema: *id007
     get:
-      operationId: listOrderItems
+      operationId: listItems
       summary: List items
       tags:
       - Order Items
@@ -722,7 +722,7 @@ paths:
             schema: *id008
   /inventory:
     get:
-      operationId: listInventories
+      operationId: listInventory
       summary: List inventory
       tags:
       - Inventories

@@ -1,7 +1,7 @@
 provider: logiless
 apis_io: https://apis.io/providers/logiless/
 context: commerce
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   order:
     path_segment:

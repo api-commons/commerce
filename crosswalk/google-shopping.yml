@@ -1,7 +1,7 @@
 provider: google-shopping
 apis_io: https://apis.io/providers/google-shopping/
 context: commerce
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   product:
     path_segment:

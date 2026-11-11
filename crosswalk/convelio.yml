@@ -1,7 +1,7 @@
 provider: convelio
 apis_io: https://apis.io/providers/convelio/
 context: commerce
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   order:
     path_segment:

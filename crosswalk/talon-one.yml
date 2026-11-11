@@ -1,7 +1,7 @@
 provider: talon-one
 apis_io: https://apis.io/providers/talon-one/
 context: commerce
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   customer:
     path_segment:
