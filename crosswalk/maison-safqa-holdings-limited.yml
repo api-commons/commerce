@@ -10,6 +10,7 @@ concepts:
       name: title
       description: body_html
       images: images
+      created_at: created
       type: product_type
       variants: variants
       brand: vendor
@@ -19,12 +20,15 @@ concepts:
     evidence:
     - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#GET /products/{product_id}
     - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#POST /products
+    - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#POST /products/bulk
     - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#PUT /products/{product_id}
   inventory:
     path_segment:
     - inventory
     properties:
+      product_id: product_id
       sku: sku
     core_coverage: 0.0
     evidence:
+    - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#PATCH /inventory/bulk
     - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#PATCH /products/{product_id}/inventory

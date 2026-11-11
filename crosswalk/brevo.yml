@@ -23,8 +23,8 @@ concepts:
     - openapi/_original/brevo-ecommerce-openapi.yml#GET /products
     - openapi/_original/brevo-ecommerce-openapi.yml#GET /products/{productId}
     - openapi/_original/brevo-ecommerce-openapi.yml#POST /products
+    - openapi/_original/brevo-ecommerce-openapi.yml#POST /products/batch
     - openapi/_original/brevo-ecommerce-openapi_2.yml#GET /products
-    - openapi/_original/brevo-ecommerce-openapi_2.yml#GET /products/{id}
   category:
     path_segment:
     - categories
@@ -37,16 +37,16 @@ concepts:
     evidence:
     - openapi/_original/brevo-ecommerce-openapi.yml#GET /categories
     - openapi/_original/brevo-ecommerce-openapi.yml#POST /categories
+    - openapi/_original/brevo-ecommerce-openapi.yml#POST /categories/batch
     - openapi/_original/brevo-ecommerce-openapi_2.yml#GET /categories
     - openapi/_original/brevo-ecommerce-openapi_2.yml#GET /categories/{id}
-    - openapi/_original/brevo-ecommerce-openapi_2.yml#POST /categories
   order:
     path_segment:
     - orders
     properties:
       id: id
-      line_items: products
       status: status
+      line_items: products
       created_at: createdAt
       total: amount
       email: email

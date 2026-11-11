@@ -89,8 +89,8 @@ concepts:
     - orders
     properties:
       id: orderId
-      line_items: items
       status: status
+      line_items: items
       created_at: creationDate
     core_coverage: 1.0
     evidence:

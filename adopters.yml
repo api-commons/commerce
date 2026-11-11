@@ -387,7 +387,9 @@ adopters:
   apis_io: https://apis.io/providers/drip/
   crosswalk: crosswalk/drip.yml
   concepts:
+  - cart
   - order
+  - product
 - provider: duda
   apis_io: https://apis.io/providers/duda/
   crosswalk: crosswalk/duda.yml
@@ -1533,6 +1535,7 @@ adopters:
   crosswalk: crosswalk/verifone.yml
   concepts:
   - customer
+  - order
   - product
 - provider: versapay
   apis_io: https://apis.io/providers/versapay/

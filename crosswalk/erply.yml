@@ -46,4 +46,4 @@ concepts:
     - openapi/_original/erply-pim-openapi.json#GET /v1/product/category
     - openapi/_original/erply-pim-openapi.json#GET /v1/product/package/category
     - openapi/_original/erply-pim-openapi.json#POST /v1/product/category
-    - openapi/_original/erply-pim-openapi.json#PUT /v1/product/category/{id}
+    - openapi/_original/erply-pim-openapi.json#POST /v1/product/category/bulk

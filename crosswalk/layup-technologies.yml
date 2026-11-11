@@ -10,10 +10,10 @@ concepts:
       id:
       - orderId
       - _id
-      line_items: products
       status:
       - status
       - state
+      line_items: products
       created_at: createdAt
       number: name
       updated_at: updatedAt

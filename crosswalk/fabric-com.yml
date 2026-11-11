@@ -144,8 +144,8 @@ concepts:
       id:
       - id
       - inventoryId
-      sku: sku
       product_id: itemId
+      sku: sku
     core_coverage: 0.0
     evidence:
     - openapi/_original/fabric-cart-openapi.yml#PATCH /carts/{cartId}/inventory

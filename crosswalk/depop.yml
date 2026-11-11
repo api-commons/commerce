@@ -31,8 +31,8 @@ concepts:
     path_segment:
     - orders
     properties:
-      line_items: line_items
       status: status
+      line_items: line_items
       created_at: created_at
       currency: currency
     core_coverage: 0.667

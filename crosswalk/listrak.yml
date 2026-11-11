@@ -36,8 +36,8 @@ concepts:
     path_segment:
     - order
     properties:
-      line_items: items
       status: status
+      line_items: items
       customer_id: customer
       shipping_address: shippingAddress
       number: orderNumber

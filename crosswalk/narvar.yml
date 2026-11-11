@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - orders
     properties:
-      line_items: order_items
       status: status
+      line_items: order_items
       number: order_number
       billing_address: billing
     core_coverage: 0.667

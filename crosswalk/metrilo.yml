@@ -10,6 +10,7 @@ concepts:
     core_coverage: null
     evidence:
     - openapi/_original/metrilo-tracking-api-openapi.yml#POST /product
+    - openapi/_original/metrilo-tracking-api-openapi.yml#POST /product/batch
   category:
     path_segment:
     - category
@@ -17,6 +18,7 @@ concepts:
     core_coverage: null
     evidence:
     - openapi/_original/metrilo-tracking-api-openapi.yml#POST /category
+    - openapi/_original/metrilo-tracking-api-openapi.yml#POST /category/batch
   customer:
     path_segment:
     - customer
@@ -24,6 +26,7 @@ concepts:
     core_coverage: null
     evidence:
     - openapi/_original/metrilo-tracking-api-openapi.yml#POST /customer
+    - openapi/_original/metrilo-tracking-api-openapi.yml#POST /customer/batch
   order:
     path_segment:
     - order
@@ -31,3 +34,4 @@ concepts:
     core_coverage: null
     evidence:
     - openapi/_original/metrilo-tracking-api-openapi.yml#POST /order
+    - openapi/_original/metrilo-tracking-api-openapi.yml#POST /order/batch

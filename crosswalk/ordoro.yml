@@ -44,8 +44,8 @@ concepts:
       id:
       - id
       - order_id
-      line_items: lines
       status: status
+      line_items: lines
       created_at: created_date
       shipping_address: shipping_address
       number: order_number

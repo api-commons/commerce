@@ -49,8 +49,8 @@ concepts:
     - orders
     properties:
       id: id
-      line_items: items
       status: state
+      line_items: items
       created_at: createdAt
       customer_id: customer
       number: orderNumber

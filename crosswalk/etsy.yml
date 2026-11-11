@@ -18,10 +18,10 @@ concepts:
     core_coverage: 0.667
     evidence:
     - openapi/_original/etsy-openapi-original.yml#DELETE /v3/application/listings/{listing_id}
+    - openapi/_original/etsy-openapi-original.yml#GET /v3/application/listings/batch
     - openapi/_original/etsy-openapi-original.yml#GET /v3/application/listings/{listing_id}
     - openapi/_original/etsy-openapi-original.yml#GET /v3/application/shops/{shop_id}/listings
     - openapi/_original/etsy-openapi-original.yml#GET /v3/application/shops/{shop_id}/policies/return/{return_policy_id}/listings
-    - openapi/_original/etsy-openapi-original.yml#GET /v3/application/shops/{shop_id}/receipts/{receipt_id}/listings
   inventory:
     path_segment:
     - inventory

@@ -61,8 +61,8 @@ concepts:
     path_segment:
     - orders
     properties:
-      line_items: entries
       status: status
+      line_items: entries
       created_at: created
       currency: currency
       shipping_address: deliveryAddress

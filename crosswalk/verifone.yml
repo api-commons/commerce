@@ -37,3 +37,11 @@ concepts:
     - openapi/_original/customer-api.json#GET /v2/customer/{customerId}
     - openapi/_original/customer-api.json#POST /v2/customer
     - openapi/_original/customer-api.json#POST /v2/customer/{customerId}
+  order:
+    path_segment:
+    - orders
+    properties:
+      custom_fields: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/order-service-api.json#GET /orders/batch

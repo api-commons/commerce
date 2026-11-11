@@ -25,8 +25,8 @@ concepts:
     - orders
     properties:
       id: id
-      line_items: items
       status: financialStatus
+      line_items: items
       created_at: createdAt
       currency: currency
       shipping_address: shippingAddress

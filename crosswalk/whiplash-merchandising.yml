@@ -20,8 +20,8 @@ concepts:
     - orders
     properties:
       id: id
-      line_items: order_items
       status: status
+      line_items: order_items
       created_at: created_at
       customer_id: customer_id
       custom_fields: meta_data
@@ -32,6 +32,7 @@ concepts:
     - openapi/_original/whiplash-merchandising-openapi-original.json#GET /api/v2/orders
     - openapi/_original/whiplash-merchandising-openapi-original.json#GET /api/v2/orders/{id}
     - openapi/_original/whiplash-merchandising-openapi-original.json#POST /api/v2/orders
+    - openapi/_original/whiplash-merchandising-openapi-original.json#POST /api/v2/orders/bulk
     - openapi/_original/whiplash-merchandising-openapi-original.json#PUT /api/v2/orders/{id}
   order_item:
     path_segment:

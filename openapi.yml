@@ -16,7 +16,7 @@ paths:
       tags:
       - Products
       x-commons-tier: core
-      x-commons-share: 0.873
+      x-commons-share: 0.868
       responses:
         '200':
           description: OK
@@ -41,7 +41,7 @@ paths:
       tags:
       - Products
       x-commons-tier: core
-      x-commons-share: 0.673
+      x-commons-share: 0.675
       responses:
         '200':
           description: OK
@@ -62,7 +62,7 @@ paths:
       tags:
       - Products
       x-commons-tier: core
-      x-commons-share: 0.8
+      x-commons-share: 0.795
       responses:
         '200':
           description: OK
@@ -75,7 +75,7 @@ paths:
       tags:
       - Products
       x-commons-tier: extended
-      x-commons-share: 0.487
+      x-commons-share: 0.483
       responses:
         '200':
           description: OK
@@ -93,7 +93,7 @@ paths:
       tags:
       - Products
       x-commons-tier: extended
-      x-commons-share: 0.453
+      x-commons-share: 0.45
       responses:
         '200':
           description: OK
@@ -338,7 +338,7 @@ paths:
       tags:
       - Customers
       x-commons-tier: core
-      x-commons-share: 0.729
+      x-commons-share: 0.741
       responses:
         '200':
           description: OK
@@ -350,8 +350,8 @@ paths:
       summary: Update a customer
       tags:
       - Customers
-      x-commons-tier: extended
-      x-commons-share: 0.494
+      x-commons-tier: core
+      x-commons-share: 0.506
       responses:
         '200':
           description: OK
@@ -369,7 +369,7 @@ paths:
       tags:
       - Customers
       x-commons-tier: extended
-      x-commons-share: 0.388
+      x-commons-share: 0.4
       responses:
         '200':
           description: OK
@@ -383,7 +383,7 @@ paths:
       tags:
       - Carts
       x-commons-tier: core
-      x-commons-share: 0.683
+      x-commons-share: 0.69
       responses:
         '200':
           description: OK
@@ -402,7 +402,7 @@ paths:
       tags:
       - Carts
       x-commons-tier: core
-      x-commons-share: 0.634
+      x-commons-share: 0.619
       responses:
         '200':
           description: OK
@@ -429,7 +429,7 @@ paths:
       tags:
       - Carts
       x-commons-tier: core
-      x-commons-share: 0.561
+      x-commons-share: 0.548
       responses:
         '200':
           description: OK
@@ -442,7 +442,7 @@ paths:
       tags:
       - Carts
       x-commons-tier: extended
-      x-commons-share: 0.366
+      x-commons-share: 0.357
       responses:
         '200':
           description: OK
@@ -455,7 +455,7 @@ paths:
       tags:
       - Carts
       x-commons-tier: extended
-      x-commons-share: 0.317
+      x-commons-share: 0.31
       responses:
         '200':
           description: OK
@@ -474,7 +474,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: core
-      x-commons-share: 0.753
+      x-commons-share: 0.754
       responses:
         '200':
           description: OK
@@ -499,7 +499,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: core
-      x-commons-share: 0.657
+      x-commons-share: 0.659
       responses:
         '200':
           description: OK
@@ -520,7 +520,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: core
-      x-commons-share: 0.742
+      x-commons-share: 0.737
       responses:
         '200':
           description: OK
@@ -533,7 +533,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: extended
-      x-commons-share: 0.36
+      x-commons-share: 0.358
       responses:
         '200':
           description: OK

@@ -39,6 +39,7 @@ concepts:
     - openapi/_original/whiplash-openapi.json#GET /v2/orders
     - openapi/_original/whiplash-openapi.json#GET /v2/orders/{id}
     - openapi/_original/whiplash-openapi.json#POST /v2/orders
+    - openapi/_original/whiplash-openapi.json#POST /v2/orders/bulk
     - openapi/_original/whiplash-openapi.json#PUT /v2/orders/{id}
   order_item:
     path_segment:

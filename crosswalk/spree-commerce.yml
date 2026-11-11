@@ -118,8 +118,8 @@ concepts:
     - orders
     properties:
       id: id
-      line_items: items
       status: state
+      line_items: items
       customer_id:
       - customer_id
       - user_id

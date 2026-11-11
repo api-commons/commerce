@@ -5,17 +5,21 @@ generated: '2026-11-10'
 concepts:
   order:
     path_segment:
-    - order
     - orders
+    - order
     properties:
       id: order_id
-      line_items: order_lines
       status: status
+      line_items: order_lines
       created_at: created_at
       customer_id: customer
       shipping_address: shipping_address
+      number: name
       billing_address: billing_address
     core_coverage: 1.0
     evidence:
+    - openapi/_original/kustom-checkout-api-openapi.yml#GET /checkout/v3/orders/{order_id}
+    - openapi/_original/kustom-checkout-api-openapi.yml#POST /checkout/v3/orders
+    - openapi/_original/kustom-checkout-api-openapi.yml#POST /checkout/v3/orders/{order_id}
     - openapi/_original/merchant-card-service-api-openapi.yml#GET /merchantcard/v3/settlements/order/{order_id}
     - openapi/_original/order-management-api-openapi.yml#GET /ordermanagement/v1/orders/{order_id}

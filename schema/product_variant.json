@@ -81,8 +81,8 @@
       "x-commons-providers": 12,
       "x-commons-spellings": [
         "created_at",
-        "createdOn",
         "created",
+        "createdOn",
         "createdAt",
         "created_on"
       ],
@@ -118,6 +118,7 @@
         "updated_at",
         "updatedAt",
         "updatedOn",
+        "updated",
         "updated_on",
         "LastModified",
         "lastUpdated"

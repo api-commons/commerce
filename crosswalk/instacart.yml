@@ -8,8 +8,8 @@ concepts:
     - orders
     properties:
       id: id
-      line_items: items
       status: status
+      line_items: items
       created_at: created_at
       shipping_address: delivery_address
     core_coverage: 1.0

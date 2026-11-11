@@ -63,10 +63,10 @@ concepts:
     path_segment:
     - orders
     properties:
-      line_items: items
       status:
       - status
       - state
+      line_items: items
       created_at: created_at
       customer_id: customer_id
       number: increment_id

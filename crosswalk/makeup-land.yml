@@ -47,8 +47,8 @@ concepts:
     - orders
     properties:
       id: id
-      line_items: line_items
       status: order_status
+      line_items: line_items
       created_at: created_at
       shipping_address: shipping
       number: order_number

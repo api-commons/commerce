@@ -15,12 +15,16 @@ concepts:
       images:
       - thumbnail
       - images
-      created_at: created_at
+      created_at:
+      - created_at
+      - created
       type: type
       status:
       - status
       - is_active
-      updated_at: updated_at
+      updated_at:
+      - updated_at
+      - updated
       category_ids: categories
       variants: variants
       slug: handle
@@ -45,10 +49,14 @@ concepts:
       - ean
       - upc
       inventory_quantity: inventory_quantity
-      created_at: created_at
+      created_at:
+      - created_at
+      - created
       options: options
       weight: weight
-      updated_at: updated_at
+      updated_at:
+      - updated_at
+      - updated
       height: height
       type: type
       width: width
@@ -58,8 +66,8 @@ concepts:
     - openapi/_original/medusa-admin-openapi.yaml#DELETE /admin/products/{id}/variants/{variant_id}
     - openapi/_original/medusa-admin-openapi.yaml#GET /admin/products/{id}/variants
     - openapi/_original/medusa-admin-openapi.yaml#GET /admin/products/{id}/variants/{variant_id}
+    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/products/{id}/images/{image_id}/variants/batch
     - openapi/_original/medusa-admin-openapi.yaml#POST /admin/products/{id}/variants
-    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/products/{id}/variants/{variant_id}
   category:
     path_segment:
     - collections
@@ -124,8 +132,8 @@ concepts:
     - orders
     properties:
       id: id
-      line_items: items
       status: status
+      line_items: items
       created_at: created_at
       customer_id:
       - customer

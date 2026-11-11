@@ -70,8 +70,8 @@ concepts:
     - inventory
     properties:
       quantity: quantity
-      sku: sku
       product_id: variantId
+      sku: sku
     core_coverage: 0.0
     evidence:
     - openapi/_original/squarespace-commerce-api-v2-openapi.json#GET /1.0/commerce/inventory

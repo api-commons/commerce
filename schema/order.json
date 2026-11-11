@@ -2,13 +2,13 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/commerce/main/schema/order.json",
   "title": "Order",
-  "description": "The common order in Commerce, distilled from 161 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common order in Commerce, distilled from 162 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.733,
+      "x-commons-share": 0.728,
       "x-commons-providers": 118,
       "x-commons-spellings": [
         "id",
@@ -21,10 +21,26 @@
         "Id"
       ]
     },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.611,
+      "x-commons-providers": 99,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "financial_status",
+        "order_status",
+        "financialStatus",
+        "Status",
+        "orderStatus",
+        "State"
+      ]
+    },
     "line_items": {
       "type": "array",
       "x-commons-tier": "core",
-      "x-commons-share": 0.609,
+      "x-commons-share": 0.605,
       "x-commons-providers": 98,
       "x-commons-spellings": [
         "items",
@@ -37,26 +53,10 @@
         "orderLines"
       ]
     },
-    "status": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.609,
-      "x-commons-providers": 98,
-      "x-commons-spellings": [
-        "status",
-        "state",
-        "financial_status",
-        "order_status",
-        "financialStatus",
-        "Status",
-        "orderStatus",
-        "State"
-      ]
-    },
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.447,
+      "x-commons-share": 0.444,
       "x-commons-providers": 72,
       "x-commons-spellings": [
         "created_at",
@@ -73,7 +73,7 @@
     "customer_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.398,
+      "x-commons-share": 0.395,
       "x-commons-providers": 64,
       "x-commons-spellings": [
         "customer",
@@ -89,7 +89,7 @@
     "currency": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.366,
+      "x-commons-share": 0.364,
       "x-commons-providers": 59,
       "x-commons-spellings": [
         "currency",
@@ -101,7 +101,7 @@
     "shipping_address": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.36,
+      "x-commons-share": 0.358,
       "x-commons-providers": 58,
       "x-commons-spellings": [
         "shipping_address",
@@ -115,8 +115,8 @@
     "number": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.323,
-      "x-commons-providers": 52,
+      "x-commons-share": 0.327,
+      "x-commons-providers": 53,
       "x-commons-spellings": [
         "name",
         "orderNumber",
@@ -130,7 +130,7 @@
     "total": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.286,
+      "x-commons-share": 0.284,
       "x-commons-providers": 46,
       "x-commons-spellings": [
         "total_price",
@@ -146,7 +146,7 @@
     "total_tax": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.261,
+      "x-commons-share": 0.259,
       "x-commons-providers": 42,
       "x-commons-spellings": [
         "tax_total",
@@ -162,8 +162,8 @@
     "custom_fields": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.242,
-      "x-commons-providers": 39,
+      "x-commons-share": 0.247,
+      "x-commons-providers": 40,
       "x-commons-spellings": [
         "attributes",
         "metadata",
@@ -178,7 +178,7 @@
     "billing_address": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.236,
+      "x-commons-share": 0.235,
       "x-commons-providers": 38,
       "x-commons-spellings": [
         "billing_address",
@@ -190,7 +190,7 @@
     "email": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.23,
+      "x-commons-share": 0.228,
       "x-commons-providers": 37,
       "x-commons-spellings": [
         "email",
@@ -204,7 +204,7 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.224,
+      "x-commons-share": 0.222,
       "x-commons-providers": 36,
       "x-commons-spellings": [
         "updated_at",
@@ -221,7 +221,7 @@
     "discount_total": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.217,
+      "x-commons-share": 0.216,
       "x-commons-providers": 35,
       "x-commons-spellings": [
         "discount_total",
@@ -241,7 +241,7 @@
   "x-commons": {
     "context": "commerce",
     "concept": "order",
-    "providers": 161,
+    "providers": 162,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - order
     properties:
-      line_items: lineItems
       status: orderStatus
+      line_items: lineItems
     core_coverage: 0.667
     evidence:
     - openapi/_original/locus-oms-openapi.yml#GET /client/{clientId}/order

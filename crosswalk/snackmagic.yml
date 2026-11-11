@@ -19,8 +19,8 @@ concepts:
     path_segment:
     - orders
     properties:
-      line_items: products
       status: status
+      line_items: products
       number: number
       email: email
     core_coverage: 0.667

@@ -90,10 +90,10 @@ concepts:
     - orders
     properties:
       id: id
-      line_items: line_items
       status:
       - financial_status
       - order_status
+      line_items: line_items
       created_at: created_at
       customer_id: customer_id
       currency: currency

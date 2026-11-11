@@ -34,8 +34,8 @@ concepts:
     path_segment:
     - orders
     properties:
-      line_items: items
       status: status
+      line_items: items
       currency: currency
       custom_fields: metadata
       email: email

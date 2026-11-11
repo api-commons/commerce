@@ -44,8 +44,8 @@ concepts:
     - orders
     properties:
       id: orderID
-      line_items: items
       status: status
+      line_items: items
       customer_id: customerID
       shipping_address: shippingAddress
       total_tax: tax

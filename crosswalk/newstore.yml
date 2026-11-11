@@ -22,10 +22,10 @@ concepts:
     - order
     properties:
       id: id
-      line_items: items
       status:
       - state
       - status
+      line_items: items
       created_at: created_at
       customer_id: customer
       currency: currency

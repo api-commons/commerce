@@ -43,8 +43,8 @@ concepts:
     - order
     properties:
       id: id
-      line_items: products
       status: status
+      line_items: products
       created_at: created_date
       number: order_number
     core_coverage: 1.0

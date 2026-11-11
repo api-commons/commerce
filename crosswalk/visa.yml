@@ -12,6 +12,7 @@ concepts:
     - openapi/_original/visa-merchant-offers.yml#GET /vmorc/referencedata/v1/categories
   customer:
     path_segment:
+    - customers
     - consumers
     properties:
       email: emailAddress
@@ -20,3 +21,7 @@ concepts:
     core_coverage: 0.6
     evidence:
     - openapi/_original/visa-click-to-pay.yml#POST /visasrci/v1/consumers
+    - openapi/_original/visa-in-app-provisioning.yml#DELETE /universal/core/customers/{vCustomerID}
+    - openapi/_original/visa-in-app-provisioning.yml#GET /universal/core/customers/{vCustomerID}
+    - openapi/_original/visa-in-app-provisioning.yml#POST /universal/core/customers
+    - openapi/_original/visa-in-app-provisioning.yml#PUT /universal/core/customers/{vCustomerID}

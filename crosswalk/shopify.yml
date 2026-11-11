@@ -92,8 +92,8 @@ concepts:
     - order
     properties:
       id: id
-      line_items: line_items
       status: financial_status
+      line_items: line_items
       created_at: created_at
       customer_id: customer
       currency: currency
@@ -132,8 +132,8 @@ concepts:
     properties:
       id: id
       quantity: available
-      sku: sku
       product_id: inventory_item_id
+      sku: sku
     core_coverage: 0.0
     evidence:
     - openapi/_original/shopify-admin-rest-api-openapi.yml#GET /inventory_items.json

@@ -16,8 +16,8 @@ concepts:
     - orders
     properties:
       id: id
-      line_items: orderItems
       status: state
+      line_items: orderItems
       shipping_address: shipping
       billing_address: billingAddress
       email: email

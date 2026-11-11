@@ -13,6 +13,7 @@ concepts:
     - openapi/_original/kurly-kls-delivery-agency-openapi.yml#POST /v1/orders
     - openapi/_original/kurly-kls-fulfillment-openapi.yml#GET /api/fulfillment/v1/orders
     - openapi/_original/kurly-kls-fulfillment-openapi.yml#POST /api/fulfillment/v2/orders
+    - openapi/_original/kurly-kls-fulfillment-openapi.yml#POST /api/fulfillment/v2/orders/bulk
   inventory:
     path_segment:
     - inventories

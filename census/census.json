@@ -1,5 +1,6 @@
 {
  "cohort_size": 401,
+ "unreadable": [],
  "concepts": {
   "product": {
    "adobe-suite": {
@@ -1083,15 +1084,19 @@
      "updateEnabled": "boolean",
      "s3Original": "string",
      "s3ThumbAnalytics": "string",
-     "s3ThumbEditor": "string"
+     "s3ThumbEditor": "string",
+     "createdCount": "integer",
+     "updatedCount": "integer"
     },
     "evidence": [
      "openapi/_original/brevo-ecommerce-openapi.yml#GET /products",
      "openapi/_original/brevo-ecommerce-openapi.yml#GET /products/{productId}",
      "openapi/_original/brevo-ecommerce-openapi.yml#POST /products",
+     "openapi/_original/brevo-ecommerce-openapi.yml#POST /products/batch",
      "openapi/_original/brevo-ecommerce-openapi_2.yml#GET /products",
      "openapi/_original/brevo-ecommerce-openapi_2.yml#GET /products/{id}",
-     "openapi/_original/brevo-ecommerce-openapi_2.yml#POST /products"
+     "openapi/_original/brevo-ecommerce-openapi_2.yml#POST /products",
+     "openapi/_original/brevo-ecommerce-openapi_2.yml#POST /products/batch"
     ]
    },
    "buywhere": {
@@ -1944,6 +1949,18 @@
      "openapi/_original/depop-openapi.yml#PUT /api/v1/products/{sku}/"
     ]
    },
+   "drip": {
+    "segments": [
+     "product"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/drip-openapi.yml#POST /v3/{account_id}/shopper_activity/product/batch"
+    ]
+   },
    "duda": {
     "segments": [
      "products"
@@ -2209,8 +2226,10 @@
      "DELETE item",
      "GET collection",
      "GET item",
+     "PATCH collection",
      "PATCH item",
      "POST collection",
+     "PUT collection",
      "PUT item"
     ],
     "properties": {
@@ -2230,6 +2249,10 @@
      "status": "string",
      "assortment_id": "integer",
      "product_id": "integer",
+     "message": "string",
+     "resourceId": "integer",
+     "resultId": "integer",
+     "links": "array",
      "code": "string",
      "code2": "string",
      "code3": "string",
@@ -2247,6 +2270,8 @@
      "variation_description": "array",
      "dimension_ids": "array",
      "matrix_product": "object",
+     "generateCode2Automatically": "boolean",
+     "generateCodeAutomatically": "boolean",
      "attributes": "array",
      "category_id": "integer",
      "deposit_fee_id": "integer",
@@ -2348,7 +2373,7 @@
      "openapi/_original/erply-pim-openapi.json#GET /v1/product/{ids}",
      "openapi/_original/erply-pim-openapi.json#GET /v1/ui/product",
      "openapi/_original/erply-pim-openapi.json#PATCH /v1/assortment/products/{id}",
-     "openapi/_original/erply-pim-openapi.json#PATCH /v1/product/{id}"
+     "openapi/_original/erply-pim-openapi.json#PATCH /v1/product/bulk"
     ]
    },
    "etsy": {
@@ -2427,6 +2452,7 @@
     },
     "evidence": [
      "openapi/_original/etsy-openapi-original.yml#DELETE /v3/application/listings/{listing_id}",
+     "openapi/_original/etsy-openapi-original.yml#GET /v3/application/listings/batch",
      "openapi/_original/etsy-openapi-original.yml#GET /v3/application/listings/{listing_id}",
      "openapi/_original/etsy-openapi-original.yml#GET /v3/application/shops/{shop_id}/listings",
      "openapi/_original/etsy-openapi-original.yml#GET /v3/application/shops/{shop_id}/policies/return/{return_policy_id}/listings",
@@ -3860,11 +3886,15 @@
      "template_suffix": "string",
      "published_scope": "string",
      "variants": "array",
-     "images": "array"
+     "images": "array",
+     "success": "boolean",
+     "created": "array",
+     "failed": "array"
     },
     "evidence": [
      "openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#GET /products/{product_id}",
      "openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#POST /products",
+     "openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#POST /products/bulk",
      "openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#PUT /products/{product_id}"
     ]
    },
@@ -3953,8 +3983,13 @@
      "shipping_profile": "object",
      "shipping_profile_id": "string",
      "additional_data": "object",
+     "created": "array",
+     "updated": "array",
+     "deleted": "object",
+     "create": "array",
+     "update": "array",
+     "delete": "array",
      "object": "string",
-     "deleted": "boolean",
      "is_disabled": "boolean",
      "estimate_count": "number"
     },
@@ -3966,6 +4001,7 @@
      "openapi/_original/medusa-admin-openapi.yaml#POST /admin/price-lists/{id}/products",
      "openapi/_original/medusa-admin-openapi.yaml#POST /admin/product-categories/{id}/products",
      "openapi/_original/medusa-admin-openapi.yaml#POST /admin/products",
+     "openapi/_original/medusa-admin-openapi.yaml#POST /admin/products/batch",
      "openapi/_original/medusa-admin-openapi.yaml#POST /admin/products/{id}",
      "openapi/_original/medusa-admin-openapi.yaml#POST /admin/sales-channels/{id}/products",
      "openapi/_original/medusa-store-openapi.yaml#GET /store/products",
@@ -3981,7 +4017,8 @@
     ],
     "properties": {},
     "evidence": [
-     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /product"
+     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /product",
+     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /product/batch"
     ]
    },
    "mikmak": {
@@ -4922,18 +4959,21 @@
      "createdAt": "string",
      "updatedAt": "string",
      "deletedAt": "string",
-     "data": "array"
+     "data": "array",
+     "key": "string"
     },
     "evidence": [
      "openapi/_original/onerail-operations-api-openapi.json#GET /v1/carrier/{carrierId}/products",
      "openapi/_original/onerail-operations-api-openapi.json#GET /v1/organization/{organizationId}/product/{productId}",
      "openapi/_original/onerail-operations-api-openapi.json#GET /v1/organization/{organizationId}/products",
      "openapi/_original/onerail-operations-api-openapi.json#POST /v1/organization/{organizationId}/product",
+     "openapi/_original/onerail-operations-api-openapi.json#POST /v1/product/bulk",
      "openapi/_original/onerail-operations-api-openapi.json#PUT /v1/organization/{organizationId}/product/{productId}",
      "openapi/_original/onerail-operations-api-openapi.yml#GET /v1/carrier/{carrierId}/products",
      "openapi/_original/onerail-operations-api-openapi.yml#GET /v1/organization/{organizationId}/product/{productId}",
      "openapi/_original/onerail-operations-api-openapi.yml#GET /v1/organization/{organizationId}/products",
      "openapi/_original/onerail-operations-api-openapi.yml#POST /v1/organization/{organizationId}/product",
+     "openapi/_original/onerail-operations-api-openapi.yml#POST /v1/product/bulk",
      "openapi/_original/onerail-operations-api-openapi.yml#PUT /v1/organization/{organizationId}/product/{productId}"
     ]
    },
@@ -7345,6 +7385,7 @@
      "openapi/_original/virto-commerce-catalog-openapi.json#PATCH /api/catalog/products",
      "openapi/_original/virto-commerce-catalog-openapi.json#PATCH /api/catalog/products/{id}",
      "openapi/_original/virto-commerce-catalog-openapi.json#POST /api/catalog/products",
+     "openapi/_original/virto-commerce-catalog-openapi.json#POST /api/catalog/products/batch",
      "openapi/_original/virto-commerce-catalog-openapi.json#POST /api/catalog/search/products",
      "openapi/_original/virto-commerce-inventory-openapi.json#GET /api/inventory/products",
      "openapi/_original/virto-commerce-inventory-openapi.json#GET /api/inventory/products/{productId}",
@@ -8371,6 +8412,10 @@
      "POST item"
     ],
     "properties": {
+     "added": "array",
+     "removed": "array",
+     "add": "array",
+     "remove": "array",
      "limit": "number",
      "offset": "number",
      "count": "number",
@@ -8422,15 +8467,22 @@
      "external_id": "string",
      "shipping_profile": "object",
      "additional_data": "object",
+     "created": "array",
+     "updated": "array",
+     "deleted": "object",
+     "create": "array",
+     "update": "array",
+     "delete": "array",
      "object": "string",
-     "deleted": "boolean",
      "parent": "object"
     },
     "evidence": [
      "openapi/_original/medusa-admin-openapi.yaml#DELETE /admin/products/{id}/variants/{variant_id}",
      "openapi/_original/medusa-admin-openapi.yaml#GET /admin/products/{id}/variants",
      "openapi/_original/medusa-admin-openapi.yaml#GET /admin/products/{id}/variants/{variant_id}",
+     "openapi/_original/medusa-admin-openapi.yaml#POST /admin/products/{id}/images/{image_id}/variants/batch",
      "openapi/_original/medusa-admin-openapi.yaml#POST /admin/products/{id}/variants",
+     "openapi/_original/medusa-admin-openapi.yaml#POST /admin/products/{id}/variants/batch",
      "openapi/_original/medusa-admin-openapi.yaml#POST /admin/products/{id}/variants/{variant_id}"
     ]
    },
@@ -9340,14 +9392,18 @@
      "isDeleted": "boolean",
      "updateEnabled": "boolean",
      "createdAt": "string",
-     "modifiedAt": "string"
+     "modifiedAt": "string",
+     "createdCount": "integer",
+     "updatedCount": "integer"
     },
     "evidence": [
      "openapi/_original/brevo-ecommerce-openapi.yml#GET /categories",
      "openapi/_original/brevo-ecommerce-openapi.yml#POST /categories",
+     "openapi/_original/brevo-ecommerce-openapi.yml#POST /categories/batch",
      "openapi/_original/brevo-ecommerce-openapi_2.yml#GET /categories",
      "openapi/_original/brevo-ecommerce-openapi_2.yml#GET /categories/{id}",
-     "openapi/_original/brevo-ecommerce-openapi_2.yml#POST /categories"
+     "openapi/_original/brevo-ecommerce-openapi_2.yml#POST /categories",
+     "openapi/_original/brevo-ecommerce-openapi_2.yml#POST /categories/batch"
     ]
    },
    "buywhere": {
@@ -9619,6 +9675,7 @@
      "openapi/_original/dataforseo-app-data-openapi.yml#GET /v3/app_data/google/app_listings/categories",
      "openapi/_original/dataforseo-app-data-openapi.yml#GET /v3/app_data/google/categories",
      "openapi/_original/dataforseo-business-data-openapi.yml#GET /v3/business_data/business_listings/categories",
+     "openapi/_original/dataforseo-content-analysis-openapi.yml#GET /v3/content_analysis/categories",
      "openapi/_original/dataforseo-keywords-data-openapi.yml#GET /v3/keywords_data/google_trends/categories",
      "openapi/_original/dataforseo-labs-openapi.yml#GET /v3/dataforseo_labs/categories"
     ]
@@ -9967,13 +10024,18 @@
      "name": "object",
      "order": "integer",
      "parent_id": "integer",
-     "main_id": "integer"
+     "main_id": "integer",
+     "message": "string",
+     "resourceId": "integer",
+     "resultId": "integer",
+     "requests": "array"
     },
     "evidence": [
      "openapi/_original/erply-pim-openapi.json#DELETE /v1/product/category/{ids}",
      "openapi/_original/erply-pim-openapi.json#GET /v1/product/category",
      "openapi/_original/erply-pim-openapi.json#GET /v1/product/package/category",
      "openapi/_original/erply-pim-openapi.json#POST /v1/product/category",
+     "openapi/_original/erply-pim-openapi.json#POST /v1/product/category/bulk",
      "openapi/_original/erply-pim-openapi.json#PUT /v1/product/category/{id}"
     ]
    },
@@ -10587,7 +10649,8 @@
     ],
     "properties": {},
     "evidence": [
-     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /category"
+     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /category",
+     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /category/batch"
     ]
    },
    "monocrawl": {
@@ -11653,6 +11716,7 @@
      "openapi/_original/virto-commerce-catalog-openapi.json#GET /api/catalog/categories/{id}",
      "openapi/_original/virto-commerce-catalog-openapi.json#PATCH /api/catalog/categories/{id}",
      "openapi/_original/virto-commerce-catalog-openapi.json#POST /api/catalog/categories",
+     "openapi/_original/virto-commerce-catalog-openapi.json#POST /api/catalog/categories/batch",
      "openapi/_original/virto-commerce-catalog-openapi.json#POST /api/catalog/search/categories"
     ]
    },
@@ -12818,10 +12882,12 @@
      "customer"
     ],
     "operations": [
+     "DELETE collection",
      "DELETE item",
      "GET collection",
      "GET item",
      "POST item",
+     "PUT collection",
      "PUT item"
     ],
     "properties": {
@@ -12837,21 +12903,22 @@
      "modifiedAt": "string",
      "version": "integer",
      "customerId": "string",
+     "legalEntityId": "string",
      "startPoints": "object"
     },
     "evidence": [
+     "openapi/_original/emporix-customer-segments-openapi.yml#DELETE /customer-segment/{tenant}/segments/{segmentId}/customers/bulk",
      "openapi/_original/emporix-customer-segments-openapi.yml#DELETE /customer-segment/{tenant}/segments/{segmentId}/customers/{customerId}",
      "openapi/_original/emporix-customer-segments-openapi.yml#GET /customer-segment/{tenant}/segments/{segmentId}/customers",
      "openapi/_original/emporix-customer-segments-openapi.yml#GET /customer-segment/{tenant}/segments/{segmentId}/customers/{customerId}",
+     "openapi/_original/emporix-customer-segments-openapi.yml#PUT /customer-segment/{tenant}/segments/{segmentId}/customers/bulk",
      "openapi/_original/emporix-customer-segments-openapi.yml#PUT /customer-segment/{tenant}/segments/{segmentId}/customers/{customerId}",
+     "openapi/_original/emporix-customer-segments-openapi_2.yml#DELETE /customer-segment/{tenant}/segments/{segmentId}/customers/bulk",
      "openapi/_original/emporix-customer-segments-openapi_2.yml#DELETE /customer-segment/{tenant}/segments/{segmentId}/customers/{customerId}",
      "openapi/_original/emporix-customer-segments-openapi_2.yml#GET /customer-segment/{tenant}/segments/{segmentId}/customers",
      "openapi/_original/emporix-customer-segments-openapi_2.yml#GET /customer-segment/{tenant}/segments/{segmentId}/customers/{customerId}",
-     "openapi/_original/emporix-customer-segments-openapi_2.yml#PUT /customer-segment/{tenant}/segments/{segmentId}/customers/{customerId}",
-     "openapi/_original/emporix-reward-points-openapi.yml#DELETE /reward-points/customer/{customerId}",
-     "openapi/_original/emporix-reward-points-openapi.yml#GET /reward-points/customer/{customerId}",
-     "openapi/_original/emporix-reward-points-openapi.yml#GET /reward-points/public/customer",
-     "openapi/_original/emporix-reward-points-openapi.yml#POST /reward-points/customer/{customerId}"
+     "openapi/_original/emporix-customer-segments-openapi_2.yml#PUT /customer-segment/{tenant}/segments/{segmentId}/customers/bulk",
+     "openapi/_original/emporix-customer-segments-openapi_2.yml#PUT /customer-segment/{tenant}/segments/{segmentId}/customers/{customerId}"
     ]
    },
    "epos-now": {
@@ -13600,7 +13667,8 @@
     ],
     "properties": {},
     "evidence": [
-     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /customer"
+     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /customer",
+     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /customer/batch"
     ]
    },
    "mile": {
@@ -14989,10 +15057,14 @@
    },
    "visa": {
     "segments": [
+     "customers",
      "consumers"
     ],
     "operations": [
-     "POST collection"
+     "DELETE item",
+     "GET item",
+     "POST collection",
+     "PUT item"
     ],
     "properties": {
      "consumerId": "string",
@@ -15001,10 +15073,23 @@
      "firstName": "string",
      "lastName": "string",
      "mobileNumber": "string",
-     "countryCode": "string"
+     "countryCode": "string",
+     "locale": "string",
+     "encAddress": "string",
+     "vCustomerID": "string",
+     "createdDateTime": "integer",
+     "encEmailAddress": "string",
+     "encMobileNumber": "string",
+     "updatedDateTime": "integer",
+     "clientCustomerID": "string",
+     "vParentCustomerID": "string"
     },
     "evidence": [
-     "openapi/_original/visa-click-to-pay.yml#POST /visasrci/v1/consumers"
+     "openapi/_original/visa-click-to-pay.yml#POST /visasrci/v1/consumers",
+     "openapi/_original/visa-in-app-provisioning.yml#DELETE /universal/core/customers/{vCustomerID}",
+     "openapi/_original/visa-in-app-provisioning.yml#GET /universal/core/customers/{vCustomerID}",
+     "openapi/_original/visa-in-app-provisioning.yml#POST /universal/core/customers",
+     "openapi/_original/visa-in-app-provisioning.yml#PUT /universal/core/customers/{vCustomerID}"
     ]
    },
    "watchmaker-genomics": {
@@ -15855,6 +15940,18 @@
      "openapi/_original/cordial-v2-openapi-original.json#DELETE /v2/contacts/{primary_key}/cart",
      "openapi/_original/cordial-v2-openapi-original.json#POST /v2/contacts/{primary_key}/cart",
      "openapi/_original/cordial-v2-openapi-original.json#PUT /v2/contacts/{primary_key}/cart"
+    ]
+   },
+   "drip": {
+    "segments": [
+     "cart"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/drip-openapi.yml#POST /v3/{account_id}/shopper_activity/cart/batch"
     ]
    },
    "elastic-path": {
@@ -18957,14 +19054,16 @@
    },
    "drip": {
     "segments": [
-     "orders"
+     "orders",
+     "order"
     ],
     "operations": [
      "POST collection"
     ],
     "properties": {},
     "evidence": [
-     "openapi/_original/drip-openapi.yml#POST /v2/{account_id}/orders"
+     "openapi/_original/drip-openapi.yml#POST /v2/{account_id}/orders",
+     "openapi/_original/drip-openapi.yml#POST /v3/{account_id}/shopper_activity/order/batch"
     ]
    },
    "duda": {
@@ -19549,11 +19648,13 @@
    },
    "gameball": {
     "segments": [
-     "orders"
+     "orders",
+     "order"
     ],
     "operations": [
      "GET collection",
-     "GET item"
+     "GET item",
+     "PUT collection"
     ],
     "properties": {
      "pageNo": "integer",
@@ -19563,6 +19664,14 @@
      "hasNext": "boolean",
      "hasPrevious": "boolean",
      "data": "array",
+     "isSucceeded": "boolean",
+     "methodName": "string",
+     "status": "object",
+     "challenges": "array",
+     "games": "array",
+     "id": "integer",
+     "order": "integer",
+     "isVisible": "boolean",
      "orderId": "string",
      "playerUniqueId": "string",
      "playerId": "integer",
@@ -19584,7 +19693,9 @@
     },
     "evidence": [
      "openapi/_original/gameball-openapi.json#GET /api/v1/challenges/{challengeId}/roi/orders",
-     "openapi/_original/gameball-openapi.json#GET /internal/v1/orders/{orderId}"
+     "openapi/_original/gameball-openapi.json#GET /internal/v1/orders/{orderId}",
+     "openapi/_original/gameball-openapi.json#PUT /api/v1/ClientBotSettings/orders/bulk",
+     "openapi/_original/gameball-openapi.json#PUT /api/v1/ClientPointsSettings/redemption-rewards/order/bulk"
     ]
    },
    "gelato": {
@@ -19647,6 +19758,8 @@
      "contractMetadata": "object",
      "timeInForce": "string",
      "makerOrCancel": "boolean",
+     "promoCashApplied": "string",
+     "fundsOnHold": "string",
      "order_id": "string",
      "client_order_id": "string",
      "exchange": "string",
@@ -19670,7 +19783,9 @@
     },
     "evidence": [
      "openapi/_original/gemini-trust-prediction-markets-openapi.yml#POST /v1/prediction-markets/order",
+     "openapi/_original/gemini-trust-prediction-markets-openapi.yml#POST /v1/prediction-markets/order/batch",
      "openapi/_original/gemini-trust-prediction-markets-openapi_2.yml#POST /v1/prediction-markets/order",
+     "openapi/_original/gemini-trust-prediction-markets-openapi_2.yml#POST /v1/prediction-markets/order/batch",
      "openapi/_original/gemini-trust-rest-openapi.yml#POST /v1/orders",
      "openapi/_original/gemini-trust-rest-openapi_2.yml#POST /v1/orders"
     ]
@@ -20448,44 +20563,70 @@
    },
    "klarna": {
     "segments": [
-     "order",
-     "orders"
+     "orders",
+     "order"
     ],
     "operations": [
-     "GET item"
+     "GET item",
+     "POST collection",
+     "POST item"
     ],
     "properties": {
+     "order_id": "string",
+     "name": "string",
+     "purchase_country": "string",
+     "purchase_currency": "string",
+     "locale": "string",
+     "status": "string",
+     "billing_address": "object",
+     "shipping_address": "object",
+     "order_amount": "integer",
+     "order_tax_amount": "integer",
+     "order_lines": "array",
+     "customer": "object",
+     "merchant_urls": "object",
+     "html_snippet": "string",
+     "merchant_reference1": "string",
+     "merchant_reference2": "string",
+     "started_at": "string",
+     "completed_at": "string",
+     "last_modified_at": "string",
+     "options": "object",
+     "attachment": "object",
+     "external_payment_methods": "array",
+     "external_checkouts": "array",
+     "shipping_countries": "array",
+     "shipping_options": "array",
+     "merchant_data": "string",
+     "gui": "object",
+     "merchant_requested": "object",
+     "selected_shipping_option": "object",
+     "recurring": "boolean",
+     "recurring_token": "string",
+     "recurring_description": "string",
+     "billing_countries": "array",
+     "tags": "array",
+     "discount_lines": "array",
      "settlement_id": "string",
      "promise_id": "string",
-     "order_id": "string",
      "cards": "array",
      "created_at": "string",
      "expires_at": "string",
-     "billing_address": "object",
      "captured_amount": "integer",
      "captures": "array",
-     "customer": "object",
      "fraud_status": "string",
      "initial_payment_method": "object",
      "klarna_reference": "string",
-     "locale": "string",
-     "merchant_data": "string",
-     "merchant_reference1": "string",
-     "merchant_reference2": "string",
-     "order_amount": "integer",
-     "order_lines": "array",
      "original_order_amount": "integer",
-     "purchase_country": "string",
-     "purchase_currency": "string",
      "refunded_amount": "integer",
      "refunds": "array",
      "remaining_authorized_amount": "integer",
-     "selected_shipping_option": "object",
-     "shipping_address": "object",
-     "shipping_info": "array",
-     "status": "string"
+     "shipping_info": "array"
     },
     "evidence": [
+     "openapi/_original/kustom-checkout-api-openapi.yml#GET /checkout/v3/orders/{order_id}",
+     "openapi/_original/kustom-checkout-api-openapi.yml#POST /checkout/v3/orders",
+     "openapi/_original/kustom-checkout-api-openapi.yml#POST /checkout/v3/orders/{order_id}",
      "openapi/_original/merchant-card-service-api-openapi.yml#GET /merchantcard/v3/settlements/order/{order_id}",
      "openapi/_original/order-management-api-openapi.yml#GET /ordermanagement/v1/orders/{order_id}"
     ]
@@ -20535,7 +20676,8 @@
      "openapi/_original/kurly-kls-delivery-agency-openapi.yml#GET /v1/orders",
      "openapi/_original/kurly-kls-delivery-agency-openapi.yml#POST /v1/orders",
      "openapi/_original/kurly-kls-fulfillment-openapi.yml#GET /api/fulfillment/v1/orders",
-     "openapi/_original/kurly-kls-fulfillment-openapi.yml#POST /api/fulfillment/v2/orders"
+     "openapi/_original/kurly-kls-fulfillment-openapi.yml#POST /api/fulfillment/v2/orders",
+     "openapi/_original/kurly-kls-fulfillment-openapi.yml#POST /api/fulfillment/v2/orders/bulk"
     ]
    },
    "layup-technologies": {
@@ -21198,7 +21340,8 @@
     ],
     "properties": {},
     "evidence": [
-     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /order"
+     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /order",
+     "openapi/_original/metrilo-tracking-api-openapi.yml#POST /order/batch"
     ]
    },
    "mile": {
@@ -24600,6 +24743,21 @@
      "openapi/_original/veho-api-openapi-original.yml#POST /orders"
     ]
    },
+   "verifone": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "batches": "array",
+     "metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/order-service-api.json#GET /orders/batch"
+    ]
+   },
    "versapay": {
     "segments": [
      "order",
@@ -25036,6 +25194,7 @@
      "openapi/_original/whiplash-openapi.json#GET /v2/orders",
      "openapi/_original/whiplash-openapi.json#GET /v2/orders/{id}",
      "openapi/_original/whiplash-openapi.json#POST /v2/orders",
+     "openapi/_original/whiplash-openapi.json#POST /v2/orders/bulk",
      "openapi/_original/whiplash-openapi.json#PUT /v2/orders/{id}"
     ]
    },
@@ -25453,12 +25612,14 @@
      "originator_attributes": "object",
      "meta_fields": "object",
      "customs_info_attributes": "object",
-     "wholesale_attributes": "object"
+     "wholesale_attributes": "object",
+     "result": "string"
     },
     "evidence": [
      "openapi/_original/whiplash-merchandising-openapi-original.json#GET /api/v2/orders",
      "openapi/_original/whiplash-merchandising-openapi-original.json#GET /api/v2/orders/{id}",
      "openapi/_original/whiplash-merchandising-openapi-original.json#POST /api/v2/orders",
+     "openapi/_original/whiplash-merchandising-openapi-original.json#POST /api/v2/orders/bulk",
      "openapi/_original/whiplash-merchandising-openapi-original.json#PUT /api/v2/orders/{id}"
     ]
    },
@@ -28572,9 +28733,12 @@
      "old_quantity": "integer",
      "new_quantity": "integer",
      "error": "string",
-     "variants": "array"
+     "variants": "array",
+     "product_id": "string",
+     "products": "array"
     },
     "evidence": [
+     "openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#PATCH /inventory/bulk",
      "openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#PATCH /products/{product_id}/inventory"
     ]
    },
@@ -29652,6 +29816,7 @@
     "versapay",
     "viglink",
     "virto-commerce",
+    "visa",
     "vori",
     "vtex",
     "wallapop",
@@ -29949,6 +30114,7 @@
     "judge-me",
     "keap",
     "kibo-commerce",
+    "klarna",
     "layup-technologies",
     "lemon-squeezy",
     "lianlian-global",

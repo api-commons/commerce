@@ -8,8 +8,8 @@ concepts:
     - orders
     properties:
       id: orderId
-      line_items: lines
       status: status
+      line_items: lines
       customer_id: customerId
       currency: currencyCode
       shipping_address: shippingAddress

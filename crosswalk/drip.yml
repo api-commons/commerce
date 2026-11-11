@@ -3,10 +3,26 @@ apis_io: https://apis.io/providers/drip/
 context: commerce
 generated: '2026-11-10'
 concepts:
+  product:
+    path_segment:
+    - product
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/drip-openapi.yml#POST /v3/{account_id}/shopper_activity/product/batch
+  cart:
+    path_segment:
+    - cart
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/drip-openapi.yml#POST /v3/{account_id}/shopper_activity/cart/batch
   order:
     path_segment:
     - orders
+    - order
     properties: {}
     core_coverage: null
     evidence:
     - openapi/_original/drip-openapi.yml#POST /v2/{account_id}/orders
+    - openapi/_original/drip-openapi.yml#POST /v3/{account_id}/shopper_activity/order/batch

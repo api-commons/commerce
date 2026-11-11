@@ -84,8 +84,8 @@ concepts:
     - orders
     properties:
       id: id
-      line_items: lines
       status: financial_status
+      line_items: lines
       customer_id: customer
       currency: currency_code
       shipping_address: shipping_address
