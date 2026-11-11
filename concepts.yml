@@ -181,3 +181,6 @@ workflows:
       - {op: createCustomer, id: customer}
       - {op: createOrder, id: order, link: {customer_id: "$steps.customer.outputs.id"}}
       - {op: listItems, id: items, path: {"{order_id}": "$steps.order.outputs.id"}}
+standards:
+  - standard: schemaorg-30.1
+    concepts: {order: [Order], product: [Product]}

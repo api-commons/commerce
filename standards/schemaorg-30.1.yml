@@ -1,0 +1,119 @@
+standard: schemaorg-30.1
+source: https://github.com/schemaorg/schemaorg/tree/v30.1
+concepts:
+  order:
+    objects:
+    - Order
+    core_coverage: 0.333
+    extended_coverage: 0.333
+    core_missing_from_standard:
+    - id
+    - line_items
+    crosswalk:
+      billing_address: billingAddress
+      customer_id: customer
+      discount_total: discount
+      placed_at: orderDate
+      number: orderNumber
+      status: orderStatus
+      payment_method: paymentMethod
+    standard_only:
+    - acceptedOffer
+    - broker
+    - confirmationNumber
+    - discountCode
+    - discountCurrency
+    - isGift
+    - orderDelivery
+    - orderedItem
+    - partOfInvoice
+    - paymentDueDate
+    - paymentMethodId
+    - paymentUrl
+    - seller
+  product:
+    objects:
+    - Product
+    core_coverage: 0.75
+    extended_coverage: 0.333
+    core_missing_from_standard:
+    - id
+    crosswalk:
+      brand: brand
+      category_ids: category
+      barcode: gtin
+      height: height
+      sku: mpn
+      size: size
+      weight: weight
+      width: width
+      description: description
+      images: image
+      name: name
+      slug: url
+    standard_only:
+    - additionalProperty
+    - aggregateRating
+    - asin
+    - audience
+    - authorizedRepresentative
+    - award
+    - color
+    - colorSwatch
+    - consumerNotice
+    - countryOfAssembly
+    - countryOfLastProcessing
+    - countryOfOrigin
+    - depth
+    - displayLocation
+    - funding
+    - gtin12
+    - gtin13
+    - gtin14
+    - gtin8
+    - hasAdultConsideration
+    - hasCertification
+    - hasDigitalProductPassport
+    - hasEnergyConsumptionDetails
+    - hasGS1DigitalLink
+    - hasMeasurement
+    - hasMerchantReturnPolicy
+    - importer
+    - inProductGroupWithID
+    - isAccessoryOrSparePartFor
+    - isConsumableFor
+    - isFamilyFriendly
+    - isOftenBoughtWith
+    - isRelatedTo
+    - isSimilarTo
+    - isVariantOf
+    - itemCondition
+    - keywords
+    - logo
+    - material
+    - mobileUrl
+    - model
+    - negativeNotes
+    - nsn
+    - offers
+    - pattern
+    - positiveNotes
+    - productID
+    - productionDate
+    - purchaseDate
+    - recycledContentPercentage
+    - releaseDate
+    - review
+    - slogan
+    - specification
+    - substanceOfConcern
+    - additionalType
+    - alternateName
+    - disambiguatingDescription
+    - identifier
+    - mainEntityOfPage
+    - owner
+    - potentialAction
+    - sameAs
+    - subjectOf
+defines_unpublished: {}
