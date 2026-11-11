@@ -37,8 +37,8 @@ concepts:
     - orders
     properties:
       id: orderId
-      status: orderStatus
       line_items: items
+      status: orderStatus
       customer_id:
       - customerId
       - userId

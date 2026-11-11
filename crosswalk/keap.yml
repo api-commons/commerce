@@ -25,11 +25,11 @@ concepts:
       sku: sku
     core_coverage: 1.0
     evidence:
-    - openapi/_original/keap-product-v1-api-openapi.yml#DELETE /rest/v1/products/{productId}
-    - openapi/_original/keap-product-v1-api-openapi.yml#GET /rest/v1/products
-    - openapi/_original/keap-product-v1-api-openapi.yml#GET /rest/v1/products/{productId}
-    - openapi/_original/keap-product-v1-api-openapi.yml#PATCH /rest/v1/products/{productId}
-    - openapi/_original/keap-product-v1-api-openapi.yml#POST /rest/v1/products
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/discounts/products/{discount_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/products/{product_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/discounts/products
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/discounts/products/{discount_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/products
   category:
     path_segment:
     - categories
@@ -37,33 +37,33 @@ concepts:
       name: name
       id: id
       description: description
-      updated_at: update_time
       created_at: create_time
+      updated_at: update_time
     core_coverage: 1.0
     evidence:
-    - openapi/_original/keap-v1-openapi.json#POST /rest/v1/tags/categories
-    - openapi/_original/keap-v2-openapi.json#DELETE /rest/v2/tags/categories/{tag_category_id}
-    - openapi/_original/keap-v2-openapi.json#GET /rest/v2/tags/categories
-    - openapi/_original/keap-v2-openapi.json#GET /rest/v2/tags/categories/{tag_category_id}
-    - openapi/_original/keap-v2-openapi.json#PATCH /rest/v2/tags/categories/{tag_category_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/tags/categories/{tag_category_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/tags/categories
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/tags/categories/{tag_category_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#PATCH /rest/v2/tags/categories/{tag_category_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#POST /rest/v2/tags/categories
   order:
     path_segment:
     - orders
     properties:
       id: id
-      status: status
       line_items: order_items
+      status: status
       created_at: creation_date
       customer_id: contact_id
       shipping_address: shipping_address
       custom_fields: custom_fields
     core_coverage: 1.0
     evidence:
-    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#DELETE /rest/v1/orders/{orderId}
-    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#GET /rest/v1/orders
-    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#GET /rest/v1/orders/{orderId}
-    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#POST /rest/v1/orders
-    - openapi/_original/keap-v1-openapi.json#DELETE /rest/v1/orders/{orderId}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/orders/{order_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/orders
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/orders/{order_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#PATCH /rest/v2/orders/{order_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#POST /rest/v2/orders
   order_item:
     path_segment:
     - items
@@ -80,8 +80,8 @@ concepts:
       type: type
     core_coverage: 1.0
     evidence:
-    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#DELETE /rest/v1/orders/{orderId}/items/{orderItemId}
-    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#POST /rest/v1/orders/{orderId}/items
-    - openapi/_original/keap-v1-openapi.json#DELETE /rest/v1/orders/{orderId}/items/{orderItemId}
-    - openapi/_original/keap-v1-openapi.json#POST /rest/v1/orders/{orderId}/items
-    - openapi/_original/keap-v2-openapi.json#DELETE /rest/v2/orders/{order_id}/items/{order_item_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/orders/{order_id}/items/{order_item_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#GET /rest/v2/orders/{order_id}/items/{order_item_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#PATCH /rest/v2/orders/{order_id}/items/{order_item_id}
+    - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#POST /rest/v2/orders/{order_id}/items
+    - openapi/_original/infusionsoft-rest-v1-2025-11-05-openapi-original.json#DELETE /v1/orders/{orderId}/items/{orderItemId}

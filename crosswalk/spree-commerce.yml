@@ -22,12 +22,12 @@ concepts:
       slug:
       - slug
       - permalink
-      price: price
-      sku: sku
       custom_fields:
       - custom_fields
       - metadata
       - attributes
+      price: price
+      sku: sku
       tags: tags
     core_coverage: 1.0
     evidence:
@@ -51,7 +51,9 @@ concepts:
       position: position
       type: type
       width: width
-    core_coverage: 0.429
+      compare_at_price: compare_at_price
+      weight_unit: weight_unit
+    core_coverage: 0.5
     evidence:
     - openapi/_original/spree-commerce-admin-api-openapi.yml#DELETE /api/v3/admin/products/{product_id}/variants/{id}
     - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/products/{product_id}/variants
@@ -116,19 +118,19 @@ concepts:
     - orders
     properties:
       id: id
-      status: state
       line_items: items
+      status: state
       customer_id:
       - customer_id
       - user_id
-      shipping_address: shipping_address
       currency: currency
+      shipping_address: shipping_address
       number: number
       total_tax: tax_total
-      billing_address: billing_address
       custom_fields:
       - metadata
       - attributes
+      billing_address: billing_address
       email: email
       discount_total:
       - discount_total

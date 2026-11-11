@@ -31,8 +31,8 @@ concepts:
     properties:
       name: category_name
       id: id
-      updated_at: updated_at
       created_at: created_at
+      updated_at: updated_at
     core_coverage: 1.0
     evidence:
     - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#DELETE /v2/pack-builders/categories/{id}
@@ -75,10 +75,10 @@ concepts:
     - orders
     properties:
       id: id
+      line_items: order_lines
       status:
       - state
       - status
-      line_items: order_lines
       created_at: created_at
       shipping_address: shipping_address
       number: name

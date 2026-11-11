@@ -8,8 +8,8 @@ concepts:
     - purchases
     properties:
       id: id
-      status: status
       line_items: items
+      status: status
       currency: currency
       number: orderNumber
       total:

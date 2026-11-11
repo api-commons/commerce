@@ -7,12 +7,15 @@ concepts:
     path_segment:
     - customers
     properties:
+      id: id
       email: email_address
       last_name: family_name
       first_name: given_name
+      created_at: created_at
       phone: phone_number
       addresses: address
-    core_coverage: 0.6
+      updated_at: updated_at
+    core_coverage: 1.0
     evidence:
     - openapi/_original/square-openapi.yml#DELETE /v2/customers/{customer_id}
     - openapi/_original/square-openapi.yml#GET /v2/customers
@@ -24,12 +27,17 @@ concepts:
     - orders
     properties:
       id: id
+      line_items: line_items
       status: state
       created_at: created_at
+      customer_id: customer_id
       shipping_address: shipping_address
+      total_tax: taxes
+      custom_fields: metadata
       email: buyer_email
       updated_at: updated_at
-    core_coverage: 0.667
+      discount_total: discounts
+    core_coverage: 1.0
     evidence:
     - openapi/_original/square-openapi.yml#GET /v1/{location_id}/orders
     - openapi/_original/square-openapi.yml#GET /v1/{location_id}/orders/{order_id}
@@ -39,7 +47,8 @@ concepts:
   inventory:
     path_segment:
     - inventory
-    properties: {}
+    properties:
+      quantity: quantity
     core_coverage: 0.0
     evidence:
     - openapi/_original/square-openapi.yml#GET /v2/inventory/{catalog_object_id}

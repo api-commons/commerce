@@ -6,16 +6,21 @@ concepts:
   product:
     path_segment:
     - products
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      name: name
+      description: description
+      variants: variants
+      slug: slug
+    core_coverage: 1.0
     evidence:
     - openapi/_original/snackmagic-stadium-openapi.yml#GET /stores/{store_number}/products
   order:
     path_segment:
     - orders
     properties:
-      status: status
       line_items: products
+      status: status
       number: number
       email: email
     core_coverage: 0.667

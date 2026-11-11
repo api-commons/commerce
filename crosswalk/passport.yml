@@ -18,8 +18,8 @@ concepts:
     properties:
       line_items: items
       created_at: created
-      shipping_address: shipping
       currency: currency_code
+      shipping_address: shipping
     core_coverage: 0.333
     evidence:
     - openapi/_original/passport-public-api-openapi.yml#DELETE /order

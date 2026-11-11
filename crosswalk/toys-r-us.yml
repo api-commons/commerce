@@ -14,8 +14,8 @@ concepts:
     path_segment:
     - orders
     properties:
-      status: Status
       line_items: LineItems
+      status: Status
     core_coverage: 0.667
     evidence:
     - openapi/_original/toys-r-us-commerce-openapi.yml#GET /api/v2/orders

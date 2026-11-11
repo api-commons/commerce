@@ -26,10 +26,10 @@ concepts:
       id:
       - id
       - order_id
+      line_items: order_lines
       status:
       - status
       - state
-      line_items: order_lines
       created_at:
       - created_at
       - created_date

@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/commerce/main/schema/inventory.json",
   "title": "Inventory",
-  "description": "The common inventory in Commerce, distilled from 35 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common inventory in Commerce, distilled from 34 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.371,
-      "x-commons-providers": 13,
+      "x-commons-share": 0.353,
+      "x-commons-providers": 12,
       "x-commons-spellings": [
         "id",
         "inventoryId",
@@ -19,8 +19,8 @@
     "quantity": {
       "type": "integer",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.314,
-      "x-commons-providers": 11,
+      "x-commons-share": 0.353,
+      "x-commons-providers": 12,
       "x-commons-spellings": [
         "quantity",
         "available",
@@ -30,7 +30,7 @@
     "sku": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.286,
+      "x-commons-share": 0.294,
       "x-commons-providers": 10,
       "x-commons-spellings": [
         "sku",
@@ -40,7 +40,7 @@
     "product_id": {
       "type": "integer",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.257,
+      "x-commons-share": 0.265,
       "x-commons-providers": 9,
       "x-commons-spellings": [
         "productId",
@@ -58,7 +58,7 @@
   "x-commons": {
     "context": "commerce",
     "concept": "inventory",
-    "providers": 35,
+    "providers": 34,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

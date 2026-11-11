@@ -32,7 +32,7 @@ concepts:
     properties:
       name: variantName
       product_id: productId
-    core_coverage: 0.286
+    core_coverage: 0.333
     evidence:
     - openapi/_original/stockx-public-openapi-original.json#GET /catalog/products/{productId}/variants
     - openapi/_original/stockx-public-openapi-original.json#GET /catalog/products/{productId}/variants/{variantId}

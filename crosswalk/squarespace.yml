@@ -31,7 +31,7 @@ concepts:
       barcode: gtin
       inventory_quantity: stock
       options: attributes
-    core_coverage: 0.429
+    core_coverage: 0.5
     evidence:
     - openapi/_original/squarespace-commerce-api-v2-openapi.json#DELETE /v2/commerce/products/{productId}/variants/{variantId}
     - openapi/_original/squarespace-commerce-api-v2-openapi.json#POST /v2/commerce/products/{productId}/variants

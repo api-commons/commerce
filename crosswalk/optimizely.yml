@@ -9,23 +9,23 @@ concepts:
     - product
     properties:
       id:
+      - product_id
       - productId
       - id
-      - product_id
       name: name
       description: shortDescription
       images:
-      - images
       - image_url
+      - images
       created_at: createdOn
       brand:
-      - brandId
       - brand
+      - brandId
+      custom_fields: properties
       price: price
       sku:
-      - productCode
       - sku
-      custom_fields: properties
+      - productCode
     core_coverage: 1.0
     evidence:
     - openapi/_original/optimizely-configured-commerce-admin-api-v1-openapi.json#GET /api/v1/admin/Products
@@ -47,10 +47,10 @@ concepts:
       - id
       - categoryId
       parent_id: parentId
-      updated_at: updatedAt
       created_at:
       - createdOn
       - createdAt
+      updated_at: updatedAt
       custom_fields: properties
     core_coverage: 1.0
     evidence:
@@ -98,8 +98,8 @@ concepts:
     - orders
     properties:
       id: id
-      status: status
       line_items: orderLines
+      status: status
       created_at: created
       customer_id: customer_id
       currency:

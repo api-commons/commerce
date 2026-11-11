@@ -33,11 +33,11 @@ concepts:
       id: id
       name: title
       product_id: product_id
-      created_at: created_at
       inventory_quantity: inventory_quantity
       price: price
+      created_at: created_at
       updated_at: updated_at
-    core_coverage: 0.857
+    core_coverage: 0.833
     evidence:
     - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}
     - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/products/{product_id}/variants
@@ -84,11 +84,11 @@ concepts:
     - orders
     properties:
       id: id
-      status: financial_status
       line_items: lines
+      status: financial_status
       customer_id: customer
-      shipping_address: shipping_address
       currency: currency_code
+      shipping_address: shipping_address
       total: order_total
       total_tax: tax_total
       billing_address: billing_address

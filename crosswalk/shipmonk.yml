@@ -29,8 +29,8 @@ concepts:
     - order
     - orders
     properties:
-      status: order_status
       line_items: items
+      status: order_status
       currency: currency_code
       number: order_number
       custom_fields: attributes

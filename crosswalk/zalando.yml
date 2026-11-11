@@ -19,8 +19,8 @@ concepts:
     - items
     properties:
       id: id
-      type: type
       custom_fields: attributes
+      type: type
     core_coverage: 0.333
     evidence:
     - openapi/_original/zalando-orders-openapi.yml#GET /merchants/{merchant-id}/orders/{order-id}/items

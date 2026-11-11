@@ -32,12 +32,13 @@ concepts:
       id: id
       name: name
       product_id: product_id
-      created_at: created_at
       inventory_quantity: stock
       price: price
-      updated_at: updated_at
+      created_at: created_at
       weight: weight
-    core_coverage: 0.857
+      updated_at: updated_at
+      description: description
+    core_coverage: 0.833
     evidence:
     - openapi/_original/nuvemshop-openapi.yml#DELETE /products/{product_id}/variants/{id}
     - openapi/_original/nuvemshop-openapi.yml#GET /products/sku/{sku}
@@ -82,8 +83,8 @@ concepts:
     - orders
     properties:
       id: id
-      status: status
       line_items: products
+      status: status
       created_at: created_at
       customer_id: customer
       currency: currency

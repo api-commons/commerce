@@ -8,8 +8,8 @@ concepts:
     - orders
     properties:
       id: orderId
-      shipping_address: shipping
       currency: currency
+      shipping_address: shipping
       total: amount
       total_tax: tax
     core_coverage: 0.333

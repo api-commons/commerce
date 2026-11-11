@@ -26,12 +26,13 @@ concepts:
       id: id
       created_at: createdOn
       updated_at: lastUpdated
-    core_coverage: 0.286
+    core_coverage: 0.167
     evidence:
     - openapi/_original/webflow-data-api-openapi.yml#PATCH /sites/{site_id}/products/{product_id}/skus/{sku_id}
     - openapi/_original/webflow-data-api-openapi.yml#POST /sites/{site_id}/products/{product_id}/skus
     - openapi/_original/webflow-products-openapi.yml#PATCH /sites/{site_id}/products/{product_id}/skus/{sku_id}
     - openapi/_original/webflow-products-openapi.yml#POST /sites/{site_id}/products/{product_id}/skus
+    - openapi/_original/webflow-data-api-openapi.yml#PATCH /sites/{site_id}/products/{product_id}/skus/{sku_id}
   order:
     path_segment:
     - orders
@@ -39,8 +40,8 @@ concepts:
       id: orderId
       status: status
       shipping_address: shippingAddress
-      billing_address: billingAddress
       custom_fields: metadata
+      billing_address: billingAddress
     core_coverage: 0.667
     evidence:
     - openapi/_original/webflow-data-api-openapi.yml#GET /sites/{site_id}/orders
@@ -60,3 +61,4 @@ concepts:
     - openapi/_original/webflow-data-api-openapi.yml#PATCH /collections/{sku_collection_id}/items/{sku_id}/inventory
     - openapi/_original/webflow-inventory-openapi.yml#GET /collections/{sku_collection_id}/items/{sku_id}/inventory
     - openapi/_original/webflow-inventory-openapi.yml#PATCH /collections/{sku_collection_id}/items/{sku_id}/inventory
+    - openapi/_original/webflow-data-api-openapi.yml#GET /collections/{sku_collection_id}/items/{sku_id}/inventory

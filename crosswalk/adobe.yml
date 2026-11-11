@@ -1,5 +1,5 @@
-provider: adobe-suite
-apis_io: https://apis.io/providers/adobe-suite/
+provider: adobe
+apis_io: https://apis.io/providers/adobe/
 context: commerce
 generated: '2026-11-10'
 concepts:
@@ -15,8 +15,8 @@ concepts:
       images: images
       status: status
       slug: slug
-      sku: sku
       custom_fields: attributes
+      sku: sku
     core_coverage: 1.0
     evidence:
     - openapi/_original/adobe-suite-aep-access-control-openapi.yaml#GET /administration/products
@@ -69,8 +69,8 @@ concepts:
     - order
     properties:
       id: orderId
-      status: status
       line_items: lineItems
+      status: status
       created_at: creationDate
       customer_id: customerId
       currency: currencyCode

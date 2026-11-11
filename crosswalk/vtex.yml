@@ -56,7 +56,7 @@ concepts:
       - ProductId
       inventory_quantity: available
       updated_at: LastModified
-    core_coverage: 0.429
+    core_coverage: 0.5
     evidence:
     - openapi/_original/vtex-catalog-openapi-original.yml#GET /api/catalog_system/pub/products/variations/{productId}
     - openapi/_original/vtex-legacy-search-openapi-original.yml#GET /api/catalog_system/pub/products/offers/{productId}/sku/{skuId}
@@ -89,8 +89,8 @@ concepts:
     - orders
     properties:
       id: orderId
-      status: status
       line_items: items
+      status: status
       created_at: creationDate
     core_coverage: 1.0
     evidence:

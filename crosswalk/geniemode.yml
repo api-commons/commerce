@@ -26,12 +26,12 @@ concepts:
       id:
       - order_id
       - id
+      line_items: items
       status:
       - financial_status
       - status
-      line_items: items
-      shipping_address: shipping_address
       currency: currency
+      shipping_address: shipping_address
       number: name
       total:
       - total_price

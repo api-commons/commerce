@@ -20,8 +20,8 @@ concepts:
     - orders
     properties:
       id: id
-      status: status
       line_items: order_items
+      status: status
       created_at: created_at
       customer_id: customer_id
       custom_fields: meta_data

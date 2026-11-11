@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - orders
     properties:
-      status: status
       line_items: items
+      status: status
       customer_id: customer
       currency: currencyCode
       total: orderTotal

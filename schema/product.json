@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/commerce/main/schema/product.json",
   "title": "Product",
-  "description": "The common product in Commerce, distilled from 137 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common product in Commerce, distilled from 133 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.796,
-      "x-commons-providers": 109,
+      "x-commons-share": 0.812,
+      "x-commons-providers": 108,
       "x-commons-spellings": [
         "id",
         "product_id",
@@ -24,14 +24,14 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.759,
-      "x-commons-providers": 104,
+      "x-commons-share": 0.774,
+      "x-commons-providers": 103,
       "x-commons-spellings": [
         "name",
         "title",
         "productName",
-        "product_name",
         "Name",
+        "product_name",
         "displayName",
         "display_name",
         "Product Name"
@@ -40,7 +40,7 @@
     "description": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.584,
+      "x-commons-share": 0.602,
       "x-commons-providers": 80,
       "x-commons-spellings": [
         "description",
@@ -56,12 +56,12 @@
     "images": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.46,
-      "x-commons-providers": 63,
+      "x-commons-share": 0.466,
+      "x-commons-providers": 62,
       "x-commons-spellings": [
         "images",
-        "image_url",
         "image",
+        "image_url",
         "imageUrl",
         "image_urls",
         "imageURL",
@@ -72,16 +72,16 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.438,
-      "x-commons-providers": 60,
+      "x-commons-share": 0.436,
+      "x-commons-providers": 58,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
         "createdOn",
         "created",
         "created_on",
-        "create_time",
         "date_created",
+        "create_time",
         "created_date"
       ],
       "format": "date-time"
@@ -89,8 +89,8 @@
     "type": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.431,
-      "x-commons-providers": 59,
+      "x-commons-share": 0.436,
+      "x-commons-providers": 58,
       "x-commons-spellings": [
         "type",
         "product_type",
@@ -101,8 +101,8 @@
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.423,
-      "x-commons-providers": 58,
+      "x-commons-share": 0.429,
+      "x-commons-providers": 57,
       "x-commons-spellings": [
         "status",
         "active",
@@ -117,31 +117,31 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.416,
-      "x-commons-providers": 57,
+      "x-commons-share": 0.421,
+      "x-commons-providers": 56,
       "x-commons-spellings": [
         "updated_at",
         "updatedAt",
-        "update_time",
         "updated",
         "lastModified",
         "updated_on",
-        "lastUpdated",
-        "date_modified"
+        "update_time",
+        "date_modified",
+        "modifiedAt"
       ],
       "format": "date-time"
     },
     "category_ids": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.409,
-      "x-commons-providers": 56,
+      "x-commons-share": 0.414,
+      "x-commons-providers": 55,
       "x-commons-spellings": [
         "categories",
         "category",
         "category_id",
-        "collections",
         "categoryId",
+        "collections",
         "categoryIds",
         "CategoryId",
         "collection_ids"
@@ -150,18 +150,18 @@
     "variants": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.387,
+      "x-commons-share": 0.398,
       "x-commons-providers": 53,
       "x-commons-spellings": [
         "variants",
-        "skus",
-        "variations"
+        "variations",
+        "skus"
       ]
     },
     "brand": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.372,
+      "x-commons-share": 0.383,
       "x-commons-providers": 51,
       "x-commons-spellings": [
         "brand",
@@ -177,7 +177,7 @@
     "slug": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.372,
+      "x-commons-share": 0.383,
       "x-commons-providers": 51,
       "x-commons-spellings": [
         "url",
@@ -187,36 +187,11 @@
         "urlKey"
       ]
     },
-    "price": {
-      "type": "number",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.328,
-      "x-commons-providers": 45,
-      "x-commons-spellings": [
-        "price",
-        "amount",
-        "regularPrice",
-        "regular_price"
-      ]
-    },
-    "sku": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.328,
-      "x-commons-providers": 45,
-      "x-commons-spellings": [
-        "sku",
-        "mpn",
-        "code",
-        "productCode",
-        "partNumber"
-      ]
-    },
     "custom_fields": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.321,
-      "x-commons-providers": 44,
+      "x-commons-share": 0.323,
+      "x-commons-providers": 43,
       "x-commons-spellings": [
         "attributes",
         "properties",
@@ -228,10 +203,35 @@
         "metafields"
       ]
     },
+    "price": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.323,
+      "x-commons-providers": 43,
+      "x-commons-spellings": [
+        "price",
+        "amount",
+        "regularPrice",
+        "regular_price"
+      ]
+    },
+    "sku": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.323,
+      "x-commons-providers": 43,
+      "x-commons-spellings": [
+        "sku",
+        "mpn",
+        "code",
+        "partNumber",
+        "productCode"
+      ]
+    },
     "tags": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.248,
+      "x-commons-share": 0.256,
       "x-commons-providers": 34,
       "x-commons-spellings": [
         "tags",
@@ -246,7 +246,7 @@
   "x-commons": {
     "context": "commerce",
     "concept": "product",
-    "providers": 137,
+    "providers": 133,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

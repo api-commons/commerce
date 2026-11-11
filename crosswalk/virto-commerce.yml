@@ -21,8 +21,8 @@ concepts:
       category_ids: categoryId
       variants: variations
       brand: vendor
-      sku: code
       custom_fields: properties
+      sku: code
     core_coverage: 0.667
     evidence:
     - openapi/_original/virto-commerce-catalog-openapi.json#DELETE /api/catalog/products
@@ -37,8 +37,8 @@ concepts:
       name: name
       id: id
       parent_id: parentId
-      updated_at: modifiedDate
       created_at: createdDate
+      updated_at: modifiedDate
       custom_fields: properties
     core_coverage: 1.0
     evidence:
@@ -69,8 +69,8 @@ concepts:
     - order
     properties:
       id: id
-      status: status
       line_items: items
+      status: status
       created_at: createdDate
       customer_id: customerId
       currency: currency

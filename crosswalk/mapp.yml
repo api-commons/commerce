@@ -8,7 +8,7 @@ concepts:
     - variants
     properties:
       product_id: product_id
-    core_coverage: 0.143
+    core_coverage: 0.167
     evidence:
     - openapi/_original/mapp-product-catalog-openapi.yml#GET /api/product-catalog/v1/catalogs/{catalogId}/products/{productId}/variants
   cart:

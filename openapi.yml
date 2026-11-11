@@ -16,7 +16,7 @@ paths:
       tags:
       - Products
       x-commons-tier: core
-      x-commons-share: 0.877
+      x-commons-share: 0.873
       responses:
         '200':
           description: OK
@@ -41,7 +41,7 @@ paths:
       tags:
       - Products
       x-commons-tier: core
-      x-commons-share: 0.682
+      x-commons-share: 0.673
       responses:
         '200':
           description: OK
@@ -62,7 +62,7 @@ paths:
       tags:
       - Products
       x-commons-tier: core
-      x-commons-share: 0.799
+      x-commons-share: 0.8
       responses:
         '200':
           description: OK
@@ -93,7 +93,7 @@ paths:
       tags:
       - Products
       x-commons-tier: extended
-      x-commons-share: 0.448
+      x-commons-share: 0.453
       responses:
         '200':
           description: OK
@@ -103,32 +103,13 @@ paths:
   /products/{product_id}/variants:
     parameters:
     - $ref: '#/components/parameters/product_id'
-    post:
-      operationId: createProductVariant
-      summary: Create a product variant
-      tags:
-      - Product Variants
-      x-commons-tier: core
-      x-commons-share: 0.741
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema: &id002
-                $ref: '#/components/schemas/ProductVariant'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema: *id002
     get:
       operationId: listProductVariants
       summary: List variants
       tags:
       - Product Variants
       x-commons-tier: core
-      x-commons-share: 0.704
+      x-commons-share: 0.731
       responses:
         '200':
           description: OK
@@ -136,7 +117,8 @@ paths:
             application/json:
               schema:
                 type: array
-                items: *id002
+                items: &id002
+                  $ref: '#/components/schemas/ProductVariant'
       parameters:
       - name: limit
         in: query
@@ -146,6 +128,24 @@ paths:
         in: query
         schema:
           type: string
+    post:
+      operationId: createProductVariant
+      summary: Create a product variant
+      tags:
+      - Product Variants
+      x-commons-tier: core
+      x-commons-share: 0.731
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
   /products/{product_id}/variants/{product_variant_id}:
     parameters:
     - $ref: '#/components/parameters/product_id'
@@ -156,7 +156,7 @@ paths:
       tags:
       - Product Variants
       x-commons-tier: core
-      x-commons-share: 0.556
+      x-commons-share: 0.577
       responses:
         '200':
           description: OK
@@ -169,7 +169,7 @@ paths:
       tags:
       - Product Variants
       x-commons-tier: core
-      x-commons-share: 0.519
+      x-commons-share: 0.538
       responses:
         '200':
           description: OK
@@ -182,7 +182,7 @@ paths:
       tags:
       - Product Variants
       x-commons-tier: extended
-      x-commons-share: 0.481
+      x-commons-share: 0.462
       responses:
         '200':
           description: OK
@@ -201,7 +201,7 @@ paths:
       tags:
       - Categories
       x-commons-tier: core
-      x-commons-share: 0.901
+      x-commons-share: 0.899
       responses:
         '200':
           description: OK
@@ -226,7 +226,7 @@ paths:
       tags:
       - Categories
       x-commons-tier: extended
-      x-commons-share: 0.494
+      x-commons-share: 0.481
       responses:
         '200':
           description: OK
@@ -247,7 +247,7 @@ paths:
       tags:
       - Categories
       x-commons-tier: core
-      x-commons-share: 0.642
+      x-commons-share: 0.633
       responses:
         '200':
           description: OK
@@ -260,7 +260,7 @@ paths:
       tags:
       - Categories
       x-commons-tier: extended
-      x-commons-share: 0.37
+      x-commons-share: 0.354
       responses:
         '200':
           description: OK
@@ -278,7 +278,7 @@ paths:
       tags:
       - Categories
       x-commons-tier: extended
-      x-commons-share: 0.333
+      x-commons-share: 0.329
       responses:
         '200':
           description: OK
@@ -474,7 +474,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: core
-      x-commons-share: 0.756
+      x-commons-share: 0.753
       responses:
         '200':
           description: OK
@@ -499,7 +499,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: core
-      x-commons-share: 0.656
+      x-commons-share: 0.657
       responses:
         '200':
           description: OK
@@ -520,7 +520,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: core
-      x-commons-share: 0.744
+      x-commons-share: 0.742
       responses:
         '200':
           description: OK
@@ -533,7 +533,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: extended
-      x-commons-share: 0.367
+      x-commons-share: 0.36
       responses:
         '200':
           description: OK
@@ -554,7 +554,7 @@ paths:
       tags:
       - Order Items
       x-commons-tier: core
-      x-commons-share: 0.733
+      x-commons-share: 0.724
       responses:
         '200':
           description: OK
@@ -573,7 +573,7 @@ paths:
       tags:
       - Order Items
       x-commons-tier: core
-      x-commons-share: 0.533
+      x-commons-share: 0.552
       responses:
         '200':
           description: OK
@@ -601,7 +601,7 @@ paths:
       tags:
       - Order Items
       x-commons-tier: core
-      x-commons-share: 0.6
+      x-commons-share: 0.586
       responses:
         '200':
           description: OK
@@ -614,7 +614,7 @@ paths:
       tags:
       - Order Items
       x-commons-tier: core
-      x-commons-share: 0.567
+      x-commons-share: 0.552
       responses:
         '200':
           description: OK
@@ -632,7 +632,7 @@ paths:
       tags:
       - Order Items
       x-commons-tier: extended
-      x-commons-share: 0.4
+      x-commons-share: 0.379
       responses:
         '200':
           description: OK
@@ -727,7 +727,7 @@ paths:
       tags:
       - Inventories
       x-commons-tier: core
-      x-commons-share: 0.652
+      x-commons-share: 0.644
       responses:
         '200':
           description: OK
@@ -752,7 +752,7 @@ paths:
       tags:
       - Inventories
       x-commons-tier: extended
-      x-commons-share: 0.261
+      x-commons-share: 0.267
       responses:
         '200':
           description: OK
@@ -773,7 +773,7 @@ paths:
       tags:
       - Inventories
       x-commons-tier: extended
-      x-commons-share: 0.261
+      x-commons-share: 0.267
       responses:
         '200':
           description: OK

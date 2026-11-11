@@ -11,9 +11,9 @@ adopters:
   crosswalk: crosswalk/accelbyte.yml
   concepts:
   - order
-- provider: adobe-suite
-  apis_io: https://apis.io/providers/adobe-suite/
-  crosswalk: crosswalk/adobe-suite.yml
+- provider: adobe
+  apis_io: https://apis.io/providers/adobe/
+  crosswalk: crosswalk/adobe.yml
   concepts:
   - category
   - customer
@@ -372,12 +372,6 @@ adopters:
   concepts:
   - category
   - product
-- provider: depictai
-  apis_io: https://apis.io/providers/depictai/
-  crosswalk: crosswalk/depictai.yml
-  concepts:
-  - category
-  - product
 - provider: depop
   apis_io: https://apis.io/providers/depop/
   crosswalk: crosswalk/depop.yml
@@ -623,14 +617,6 @@ adopters:
   crosswalk: crosswalk/icon-aircraft.yml
   concepts:
   - category
-- provider: infusionsoft
-  apis_io: https://apis.io/providers/infusionsoft/
-  crosswalk: crosswalk/infusionsoft.yml
-  concepts:
-  - category
-  - order
-  - order_item
-  - product
 - provider: instacart
   apis_io: https://apis.io/providers/instacart/
   crosswalk: crosswalk/instacart.yml
@@ -1611,14 +1597,6 @@ adopters:
   - order
   - product
   - product_variant
-- provider: webflow-api-and-documentation-webflow
-  apis_io: https://apis.io/providers/webflow-api-and-documentation-webflow/
-  crosswalk: crosswalk/webflow-api-and-documentation-webflow.yml
-  concepts:
-  - inventory
-  - order
-  - product
-  - product_variant
 - provider: weclapp
   apis_io: https://apis.io/providers/weclapp/
   crosswalk: crosswalk/weclapp.yml
@@ -1674,11 +1652,6 @@ adopters:
   concepts:
   - customer
   - order
-  - product
-- provider: zaius
-  apis_io: https://apis.io/providers/zaius/
-  crosswalk: crosswalk/zaius.yml
-  concepts:
   - product
 - provider: zalando
   apis_io: https://apis.io/providers/zalando/

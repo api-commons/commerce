@@ -44,8 +44,8 @@ concepts:
     - orders
     properties:
       id: orderId
-      status: financialStatus
       line_items: lineItems
+      status: financialStatus
       customer_id: customerId
       currency: currency
     core_coverage: 1.0

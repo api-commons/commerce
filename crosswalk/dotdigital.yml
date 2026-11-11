@@ -8,11 +8,11 @@ concepts:
     - orders
     properties:
       id: id
-      status: status
       line_items: items
+      status: status
       customer_id: contactId
-      shipping_address: deliveryAddress
       currency: currency
+      shipping_address: deliveryAddress
       total: orderTotal
       billing_address: billingAddress
       email: email

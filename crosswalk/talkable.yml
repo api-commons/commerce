@@ -11,8 +11,8 @@ concepts:
       line_items: items
       created_at: created_at
       customer_id: customer_id
-      shipping_address: shipping_address
       currency: currency_iso_code
+      shipping_address: shipping_address
       number: order_number
       custom_fields: custom_properties
       email: email

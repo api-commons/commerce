@@ -2,14 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/api-commons/commerce/main/schema/product_variant.json",
   "title": "Product Variant",
-  "description": "The common product_variant in Commerce, distilled from 26 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "description": "The common product_variant in Commerce, distilled from 25 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.769,
-      "x-commons-providers": 20,
+      "x-commons-share": 0.76,
+      "x-commons-providers": 19,
       "x-commons-spellings": [
         "id"
       ]
@@ -17,7 +17,7 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.577,
+      "x-commons-share": 0.6,
       "x-commons-providers": 15,
       "x-commons-spellings": [
         "name",
@@ -29,7 +29,7 @@
     "product_id": {
       "type": "integer",
       "x-commons-tier": "core",
-      "x-commons-share": 0.577,
+      "x-commons-share": 0.6,
       "x-commons-providers": 15,
       "x-commons-spellings": [
         "product_id",
@@ -41,7 +41,7 @@
     "barcode": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.5,
+      "x-commons-share": 0.52,
       "x-commons-providers": 13,
       "x-commons-spellings": [
         "barcode",
@@ -50,24 +50,10 @@
         "ean"
       ]
     },
-    "created_at": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.5,
-      "x-commons-providers": 13,
-      "x-commons-spellings": [
-        "created_at",
-        "createdOn",
-        "created",
-        "createdAt",
-        "created_on"
-      ],
-      "format": "date-time"
-    },
     "inventory_quantity": {
       "type": "integer",
       "x-commons-tier": "core",
-      "x-commons-share": 0.5,
+      "x-commons-share": 0.52,
       "x-commons-providers": 13,
       "x-commons-spellings": [
         "inventory_quantity",
@@ -80,7 +66,7 @@
     "price": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.5,
+      "x-commons-share": 0.52,
       "x-commons-providers": 13,
       "x-commons-spellings": [
         "price",
@@ -88,10 +74,24 @@
         "basePrice"
       ]
     },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.48,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "created_at",
+        "createdOn",
+        "created",
+        "createdAt",
+        "created_on"
+      ],
+      "format": "date-time"
+    },
     "options": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.462,
+      "x-commons-share": 0.48,
       "x-commons-providers": 12,
       "x-commons-spellings": [
         "options",
@@ -100,34 +100,34 @@
         "option_values"
       ]
     },
-    "updated_at": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.462,
-      "x-commons-providers": 12,
-      "x-commons-spellings": [
-        "updated_at",
-        "lastUpdated",
-        "updatedAt",
-        "updatedOn",
-        "updated_on",
-        "LastModified"
-      ],
-      "format": "date-time"
-    },
     "weight": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.462,
+      "x-commons-share": 0.48,
       "x-commons-providers": 12,
       "x-commons-spellings": [
         "weight"
       ]
     },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.44,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "updatedOn",
+        "updated_on",
+        "LastModified",
+        "lastUpdated"
+      ],
+      "format": "date-time"
+    },
     "height": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.231,
+      "x-commons-share": 0.24,
       "x-commons-providers": 6,
       "x-commons-spellings": [
         "height"
@@ -136,7 +136,7 @@
     "position": {
       "type": "integer",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.231,
+      "x-commons-share": 0.24,
       "x-commons-providers": 6,
       "x-commons-spellings": [
         "position"
@@ -145,7 +145,7 @@
     "type": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.231,
+      "x-commons-share": 0.24,
       "x-commons-providers": 6,
       "x-commons-spellings": [
         "type"
@@ -154,10 +154,37 @@
     "width": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.231,
+      "x-commons-share": 0.24,
       "x-commons-providers": 6,
       "x-commons-spellings": [
         "width"
+      ]
+    },
+    "compare_at_price": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "compare_at_price"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "description"
+      ]
+    },
+    "weight_unit": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "weight_unit"
       ]
     }
   },
@@ -167,7 +194,7 @@
   "x-commons": {
     "context": "commerce",
     "concept": "product_variant",
-    "providers": 26,
+    "providers": 25,
     "generated": "2026-11-10",
     "version": "0.1.0-draft.20261110",
     "status": "draft"

@@ -25,8 +25,8 @@ concepts:
       slug:
       - slug
       - permalink
-      sku: sku
       custom_fields: attributes
+      sku: sku
       tags: tags
     core_coverage: 1.0
     evidence:

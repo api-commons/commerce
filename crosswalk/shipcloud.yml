@@ -8,8 +8,8 @@ concepts:
     - orders
     properties:
       id: id
-      shipping_address: delivery_address
       currency: currency
+      shipping_address: delivery_address
       total: total_price
     core_coverage: 0.333
     evidence:

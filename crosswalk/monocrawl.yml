@@ -35,11 +35,11 @@ concepts:
       slug:
       - url
       - slug
-      price: price
-      sku: mpn
       custom_fields:
       - properties
       - attributes
+      price: price
+      sku: mpn
       tags: tags
     core_coverage: 1.0
     evidence:

@@ -44,15 +44,16 @@ concepts:
       - barcode
       - ean
       - upc
-      created_at: created_at
       inventory_quantity: inventory_quantity
+      created_at: created_at
       options: options
-      updated_at: updated_at
       weight: weight
+      updated_at: updated_at
       height: height
       type: type
       width: width
-    core_coverage: 0.857
+      description: description
+    core_coverage: 0.833
     evidence:
     - openapi/_original/medusa-admin-openapi.yaml#DELETE /admin/products/{id}/variants/{variant_id}
     - openapi/_original/medusa-admin-openapi.yaml#GET /admin/products/{id}/variants
@@ -66,8 +67,8 @@ concepts:
       name: title
       id: id
       slug: handle
-      updated_at: updated_at
       created_at: created_at
+      updated_at: updated_at
       custom_fields: metadata
     core_coverage: 1.0
     evidence:
@@ -123,18 +124,18 @@ concepts:
     - orders
     properties:
       id: id
-      status: status
       line_items: items
+      status: status
       created_at: created_at
       customer_id:
       - customer
       - customer_id
-      shipping_address: shipping_address
       currency: currency_code
+      shipping_address: shipping_address
       number: display_id
       total_tax: tax_total
-      billing_address: billing_address
       custom_fields: metadata
+      billing_address: billing_address
       email: email
       updated_at: updated_at
       discount_total: discount_total

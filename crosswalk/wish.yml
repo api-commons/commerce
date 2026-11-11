@@ -45,7 +45,7 @@ concepts:
       options:
       - options
       - attributes
-    core_coverage: 0.571
+    core_coverage: 0.667
     evidence:
     - openapi/_original/wish-marketplace-v3-openapi.json#POST /api/v3/products/{id}/variations
   category:

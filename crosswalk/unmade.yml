@@ -16,8 +16,8 @@ concepts:
     - orders
     properties:
       id: id
-      status: state
       line_items: order_items
+      status: state
       created_at: created
       shipping_address: shipping_address
     core_coverage: 1.0

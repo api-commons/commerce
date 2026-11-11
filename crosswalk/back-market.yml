@@ -32,8 +32,8 @@ concepts:
       - state
       created_at: creationDate
       customer_id: customer
-      shipping_address: shipping_address
       currency: currency
+      shipping_address: shipping_address
       billing_address: billing_address
     core_coverage: 0.667
     evidence:

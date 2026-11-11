@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.825,
-      "x-commons-providers": 66,
+      "x-commons-share": 0.85,
+      "x-commons-providers": 68,
       "x-commons-spellings": [
         "id",
         "customerId",
@@ -61,8 +61,8 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.525,
-      "x-commons-providers": 42,
+      "x-commons-share": 0.55,
+      "x-commons-providers": 44,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -109,8 +109,8 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.338,
-      "x-commons-providers": 27,
+      "x-commons-share": 0.362,
+      "x-commons-providers": 29,
       "x-commons-spellings": [
         "updated_at",
         "updatedAt",

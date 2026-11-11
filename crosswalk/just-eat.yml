@@ -11,7 +11,7 @@ concepts:
       name: name
       price: basePrice
       type: type
-    core_coverage: 0.429
+    core_coverage: 0.5
     evidence:
     - openapi/_original/just-eat-uk-openapi-original.json#GET /restaurants/{tenant}/{restaurantId}/catalogue/items/{itemId}/variations
   category:

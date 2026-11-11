@@ -28,11 +28,11 @@ concepts:
       id: id
       status: status
       created_at: createdAt
-      shipping_address: shippingAddress
       currency: currency
+      shipping_address: shippingAddress
       number: name
-      billing_address: billingAddress
       custom_fields: customFields
+      billing_address: billingAddress
       updated_at: updatedAt
     core_coverage: 0.667
     evidence:

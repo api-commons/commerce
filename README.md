@@ -16,17 +16,17 @@ of providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| product | 154 | 137 | id 80%, name 76%, description 58% | products 137, product 30, listings 9, catalog-items 1 |
-| product_variant | 27 | 26 | id 77%, name 58%, product_id 58%, barcode 50%, created_at 50%, inventory_quantity 50%, price 50% | variants 17, skus 5, variations 5, sku 3 |
-| category | 81 | 66 | name 82%, id 79% | categories 65, collections 15, category 14, collection 5 |
-| customer | 85 | 80 | id 82%, email 79%, last_name 61%, first_name 60%, created_at 52% | customers 68, customer 21, consumers 4, buyers 1 |
+| product | 150 | 133 | id 81%, name 77%, description 60% | products 133, product 30, listings 8, catalog-items 1 |
+| product_variant | 26 | 25 | id 76%, name 60%, product_id 60%, barcode 52%, inventory_quantity 52%, price 52% | variants 17, variations 5, skus 4, sku 3 |
+| category | 79 | 64 | name 81%, id 78% | categories 64, collections 14, category 13, collection 5 |
+| customer | 85 | 80 | id 85%, email 79%, last_name 61%, first_name 60%, created_at 55% | customers 68, customer 21, consumers 4, buyers 1 |
 | cart | 41 | 36 | id 67%, line_items 53% | cart 23, carts 20, basket 3 |
-| order | 180 | 163 | id 74%, status 61%, line_items 60% | orders 151, order 43, purchases 4, sales_orders 2 |
-| order_item | 30 | 25 | quantity 80%, id 76%, product_id 64% | items 24, line_items 2, order_items 2, lines 1 |
+| order | 178 | 161 | id 73%, line_items 61%, status 61% | orders 149, order 43, purchases 4, sales_orders 2 |
+| order_item | 29 | 24 | quantity 79%, id 75%, product_id 62% | items 23, line_items 2, order_items 2, lines 1 |
 | shipment | 24 | 19 | id 68%, status 63%, tracking_number 63% | shipments 11, fulfillments 7, shipment 5, fulfillment 2 |
-| inventory | 46 | 35 |  | inventory 30, stock 8, inventory_levels 4, inventories 4 |
+| inventory | 45 | 34 |  | inventory 29, stock 8, inventory_levels 4, inventories 4 |
 
-Cohort: 401 providers with harvested OpenAPI, 256 crosswalks. Of the providers exposing a product: 68% create, 88% list, 80% fetch, 49% update, 45% delete. Generated 2026-11-10 by build.py.
+Cohort: 401 providers with harvested OpenAPI, 252 crosswalks. Of the providers exposing a product: 67% create, 87% list, 80% fetch, 49% update, 45% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

@@ -23,8 +23,8 @@ concepts:
       slug:
       - handle
       - slug
-      price: price
       custom_fields: metadata
+      price: price
     core_coverage: 0.667
     evidence:
     - openapi/_original/depict-lite-openapi-original.json#POST /collections/{collection_id}/products
@@ -36,6 +36,7 @@ concepts:
     path_segment:
     - collections
     - category
+    - categories
     properties:
       name: title
       id: category_id

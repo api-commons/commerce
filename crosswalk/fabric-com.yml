@@ -22,9 +22,9 @@ concepts:
       - categories
       - collections
       variants: variants
+      custom_fields: attributes
       price: price
       sku: sku
-      custom_fields: attributes
     core_coverage: 0.667
     evidence:
     - openapi/_original/fabric-cart-openapi.yml#PATCH /carts/{cartId}/product
@@ -42,7 +42,7 @@ concepts:
       options: attributes
       updated_at: updatedAt
       type: type
-    core_coverage: 0.429
+    core_coverage: 0.333
     evidence:
     - openapi/_original/fabric-catalog-openapi.yml#DELETE /catalog-connector/products/skus/{skuId}
     - openapi/_original/fabric-catalog-openapi.yml#GET /catalog-connector/products/skus/{skuId}

@@ -165,3 +165,11 @@ exclude:
     xentral: analytics report collections
   customer:
     satispay: /consumers/{phone_number} is a payment-account lookup
+
+# One company, several catalog listings (scripts/duplicates.py, confirmed by hand).
+duplicates:
+  adobe: [adobe-suite]
+  depict: [depictai]
+  optimizely: [zaius]
+  keap: [infusionsoft]
+  webflow: [webflow-api-and-documentation-webflow]

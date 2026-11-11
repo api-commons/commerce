@@ -14,13 +14,13 @@ concepts:
       status: isActive
       category_ids: categories
       variants: variations
+      custom_fields:
+      - metaData
+      - properties
       price: price
       sku:
       - productCode
       - code
-      custom_fields:
-      - metaData
-      - properties
       tags: labels
     core_coverage: 0.667
     evidence:
@@ -35,7 +35,7 @@ concepts:
     properties:
       barcode: upc
       options: options
-    core_coverage: 0.143
+    core_coverage: 0.167
     evidence:
     - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#DELETE /commerce/catalog/admin/products/{productCode}/variations/{variationKey}
     - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#GET /commerce/catalog/admin/products/{productCode}/variations
@@ -98,8 +98,8 @@ concepts:
     - order
     properties:
       id: id
-      status: status
       line_items: items
+      status: status
       customer_id: userId
       currency: currencyCode
       number: orderNumber
@@ -125,9 +125,9 @@ concepts:
       product_id: product
       price: unitPrice
       currency: currencyCode
-      type: type
       custom_fields: attributes
       tax_total: taxTotal
+      type: type
       discount_total: discountTotal
       status: status
     core_coverage: 1.0

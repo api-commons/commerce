@@ -26,10 +26,10 @@ concepts:
       id:
       - id
       - orderId
+      line_items: orderItems
       status:
       - state
       - status
-      line_items: orderItems
       created_at: createdAt
       custom_fields: customFields
       updated_at: updatedOn
