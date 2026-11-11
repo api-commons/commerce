@@ -1,0 +1,37 @@
+provider: gelato
+apis_io: https://apis.io/providers/gelato/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: title
+      description: description
+      created_at: createdAt
+      status: status
+      updated_at: updatedAt
+      variants: variants
+      custom_fields: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/gelato-openapi.yml#GET /v1/stores/{storeId}/products
+    - openapi/_original/gelato-openapi.yml#GET /v1/stores/{storeId}/products/{productId}
+    - openapi/_original/gelato-openapi.yml#GET /v3/products/{productUid}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: financialStatus
+      line_items: items
+      created_at: createdAt
+      shipping_address: shippingAddress
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/gelato-openapi.yml#GET /v4/orders/{orderId}
+    - openapi/_original/gelato-openapi.yml#PATCH /v4/orders/{orderId}
+    - openapi/_original/gelato-openapi.yml#POST /v4/orders

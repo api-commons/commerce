@@ -1,0 +1,83 @@
+provider: adobe-suite
+apis_io: https://apis.io/providers/adobe-suite/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description:
+      - description
+      - shortDescription
+      images: images
+      status: status
+      slug: slug
+      sku: sku
+      custom_fields: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/adobe-suite-aep-access-control-openapi.yaml#GET /administration/products
+    - openapi/_original/adobe-suite-commerce-data-ingestion-openapi.yaml#PATCH /v1/catalog/products
+    - openapi/_original/adobe-suite-commerce-data-ingestion-openapi.yaml#POST /v1/catalog/products
+    - openapi/_original/adobe-suite-status-openapi.yaml#GET /api/v1/products
+  category:
+    path_segment:
+    - category
+    - categories
+    - collection
+    properties:
+      name: name
+      description: description
+      slug: slug
+      custom_fields: attributes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/adobe-suite-aep-access-control-openapi.yaml#GET /administration/products/{PRODUCT_ID}/categories
+    - openapi/_original/adobe-suite-aep-streaming-ingestion-openapi.yaml#POST /collection/{CONNECTION_ID}
+    - openapi/_original/adobe-suite-commerce-data-ingestion-openapi.yaml#PATCH /v1/catalog/categories
+    - openapi/_original/adobe-suite-commerce-data-ingestion-openapi.yaml#POST /v1/catalog/categories
+    - openapi/_original/adobe-suite-workfront-workflow-openapi.json#DELETE /category
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id:
+      - id
+      - customerId
+      email: email
+      last_name: lastname
+      first_name: firstname
+      created_at:
+      - created_at
+      - creationDate
+      addresses: addresses
+      updated_at: updated_at
+      custom_fields: custom_attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/adobe-suite-commerce-rest-customer-openapi.yaml#POST /V1/customers
+    - openapi/_original/adobe-suite-commerce-rest-guest-openapi.yaml#POST /V1/customers
+    - openapi/_original/adobe-suite-vip-marketplace-partners-openapi.json#GET /v2/customers/{customer-id}
+    - openapi/_original/adobe-suite-vip-marketplace-partners-openapi.json#GET /v3/customers/{customer-id}
+    - openapi/_original/adobe-suite-vip-marketplace-partners-openapi.json#PATCH /v2/customers/{customer-id}
+  order:
+    path_segment:
+    - orders
+    - order
+    properties:
+      id: orderId
+      status: status
+      line_items: lineItems
+      created_at: creationDate
+      customer_id: customerId
+      currency: currencyCode
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/adobe-suite-commerce-rest-customer-openapi.yaml#PUT /V1/guest-carts/{cartId}/order
+    - openapi/_original/adobe-suite-commerce-rest-guest-openapi.yaml#PUT /V1/guest-carts/{cartId}/order
+    - openapi/_original/adobe-suite-vip-marketplace-partners-openapi.json#GET /v2/customers/{customer-id}/orders
+    - openapi/_original/adobe-suite-vip-marketplace-partners-openapi.json#GET /v2/customers/{customer-id}/orders/{order-id}
+    - openapi/_original/adobe-suite-vip-marketplace-partners-openapi.json#GET /v3/customers/{customer-id}/orders

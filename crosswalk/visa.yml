@@ -1,0 +1,22 @@
+provider: visa
+apis_io: https://apis.io/providers/visa/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/visa-merchant-offers.yml#GET /vmorc/referencedata/v1/categories
+  customer:
+    path_segment:
+    - consumers
+    properties:
+      email: emailAddress
+      last_name: lastName
+      first_name: firstName
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/visa-click-to-pay.yml#POST /visasrci/v1/consumers

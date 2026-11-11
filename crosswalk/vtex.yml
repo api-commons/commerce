@@ -1,0 +1,108 @@
+provider: vtex
+apis_io: https://apis.io/providers/vtex/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    - product
+    properties:
+      id:
+      - id
+      - Id
+      - productId
+      name:
+      - name
+      - Name
+      - Title
+      description:
+      - description
+      - Description
+      images: images
+      created_at: createdAt
+      status:
+      - status
+      - IsActive
+      updated_at: updatedAt
+      category_ids:
+      - categoryIds
+      - CategoryId
+      variants: skus
+      brand:
+      - brandId
+      - brandName
+      - BrandId
+      - BrandName
+      slug: slug
+      custom_fields: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/vtex-catalog-api-seller-portal-openapi-original.yml#GET /api/catalog-seller-portal/products/{param}
+    - openapi/_original/vtex-catalog-api-seller-portal-openapi-original.yml#GET /api/catalog-seller-portal/products/{productId}
+    - openapi/_original/vtex-catalog-api-seller-portal-openapi-original.yml#POST /api/catalog-seller-portal/products
+    - openapi/_original/vtex-catalog-api-seller-portal-openapi-original.yml#PUT /api/catalog-seller-portal/products/{productId}
+    - openapi/_original/vtex-catalog-openapi-original.yml#GET /api/catalog/pvt/collection/{collectionId}/products
+  product_variant:
+    path_segment:
+    - sku
+    - variations
+    properties:
+      name:
+      - name
+      - Name
+      product_id:
+      - productId
+      - ProductId
+      inventory_quantity: available
+      updated_at: LastModified
+    core_coverage: 0.429
+    evidence:
+    - openapi/_original/vtex-catalog-openapi-original.yml#GET /api/catalog_system/pub/products/variations/{productId}
+    - openapi/_original/vtex-legacy-search-openapi-original.yml#GET /api/catalog_system/pub/products/offers/{productId}/sku/{skuId}
+    - openapi/_original/vtex-marketplace-openapi-original.yml#GET /offer-manager/pvt/product/{productId}/sku/{skuId}
+  category:
+    path_segment:
+    - category
+    - collection
+    - categories
+    properties:
+      name:
+      - name
+      - Name
+      - Title
+      id:
+      - id
+      - Id
+      - CategoryId
+      parent_id: parentId
+      description: Description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/vtex-catalog-api-seller-portal-openapi-original.yml#GET /api/catalog-seller-portal/category-tree/categories/{categoryId}
+    - openapi/_original/vtex-catalog-api-seller-portal-openapi-original.yml#POST /api/catalog-seller-portal/category-tree/categories
+    - openapi/_original/vtex-catalog-openapi-original.yml#DELETE /api/catalog/pvt/collection/{collectionId}
+    - openapi/_original/vtex-catalog-openapi-original.yml#GET /api/catalog/pvt/category/{categoryId}
+    - openapi/_original/vtex-catalog-openapi-original.yml#GET /api/catalog/pvt/collection/{collectionId}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: orderId
+      status: status
+      line_items: items
+      created_at: creationDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/vtex-checkout-openapi-original.yml#PUT /api/checkout/pub/orders
+    - openapi/_original/vtex-marketplace-protocol-external-orders-openapi-original.yml#POST /api/fulfillment/pvt/orders
+    - openapi/_original/vtex-marketplace-protocol-external-orders-openapi-original.yml#POST /api/order-integration/orders
+    - openapi/_original/vtex-marketplace-protocol-external-seller-fulfillment-openapi-original.yml#POST /pvt/orders
+    - openapi/_original/vtex-orders-openapi-original.yml#GET /api/oms/pvt/orders
+  inventory:
+    path_segment:
+    - inventory
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/vtex-marketplace-openapi-original.yml#POST /notificator/{sellerId}/changenotification/{skuId}/inventory

@@ -1,0 +1,48 @@
+provider: just-eat
+apis_io: https://apis.io/providers/just-eat/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product_variant:
+    path_segment:
+    - variations
+    properties:
+      id: id
+      name: name
+      price: basePrice
+      type: type
+    core_coverage: 0.429
+    evidence:
+    - openapi/_original/just-eat-uk-openapi-original.json#GET /restaurants/{tenant}/{restaurantId}/catalogue/items/{itemId}/variations
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: id
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/just-eat-uk-openapi-original.json#GET /restaurants/{tenant}/{restaurantId}/catalogue/categories
+  customer:
+    path_segment:
+    - consumers
+    properties:
+      email: emailAddress
+      last_name: lastName
+      first_name: firstName
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/just-eat-uk-openapi-original.json#GET /consumers/{tenant}
+    - openapi/_original/just-eat-uk-openapi-original.json#POST /consumers/{tenant}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: OrderId
+      line_items: Items
+      customer_id: Customer
+      total: TotalPrice
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/just-eat-uk-openapi-original.json#POST /orders

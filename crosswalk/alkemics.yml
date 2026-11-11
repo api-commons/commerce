@@ -1,0 +1,13 @@
+provider: alkemics
+apis_io: https://apis.io/providers/alkemics/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/alkemics-tariff-openapi.yml#GET /{uuid}/products
+    - openapi/_original/alkemics-tariff-openapi.yml#POST /{uuid}/products

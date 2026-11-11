@@ -1,0 +1,21 @@
+provider: talkable
+apis_io: https://apis.io/providers/talkable/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - purchases
+    properties:
+      id: uuid
+      line_items: items
+      created_at: created_at
+      customer_id: customer_id
+      shipping_address: shipping_address
+      currency: currency_iso_code
+      number: order_number
+      custom_fields: custom_properties
+      email: email
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/talkable-v2-openapi-original.yml#POST /api/v2/origins/batch/purchases

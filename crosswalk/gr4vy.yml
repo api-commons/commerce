@@ -1,0 +1,20 @@
+provider: gr4vy
+apis_io: https://apis.io/providers/gr4vy/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - buyers
+    properties:
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      name: display_name
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/gr4vy-docs-v1-openapi.json#DELETE /buyers/{buyer_id}
+    - openapi/_original/gr4vy-docs-v1-openapi.json#GET /buyers
+    - openapi/_original/gr4vy-docs-v1-openapi.json#GET /buyers/{buyer_id}
+    - openapi/_original/gr4vy-docs-v1-openapi.json#POST /buyers
+    - openapi/_original/gr4vy-docs-v1-openapi.json#PUT /buyers/{buyer_id}

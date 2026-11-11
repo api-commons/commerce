@@ -1,0 +1,14 @@
+provider: bloomreach
+apis_io: https://apis.io/providers/bloomreach/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - category
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/bloomreach-discovery-email-widget-openapi.yml#GET /api/v2/widgets/image/category/{widget_id}
+    - openapi/_original/bloomreach-discovery-email-widget-openapi.yml#GET /api/v2/widgets/proxy/category/{widget_id}
+    - openapi/_original/bloomreach-discovery-recommendations-pathways-openapi.yml#GET /category/{widget_id}

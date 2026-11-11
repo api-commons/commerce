@@ -1,0 +1,12 @@
+provider: serpwow
+apis_io: https://apis.io/providers/serpwow/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/serpwow-openapi.yml#GET /product

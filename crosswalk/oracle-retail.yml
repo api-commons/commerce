@@ -1,0 +1,32 @@
+provider: oracle-retail
+apis_io: https://apis.io/providers/oracle-retail/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: orderId
+      status: status
+      line_items: lines
+      customer_id: customerId
+      shipping_address: shippingAddress
+      currency: currencyCode
+      total: orderTotal
+      total_tax: taxTotal
+      email: contactEmail
+      discount_total: discountTotal
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/oracle-retail-order-management-openapi.yml#GET /orders
+    - openapi/_original/oracle-retail-order-management-openapi.yml#GET /orders/{orderId}
+    - openapi/_original/oracle-retail-order-management-openapi.yml#PATCH /orders/{orderId}
+    - openapi/_original/oracle-retail-order-management-openapi.yml#POST /orders
+  inventory:
+    path_segment:
+    - inventory
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/oracle-retail-merchandising-openapi.yml#GET /inventory

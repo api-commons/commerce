@@ -1,0 +1,20 @@
+provider: amazon-seller-central
+apis_io: https://apis.io/providers/amazon-seller-central/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  shipment:
+    path_segment:
+    - shipment
+    properties:
+      status: shipmentStatus
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/amazon-seller-central-orders-v0-original.json#POST /orders/v0/orders/{orderId}/shipment
+  inventory:
+    path_segment:
+    - inventory
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/amazon-seller-central-fulfillment-outbound-2020-07-01-original.json#GET /fba/outbound/2020-07-01/features/inventory/{featureName}

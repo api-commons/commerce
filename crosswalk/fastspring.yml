@@ -1,0 +1,24 @@
+provider: fastspring
+apis_io: https://apis.io/providers/fastspring/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fastspring-openapi.yml#DELETE /products/{product_path}
+    - openapi/_original/fastspring-openapi.yml#GET /products
+    - openapi/_original/fastspring-openapi.yml#GET /products/{product_path}
+    - openapi/_original/fastspring-openapi.yml#POST /products
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fastspring-openapi.yml#GET /orders
+    - openapi/_original/fastspring-openapi.yml#GET /orders/{order_id}
+    - openapi/_original/fastspring-openapi.yml#PATCH /orders/{order_id}

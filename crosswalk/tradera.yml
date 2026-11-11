@@ -1,0 +1,25 @@
+provider: tradera
+apis_io: https://apis.io/providers/tradera/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/tradera-openapi.json#GET /v4/categories
+  order:
+    path_segment:
+    - orders
+    - order
+    properties:
+      id: orderId
+      line_items: items
+      created_at: createdDate
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/tradera-openapi.json#GET /v4/orders
+    - openapi/_original/tradera-openapi.json#GET /v4/orders/{orderIds}
+    - openapi/_original/tradera-openapi.json#POST /v4/listings/feedback/order/{orderNumber}

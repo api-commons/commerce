@@ -1,0 +1,12 @@
+provider: zoho-inventory
+apis_io: https://apis.io/providers/zoho-inventory/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/replenishment.yml#GET /replenishments/orders

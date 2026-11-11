@@ -1,0 +1,27 @@
+provider: narvar
+apis_io: https://apis.io/providers/narvar/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      status: status
+      line_items: order_items
+      number: order_number
+      billing_address: billing
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/narvar-order-openapi.yml#GET /orders/{OrderNumber}
+    - openapi/_original/narvar-order-openapi.yml#POST /orders
+  shipment:
+    path_segment:
+    - shipments
+    properties:
+      status: status
+      tracking_number: tracking_number
+      carrier: carrier
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/narvar-order-openapi.yml#PUT /orders/{OrderNumber}/shipments

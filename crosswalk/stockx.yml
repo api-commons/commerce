@@ -1,0 +1,51 @@
+provider: stockx
+apis_io: https://apis.io/providers/stockx/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - listings
+    - products
+    properties:
+      id: productId
+      name: title
+      created_at: createdAt
+      type: productType
+      status:
+      - active
+      - status
+      updated_at: updatedAt
+      brand: brand
+      slug: urlKey
+      price: amount
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/stockx-public-openapi-original.json#DELETE /selling/listings/{listingId}
+    - openapi/_original/stockx-public-openapi-original.json#GET /catalog/products/{productId}
+    - openapi/_original/stockx-public-openapi-original.json#GET /selling/listings
+    - openapi/_original/stockx-public-openapi-original.json#GET /selling/listings/{listingId}
+    - openapi/_original/stockx-public-openapi-original.json#PATCH /selling/listings/{listingId}
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      name: variantName
+      product_id: productId
+    core_coverage: 0.286
+    evidence:
+    - openapi/_original/stockx-public-openapi-original.json#GET /catalog/products/{productId}/variants
+    - openapi/_original/stockx-public-openapi-original.json#GET /catalog/products/{productId}/variants/{variantId}
+  order:
+    path_segment:
+    - orders
+    properties:
+      status: status
+      created_at: createdAt
+      currency: currencyCode
+      number: orderNumber
+      total: amount
+      updated_at: updatedAt
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/stockx-public-openapi-original.json#GET /selling/orders/{orderNumber}

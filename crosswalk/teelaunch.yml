@@ -1,0 +1,41 @@
+provider: teelaunch
+apis_io: https://apis.io/providers/teelaunch/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/teelaunch-openapi.yml#GET /products
+    - openapi/_original/teelaunch-openapi.yml#GET /products/{id}
+    - openapi/_original/teelaunch-openapi.yml#GET /stores/{platformStoreId}/products
+    - openapi/_original/teelaunch-openapi.yml#GET /stores/{platformStoreId}/products/{id}
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/teelaunch-openapi.yml#GET /categories
+    - openapi/_original/teelaunch-openapi.yml#GET /categories/{id}
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/teelaunch-openapi.yml#GET /orders
+    - openapi/_original/teelaunch-openapi.yml#GET /orders/{id}
+    - openapi/_original/teelaunch-openapi.yml#POST /orders
+  shipment:
+    path_segment:
+    - shipments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/teelaunch-openapi.yml#GET /orders/line-item/{id}/shipments
+    - openapi/_original/teelaunch-openapi.yml#GET /orders/platform/{id}/shipments
+    - openapi/_original/teelaunch-openapi.yml#GET /orders/{id}/shipments

@@ -1,0 +1,20 @@
+provider: shipcloud
+apis_io: https://apis.io/providers/shipcloud/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      shipping_address: delivery_address
+      currency: currency
+      total: total_price
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/shipcloud-openapi.yml#GET /orders
+    - openapi/_original/shipcloud-openapi.yml#GET /orders/{id}
+    - openapi/_original/shipcloud-openapi.yml#POST /orders
+    - openapi/_original/shipcloud_v1_oai3.json#GET /orders
+    - openapi/_original/shipcloud_v1_oai3.json#GET /orders/{id}

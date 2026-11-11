@@ -1,0 +1,16 @@
+provider: locus-sh
+apis_io: https://apis.io/providers/locus-sh/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - order
+    properties:
+      status: orderStatus
+      line_items: lineItems
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/locus-oms-openapi.yml#GET /client/{clientId}/order
+    - openapi/_original/locus-oms-openapi.yml#GET /client/{clientId}/order/{orderId}
+    - openapi/_original/locus-oms-openapi.yml#PUT /client/{clientId}/order/{orderId}

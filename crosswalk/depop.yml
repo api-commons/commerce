@@ -1,0 +1,41 @@
+provider: depop
+apis_io: https://apis.io/providers/depop/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: product_id
+      description: description
+      images: pictures
+      created_at: created_at
+      type: product_type
+      status: status
+      updated_at: updated_at
+      brand:
+      - brand
+      - brand_name
+      slug: slug
+      sku: sku
+      custom_fields: attributes
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/depop-openapi.yml#DELETE /api/v1/products/{sku}/
+    - openapi/_original/depop-openapi.yml#GET /api/v1/products/
+    - openapi/_original/depop-openapi.yml#GET /api/v1/products/{sku}/
+    - openapi/_original/depop-openapi.yml#PATCH /api/v1/products/{sku}/
+    - openapi/_original/depop-openapi.yml#POST /api/v1/products/
+  order:
+    path_segment:
+    - orders
+    properties:
+      status: status
+      line_items: line_items
+      created_at: created_at
+      currency: currency
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/depop-openapi.yml#GET /api/v1/orders/
+    - openapi/_original/depop-openapi.yml#GET /api/v1/orders/{purchase_id}/

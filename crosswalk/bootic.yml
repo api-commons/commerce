@@ -1,0 +1,118 @@
+provider: bootic
+apis_io: https://apis.io/providers/bootic/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id:
+      - id
+      - product_id
+      name: name
+      description:
+      - description
+      - short_description
+      created_at: created_on
+      status: status
+      updated_at: updated_on
+      category_ids: collections
+      variants: variants
+      brand: vendor
+      slug: slug
+      price:
+      - regular_price
+      - price
+      custom_fields: custom_attributes
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bootic-v2-openapi.yml#DELETE /products/{id}
+    - openapi/_original/bootic-v2-openapi.yml#GET /price_lists/{id}/products
+    - openapi/_original/bootic-v2-openapi.yml#GET /products
+    - openapi/_original/bootic-v2-openapi.yml#GET /products/{id}
+    - openapi/_original/bootic-v2-openapi.yml#POST /products
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      id: id
+      name: name
+      product_id: product_id
+      price:
+      - regular_price
+      - price
+      options:
+      - option1
+      - option_values
+      position: position
+    core_coverage: 0.571
+    evidence:
+    - openapi/_original/bootic-v2-openapi.yml#DELETE /products/{product_id}/variants/{id}
+    - openapi/_original/bootic-v2-openapi.yml#GET /products/{product_id}/variants
+    - openapi/_original/bootic-v2-openapi.yml#GET /products/{product_id}/variants/{id}
+    - openapi/_original/bootic-v2-openapi.yml#POST /products/{product_id}/variants
+    - openapi/_original/bootic-v2-openapi.yml#PUT /products/{product_id}/variants/{id}
+  category:
+    path_segment:
+    - collections
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/bootic-v2-openapi.yml#DELETE /collections/{id}
+    - openapi/_original/bootic-v2-openapi.yml#GET /collections
+    - openapi/_original/bootic-v2-openapi.yml#GET /collections/{id}
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      created_at: created_on
+      phone: phone_number
+      updated_at: updated_on
+      name: name
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/bootic-v2-openapi.yml#GET /customers
+    - openapi/_original/bootic-v2-openapi.yml#GET /customers/{id}
+    - openapi/_original/bootic-v2-openapi.yml#POST /customers
+    - openapi/_original/bootic-v2-openapi.yml#PUT /customers/{id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      line_items: line_items
+      created_at: created_on
+      currency: currency_code
+      total_tax: tax_total
+      updated_at: updated_on
+      discount_total: discount_total
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bootic-v2-openapi.yml#GET /orders
+    - openapi/_original/bootic-v2-openapi.yml#GET /orders/{id}
+    - openapi/_original/bootic-v2-openapi.yml#POST /orders
+    - openapi/_original/bootic-v2-openapi.yml#PUT /orders/{id}
+  order_item:
+    path_segment:
+    - items
+    properties:
+      id: id
+      price: price
+      currency: currency_code
+      name: product_name
+      tax_total: tax_total
+      created_at: created_on
+      discount_total: discount_total
+      updated_at: updated_on
+      variant_id: variant_id
+      status: status
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/bootic-v2-openapi.yml#DELETE /orders/{order_id}/items/{id}
+    - openapi/_original/bootic-v2-openapi.yml#POST /orders/{order_id}/items
+    - openapi/_original/bootic-v2-openapi.yml#PUT /orders/{order_id}/items/{id}

@@ -1,0 +1,34 @@
+provider: gameball
+apis_io: https://apis.io/providers/gameball/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      images: imageUrl
+      status: status
+      variants: variants
+      slug: url
+      price: price
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/gameball-openapi.json#DELETE /api/v1/ClientGeneralSettings/products
+    - openapi/_original/gameball-openapi.json#GET /api/v1/ClientGeneralSettings/products
+    - openapi/_original/gameball-openapi.json#GET /api/v1/ClientPointsSettings/products
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: orderId
+      line_items: lineItems
+      currency: currency
+      total: totalPrice
+      total_tax: totalTax
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/gameball-openapi.json#GET /api/v1/challenges/{challengeId}/roi/orders
+    - openapi/_original/gameball-openapi.json#GET /internal/v1/orders/{orderId}

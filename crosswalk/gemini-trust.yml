@@ -1,0 +1,13 @@
+provider: gemini-trust
+apis_io: https://apis.io/providers/gemini-trust/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/gemini-trust-prediction-markets-openapi.yml#GET /v1/prediction-markets/categories
+    - openapi/_original/gemini-trust-prediction-markets-openapi_2.yml#GET /v1/prediction-markets/categories

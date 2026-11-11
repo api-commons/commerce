@@ -1,0 +1,12 @@
+provider: dana
+apis_io: https://apis.io/providers/dana/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dana-aftermarket-api-openapi.yml#POST /orders

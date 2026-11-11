@@ -1,0 +1,857 @@
+openapi: 3.1.0
+info:
+  title: Commerce (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Commerce interface, distilled from the harvested OpenAPI of 401 providers in the APIs.io
+    catalog. Not a product: no one serves this API. It is the shape the market already shares, measured, so that
+    providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /products:
+    get:
+      operationId: listProducts
+      summary: List products
+      tags:
+      - Products
+      x-commons-tier: core
+      x-commons-share: 0.877
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/Product'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createProduct
+      summary: Create a product
+      tags:
+      - Products
+      x-commons-tier: core
+      x-commons-share: 0.682
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /products/{product_id}:
+    parameters:
+    - $ref: '#/components/parameters/product_id'
+    get:
+      operationId: getProduct
+      summary: Get a product
+      tags:
+      - Products
+      x-commons-tier: core
+      x-commons-share: 0.799
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateProduct
+      summary: Update a product
+      tags:
+      - Products
+      x-commons-tier: extended
+      x-commons-share: 0.487
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+    delete:
+      operationId: deleteProduct
+      summary: Delete a product
+      tags:
+      - Products
+      x-commons-tier: extended
+      x-commons-share: 0.448
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+  /products/{product_id}/variants:
+    parameters:
+    - $ref: '#/components/parameters/product_id'
+    post:
+      operationId: createProductVariant
+      summary: Create a product variant
+      tags:
+      - Product Variants
+      x-commons-tier: core
+      x-commons-share: 0.741
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id002
+                $ref: '#/components/schemas/ProductVariant'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+    get:
+      operationId: listProductVariants
+      summary: List variants
+      tags:
+      - Product Variants
+      x-commons-tier: core
+      x-commons-share: 0.704
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id002
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /products/{product_id}/variants/{product_variant_id}:
+    parameters:
+    - $ref: '#/components/parameters/product_id'
+    - $ref: '#/components/parameters/product_variant_id'
+    delete:
+      operationId: deleteProductVariant
+      summary: Delete a product variant
+      tags:
+      - Product Variants
+      x-commons-tier: core
+      x-commons-share: 0.556
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    get:
+      operationId: getProductVariant
+      summary: Get a product variant
+      tags:
+      - Product Variants
+      x-commons-tier: core
+      x-commons-share: 0.519
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateProductVariant
+      summary: Update a product variant
+      tags:
+      - Product Variants
+      x-commons-tier: extended
+      x-commons-share: 0.481
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /categories:
+    get:
+      operationId: listCategories
+      summary: List categories
+      tags:
+      - Categories
+      x-commons-tier: core
+      x-commons-share: 0.901
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Category'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createCategory
+      summary: Create a category
+      tags:
+      - Categories
+      x-commons-tier: extended
+      x-commons-share: 0.494
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /categories/{category_id}:
+    parameters:
+    - $ref: '#/components/parameters/category_id'
+    get:
+      operationId: getCategory
+      summary: Get a category
+      tags:
+      - Categories
+      x-commons-tier: core
+      x-commons-share: 0.642
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateCategory
+      summary: Update a category
+      tags:
+      - Categories
+      x-commons-tier: extended
+      x-commons-share: 0.37
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+    delete:
+      operationId: deleteCategory
+      summary: Delete a category
+      tags:
+      - Categories
+      x-commons-tier: extended
+      x-commons-share: 0.333
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+  /customers:
+    post:
+      operationId: createCustomer
+      summary: Create a customer
+      tags:
+      - Customers
+      x-commons-tier: core
+      x-commons-share: 0.776
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id004
+                $ref: '#/components/schemas/Customer'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+    get:
+      operationId: listCustomers
+      summary: List customers
+      tags:
+      - Customers
+      x-commons-tier: core
+      x-commons-share: 0.753
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id004
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /customers/{customer_id}:
+    parameters:
+    - $ref: '#/components/parameters/customer_id'
+    get:
+      operationId: getCustomer
+      summary: Get a customer
+      tags:
+      - Customers
+      x-commons-tier: core
+      x-commons-share: 0.729
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    patch:
+      operationId: updateCustomer
+      summary: Update a customer
+      tags:
+      - Customers
+      x-commons-tier: extended
+      x-commons-share: 0.494
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+    delete:
+      operationId: deleteCustomer
+      summary: Delete a customer
+      tags:
+      - Customers
+      x-commons-tier: extended
+      x-commons-share: 0.388
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+  /carts:
+    post:
+      operationId: createCart
+      summary: Create a cart
+      tags:
+      - Carts
+      x-commons-tier: core
+      x-commons-share: 0.683
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id005
+                $ref: '#/components/schemas/Cart'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+    get:
+      operationId: listCarts
+      summary: List carts
+      tags:
+      - Carts
+      x-commons-tier: core
+      x-commons-share: 0.634
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id005
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /carts/{cart_id}:
+    parameters:
+    - $ref: '#/components/parameters/cart_id'
+    get:
+      operationId: getCart
+      summary: Get a cart
+      tags:
+      - Carts
+      x-commons-tier: core
+      x-commons-share: 0.561
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    delete:
+      operationId: deleteCart
+      summary: Delete a cart
+      tags:
+      - Carts
+      x-commons-tier: extended
+      x-commons-share: 0.366
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    patch:
+      operationId: updateCart
+      summary: Update a cart
+      tags:
+      - Carts
+      x-commons-tier: extended
+      x-commons-share: 0.317
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /orders:
+    get:
+      operationId: listOrders
+      summary: List orders
+      tags:
+      - Orders
+      x-commons-tier: core
+      x-commons-share: 0.756
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id006
+                  $ref: '#/components/schemas/Order'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createOrder
+      summary: Create an order
+      tags:
+      - Orders
+      x-commons-tier: core
+      x-commons-share: 0.656
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+  /orders/{order_id}:
+    parameters:
+    - $ref: '#/components/parameters/order_id'
+    get:
+      operationId: getOrder
+      summary: Get an order
+      tags:
+      - Orders
+      x-commons-tier: core
+      x-commons-share: 0.744
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+    patch:
+      operationId: updateOrder
+      summary: Update an order
+      tags:
+      - Orders
+      x-commons-tier: extended
+      x-commons-share: 0.367
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id006
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id006
+  /orders/{order_id}/items:
+    parameters:
+    - $ref: '#/components/parameters/order_id'
+    post:
+      operationId: createOrderItem
+      summary: Create an order item
+      tags:
+      - Order Items
+      x-commons-tier: core
+      x-commons-share: 0.733
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id007
+                $ref: '#/components/schemas/OrderItem'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id007
+    get:
+      operationId: listOrderItems
+      summary: List items
+      tags:
+      - Order Items
+      x-commons-tier: core
+      x-commons-share: 0.533
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id007
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /orders/{order_id}/items/{order_item_id}:
+    parameters:
+    - $ref: '#/components/parameters/order_id'
+    - $ref: '#/components/parameters/order_item_id'
+    delete:
+      operationId: deleteOrderItem
+      summary: Delete an order item
+      tags:
+      - Order Items
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+    patch:
+      operationId: updateOrderItem
+      summary: Update an order item
+      tags:
+      - Order Items
+      x-commons-tier: core
+      x-commons-share: 0.567
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id007
+    get:
+      operationId: getOrderItem
+      summary: Get an order item
+      tags:
+      - Order Items
+      x-commons-tier: extended
+      x-commons-share: 0.4
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id007
+  /orders/{order_id}/shipments:
+    parameters:
+    - $ref: '#/components/parameters/order_id'
+    post:
+      operationId: createShipment
+      summary: Create a shipment
+      tags:
+      - Shipments
+      x-commons-tier: core
+      x-commons-share: 0.583
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id008
+                $ref: '#/components/schemas/Shipment'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id008
+    get:
+      operationId: listShipments
+      summary: List shipments
+      tags:
+      - Shipments
+      x-commons-tier: core
+      x-commons-share: 0.5
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id008
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /orders/{order_id}/shipments/{shipment_id}:
+    parameters:
+    - $ref: '#/components/parameters/order_id'
+    - $ref: '#/components/parameters/shipment_id'
+    get:
+      operationId: getShipment
+      summary: Get a shipment
+      tags:
+      - Shipments
+      x-commons-tier: extended
+      x-commons-share: 0.375
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id008
+    patch:
+      operationId: updateShipment
+      summary: Update a shipment
+      tags:
+      - Shipments
+      x-commons-tier: extended
+      x-commons-share: 0.375
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id008
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id008
+  /inventory:
+    get:
+      operationId: listInventories
+      summary: List inventory
+      tags:
+      - Inventories
+      x-commons-tier: core
+      x-commons-share: 0.652
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id009
+                  $ref: '#/components/schemas/Inventory'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createInventory
+      summary: Create an inventory
+      tags:
+      - Inventories
+      x-commons-tier: extended
+      x-commons-share: 0.261
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id009
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id009
+  /inventory/{inventory_id}:
+    parameters:
+    - $ref: '#/components/parameters/inventory_id'
+    get:
+      operationId: getInventory
+      summary: Get an inventory
+      tags:
+      - Inventories
+      x-commons-tier: extended
+      x-commons-share: 0.261
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id009
+components:
+  schemas:
+    Product:
+      $ref: ./schema/product.json
+    ProductVariant:
+      $ref: ./schema/product_variant.json
+    Category:
+      $ref: ./schema/category.json
+    Customer:
+      $ref: ./schema/customer.json
+    Cart:
+      $ref: ./schema/cart.json
+    Order:
+      $ref: ./schema/order.json
+    OrderItem:
+      $ref: ./schema/order_item.json
+    Shipment:
+      $ref: ./schema/shipment.json
+    Inventory:
+      $ref: ./schema/inventory.json
+  parameters:
+    product_id:
+      name: product_id
+      in: path
+      required: true
+      schema:
+        type: string
+    product_variant_id:
+      name: product_variant_id
+      in: path
+      required: true
+      schema:
+        type: string
+    category_id:
+      name: category_id
+      in: path
+      required: true
+      schema:
+        type: string
+    customer_id:
+      name: customer_id
+      in: path
+      required: true
+      schema:
+        type: string
+    cart_id:
+      name: cart_id
+      in: path
+      required: true
+      schema:
+        type: string
+    order_id:
+      name: order_id
+      in: path
+      required: true
+      schema:
+        type: string
+    order_item_id:
+      name: order_item_id
+      in: path
+      required: true
+      schema:
+        type: string
+    shipment_id:
+      name: shipment_id
+      in: path
+      required: true
+      schema:
+        type: string
+    inventory_id:
+      name: inventory_id
+      in: path
+      required: true
+      schema:
+        type: string

@@ -1,0 +1,22 @@
+provider: toys-r-us
+apis_io: https://apis.io/providers/toys-r-us/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/toys-r-us-commerce-openapi.yml#GET /api/v2/products
+  order:
+    path_segment:
+    - orders
+    properties:
+      status: Status
+      line_items: LineItems
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/toys-r-us-commerce-openapi.yml#GET /api/v2/orders
+    - openapi/_original/toys-r-us-commerce-openapi.yml#GET /api/v2/orders/{key}

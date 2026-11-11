@@ -1,0 +1,29 @@
+provider: numeral
+apis_io: https://apis.io/providers/numeral/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/numeral-openapi.yml#DELETE /tax/products/{reference_product_id}
+    - openapi/_original/numeral-openapi.yml#GET /tax/products
+    - openapi/_original/numeral-openapi.yml#GET /tax/products/{reference_product_id}
+    - openapi/_original/numeral-openapi.yml#POST /tax/products
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      name: name
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/numeral-openapi.yml#DELETE /tax/customers/{customer_id}
+    - openapi/_original/numeral-openapi.yml#GET /tax/customers/{customer_id}
+    - openapi/_original/numeral-openapi.yml#POST /tax/customers

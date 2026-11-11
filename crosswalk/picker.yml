@@ -1,0 +1,19 @@
+provider: picker
+apis_io: https://apis.io/providers/picker/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/picker-openapi-original.json#GET /business/products
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/picker-openapi-original.json#GET /business/categories

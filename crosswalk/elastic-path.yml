@@ -1,0 +1,108 @@
+provider: elastic-path
+apis_io: https://apis.io/providers/elastic-path/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      type: type
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/catalog.yaml#GET /catalog/hierarchies/{hierarchy_id}/products
+    - openapi/_original/catalog.yaml#GET /catalog/nodes/{node_id}/relationships/products
+    - openapi/_original/catalog.yaml#GET /catalog/products
+    - openapi/_original/catalog.yaml#GET /catalog/products/{product_id}
+    - openapi/_original/catalog.yaml#GET /catalogs/{catalog_id}/releases/{release_id}/hierarchies/{hierarchy_id}/products
+  product_variant:
+    path_segment:
+    - variations
+    properties:
+      id: id
+      type: type
+    core_coverage: 0.143
+    evidence:
+    - openapi/_original/pim.yaml#DELETE /pcm/products/{productID}/relationships/variations
+    - openapi/_original/pim.yaml#GET /pcm/products/{productID}/relationships/variations
+    - openapi/_original/pim.yaml#POST /pcm/products/{productID}/relationships/variations
+    - openapi/_original/pim.yaml#PUT /pcm/products/{productID}/relationships/variations
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/carts.yaml#DELETE /v2/carts/{cartID}/relationships/customers
+    - openapi/_original/carts.yaml#POST /v2/carts/{cartID}/relationships/customers
+  cart:
+    path_segment:
+    - carts
+    - cart
+    properties:
+      id: id
+      line_items: items
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/carts.yaml#DELETE /v2/carts/{cartID}
+    - openapi/_original/carts.yaml#GET /v2/carts
+    - openapi/_original/carts.yaml#GET /v2/carts/{cartID}
+    - openapi/_original/carts.yaml#GET /v2/settings/cart
+    - openapi/_original/carts.yaml#GET /v2/settings/cart/{storeID}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      customer_id: customer
+      shipping_address:
+      - shipping
+      - shipping_address
+      number: order_number
+      billing_address: billing_address
+      custom_fields: custom_attributes
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/carts.yaml#GET /v2/orders
+    - openapi/_original/carts.yaml#GET /v2/orders/{orderID}
+    - openapi/_original/carts.yaml#PUT /v2/orders/{orderID}
+  order_item:
+    path_segment:
+    - items
+    properties:
+      quantity: quantity
+      id: id
+      product_id: product_id
+      price: unit_price
+      name:
+      - name
+      - description
+      sku: sku
+      type: type
+      custom_fields: custom_attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/carts.yaml#DELETE /v2/carts/{cartID}/items
+    - openapi/_original/carts.yaml#DELETE /v2/carts/{cartID}/items/{cartitemID}
+    - openapi/_original/carts.yaml#GET /v2/carts/{cartID}/items
+    - openapi/_original/carts.yaml#GET /v2/orders/{orderID}/items
+    - openapi/_original/carts.yaml#POST /v2/carts/{cartID}/items
+  inventory:
+    path_segment:
+    - inventories
+    properties:
+      id: id
+      quantity:
+      - available
+      - quantity
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/inventory-legacy.yaml#DELETE /inventories/{product_uuid}
+    - openapi/_original/inventory-legacy.yaml#GET /inventories
+    - openapi/_original/inventory-legacy.yaml#GET /inventories/{product_uuid}
+    - openapi/_original/inventory-legacy.yaml#POST /inventories/{product_uuid}
+    - openapi/_original/inventory.yaml#DELETE /inventories/{product_uuid}

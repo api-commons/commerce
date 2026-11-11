@@ -1,0 +1,20 @@
+provider: nacelle
+apis_io: https://apis.io/providers/nacelle/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      last_name: last_name
+      first_name: first_name
+      phone: phone
+      addresses: addresses
+      custom_fields: metadata
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/nacelle-order-management-api-experimental-openapi.yml#PATCH /customers/{nacelle-customer-id}
+    - openapi/_original/nacelle-order-management-api-experimental-openapi.yml#POST /customers

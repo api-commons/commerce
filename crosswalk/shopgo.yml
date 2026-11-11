@@ -1,0 +1,26 @@
+provider: shopgo
+apis_io: https://apis.io/providers/shopgo/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - order
+    properties:
+      created_at: created
+      shipping_address: shipping_address
+      number: number
+      billing_address: billing_address
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/shopgo-management-openapi.yml#GET /v1/management/order/
+    - openapi/_original/shopgo-management-openapi.yml#GET /v1/management/order/{number}
+    - openapi/_original/shopgo-management-openapi.yml#PATCH /v1/management/order/{number}
+  shipment:
+    path_segment:
+    - shipment
+    properties:
+      status: state
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/shopgo-management-openapi.yml#PATCH /v1/management/order/{number}/shipment/{id}

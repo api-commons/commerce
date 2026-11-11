@@ -1,0 +1,88 @@
+provider: emporix
+apis_io: https://apis.io/providers/emporix/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: id
+      description: description
+      custom_fields: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/emporix-catalog-openapi.yml#GET /catalog/{tenant}/catalogs/categories/{categoryId}
+    - openapi/_original/emporix-catalog-openapi_2.yml#GET /catalog/{tenant}/catalogs/categories/{categoryId}
+  customer:
+    path_segment:
+    - customers
+    - customer
+    properties:
+      id:
+      - id
+      - customerId
+      email: email
+      last_name: lastName
+      first_name: firstName
+      created_at: createdAt
+      updated_at: modifiedAt
+      custom_fields: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/emporix-customer-segments-openapi.yml#DELETE /customer-segment/{tenant}/segments/{segmentId}/customers/{customerId}
+    - openapi/_original/emporix-customer-segments-openapi.yml#GET /customer-segment/{tenant}/segments/{segmentId}/customers
+    - openapi/_original/emporix-customer-segments-openapi.yml#GET /customer-segment/{tenant}/segments/{segmentId}/customers/{customerId}
+    - openapi/_original/emporix-customer-segments-openapi.yml#PUT /customer-segment/{tenant}/segments/{segmentId}/customers/{customerId}
+    - openapi/_original/emporix-customer-segments-openapi_2.yml#DELETE /customer-segment/{tenant}/segments/{segmentId}/customers/{customerId}
+  order:
+    path_segment:
+    - orders
+    - order
+    properties:
+      id:
+      - orderId
+      - id
+      status: status
+      line_items: entries
+      created_at: created
+      customer_id: customer
+      shipping_address:
+      - shipping
+      - shippingAddress
+      currency: currency
+      total: totalPrice
+      total_tax: tax
+      billing_address: billingAddress
+      custom_fields: metadata
+      discount_total: discounts
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/emporix-checkout-openapi.yml#POST /checkout/{tenant}/checkouts/order
+    - openapi/_original/emporix-checkout-openapi_2.yml#POST /checkout/{tenant}/checkouts/order
+    - openapi/_original/emporix-order-openapi.yml#GET /order-v2/{tenant}/orders
+    - openapi/_original/emporix-order-openapi.yml#GET /order-v2/{tenant}/orders/{orderId}
+    - openapi/_original/emporix-order-openapi_2.yml#GET /order-v2/{tenant}/orders
+  order_item:
+    path_segment:
+    - items
+    properties:
+      quantity: quantity
+      id: id
+      product_id:
+      - product
+      - itemId
+      price:
+      - unitPrice
+      - price
+      - itemPrice
+      type: type
+      custom_fields: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/emporix-cart-openapi.yml#DELETE /cart/{tenant}/carts/{cartId}/items
+    - openapi/_original/emporix-cart-openapi.yml#DELETE /cart/{tenant}/carts/{cartId}/items/{itemId}
+    - openapi/_original/emporix-cart-openapi.yml#GET /cart/{tenant}/carts/{cartId}/items
+    - openapi/_original/emporix-cart-openapi.yml#GET /cart/{tenant}/carts/{cartId}/items/{itemId}
+    - openapi/_original/emporix-cart-openapi.yml#POST /cart/{tenant}/carts/{cartId}/items

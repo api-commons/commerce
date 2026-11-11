@@ -1,0 +1,24 @@
+provider: mikmak
+apis_io: https://apis.io/providers/mikmak/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/mikmak-commerce-api-openapi.json#GET /commerce/v1/products/{id}
+    - openapi/_original/mikmak-commerce-api-openapi.json#GET /commerce/v1/search/products
+    - openapi/_original/mikmak-commerce-api-openapi.yml#GET /commerce/v1/products/{id}
+    - openapi/_original/mikmak-commerce-api-openapi.yml#GET /commerce/v1/search/products
+  cart:
+    path_segment:
+    - cart
+    properties:
+      line_items: products
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/mikmak-commerce-api-openapi.json#GET /commerce/v1/availabilities/cart/{id}
+    - openapi/_original/mikmak-commerce-api-openapi.yml#GET /commerce/v1/availabilities/cart/{id}

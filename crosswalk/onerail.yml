@@ -1,0 +1,50 @@
+provider: onerail
+apis_io: https://apis.io/providers/onerail/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    - products
+    properties:
+      id: id
+      description: description
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/onerail-operations-api-openapi.json#GET /v1/carrier/{carrierId}/products
+    - openapi/_original/onerail-operations-api-openapi.json#GET /v1/organization/{organizationId}/product/{productId}
+    - openapi/_original/onerail-operations-api-openapi.json#GET /v1/organization/{organizationId}/products
+    - openapi/_original/onerail-operations-api-openapi.json#POST /v1/organization/{organizationId}/product
+    - openapi/_original/onerail-operations-api-openapi.json#PUT /v1/organization/{organizationId}/product/{productId}
+  order:
+    path_segment:
+    - order
+    properties:
+      id:
+      - id
+      - orderId
+      status:
+      - state
+      - status
+      line_items: orderItems
+      created_at: createdAt
+      custom_fields: customFields
+      updated_at: updatedOn
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/onerail-delivery-api-openapi.json#POST /v2/order
+    - openapi/_original/onerail-operations-api-openapi.json#GET /v1/order/{orderId}
+    - openapi/_original/onerail-operations-api-openapi.json#POST /v1/organization/{organizationId}/order
+    - openapi/_original/onerail-operations-api-openapi.yml#GET /v1/order/{orderId}
+    - openapi/_original/onerail-operations-api-openapi.yml#POST /v1/organization/{organizationId}/order
+  order_item:
+    path_segment:
+    - items
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/onerail-operations-api-openapi.json#GET /v1/order/{orderId}/delivery/{deliveryId}/items
+    - openapi/_original/onerail-operations-api-openapi.yml#GET /v1/order/{orderId}/delivery/{deliveryId}/items

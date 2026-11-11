@@ -1,0 +1,71 @@
+provider: monocrawl
+apis_io: https://apis.io/providers/monocrawl/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    properties:
+      id: id
+      name:
+      - title
+      - name
+      description:
+      - description
+      - short_description
+      images:
+      - image
+      - images
+      - image_url
+      created_at: created_at
+      type: type
+      status: state
+      updated_at: updated_at
+      category_ids:
+      - category_id
+      - category
+      - categories
+      variants:
+      - variants
+      - skus
+      brand:
+      - brand
+      - brand_id
+      slug:
+      - url
+      - slug
+      price: price
+      sku: mpn
+      custom_fields:
+      - properties
+      - attributes
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/monocrawl-openapi.json#GET /v1/aliexpress/product
+    - openapi/_original/monocrawl-openapi.json#GET /v1/amazon/product
+    - openapi/_original/monocrawl-openapi.json#GET /v1/ebay/product
+    - openapi/_original/monocrawl-openapi.json#GET /v1/etsy/product
+    - openapi/_original/monocrawl-openapi.json#GET /v1/g2/product
+  category:
+    path_segment:
+    - categories
+    - category
+    properties:
+      name: name
+      id:
+      - id
+      - category_id
+      parent_id:
+      - parent_id
+      - parent
+      description: description
+      slug: slug
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/monocrawl-openapi.json#GET /v1/aliexpress/categories
+    - openapi/_original/monocrawl-openapi.json#GET /v1/amazon/categories
+    - openapi/_original/monocrawl-openapi.json#GET /v1/app_store/categories
+    - openapi/_original/monocrawl-openapi.json#GET /v1/content_analysis/categories
+    - openapi/_original/monocrawl-openapi.json#GET /v1/etsy/categories

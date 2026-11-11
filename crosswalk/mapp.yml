@@ -1,0 +1,20 @@
+provider: mapp
+apis_io: https://apis.io/providers/mapp/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      product_id: product_id
+    core_coverage: 0.143
+    evidence:
+    - openapi/_original/mapp-product-catalog-openapi.yml#GET /api/product-catalog/v1/catalogs/{catalogId}/products/{productId}/variants
+  cart:
+    path_segment:
+    - basket
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/mapp-fashion-openapi.yml#GET /items/basket

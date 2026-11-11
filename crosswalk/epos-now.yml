@@ -1,0 +1,49 @@
+provider: epos-now
+apis_io: https://apis.io/providers/epos-now/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    properties:
+      id: Id
+      name: Name
+      description: Description
+      category_ids: CategoryId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/epos-now-openapi.yml#DELETE /Product/{Id}
+    - openapi/_original/epos-now-openapi.yml#GET /Product
+    - openapi/_original/epos-now-openapi.yml#GET /Product/{Id}
+    - openapi/_original/epos-now-openapi.yml#POST /Product
+    - openapi/_original/epos-now-openapi.yml#PUT /Product/{Id}
+  category:
+    path_segment:
+    - category
+    properties:
+      name: Name
+      id: Id
+      parent_id: ParentId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/epos-now-openapi.yml#DELETE /Category/{Id}
+    - openapi/_original/epos-now-openapi.yml#GET /Category
+    - openapi/_original/epos-now-openapi.yml#GET /Category/{Id}
+    - openapi/_original/epos-now-openapi.yml#POST /Category
+    - openapi/_original/epos-now-openapi.yml#PUT /Category/{Id}
+  customer:
+    path_segment:
+    - customer
+    properties:
+      id: Id
+      email: EmailAddress
+      last_name: Surname
+      phone: PhoneNumber
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/epos-now-openapi.yml#DELETE /Customer/{Id}
+    - openapi/_original/epos-now-openapi.yml#GET /Customer
+    - openapi/_original/epos-now-openapi.yml#GET /Customer/{Id}
+    - openapi/_original/epos-now-openapi.yml#POST /Customer
+    - openapi/_original/epos-now-openapi.yml#PUT /Customer/{Id}

@@ -1,0 +1,35 @@
+provider: bold-commerce
+apis_io: https://apis.io/providers/bold-commerce/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      last_name: last_name
+      first_name: first_name
+      created_at: created_at
+      phone: phone
+      addresses:
+      - addresses
+      - default_address
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bold-commerce-openapi.yml#GET /subscriptions/v1/shops/{shop_identifier}/customers
+    - openapi/_original/bold-commerce-openapi.yml#GET /subscriptions/v1/shops/{shop_identifier}/customers/{customer_id}
+    - openapi/_original/bold-commerce-openapi.yml#PUT /subscriptions/v1/shops/{shop_identifier}/customers/{customer_id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      created_at: created_at
+      currency: currency
+      updated_at: updated_at
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/bold-commerce-openapi.yml#GET /subscriptions/v1/shops/{shop_identifier}/subscriptions/{subscription_id}/orders
+    - openapi/_original/bold-commerce-openapi.yml#GET /subscriptions/v1/shops/{shop_identifier}/subscriptions/{subscription_id}/orders/{order_id}

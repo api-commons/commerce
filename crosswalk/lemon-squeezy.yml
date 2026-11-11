@@ -1,0 +1,41 @@
+provider: lemon-squeezy
+apis_io: https://apis.io/providers/lemon-squeezy/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      type: type
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/lemon-squeezy-api-openapi.yml#GET /v1/products
+    - openapi/_original/lemon-squeezy-openapi.yml#GET /products
+    - openapi/_original/lemon-squeezy-openapi.yml#GET /products/{id}
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/lemon-squeezy-api-openapi.yml#GET /v1/customers
+    - openapi/_original/lemon-squeezy-openapi.yml#GET /customers
+    - openapi/_original/lemon-squeezy-openapi.yml#GET /customers/{id}
+    - openapi/_original/lemon-squeezy-openapi.yml#PATCH /customers/{id}
+    - openapi/_original/lemon-squeezy-openapi.yml#POST /customers
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/lemon-squeezy-api-openapi.yml#GET /v1/orders
+    - openapi/_original/lemon-squeezy-openapi.yml#GET /orders
+    - openapi/_original/lemon-squeezy-openapi.yml#GET /orders/{id}

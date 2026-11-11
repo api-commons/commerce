@@ -1,0 +1,45 @@
+provider: block
+apis_io: https://apis.io/providers/block/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties:
+      email: email_address
+      last_name: family_name
+      first_name: given_name
+      phone: phone_number
+      addresses: address
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/block-openapi.json#DELETE /v2/customers/{customer_id}
+    - openapi/_original/block-openapi.json#GET /v2/customers
+    - openapi/_original/block-openapi.json#GET /v2/customers/{customer_id}
+    - openapi/_original/block-openapi.json#POST /v2/customers
+    - openapi/_original/block-openapi.json#PUT /v2/customers/{customer_id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: state
+      created_at: created_at
+      shipping_address: shipping_address
+      email: buyer_email
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/block-openapi.json#GET /v1/{location_id}/orders
+    - openapi/_original/block-openapi.json#GET /v1/{location_id}/orders/{order_id}
+    - openapi/_original/block-openapi.json#GET /v2/orders/{order_id}
+    - openapi/_original/block-openapi.json#POST /v2/orders
+    - openapi/_original/block-openapi.json#PUT /v1/{location_id}/orders/{order_id}
+  inventory:
+    path_segment:
+    - inventory
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/block-openapi.json#GET /v2/inventory/{catalog_object_id}

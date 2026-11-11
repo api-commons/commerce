@@ -1,0 +1,41 @@
+provider: terminal-shop
+apis_io: https://apis.io/providers/terminal-shop/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    properties:
+      id: id
+      name: name
+      description: description
+      variants: variants
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/terminal-shop-openapi.yml#GET /product
+    - openapi/_original/terminal-shop-openapi.yml#GET /product/{id}
+  cart:
+    path_segment:
+    - cart
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/terminal-shop-openapi.yml#DELETE /cart
+    - openapi/_original/terminal-shop-openapi.yml#GET /cart
+  order:
+    path_segment:
+    - order
+    properties:
+      id: id
+      line_items: items
+      created_at: created
+      shipping_address: shipping
+      total: amount
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/terminal-shop-openapi.yml#GET /order
+    - openapi/_original/terminal-shop-openapi.yml#GET /order/{id}
+    - openapi/_original/terminal-shop-openapi.yml#POST /order

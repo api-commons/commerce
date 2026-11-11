@@ -1,0 +1,29 @@
+provider: google-shopping
+apis_io: https://apis.io/providers/google-shopping/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: title
+      description: description
+      type: kind
+      brand: brand
+      price: price
+      sku: mpn
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openapi.yml#DELETE /{merchantId}/products/{productId}
+    - openapi/_original/openapi.yml#GET /{merchantId}/products
+    - openapi/_original/openapi.yml#GET /{merchantId}/products/{productId}
+    - openapi/_original/openapi.yml#POST /{merchantId}/products
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.yml#GET /{merchantId}/orders

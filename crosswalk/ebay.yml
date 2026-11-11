@@ -1,0 +1,28 @@
+provider: ebay
+apis_io: https://apis.io/providers/ebay/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    properties:
+      name: title
+      description: description
+      images: image
+      brand: brand
+      sku: mpn
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/ebay-catalog-openapi-original.yml#GET /product/{epid}
+  order:
+    path_segment:
+    - order
+    properties:
+      id: orderId
+      line_items: lineItems
+      created_at: creationDate
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/ebay-fulfillment-openapi-original.yml#GET /order
+    - openapi/_original/ebay-fulfillment-openapi-original.yml#GET /order/{orderId}

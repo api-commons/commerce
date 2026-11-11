@@ -1,0 +1,78 @@
+provider: squarespace
+apis_io: https://apis.io/providers/squarespace/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      images: images
+      created_at: createdOn
+      type: type
+      variants: variants
+      slug: url
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#DELETE /v2/commerce/products/{productId}
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#GET /v2/commerce/products
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#GET /v2/commerce/products/{productIdCsvs}
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#POST /v2/commerce/products
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#POST /v2/commerce/products/{productId}
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      id: id
+      barcode: gtin
+      inventory_quantity: stock
+      options: attributes
+    core_coverage: 0.429
+    evidence:
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#DELETE /v2/commerce/products/{productId}/variants/{variantId}
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#POST /v2/commerce/products/{productId}/variants
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#POST /v2/commerce/products/{productId}/variants/{variantId}
+  order:
+    path_segment:
+    - orders
+    - order
+    properties:
+      id: id
+      line_items: lineItems
+      created_at: createdOn
+      customer_id: customerId
+      shipping_address: shippingAddress
+      number: orderNumber
+      total: grandTotal
+      total_tax: taxTotal
+      billing_address: billingAddress
+      email: customerEmail
+      discount_total: discountTotal
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#GET /1.0/commerce/orders
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#GET /1.0/commerce/orders/{id}
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#POST /1.0/commerce/orders
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#POST /v2/commerce/products/{productId}/images/{imageId}/order
+  shipment:
+    path_segment:
+    - fulfillments
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#POST /1.0/commerce/orders/{id}/fulfillments
+  inventory:
+    path_segment:
+    - inventory
+    properties:
+      quantity: quantity
+      sku: sku
+      product_id: variantId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#GET /1.0/commerce/inventory
+    - openapi/_original/squarespace-commerce-api-v2-openapi.json#GET /1.0/commerce/inventory/{variantIdCsvs}

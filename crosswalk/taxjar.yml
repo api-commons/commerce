@@ -1,0 +1,44 @@
+provider: taxjar
+apis_io: https://apis.io/providers/taxjar/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/taxjar-sales-tax-openapi.yml#GET /categories
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: customer_id
+      name: name
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/taxjar-sales-tax-openapi.yml#DELETE /customers/{customer_id}
+    - openapi/_original/taxjar-sales-tax-openapi.yml#GET /customers
+    - openapi/_original/taxjar-sales-tax-openapi.yml#GET /customers/{customer_id}
+    - openapi/_original/taxjar-sales-tax-openapi.yml#POST /customers
+    - openapi/_original/taxjar-sales-tax-openapi.yml#PUT /customers/{customer_id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      line_items: line_items
+      customer_id:
+      - user_id
+      - customer_id
+      shipping_address: shipping
+      total: amount
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/taxjar-sales-tax-openapi.yml#DELETE /transactions/orders/{transaction_id}
+    - openapi/_original/taxjar-sales-tax-openapi.yml#GET /transactions/orders
+    - openapi/_original/taxjar-sales-tax-openapi.yml#GET /transactions/orders/{transaction_id}
+    - openapi/_original/taxjar-sales-tax-openapi.yml#POST /transactions/orders
+    - openapi/_original/taxjar-sales-tax-openapi.yml#PUT /transactions/orders/{transaction_id}

@@ -1,0 +1,45 @@
+provider: crm-bonus
+apis_io: https://apis.io/providers/crm-bonus/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      images: image
+      category_ids: category
+      brand: brand
+      slug: url
+      sku: sku
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/crm-bonus-oto-data-api-openapi.json#POST /v1/products
+    - openapi/_original/crm-bonus-oto-data-api-openapi.yml#POST /v1/products
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: customer_id
+      email: email
+      last_name: last_name
+      first_name: first_name
+      phone: phone_number
+      addresses: address
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/crm-bonus-oto-data-api-openapi.json#POST /v1/customers
+    - openapi/_original/crm-bonus-oto-data-api-openapi.yml#POST /v1/customers
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      customer_id: customer_id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/crm-bonus-oto-data-api-openapi.json#POST /v1/orders
+    - openapi/_original/crm-bonus-oto-data-api-openapi.yml#POST /v1/orders

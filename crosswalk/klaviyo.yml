@@ -1,0 +1,32 @@
+provider: klaviyo
+apis_io: https://apis.io/providers/klaviyo/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - catalog-items
+    properties:
+      id: id
+      type: type
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/klaviyo-openapi.json#DELETE /api/catalog-items/{id}
+    - openapi/_original/klaviyo-openapi.json#GET /api/catalog-items
+    - openapi/_original/klaviyo-openapi.json#GET /api/catalog-items/{id}
+    - openapi/_original/klaviyo-openapi.json#PATCH /api/catalog-items/{id}
+    - openapi/_original/klaviyo-openapi.json#POST /api/catalog-items
+  category:
+    path_segment:
+    - categories
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/klaviyo-openapi.json#DELETE /api/catalog-items/{id}/relationships/categories
+    - openapi/_original/klaviyo-openapi.json#GET /api/catalog-items/{id}/categories
+    - openapi/_original/klaviyo-openapi.json#GET /api/catalog-items/{id}/relationships/categories
+    - openapi/_original/klaviyo-openapi.json#PATCH /api/catalog-items/{id}/relationships/categories
+    - openapi/_original/klaviyo-openapi.json#POST /api/catalog-items/{id}/relationships/categories

@@ -1,0 +1,179 @@
+provider: medusa
+apis_io: https://apis.io/providers/medusa/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name:
+      - title
+      - name
+      description: description
+      images:
+      - thumbnail
+      - images
+      created_at: created_at
+      type: type
+      status:
+      - status
+      - is_active
+      updated_at: updated_at
+      category_ids: categories
+      variants: variants
+      slug: handle
+      custom_fields: metadata
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/medusa-admin-openapi.yaml#DELETE /admin/products/{id}
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/products
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/products/{id}
+    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/collections/{id}/products
+    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/price-lists/{id}/products
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      id: id
+      name: title
+      product_id: product_id
+      barcode:
+      - barcode
+      - ean
+      - upc
+      created_at: created_at
+      inventory_quantity: inventory_quantity
+      options: options
+      updated_at: updated_at
+      weight: weight
+      height: height
+      type: type
+      width: width
+    core_coverage: 0.857
+    evidence:
+    - openapi/_original/medusa-admin-openapi.yaml#DELETE /admin/products/{id}/variants/{variant_id}
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/products/{id}/variants
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/products/{id}/variants/{variant_id}
+    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/products/{id}/variants
+    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/products/{id}/variants/{variant_id}
+  category:
+    path_segment:
+    - collections
+    properties:
+      name: title
+      id: id
+      slug: handle
+      updated_at: updated_at
+      created_at: created_at
+      custom_fields: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/medusa-admin-openapi.yaml#DELETE /admin/collections/{id}
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/collections
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/collections/{id}
+    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/collections
+    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/collections/{id}
+  customer:
+    path_segment:
+    - customers
+    - customer
+    properties:
+      id:
+      - id
+      - customer_id
+      email: email
+      last_name: last_name
+      first_name: first_name
+      created_at: created_at
+      phone: phone
+      addresses:
+      - addresses
+      - shipping_address
+      - billing_address
+      updated_at: updated_at
+      name: name
+      custom_fields: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/medusa-admin-openapi.yaml#DELETE /admin/customers/{id}
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/customers
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/customers/{id}
+    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/customer-groups/{id}/customers
+    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/customers
+  cart:
+    path_segment:
+    - carts
+    properties:
+      id: id
+      line_items: items
+      currency: currency_code
+      created_at: created_at
+      customer_id: customer_id
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/medusa-store-openapi.yaml#GET /store/carts/{id}
+    - openapi/_original/medusa-store-openapi.yaml#POST /store/carts
+    - openapi/_original/medusa-store-openapi.yaml#POST /store/carts/{id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      line_items: items
+      created_at: created_at
+      customer_id:
+      - customer
+      - customer_id
+      shipping_address: shipping_address
+      currency: currency_code
+      number: display_id
+      total_tax: tax_total
+      billing_address: billing_address
+      custom_fields: metadata
+      email: email
+      updated_at: updated_at
+      discount_total: discount_total
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/gift-cards/{id}/orders
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/orders
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/orders/{id}
+    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/orders/{id}
+    - openapi/_original/medusa-store-openapi.yaml#GET /store/orders
+  order_item:
+    path_segment:
+    - line-items
+    properties:
+      quantity: quantity
+      id: id
+      product_id: item_id
+      currency: currency_code
+      custom_fields: metadata
+      tax_total: tax_total
+      created_at: created_at
+      discount_total: discount_total
+      updated_at: updated_at
+      variant_id: variant_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/medusa-admin-openapi.yaml#GET /admin/orders/{id}/line-items
+    - openapi/_original/medusa-store-openapi.yaml#DELETE /store/carts/{id}/line-items/{line_id}
+    - openapi/_original/medusa-store-openapi.yaml#POST /store/carts/{id}/line-items
+    - openapi/_original/medusa-store-openapi.yaml#POST /store/carts/{id}/line-items/{line_id}
+  shipment:
+    path_segment:
+    - fulfillments
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      updated_at: updated_at
+      line_items: items
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/medusa-admin-openapi.yaml#POST /admin/orders/{id}/fulfillments

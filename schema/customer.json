@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/commerce/main/schema/customer.json",
+  "title": "Customer",
+  "description": "The common customer in Commerce, distilled from 80 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.825,
+      "x-commons-providers": 66,
+      "x-commons-spellings": [
+        "id",
+        "customerId",
+        "customer_id",
+        "Id",
+        "customerID",
+        "uuid"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.787,
+      "x-commons-providers": 63,
+      "x-commons-spellings": [
+        "email",
+        "email_address",
+        "emailAddress",
+        "EmailAddress",
+        "Email"
+      ],
+      "format": "email"
+    },
+    "last_name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.613,
+      "x-commons-providers": 49,
+      "x-commons-spellings": [
+        "last_name",
+        "lastName",
+        "lastname",
+        "family_name",
+        "Surname"
+      ]
+    },
+    "first_name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.6,
+      "x-commons-providers": 48,
+      "x-commons-spellings": [
+        "first_name",
+        "firstName",
+        "firstname",
+        "given_name"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.525,
+      "x-commons-providers": 42,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "creationDate",
+        "created_on",
+        "date_created",
+        "created_date",
+        "DateAdded"
+      ],
+      "format": "date-time"
+    },
+    "phone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.487,
+      "x-commons-providers": 39,
+      "x-commons-spellings": [
+        "phone",
+        "phone_number",
+        "mobile",
+        "PhoneNumber",
+        "Mobile",
+        "phoneNumber",
+        "telephone"
+      ]
+    },
+    "addresses": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 32,
+      "x-commons-spellings": [
+        "addresses",
+        "address",
+        "default_address",
+        "shippingAddress",
+        "billingAddress",
+        "defaultAddress",
+        "shipping_address",
+        "billing_address"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.338,
+      "x-commons-providers": 27,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "date_modified",
+        "updated_on",
+        "modifiedAt",
+        "modified_date"
+      ],
+      "format": "date-time"
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.312,
+      "x-commons-providers": 25,
+      "x-commons-spellings": [
+        "name",
+        "display_name",
+        "Name"
+      ]
+    },
+    "custom_fields": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.275,
+      "x-commons-providers": 22,
+      "x-commons-spellings": [
+        "metadata",
+        "attributes",
+        "custom_attributes",
+        "customFields",
+        "properties"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "commerce",
+    "concept": "customer",
+    "providers": 80,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

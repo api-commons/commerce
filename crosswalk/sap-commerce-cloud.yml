@@ -1,0 +1,84 @@
+provider: sap-commerce-cloud
+apis_io: https://apis.io/providers/sap-commerce-cloud/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      name: name
+      description: description
+      images: images
+      category_ids: categories
+      brand: manufacturer
+      slug: url
+      price: price
+      sku: code
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/sap-commerce-cloud-commerce-web-services-openapi.yml#GET /products
+    - openapi/_original/sap-commerce-cloud-commerce-web-services-openapi.yml#GET /products/{productCode}
+    - openapi/_original/sap-commerce-cloud-integration-openapi.yml#GET /InboundProduct/Products
+    - openapi/_original/sap-commerce-cloud-integration-openapi.yml#POST /InboundProduct/Products
+    - openapi/_original/sap-commerce-cloud-product-content-management-openapi.yml#GET /products/{productCode}
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/sap-commerce-cloud-commerce-web-services-openapi.yml#GET /catalogs/{catalogId}/{catalogVersionId}/categories/{categoryId}
+    - openapi/_original/sap-commerce-cloud-product-content-management-openapi.yml#GET /catalogs/{catalogId}/{catalogVersionId}/categories/{categoryId}
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: customerID
+      addresses: addresses
+      name: name
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/sap-commerce-cloud-assisted-service-openapi.yml#GET /customers/{customerId}
+    - openapi/_original/sap-commerce-cloud-integration-openapi.yml#GET /InboundCustomer/Customers
+    - openapi/_original/sap-commerce-cloud-integration-openapi.yml#POST /InboundCustomer/Customers
+  cart:
+    path_segment:
+    - carts
+    properties:
+      id: guid
+      line_items: entries
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sap-commerce-cloud-assisted-service-openapi.yml#GET /customers/{customerId}/carts
+    - openapi/_original/sap-commerce-cloud-commerce-web-services-openapi.yml#DELETE /users/{userId}/carts/{cartId}
+    - openapi/_original/sap-commerce-cloud-commerce-web-services-openapi.yml#GET /users/{userId}/carts
+    - openapi/_original/sap-commerce-cloud-commerce-web-services-openapi.yml#GET /users/{userId}/carts/{cartId}
+    - openapi/_original/sap-commerce-cloud-commerce-web-services-openapi.yml#POST /users/{userId}/carts
+  order:
+    path_segment:
+    - orders
+    properties:
+      status: status
+      line_items: entries
+      created_at: created
+      shipping_address: deliveryAddress
+      currency: currency
+      total: totalPrice
+      total_tax: totalTax
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/sap-commerce-cloud-commerce-web-services-openapi.yml#GET /users/{userId}/orders
+    - openapi/_original/sap-commerce-cloud-commerce-web-services-openapi.yml#GET /users/{userId}/orders/{orderCode}
+    - openapi/_original/sap-commerce-cloud-commerce-web-services-openapi.yml#POST /users/{userId}/orders
+    - openapi/_original/sap-commerce-cloud-integration-openapi.yml#GET /InboundOrder/Orders
+    - openapi/_original/sap-commerce-cloud-integration-openapi.yml#POST /InboundOrder/Orders
+  inventory:
+    path_segment:
+    - stock
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/sap-commerce-cloud-commerce-web-services-openapi.yml#GET /products/{productCode}/stock

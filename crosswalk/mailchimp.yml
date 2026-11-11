@@ -1,0 +1,119 @@
+provider: mailchimp
+apis_io: https://apis.io/providers/mailchimp/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: title
+      description: description
+      images:
+      - image_url
+      - images
+      type: type
+      variants: variants
+      brand: vendor
+      slug:
+      - handle
+      - url
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /ecommerce/stores/{store_id}/products/{product_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/products
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/products/{product_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#PATCH /ecommerce/stores/{store_id}/products/{product_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#POST /ecommerce/stores/{store_id}/products
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      id: id
+      name: title
+      product_id: product_id
+      created_at: created_at
+      inventory_quantity: inventory_quantity
+      price: price
+      updated_at: updated_at
+    core_coverage: 0.857
+    evidence:
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/products/{product_id}/variants
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#PATCH /ecommerce/stores/{store_id}/products/{product_id}/variants/{variant_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#POST /ecommerce/stores/{store_id}/products/{product_id}/variants
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email_address
+      last_name: last_name
+      first_name: first_name
+      created_at: created_at
+      addresses: address
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /ecommerce/stores/{store_id}/customers/{customer_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/customers
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/customers/{customer_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#PATCH /ecommerce/stores/{store_id}/customers/{customer_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#POST /ecommerce/stores/{store_id}/customers
+  cart:
+    path_segment:
+    - carts
+    properties:
+      id: id
+      line_items: lines
+      currency: currency_code
+      created_at: created_at
+      customer_id: customer
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /ecommerce/stores/{store_id}/carts/{cart_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/carts
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/carts/{cart_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#PATCH /ecommerce/stores/{store_id}/carts/{cart_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#POST /ecommerce/stores/{store_id}/carts
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: financial_status
+      line_items: lines
+      customer_id: customer
+      shipping_address: shipping_address
+      currency: currency_code
+      total: order_total
+      total_tax: tax_total
+      billing_address: billing_address
+      discount_total: discount_total
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /ecommerce/stores/{store_id}/orders/{order_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/orders
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/orders
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/orders/{order_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#PATCH /ecommerce/stores/{store_id}/orders/{order_id}
+  order_item:
+    path_segment:
+    - lines
+    properties:
+      quantity: quantity
+      id: id
+      product_id:
+      - product_id
+      - product
+      price: price
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /ecommerce/stores/{store_id}/orders/{order_id}/lines/{line_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/carts/{cart_id}/lines
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/carts/{cart_id}/lines/{line_id}
+    - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /ecommerce/stores/{store_id}/orders/{order_id}/lines

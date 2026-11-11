@@ -1,0 +1,23 @@
+provider: scalapay
+apis_io: https://apis.io/providers/scalapay/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      line_items: items
+      shipping_address: shipping
+      number: name
+      total: totalAmount
+      total_tax: taxAmount
+      billing_address: billing
+      discount_total: discounts
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/scalapay-openapi-original.yml#GET /v1/instore/orders/{token}
+    - openapi/_original/scalapay-openapi-original.yml#GET /v1/reporting/orders
+    - openapi/_original/scalapay-openapi-original.yml#GET /v1/reporting/payouts/{token}/orders
+    - openapi/_original/scalapay-openapi-original.yml#POST /v1/instore/orders
+    - openapi/_original/scalapay-openapi-original.yml#POST /v2/instore/paybylink/orders

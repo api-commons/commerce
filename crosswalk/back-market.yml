@@ -1,0 +1,44 @@
+provider: back-market
+apis_io: https://apis.io/providers/back-market/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - listings
+    properties:
+      id:
+      - id
+      - product_id
+      - productId
+      name: title
+      status: state
+      price: price
+      sku: sku
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/back-market-openapi-original.yml#GET /ws/buyback/v1/listings
+    - openapi/_original/back-market-openapi-original.yml#GET /ws/buyback/v1/listings/{buybackListingId}
+    - openapi/_original/back-market-openapi-original.yml#GET /ws/listings
+    - openapi/_original/back-market-openapi-original.yml#GET /ws/listings/{listingId}
+    - openapi/_original/back-market-openapi-original.yml#POST /ws/listings
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: order_id
+      status:
+      - status
+      - state
+      created_at: creationDate
+      customer_id: customer
+      shipping_address: shipping_address
+      currency: currency
+      billing_address: billing_address
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/back-market-openapi-original.yml#GET /ws/buyback/v1/orders
+    - openapi/_original/back-market-openapi-original.yml#GET /ws/buyback/v1/orders/{buybackOrderId}
+    - openapi/_original/back-market-openapi-original.yml#GET /ws/orders
+    - openapi/_original/back-market-openapi-original.yml#GET /ws/orders/{order_id}
+    - openapi/_original/back-market-openapi-original.yml#POST /ws/orders/{order_id}

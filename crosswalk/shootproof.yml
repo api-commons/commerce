@@ -1,0 +1,18 @@
+provider: shootproof
+apis_io: https://apis.io/providers/shootproof/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - order
+    properties:
+      id: id
+      status: status
+      customer_id: contactId
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/shootproof-openapi.yml#DELETE /brand/{brandId}/order/{orderId}
+    - openapi/_original/shootproof-openapi.yml#GET /brand/{brandId}/order
+    - openapi/_original/shootproof-openapi.yml#GET /brand/{brandId}/order/{orderId}
+    - openapi/_original/shootproof-openapi.yml#POST /brand/{brandId}/order

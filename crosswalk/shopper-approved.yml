@@ -1,0 +1,22 @@
+provider: shopper-approved
+apis_io: https://apis.io/providers/shopper-approved/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/shopper-approved-openapi.yml#GET /products/{site_id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      line_items: products
+      number: name
+      email: email
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/shopper-approved-openapi.yml#POST /orders/{site_id}

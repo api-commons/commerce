@@ -1,0 +1,12 @@
+provider: fashionbyu-com
+apis_io: https://apis.io/providers/fashionbyu-com/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  cart:
+    path_segment:
+    - cart
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fashionbyu-com-iriz-platform-api-openapi.json#GET /cart

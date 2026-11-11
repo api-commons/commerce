@@ -1,0 +1,137 @@
+provider: shoplazza
+apis_io: https://apis.io/providers/shoplazza/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: title
+      description: description
+      images:
+      - image
+      - images
+      created_at: created_at
+      status: published
+      updated_at: updated_at
+      variants: variants
+      brand: vendor
+      slug: handle
+      custom_fields: metafields
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/shoplazza-admin-openapi-original.json#DELETE /openapi/2022-01/products/{product_id}
+    - openapi/_original/shoplazza-admin-openapi-original.json#GET /openapi/2022-01/products
+    - openapi/_original/shoplazza-admin-openapi-original.json#GET /openapi/2022-01/products/{product_id}
+    - openapi/_original/shoplazza-admin-openapi-original.json#POST /openapi/2022-01/products
+    - openapi/_original/shoplazza-admin-openapi-original.json#PUT /openapi/2022-01/products/{product_id}
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      id: id
+      name: title
+      product_id: product_id
+      barcode: barcode
+      created_at: created_at
+      inventory_quantity: inventory_quantity
+      price: price
+      options: option1
+      updated_at: updated_at
+      weight: weight
+      position: position
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/shoplazza-admin-openapi-original.json#DELETE /openapi/2022-01/products/{product_id}/variants/{variant_id}
+    - openapi/_original/shoplazza-admin-openapi-original.json#GET /openapi/2022-01/products/{product_id}/variants
+    - openapi/_original/shoplazza-admin-openapi-original.json#POST /openapi/2022-01/products/{product_id}/variants
+  category:
+    path_segment:
+    - collections
+    properties:
+      name: title
+      id: id
+      description: description
+      slug: handle
+      updated_at: updated_at
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/shoplazza-admin-openapi-original.json#DELETE /openapi/2022-01/collections/{id}
+    - openapi/_original/shoplazza-admin-openapi-original.json#GET /openapi/2022-01/collections
+    - openapi/_original/shoplazza-admin-openapi-original.json#GET /openapi/2022-01/collections/{id}
+    - openapi/_original/shoplazza-admin-openapi-original.json#POST /openapi/2022-01/collections
+    - openapi/_original/shoplazza-admin-openapi-original.json#PUT /openapi/2022-01/collections/{id}
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      last_name: last_name
+      first_name: first_name
+      created_at: created_at
+      phone: phone
+      addresses:
+      - default_address
+      - addresses
+      updated_at: updated_at
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/shoplazza-admin-openapi-original.json#GET /openapi/2022-01/customers
+    - openapi/_original/shoplazza-admin-openapi-original.json#GET /openapi/2022-01/customers/{id}
+    - openapi/_original/shoplazza-admin-openapi-original.json#POST /openapi/2022-01/customers
+    - openapi/_original/shoplazza-admin-openapi-original.json#PUT /openapi/2022-01/customers/{id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status:
+      - financial_status
+      - status
+      line_items: line_items
+      created_at: created_at
+      customer_id: customer
+      shipping_address: shipping_address
+      currency:
+      - currency
+      - currency_code
+      number: number
+      total: total_price
+      total_tax:
+      - total_tax
+      - tax_total
+      billing_address: billing_address
+      updated_at: updated_at
+      discount_total: discount
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/shoplazza-admin-openapi-original.json#DELETE /openapi/2022-01/orders/{id}
+    - openapi/_original/shoplazza-admin-openapi-original.json#GET /openapi/2022-01/orders
+    - openapi/_original/shoplazza-admin-openapi-original.json#GET /openapi/2022-01/orders/{id}
+    - openapi/_original/shoplazza-admin-openapi-original.json#POST /openapi/2022-01/orders
+    - openapi/_original/shoplazza-admin-openapi-original.json#PUT /openapi/2022-01/orders/{id}
+  shipment:
+    path_segment:
+    - fulfillments
+    properties:
+      id: id
+      status: status
+      tracking_number: tracking_number
+      created_at: created_at
+      updated_at: updated_at
+      carrier: tracking_company
+      line_items: line_items
+      order_id: order_id
+      tracking_url: tracking_url
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/shoplazza-admin-openapi-original.json#GET /openapi/2022-01/orders/{order_id}/fulfillments
+    - openapi/_original/shoplazza-admin-openapi-original.json#GET /openapi/2022-01/orders/{order_id}/fulfillments/{fulfillment_id}
+    - openapi/_original/shoplazza-admin-openapi-original.json#POST /openapi/2022-01/orders/{order_id}/fulfillments
+    - openapi/_original/shoplazza-admin-openapi-original.json#PUT /openapi/2022-01/orders/{order_id}/fulfillments/{fulfillment_id}

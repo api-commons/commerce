@@ -1,0 +1,41 @@
+provider: walmart
+apis_io: https://apis.io/providers/walmart/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - departments
+    - categories
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/walmart-marketplace-reviews-openapi-original.yml#POST /v3/growth/reviews-accelerator/categories
+    - openapi/_original/walmart-marketplace-utilities-openapi-original.yml#GET /v3/utilities/taxonomy/departments
+    - openapi/_original/walmart-marketplace-utilities-openapi-original.yml#GET /v3/utilities/taxonomy/departments/{departmentId}
+  order:
+    path_segment:
+    - orders
+    properties:
+      line_items: orderLines
+      customer_id: buyerId
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/walmart-dropship-vendor-orders-openapi-original.yml#GET /v3/orders
+    - openapi/_original/walmart-dropship-vendor-orders-openapi-original.yml#GET /v3/orders/{purchaseOrderId}
+    - openapi/_original/walmart-marketplace-orders-openapi-original.yml#GET /v3/orders
+    - openapi/_original/walmart-marketplace-orders-openapi-original.yml#GET /v3/orders/{purchaseOrderId}
+  inventory:
+    path_segment:
+    - inventory
+    - inventories
+    properties:
+      quantity: quantity
+      sku: sku
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/walmart-dropship-vendor-inventory-openapi-original.yml#GET /v3/inventories/{id}
+    - openapi/_original/walmart-dropship-vendor-inventory-openapi-original.yml#GET /v3/inventory
+    - openapi/_original/walmart-dropship-vendor-inventory-openapi-original.yml#PUT /v3/inventory
+    - openapi/_original/walmart-marketplace-inventory-openapi-original.yml#GET /v3/fulfillment/inventory
+    - openapi/_original/walmart-marketplace-inventory-openapi-original.yml#GET /v3/inventories

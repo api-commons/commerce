@@ -1,0 +1,18 @@
+provider: veho
+apis_io: https://apis.io/providers/veho/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: _id
+      created_at: createdAt
+      email: email
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/veho-api-openapi-original.yml#GET /orders
+    - openapi/_original/veho-api-openapi-original.yml#GET /orders/{_id}
+    - openapi/_original/veho-api-openapi-original.yml#PATCH /orders/{_id}
+    - openapi/_original/veho-api-openapi-original.yml#POST /orders

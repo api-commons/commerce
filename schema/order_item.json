@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/commerce/main/schema/order_item.json",
+  "title": "Order Item",
+  "description": "The common order_item in Commerce, distilled from 25 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "quantity": {
+      "type": "integer",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.8,
+      "x-commons-providers": 20,
+      "x-commons-spellings": [
+        "quantity",
+        "qty"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.76,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "id"
+      ]
+    },
+    "product_id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.64,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "product_id",
+        "product",
+        "item_id",
+        "productId",
+        "itemId"
+      ]
+    },
+    "price": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.48,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "price",
+        "unit_price",
+        "unitPrice",
+        "itemPrice"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "currency",
+        "currency_code",
+        "currencyCode"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "name",
+        "description",
+        "product_name"
+      ]
+    },
+    "sku": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.32,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "sku"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.32,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "type"
+      ]
+    },
+    "custom_fields": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.28,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "metadata",
+        "attributes",
+        "custom_attributes"
+      ]
+    },
+    "tax_total": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.28,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "tax_total",
+        "taxTotal"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.24,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "created_at",
+        "created_time",
+        "createdTime",
+        "created_on",
+        "createdAt",
+        "createdDate"
+      ],
+      "format": "date-time"
+    },
+    "discount_total": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.24,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "discount_total",
+        "discountTotal"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.24,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "updated_at",
+        "updated_time",
+        "updatedTime",
+        "updated_on",
+        "updatedAt",
+        "modifiedDate"
+      ],
+      "format": "date-time"
+    },
+    "variant_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.24,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "variant_id"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "status"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "commerce",
+    "concept": "order_item",
+    "providers": 25,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

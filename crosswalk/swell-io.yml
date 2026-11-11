@@ -1,0 +1,106 @@
+provider: swell-io
+apis_io: https://apis.io/providers/swell-io/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      images: images
+      created_at: date_created
+      type: type
+      status: active
+      category_ids:
+      - category_id
+      - categories
+      variants: variants
+      slug: slug
+      price: price
+      sku: sku
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/swell-backend-api-openapi.yml#DELETE /products/{id}
+    - openapi/_original/swell-backend-api-openapi.yml#GET /products
+    - openapi/_original/swell-backend-api-openapi.yml#GET /products/{id}
+    - openapi/_original/swell-backend-api-openapi.yml#POST /products
+    - openapi/_original/swell-backend-api-openapi.yml#PUT /products/{id}
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/swell-backend-api-openapi.yml#DELETE /categories/{id}
+    - openapi/_original/swell-backend-api-openapi.yml#GET /categories
+    - openapi/_original/swell-backend-api-openapi.yml#GET /categories/{id}
+    - openapi/_original/swell-backend-api-openapi.yml#POST /categories
+    - openapi/_original/swell-backend-api-openapi.yml#PUT /categories/{id}
+  cart:
+    path_segment:
+    - carts
+    - cart
+    properties:
+      id: id
+      line_items: items
+      currency: currency
+      created_at: date_created
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/swell-backend-api-openapi.yml#DELETE /carts/{id}
+    - openapi/_original/swell-backend-api-openapi.yml#GET /carts
+    - openapi/_original/swell-backend-api-openapi.yml#GET /carts/{id}
+    - openapi/_original/swell-backend-api-openapi.yml#POST /carts
+    - openapi/_original/swell-backend-api-openapi.yml#PUT /carts/{id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      line_items: items
+      created_at: date_created
+      shipping_address: shipping
+      currency: currency
+      number: number
+      total: grand_total
+      total_tax: tax_total
+      billing_address: billing
+      custom_fields: metadata
+      discount_total: discount_total
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/swell-backend-api-openapi.yml#DELETE /orders/{id}
+    - openapi/_original/swell-backend-api-openapi.yml#GET /orders
+    - openapi/_original/swell-backend-api-openapi.yml#GET /orders/{id}
+    - openapi/_original/swell-backend-api-openapi.yml#PATCH /orders/{id}
+    - openapi/_original/swell-backend-api-openapi.yml#POST /orders
+  order_item:
+    path_segment:
+    - items
+    properties:
+      quantity: quantity
+      id: id
+      product_id: product_id
+      currency: currency
+      tax_total: tax_total
+      discount_total: discount_total
+      variant_id: variant_id
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/swell-frontend-api-openapi.yml#DELETE /api/cart/items/{itemId}
+    - openapi/_original/swell-frontend-api-openapi.yml#POST /api/cart/items
+    - openapi/_original/swell-frontend-api-openapi.yml#PUT /api/cart/items/{itemId}
+  inventory:
+    path_segment:
+    - stock
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/swell-backend-api-openapi.yml#GET /stock
+    - openapi/_original/swell-backend-api-openapi.yml#POST /stock

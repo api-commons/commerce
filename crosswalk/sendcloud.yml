@@ -1,0 +1,24 @@
+provider: sendcloud
+apis_io: https://apis.io/providers/sendcloud/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id:
+      - id
+      - order_id
+      created_at: created_at
+      shipping_address: shipping_address
+      number: order_number
+      billing_address: billing_address
+      updated_at: modified_at
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/sendcloud-v3-orders-openapi.yml#DELETE /orders/{id}
+    - openapi/_original/sendcloud-v3-orders-openapi.yml#GET /orders
+    - openapi/_original/sendcloud-v3-orders-openapi.yml#GET /orders/{id}
+    - openapi/_original/sendcloud-v3-orders-openapi.yml#PATCH /orders/{id}
+    - openapi/_original/sendcloud-v3-orders-openapi.yml#POST /orders

@@ -1,0 +1,47 @@
+provider: snipcart
+apis_io: https://apis.io/providers/snipcart/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      slug: url
+      price: price
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/snipcart-rest-api-openapi.yml#DELETE /products/{id}
+    - openapi/_original/snipcart-rest-api-openapi.yml#GET /products
+    - openapi/_original/snipcart-rest-api-openapi.yml#GET /products/{id}
+    - openapi/_original/snipcart-rest-api-openapi.yml#POST /products
+    - openapi/_original/snipcart-rest-api-openapi.yml#PUT /products/{id}
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      created_at: creationDate
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/snipcart-rest-api-openapi.yml#GET /customers
+    - openapi/_original/snipcart-rest-api-openapi.yml#GET /customers/{id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      status: status
+      line_items: items
+      currency: currency
+      custom_fields: metadata
+      email: email
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/snipcart-rest-api-openapi.yml#GET /customers/{id}/orders
+    - openapi/_original/snipcart-rest-api-openapi.yml#GET /orders
+    - openapi/_original/snipcart-rest-api-openapi.yml#GET /orders/{token}
+    - openapi/_original/snipcart-rest-api-openapi.yml#PUT /orders/{token}

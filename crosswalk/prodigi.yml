@@ -1,0 +1,23 @@
+provider: prodigi
+apis_io: https://apis.io/providers/prodigi/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/prodigi-openapi.yml#GET /products/{sku}
+  order:
+    path_segment:
+    - orders
+    properties:
+      line_items: items
+      custom_fields: metadata
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/prodigi-openapi.yml#GET /orders
+    - openapi/_original/prodigi-openapi.yml#GET /orders/{orderId}
+    - openapi/_original/prodigi-openapi.yml#POST /orders

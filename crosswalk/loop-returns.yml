@@ -1,0 +1,15 @@
+provider: loop-returns
+apis_io: https://apis.io/providers/loop-returns/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  cart:
+    path_segment:
+    - cart
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/loop-returns-carts-openapi.yml#DELETE /cart/{token}
+    - openapi/_original/loop-returns-carts-openapi.yml#GET /cart/{token}
+    - openapi/_original/loop-returns-carts-openapi.yml#POST /cart
+    - openapi/_original/loop-returns-carts-openapi.yml#POST /cart/{token}

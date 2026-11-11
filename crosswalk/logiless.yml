@@ -1,0 +1,18 @@
+provider: logiless
+apis_io: https://apis.io/providers/logiless/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - sales_orders
+    properties:
+      id: id
+      line_items: lines
+      total_tax: tax_total
+      email: buyer_email
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/logiless-openapi.yml#GET /merchant/{merchant_id}/sales_orders
+    - openapi/_original/logiless-openapi.yml#PUT /merchant/{merchant_id}/sales_orders/{id}

@@ -1,0 +1,38 @@
+provider: versapay
+apis_io: https://apis.io/providers/versapay/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customer
+    - customers
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      phone: telephone
+      name: name
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/versapay-api-reference.json#GET /api/exports/customer/{identifier}
+    - openapi/_original/versapay-api-reference.json#GET /api/exports/customers
+    - openapi/_original/versapay-api-reference.json#POST /api/imports/customer
+  order:
+    path_segment:
+    - order
+    - orders
+    properties:
+      line_items: order_items
+      shipping_address: shipping_address
+      currency: currency
+      number: number
+      billing_address: billing_address
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/versapay-api-reference.json#GET /api/exports/order/{identifier}
+    - openapi/_original/versapay-api-reference.json#GET /api/exports/orders
+    - openapi/_original/versapay-api-reference.json#GET /api/gateway/v1/orders/{token}
+    - openapi/_original/versapay-api-reference.json#PATCH /api/imports/order
+    - openapi/_original/versapay-api-reference.json#POST /api/imports/order

@@ -1,0 +1,28 @@
+provider: passport
+apis_io: https://apis.io/providers/passport/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  cart:
+    path_segment:
+    - cart
+    properties:
+      line_items: items
+      currency: currency
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/passport-public-api-openapi.yml#POST /cart
+  order:
+    path_segment:
+    - order
+    properties:
+      line_items: items
+      created_at: created
+      shipping_address: shipping
+      currency: currency_code
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/passport-public-api-openapi.yml#DELETE /order
+    - openapi/_original/passport-public-api-openapi.yml#GET /order
+    - openapi/_original/passport-public-api-openapi.yml#POST /order
+    - openapi/_original/passport-public-api-openapi.yml#PUT /order

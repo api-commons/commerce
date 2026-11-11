@@ -1,0 +1,43 @@
+provider: bjs-wholesale-club
+apis_io: https://apis.io/providers/bjs-wholesale-club/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: productId
+      name: name
+      description: description
+      images: images
+      category_ids: category
+      brand: brand
+      price:
+      - price
+      - regularPrice
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bjs-wholesale-club-openapi.yaml#GET /products
+    - openapi/_original/bjs-wholesale-club-openapi.yaml#GET /products/{productId}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: orderId
+      status: status
+      line_items: items
+      created_at: createdAt
+      total_tax: tax
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bjs-wholesale-club-openapi.yaml#GET /orders/{orderId}
+    - openapi/_original/bjs-wholesale-club-openapi.yaml#POST /orders
+  inventory:
+    path_segment:
+    - inventory
+    properties:
+      product_id: productId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/bjs-wholesale-club-openapi.yaml#GET /products/{productId}/inventory

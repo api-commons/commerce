@@ -1,0 +1,27 @@
+provider: beacon-roofing-supply
+apis_io: https://apis.io/providers/beacon-roofing-supply/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: categoryName
+      id: categoryId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/beacon-roofing-supply-all-api.yaml#GET /categories
+    - openapi/_original/beacon-roofing-supply-v2-openapi.yml#GET /categories
+    - openapi/_original/beacon-roofing-supply-v2.yaml#GET /categories
+  order:
+    path_segment:
+    - order
+    properties:
+      id:
+      - orderId
+      - uuid
+      email: email
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/beacon-roofing-supply-openapi.json#POST /v1/eagleview/order

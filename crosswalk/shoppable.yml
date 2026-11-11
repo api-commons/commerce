@@ -1,0 +1,23 @@
+provider: shoppable
+apis_io: https://apis.io/providers/shoppable/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/shoppable-cloud-openapi-original.yml#POST /products
+  order:
+    path_segment:
+    - orders
+    properties:
+      status: status
+      number: orderNumber
+      email: email
+      updated_at: updatedAt
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/shoppable-cloud-openapi-original.yml#GET /orders/{orderId}

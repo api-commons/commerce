@@ -1,0 +1,33 @@
+provider: metrilo
+apis_io: https://apis.io/providers/metrilo/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/metrilo-tracking-api-openapi.yml#POST /product
+  category:
+    path_segment:
+    - category
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/metrilo-tracking-api-openapi.yml#POST /category
+  customer:
+    path_segment:
+    - customer
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/metrilo-tracking-api-openapi.yml#POST /customer
+  order:
+    path_segment:
+    - order
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/metrilo-tracking-api-openapi.yml#POST /order

@@ -1,0 +1,24 @@
+provider: neon-commerce
+apis_io: https://apis.io/providers/neon-commerce/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - purchases
+    properties:
+      id: id
+      status: status
+      line_items: items
+      currency: currency
+      number: orderNumber
+      total:
+      - totalAmount
+      - amount
+      total_tax: taxAmount
+      email: email
+      discount_total: discountAmount
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/neon-commerce-purchase-openapi.yml#GET /purchases
+    - openapi/_original/neon-commerce-purchase-openapi.yml#GET /purchases/{purchaseId}

@@ -1,0 +1,21 @@
+provider: copthis
+apis_io: https://apis.io/providers/copthis/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status:
+      - status
+      - state
+      line_items: line_items
+      created_at: created
+      shipping_address: shipping
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/copthis-partner-api-openapi.yml#GET /orders/{order_id}
+    - openapi/_original/copthis-partner-api-openapi.yml#PATCH /orders/{order_id}
+    - openapi/_original/copthis-partner-api-openapi.yml#POST /orders

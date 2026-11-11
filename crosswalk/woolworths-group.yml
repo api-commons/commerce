@@ -1,0 +1,47 @@
+provider: woolworths-group
+apis_io: https://apis.io/providers/woolworths-group/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: productId
+      name: name
+      type: productType
+      brand: brand
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/woolworths-group-wpay-gifting-client-openapi.yml#GET /gcc/client/api/v1/catalogue/products
+    - openapi/_original/woolworths-group-wpay-gifting-client-openapi.yml#GET /gcc/client/api/v1/catalogue/products/{id}
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: categoryId
+      description: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/woolworths-group-wpay-gifting-client-openapi.yml#GET /gcc/client/api/v1/catalogue/categories
+    - openapi/_original/woolworths-group-wpay-gifting-client-openapi.yml#GET /gcc/client/api/v1/catalogue/categories/{id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: orderId
+      status: status
+      line_items: products
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/woolworths-group-wpay-gift-card-partner-openapi.yml#POST /orders
+    - openapi/_original/woolworths-group-wpay-gifting-client-openapi.yml#POST /gco/client/api/v1/orders
+  shipment:
+    path_segment:
+    - fulfillment
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/woolworths-group-wpay-gifting-client-openapi.yml#POST /gco/client/api/v1/orders/{clientOrderNumber}/items/fulfillment

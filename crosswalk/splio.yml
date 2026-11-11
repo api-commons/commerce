@@ -1,0 +1,49 @@
+provider: splio
+apis_io: https://apis.io/providers/splio/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      name: name
+      description: description
+      category_ids: category
+      brand: brand
+      price: price
+      sku: sku
+      custom_fields: custom_fields
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/splio-customer-platform-openapi.json#DELETE /data/products/{id}
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/contacts/{id}/products
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/fields/products
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/v1/products
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/v1/products/{id}
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/coupons/categories
+    - openapi/_original/splio-doc-swagger2.json#GET /data/coupons/categories
+  order:
+    path_segment:
+    - orders
+    properties:
+      line_items: products
+      customer_id: contact_id
+      currency: currency
+      total: total_price
+      total_tax: tax_amount
+      custom_fields: custom_fields
+      discount_total: discount_amount
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/splio-customer-platform-openapi.json#DELETE /data/orders/{id}
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/contacts/{id}/orders
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/fields/orders
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/v1/orders
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/v1/orders/{id}

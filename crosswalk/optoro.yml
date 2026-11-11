@@ -1,0 +1,36 @@
+provider: optoro
+apis_io: https://apis.io/providers/optoro/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - listings
+    properties:
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/optoro-drop-ship-openapi-original.yml#GET /listings
+    - openapi/_original/optoro-drop-ship-openapi-original.yml#GET /listings/{id}
+    - openapi/_original/optoro-drop-ship-openapi-original.yml#PUT /listings/{id}
+    - openapi/_original/optoro-drop-ship-openapi.yml#GET /listings
+    - openapi/_original/optoro-drop-ship-openapi.yml#GET /listings/{id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      line_items: order_items
+      created_at: created_at
+      shipping_address: shipping_address
+      billing_address: billing_address
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/optoro-drop-ship-openapi-original.yml#DELETE /orders/{id}
+    - openapi/_original/optoro-drop-ship-openapi-original.yml#GET /orders
+    - openapi/_original/optoro-drop-ship-openapi-original.yml#GET /orders/{id}
+    - openapi/_original/optoro-drop-ship-openapi-original.yml#POST /batch/orders
+    - openapi/_original/optoro-drop-ship-openapi-original.yml#POST /orders

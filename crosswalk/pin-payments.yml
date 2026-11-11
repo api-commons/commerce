@@ -1,0 +1,20 @@
+provider: pin-payments
+apis_io: https://apis.io/providers/pin-payments/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      phone: phone_number
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/pin-payments-openapi.yaml#DELETE /customers/{customer_token}
+    - openapi/_original/pin-payments-openapi.yaml#GET /customers
+    - openapi/_original/pin-payments-openapi.yaml#GET /customers/{customer_token}
+    - openapi/_original/pin-payments-openapi.yaml#POST /customers
+    - openapi/_original/pin-payments-openapi.yaml#PUT /customers/{customer_token}

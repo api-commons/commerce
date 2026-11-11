@@ -1,0 +1,20 @@
+provider: buywhere
+apis_io: https://apis.io/providers/buywhere/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/buywhere-openapi.json#GET /products/{id}
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/buywhere-openapi.json#GET /categories
+    - openapi/_original/buywhere-openapi.json#GET /categories/{slug}

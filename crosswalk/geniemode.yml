@@ -1,0 +1,56 @@
+provider: geniemode
+apis_io: https://apis.io/providers/geniemode/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/design-attribution/products
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v2/path/manufacturer/categories
+    - openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#PUT /api/v2/path/manufacturer/{manufacturerId}/categories
+  order:
+    path_segment:
+    - order
+    - orders
+    properties:
+      id:
+      - order_id
+      - id
+      status:
+      - financial_status
+      - status
+      line_items: items
+      shipping_address: shipping_address
+      currency: currency
+      number: name
+      total:
+      - total_price
+      - total_amount
+      custom_fields: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/founder/risk/order/{orderId}
+    - openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/path/risk/order/{orderId}
+    - openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/commission/invoice/find-similar-shipments/{shipmentId}/order/{orderId}
+    - openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/excel/report/types/sample/orders
+    - openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/logistics/dashboard/order/{orderId}
+  shipment:
+    path_segment:
+    - shipments
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/order/shipments/{orderId}
+    - openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#POST /api/v1/order/shipments/{orderId}
+    - openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#PUT /api/v1/order/shipments/{orderId}

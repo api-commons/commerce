@@ -1,0 +1,49 @@
+provider: stripe
+apis_io: https://apis.io/providers/stripe/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      created_at: created
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/climate-openapi-original.yml#GET /v1/climate/products
+    - openapi/_original/climate-openapi-original.yml#GET /v1/climate/products/{product}
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      created_at: created
+      phone: phone
+      addresses: address
+      name: name
+      custom_fields: metadata
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/customers-openapi-original.yml#DELETE /v1/customers/{customer}
+    - openapi/_original/customers-openapi-original.yml#GET /v1/customers
+    - openapi/_original/customers-openapi-original.yml#GET /v1/customers/{customer}
+    - openapi/_original/customers-openapi-original.yml#POST /v1/customers
+    - openapi/_original/customers-openapi-original.yml#POST /v1/customers/{customer}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      created_at: created
+      currency: currency
+      custom_fields: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/climate-openapi-original.yml#GET /v1/climate/orders
+    - openapi/_original/climate-openapi-original.yml#GET /v1/climate/orders/{order}
+    - openapi/_original/climate-openapi-original.yml#POST /v1/climate/orders
+    - openapi/_original/climate-openapi-original.yml#POST /v1/climate/orders/{order}

@@ -1,0 +1,23 @@
+provider: northbeam
+apis_io: https://apis.io/providers/northbeam/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: order_id
+      line_items: products
+      customer_id: customer_id
+      currency: currency
+      total_tax: tax
+      email: customer_email
+      discount_total: discount_amount
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/northbeam-orders-v1-openapi.json#GET /orders
+    - openapi/_original/northbeam-orders-v1-openapi.json#POST /orders
+    - openapi/_original/northbeam-orders-v1-openapi.yml#GET /orders
+    - openapi/_original/northbeam-orders-v1-openapi.yml#POST /orders
+    - openapi/_original/northbeam-orders-v2-openapi.json#GET /orders

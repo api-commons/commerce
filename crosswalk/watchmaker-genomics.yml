@@ -1,0 +1,27 @@
+provider: watchmaker-genomics
+apis_io: https://apis.io/providers/watchmaker-genomics/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      last_name: lastname
+      first_name: firstname
+      created_at: created_at
+      addresses: addresses
+      updated_at: updated_at
+      custom_fields: custom_attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/watchmaker-genomics-commerce-rest-swagger.json#POST /V1/customers
+  order:
+    path_segment:
+    - order
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/watchmaker-genomics-commerce-rest-swagger.json#PUT /V1/guest-carts/{cartId}/order

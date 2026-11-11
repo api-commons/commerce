@@ -1,0 +1,44 @@
+provider: shipmonk
+apis_io: https://apis.io/providers/shipmonk/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    - products
+    properties:
+      id: id
+      name: name
+      images: image_url
+      created_at: created_at
+      type:
+      - product_type
+      - type
+      status: is_active
+      updated_at: updated_at
+      sku: sku
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/shipmonk-openapi.json#GET /v1/products
+    - openapi/_original/shipmonk-openapi.json#POST /v1/integrations/product
+    - openapi/_original/shipmonk-products-openapi.yml#GET /v1/products
+    - openapi/_original/shipmonk-products-openapi.yml#POST /v1/integrations/product
+  order:
+    path_segment:
+    - order
+    - orders
+    properties:
+      status: order_status
+      line_items: items
+      currency: currency_code
+      number: order_number
+      custom_fields: attributes
+      email: customer_email
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/shipmonk-openapi.json#GET /v1/integrations/orders
+    - openapi/_original/shipmonk-openapi.json#POST /v1/integrations/order
+    - openapi/_original/shipmonk-orders-openapi.yml#GET /v1/integrations/orders
+    - openapi/_original/shipmonk-orders-openapi.yml#POST /v1/integrations/order

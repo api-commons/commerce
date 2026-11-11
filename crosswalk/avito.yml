@@ -1,0 +1,21 @@
+provider: avito
+apis_io: https://apis.io/providers/avito/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/avito-order-management-openapi.json#GET /order-management/1/orders
+  inventory:
+    path_segment:
+    - stocks
+    properties:
+      quantity: quantity
+      product_id: item_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/avito-stock-management-openapi.json#PUT /stock-management/1/stocks

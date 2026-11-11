@@ -1,0 +1,26 @@
+provider: talon-one
+apis_io: https://apis.io/providers/talon-one/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    - customer
+    properties:
+      id: id
+      created_at: created
+      custom_fields: attributes
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/talon-one-management-api-openapi.yml#GET /v1/applications/{applicationId}/customers
+    - openapi/_original/talon-one-management-api-openapi.yml#GET /v1/applications/{applicationId}/customers/{customerId}
+    - openapi/_original/talon-one-management-api-openapi.yml#GET /v1/customers/{customerId}
+    - openapi/_original/talon-one-shopify-integration-api-openapi.yml#GET /api/v1/customer
+  inventory:
+    path_segment:
+    - inventory
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/talon-one-integration-api-openapi.yml#GET /v1/customer_profiles/{integrationId}/inventory

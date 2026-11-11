@@ -1,0 +1,20 @@
+provider: huuray
+apis_io: https://apis.io/providers/huuray/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - order
+    properties:
+      status: Status
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/huuray-openapi.yml#POST /v4/Order
+  inventory:
+    path_segment:
+    - stock
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/huuray-openapi.yml#POST /v4/Stock

@@ -1,0 +1,167 @@
+# The commerce bounded context: catalog, carts, orders, customers and fulfilment. See
+# ../schema-commons for the method; the only judgement in this repo is in this file.
+#
+# Cohort decision: "Marketplace" (1,338 providers) and "Retail" (1,212) are NOT used. The
+# first also means API, talent and data marketplaces; the second takes in energy retail and
+# retail media. The e-commerce tags, in every spelling the catalog carries, define the cohort.
+context: commerce
+name: Commerce
+tags: [E-Commerce, E-commerce, Ecommerce, eCommerce, ECommerce, e-commerce, "E‑commerce", Commerce,
+       Headless Commerce, Composable Commerce, B2B Commerce, Storefront, Order Management,
+       Shopping Cart, Online Shopping, WooCommerce, Digital Commerce]
+
+envelope: [_links, _pagination, _results, data, success, errors, warnings, count, total, page, meta, links,
+           value, results, next, previous, has_more, message, status_code, ids, next_page, previous_page,
+           page_info, cursor, total_count, per_page, total_pages, current_page]
+
+common_fields:
+  id: [uuid, guid, object_id, record_id, gid]
+  created_at: [created, created_date, created_time, date_created, create_time, creation_date, date_added, created_on]
+  updated_at: [updated, updated_date, modified_at, last_modified, date_modified, update_time, modified_date, updated_time, last_updated, updated_on]
+  custom_fields: [custom_field_values, custom_properties, custom, customfields, metafields, meta_data, metadata, attributes, properties, custom_attributes]
+  tags: [tag_ids, labels, tag_list]
+  external_id: [foreign_id, source_id, reference, external_reference]
+  is_deleted: [deleted, archived, is_archived]
+  currency: [currency_code, currency_iso_code, currency_iso]
+
+concepts:
+  product:
+    # "offers" is not used: in this cohort it is loyalty offers, FX quotes and promotions.
+    segments: [products, product, catalog_items, catalog-items, listings]
+    aliases:
+      name: [title, product_name, display_name]
+      description: [body_html, long_description, product_description, details, short_description]
+      sku: [product_code, item_code, code, part_number, mpn]
+      price: [base_price, list_price, unit_price, regular_price, amount]
+      status: [state, published, is_published, is_active, active, visibility, enabled]
+      images: [image, image_url, image_urls, media, photos, pictures, thumbnail]
+      category_ids: [categories, category, category_id, collections, collection_ids]
+      brand: [vendor, manufacturer, brand_name, brand_id]
+      slug: [handle, url_key, permalink, seo_url, url]
+      variants: [variations, skus, options_values]
+      barcode: [gtin, upc, ean, isbn]
+      weight: [shipping_weight, gross_weight]
+      type: [product_type, kind]
+  product_variant:
+    under: [products, product, items]
+    path: /products/{product_id}/variants
+    segments: [variants, variant, variations, skus, sku]
+    aliases:
+      name: [title, variant_name]
+      sku: [code, item_code, product_code]
+      price: [unit_price, base_price, list_price, regular_price, amount]
+      inventory_quantity: [stock, stock_quantity, quantity, inventory_level, available, qty]
+      options: [option_values, attributes, option1, selected_options]
+      barcode: [gtin, upc, ean]
+      product_id: [parent_id, item_id]
+  category:
+    segments: [categories, category, collections, collection, taxonomies, departments]
+    aliases:
+      name: [title, category_name, display_name]
+      parent_id: [parent, parent_category_id]
+      slug: [handle, url_key, permalink]
+      description: [body_html]
+  customer:
+    segments: [customers, customer, shoppers, buyers, consumers]
+    aliases:
+      first_name: [firstname, given_name]
+      last_name: [lastname, surname, family_name]
+      name: [full_name, display_name]
+      email: [email_address, primary_email, emails]
+      phone: [phone_number, phones, mobile, telephone]
+      addresses: [address, default_address, billing_address, shipping_address]
+      accepts_marketing: [marketing_opt_in, newsletter, subscribed, email_marketing_consent, accepts_email_marketing]
+      orders_count: [order_count, total_orders]
+      group_id: [customer_group_id, segment, customer_group]
+  cart:
+    # "checkout" is not used: in this cohort it is a hosted PAYMENT session (Square, Visa,
+    # Tabby, Stripe-style), which belongs to the payments context, not a cart.
+    segments: [carts, cart, baskets, basket]
+    aliases:
+      line_items: [items, products, lines, cart_items, entries]
+      customer_id: [customer, buyer_id, user_id, shopper_id]
+      total: [total_price, grand_total, amount, total_amount, cart_total]
+      subtotal: [subtotal_price, sub_total, base_amount]
+      email: [customer_email]
+  order:
+    segments: [orders, order, sales_orders, purchases]
+    aliases:
+      number: [order_number, order_id_display, reference_number, display_id, name, increment_id]
+      status: [state, order_status, financial_status, status_id]
+      fulfillment_status: [shipping_status, shipment_status, delivery_status]
+      payment_status: [financial_status_payment, paid, is_paid]
+      customer_id: [customer, buyer_id, user_id, shopper_id, contact_id]
+      email: [customer_email, buyer_email, contact_email]
+      line_items: [items, order_items, products, lines, order_lines, entries]
+      total: [total_price, grand_total, amount, total_amount, order_total, total_inc_tax]
+      subtotal: [subtotal_price, sub_total, subtotal_amount, items_total, total_ex_tax]
+      total_tax: [tax, tax_amount, taxes, tax_total]
+      shipping_total: [shipping, shipping_amount, shipping_cost, shipping_price, total_shipping]
+      discount_total: [discount, discount_amount, total_discounts, discounts]
+      billing_address: [billing]
+      shipping_address: [shipping, delivery_address]
+      placed_at: [ordered_at, order_date, date_placed, processed_at, date_ordered, submitted_at]
+      note: [notes, comment, customer_note, comments]
+  order_item:
+    under: [orders, order, carts, cart, checkouts]
+    path: /orders/{order_id}/items
+    segments: [line_items, line-items, lineitems, items, order_items, lines]
+    aliases:
+      product_id: [product, item_id]
+      variant_id: [variant, sku_id]
+      name: [title, product_name, description]
+      quantity: [qty, count]
+      price: [unit_price, base_price, amount, item_price]
+      total: [total_price, line_total, subtotal, amount_total]
+  shipment:
+    under: [orders, order]
+    path: /orders/{order_id}/shipments
+    segments: [fulfillments, fulfillment, shipments, shipment, deliveries, fulfilments]
+    aliases:
+      status: [state, shipment_status, shipping_status]
+      tracking_number: [tracking_numbers, tracking_code, tracking]
+      tracking_url: [tracking_urls, tracking_link]
+      carrier: [tracking_company, shipping_carrier, carrier_code, shipping_provider]
+      line_items: [items, shipment_items, lines]
+      shipped_at: [ship_date, date_shipped, shipped_date]
+      order_id: [order]
+  inventory:
+    # A mass noun: 30 providers say /inventory, none /inventories.
+    path: /inventory
+    segments: [inventory, inventories, inventory_levels, inventory-levels, inventory_items, stock, stocks, stock_levels]
+    aliases:
+      sku: [item_code, product_code, code]
+      quantity: [available, qty, stock, on_hand, quantity_available, stock_quantity, available_quantity]
+      location_id: [warehouse_id, location, warehouse, store_id]
+      product_id: [item_id, inventory_item_id, variant_id]
+
+# Reviewed by hand: every provider counted only through an ambiguous segment.
+exclude:
+  order:
+    bloomberg-emsx: trading orders (side, ticker, time in force)
+    gemini-trust: exchange trading orders
+    river-markets: trading orders
+    ss-c-technologies: trading orders
+    lianlian-global: /refund/order is a payment refund
+    fraud-net: /risk/order is a fraud-scoring event
+    mile: /track/order is shipment tracking
+    atrato: /integration/.../order is a webhook event feed
+    erply: /resource/{id}/order sets display order
+    apurata: point-of-sale financing order (payments)
+    payflex: buy-now-pay-later order (payments)
+    shopback: in-store payment order (payments)
+    adro1b33: /credits/purchases are credit top-ups
+  product:
+    coveo: /commerce/v2/configurations/listings are search listing-page configurations
+  category:
+    webflow: CMS collections
+    webflow-api-and-documentation-webflow: CMS collections
+    duda: website CMS collections
+    lucidworks: search index collections
+    dotdigital: insight-data collections
+    gameball: settings file collections
+    layup-technologies: debit-order payment collections
+    talon-one: promotion-campaign collections
+    xentral: analytics report collections
+  customer:
+    satispay: /consumers/{phone_number} is a payment-account lookup

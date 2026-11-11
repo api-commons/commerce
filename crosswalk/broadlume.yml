@@ -1,0 +1,28 @@
+provider: broadlume
+apis_io: https://apis.io/providers/broadlume/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customer
+    - customers
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/broadlume-bms-openapi.yml#GET /{alias}/customer
+    - openapi/_original/broadlume-bms-openapi.yml#GET /{alias}/customers
+    - openapi/_original/broadlume-bms-openapi.yml#PATCH /{alias}/customer
+    - openapi/_original/broadlume-bms-openapi.yml#POST /{alias}/customer
+  order:
+    path_segment:
+    - order
+    - orders
+    properties:
+      email: email
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/broadlume-bms-openapi.yml#GET /{alias}/order
+    - openapi/_original/broadlume-bms-openapi.yml#GET /{alias}/orders
+    - openapi/_original/broadlume-bms-openapi.yml#PATCH /{alias}/order
+    - openapi/_original/broadlume-bms-openapi.yml#POST /{alias}/order

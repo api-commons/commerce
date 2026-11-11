@@ -1,0 +1,94 @@
+provider: getresponse
+apis_io: https://apis.io/providers/getresponse/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: productId
+      name: name
+      created_at: createdOn
+      type: type
+      updated_at: updatedOn
+      category_ids: categories
+      variants: variants
+      brand: vendor
+      slug: url
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/getresponse-open-api-original.json#DELETE /shops/{shopId}/products/{productId}
+    - openapi/_original/getresponse-open-api-original.json#GET /shops/{shopId}/products
+    - openapi/_original/getresponse-open-api-original.json#GET /shops/{shopId}/products/{productId}
+    - openapi/_original/getresponse-open-api-original.json#POST /shops/{shopId}/products
+    - openapi/_original/getresponse-open-api-original.json#POST /shops/{shopId}/products/{productId}
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      name: name
+      barcode: barcode
+      created_at: createdOn
+      inventory_quantity: quantity
+      price: price
+      updated_at: updatedOn
+      position: position
+    core_coverage: 0.714
+    evidence:
+    - openapi/_original/getresponse-open-api-original.json#DELETE /shops/{shopId}/products/{productId}/variants/{variantId}
+    - openapi/_original/getresponse-open-api-original.json#GET /shops/{shopId}/products/{productId}/variants
+    - openapi/_original/getresponse-open-api-original.json#GET /shops/{shopId}/products/{productId}/variants/{variantId}
+    - openapi/_original/getresponse-open-api-original.json#POST /shops/{shopId}/products/{productId}/variants
+    - openapi/_original/getresponse-open-api-original.json#POST /shops/{shopId}/products/{productId}/variants/{variantId}
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: categoryId
+      parent_id: parentId
+      updated_at: updatedOn
+      created_at: createdOn
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/getresponse-categories-openapi.yml#DELETE /shops/{shopId}/categories/{categoryId}
+    - openapi/_original/getresponse-categories-openapi.yml#GET /shops/{shopId}/categories
+    - openapi/_original/getresponse-categories-openapi.yml#GET /shops/{shopId}/categories/{categoryId}
+    - openapi/_original/getresponse-categories-openapi.yml#POST /shops/{shopId}/categories
+    - openapi/_original/getresponse-categories-openapi.yml#POST /shops/{shopId}/categories/{categoryId}
+  cart:
+    path_segment:
+    - carts
+    properties:
+      id: cartId
+      currency: currency
+      created_at: createdOn
+      updated_at: updatedOn
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/getresponse-carts-openapi.yml#DELETE /shops/{shopId}/carts/{cartId}
+    - openapi/_original/getresponse-carts-openapi.yml#GET /shops/{shopId}/carts
+    - openapi/_original/getresponse-carts-openapi.yml#GET /shops/{shopId}/carts/{cartId}
+    - openapi/_original/getresponse-carts-openapi.yml#POST /shops/{shopId}/carts
+    - openapi/_original/getresponse-carts-openapi.yml#POST /shops/{shopId}/carts/{cartId}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: orderId
+      status: status
+      customer_id: contactId
+      shipping_address: shippingAddress
+      currency: currency
+      number: name
+      total: totalPrice
+      total_tax: taxes
+      billing_address: billingAddress
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/getresponse-open-api-original.json#DELETE /shops/{shopId}/orders/{orderId}
+    - openapi/_original/getresponse-open-api-original.json#GET /shops/{shopId}/orders
+    - openapi/_original/getresponse-open-api-original.json#GET /shops/{shopId}/orders/{orderId}
+    - openapi/_original/getresponse-open-api-original.json#POST /shops/{shopId}/orders
+    - openapi/_original/getresponse-open-api-original.json#POST /shops/{shopId}/orders/{orderId}

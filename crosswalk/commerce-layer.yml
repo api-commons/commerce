@@ -1,0 +1,47 @@
+provider: commerce-layer
+apis_io: https://apis.io/providers/commerce-layer/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customer
+    - customers
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/commerce-layer-core-api-openapi.json#DELETE /customers/{customerId}
+    - openapi/_original/commerce-layer-core-api-openapi.json#GET /coupon_recipients/{couponRecipientId}/customer
+    - openapi/_original/commerce-layer-core-api-openapi.json#GET /customer_addresses/{customerAddressId}/customer
+    - openapi/_original/commerce-layer-core-api-openapi.json#GET /customer_groups/{customerGroupId}/customers
+    - openapi/_original/commerce-layer-core-api-openapi.json#GET /customer_password_resets/{customerPasswordResetId}/customer
+  order:
+    path_segment:
+    - order
+    - orders
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/commerce-layer-core-api-openapi.json#DELETE /orders/{orderId}
+    - openapi/_original/commerce-layer-core-api-openapi.json#GET /adyen_payments/{adyenPaymentId}/order
+    - openapi/_original/commerce-layer-core-api-openapi.json#GET /authorizations/{authorizationId}/order
+    - openapi/_original/commerce-layer-core-api-openapi.json#GET /axerve_payments/{axervePaymentId}/order
+    - openapi/_original/commerce-layer-core-api-openapi.json#GET /braintree_payments/{braintreePaymentId}/order
+  order_item:
+    path_segment:
+    - line_items
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/commerce-layer-core-api-openapi.json#GET /orders/{orderId}/line_items
+  shipment:
+    path_segment:
+    - shipments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/commerce-layer-core-api-openapi.json#GET /orders/{orderId}/shipments

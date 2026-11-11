@@ -1,0 +1,54 @@
+provider: depictai
+apis_io: https://apis.io/providers/depictai/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    - listings
+    properties:
+      name: title
+      description: description
+      images:
+      - images
+      - image_urls
+      created_at: created_at
+      type: type
+      status: status
+      category_ids: collections
+      variants:
+      - skus
+      - variants
+      slug:
+      - handle
+      - slug
+      price: price
+      custom_fields: metadata
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/depictai-lite-openapi.json#POST /collections/{collection_id}/products
+    - openapi/_original/depictai-portal-openapi.json#GET /api/v1/merchants/{merchant_id}/products/{main_product_id}
+    - openapi/_original/depictai-portal-openapi.json#POST /api/v1/merchants/{merchant_id}/collections/{collection_id}/products
+    - openapi/_original/depictai-portal-openapi.json#POST /api/v1/merchants/{merchant_id}/products
+    - openapi/_original/depictai-storefront-openapi.json#DELETE /catalog/v0/products
+  category:
+    path_segment:
+    - collections
+    - categories
+    - category
+    properties:
+      name: title
+      id: category_id
+      parent_id: parent_id
+      description: description
+      slug: handle
+      updated_at: updated_at
+      custom_fields: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/depictai-lite-openapi.json#GET /collections
+    - openapi/_original/depictai-lite-openapi.json#GET /collections/{collection_id}
+    - openapi/_original/depictai-lite-openapi.json#PUT /collections/{collection_id}
+    - openapi/_original/depictai-portal-openapi.json#GET /api/v1/merchants/{merchant_id}/collections
+    - openapi/_original/depictai-portal-openapi.json#GET /api/v1/merchants/{merchant_id}/collections/{collection_id}

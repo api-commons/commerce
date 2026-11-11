@@ -1,0 +1,34 @@
+provider: primis
+apis_io: https://apis.io/providers/primis/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: _id
+      name: name
+      description: description
+      images: imageUrl
+      status: status
+      variants: variants
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/primis-openapi-original.json#DELETE /products/{id}
+    - openapi/_original/primis-openapi-original.json#GET /products/{id}
+    - openapi/_original/primis-openapi-original.json#POST /products
+    - openapi/_original/primis-openapi-original.json#PUT /products/{id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      line_items: products
+      customer_id: customer
+      number: orderNumber
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/primis-openapi-original.json#GET /orders/{orderId}
+    - openapi/_original/primis-openapi-original.json#POST /orders
+    - openapi/_original/primis-openapi-original.json#POST /orders/{orderId}

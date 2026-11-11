@@ -1,0 +1,46 @@
+provider: omniful-inc
+apis_io: https://apis.io/providers/omniful-inc/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/omniful-inc-openapi.yml#GET /sales-channel/public/v1/customers
+    - openapi/_original/omniful-inc-openapi.yml#GET /sales-channel/public/v1/customers/{customer_id}
+    - openapi/_original/omniful-inc-openapi.yml#POST /sales-channel/public/v1/customers
+    - openapi/_original/omniful-inc-openapi.yml#PUT /sales-channel/public/v1/customers/{customer_id}
+  order:
+    path_segment:
+    - orders
+    - order
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/omniful-inc-openapi.yml#GET /sales-channel/public/v1/seller/orders
+    - openapi/_original/omniful-inc-openapi.yml#GET /sales-channel/public/v1/seller/orders/{order_id}
+    - openapi/_original/omniful-inc-openapi.yml#GET /sales-channel/public/v1/tenants/sellers/{seller_code}/orders
+    - openapi/_original/omniful-inc-openapi.yml#GET /sales-channel/public/v1/tenants/sellers/{seller_code}/orders/{id}
+    - openapi/_original/omniful-inc-openapi.yml#GET /sales-channel/public/v2/seller/orders
+  shipment:
+    path_segment:
+    - shipment
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/omniful-inc-openapi.yml#POST /sales-channel/public/v1/orders/{order_id}/shipment
+    - openapi/_original/omniful-inc-openapi.yml#POST /sales-channel/public/v1/tenants/sellers/{seller_code}/orders/{id}/shipment
+    - openapi/_original/omniful-inc-openapi.yml#PUT /sales-channel/public/v1/orders/{order_id}/shipment
+    - openapi/_original/omniful-inc-openapi.yml#PUT /sales-channel/public/v1/tenants/sellers/{seller_code}/orders/{order_id}/shipment
+  inventory:
+    path_segment:
+    - inventory
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/omniful-inc-openapi.yml#GET /sales-channel/public/v1/tenants/hubs/{hub_code}/inventory
+    - openapi/_original/omniful-inc-openapi.yml#GET /sales-channel/public/v1/tenants/sellers/{seller_code}/skus/{sku_code}/inventory
+    - openapi/_original/omniful-inc-openapi.yml#PUT /sales-channel/public/v1/tenants/hubs/{hub_code}/sellers/{seller_code}/inventory

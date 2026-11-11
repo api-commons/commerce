@@ -1,0 +1,39 @@
+provider: finditparts
+apis_io: https://apis.io/providers/finditparts/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/finditparts-reseller-api-openapi.yml#GET /products
+    - openapi/_original/finditparts-reseller-api-openapi.yml#GET /products/{product_id}
+  cart:
+    path_segment:
+    - carts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/finditparts-reseller-api-openapi.yml#GET /carts/{cart_id}
+    - openapi/_original/finditparts-reseller-api-openapi.yml#POST /carts
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/finditparts-reseller-api-openapi.yml#GET /orders
+    - openapi/_original/finditparts-reseller-api-openapi.yml#GET /orders/{order_id}
+  order_item:
+    path_segment:
+    - line_items
+    properties:
+      quantity: quantity
+      variant_id: variant_id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/finditparts-reseller-api-openapi.yml#POST /carts/{cart_id}/line_items
+    - openapi/_original/finditparts-reseller-api-openapi.yml#PUT /carts/{cart_id}/line_items

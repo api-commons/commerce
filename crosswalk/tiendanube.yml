@@ -1,0 +1,97 @@
+provider: tiendanube
+apis_io: https://apis.io/providers/tiendanube/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      images: images
+      created_at: created_at
+      status: published
+      updated_at: updated_at
+      category_ids: categories
+      variants: variants
+      brand: brand
+      slug: handle
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tiendanube-openapi.yml#DELETE /products/{id}
+    - openapi/_original/tiendanube-openapi.yml#GET /products
+    - openapi/_original/tiendanube-openapi.yml#GET /products/{id}
+    - openapi/_original/tiendanube-openapi.yml#POST /products
+    - openapi/_original/tiendanube-openapi.yml#PUT /products/{id}
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      id: id
+      product_id: product_id
+      barcode: barcode
+      inventory_quantity: stock
+      price: price
+      weight: weight
+      height: height
+      width: width
+    core_coverage: 0.714
+    evidence:
+    - openapi/_original/tiendanube-openapi.yml#DELETE /products/{product_id}/variants/{id}
+    - openapi/_original/tiendanube-openapi.yml#GET /products/{product_id}/variants
+    - openapi/_original/tiendanube-openapi.yml#GET /products/{product_id}/variants/{id}
+    - openapi/_original/tiendanube-openapi.yml#POST /products/{product_id}/variants
+    - openapi/_original/tiendanube-openapi.yml#PUT /products/{product_id}/variants/{id}
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: id
+      parent_id: parent
+      description: description
+      slug: handle
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tiendanube-openapi.yml#DELETE /categories/{id}
+    - openapi/_original/tiendanube-openapi.yml#GET /categories
+    - openapi/_original/tiendanube-openapi.yml#GET /categories/{id}
+    - openapi/_original/tiendanube-openapi.yml#POST /categories
+    - openapi/_original/tiendanube-openapi.yml#PUT /categories/{id}
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      created_at: created_at
+      phone: phone
+      addresses:
+      - addresses
+      - default_address
+      name: name
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/tiendanube-openapi.yml#GET /customers
+    - openapi/_original/tiendanube-openapi.yml#GET /customers/{id}
+    - openapi/_original/tiendanube-openapi.yml#POST /customers
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      line_items: products
+      created_at: created_at
+      customer_id: customer
+      shipping_address: shipping_address
+      currency: currency
+      number: number
+      billing_address: billing_address
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tiendanube-openapi.yml#GET /orders
+    - openapi/_original/tiendanube-openapi.yml#GET /orders/{id}

@@ -1,0 +1,27 @@
+provider: channable
+apis_io: https://apis.io/providers/channable/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      number: name
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/channable-order-connection-openapi.json#GET /v1/companies/{company_id}/projects/{project_id}/orders
+    - openapi/_original/channable-order-connection-openapi.json#GET /v1/companies/{company_id}/projects/{project_id}/orders/{order_id}
+    - openapi/_original/channable-order-connection-openapi.json#GET /v1/companies/{company_id}/projects/{project_id}/statistics/orders
+    - openapi/_original/channable-order-connection-openapi.json#GET /v1/companies/{company_id}/projects/{project_id}/statistics/orders/{order_config_id}
+    - openapi/_original/channable-order-connection-openapi.json#GET /v2/companies/{company_id}/projects/{project_id}/orders
+  shipment:
+    path_segment:
+    - shipment
+    properties:
+      id: id
+      status: status
+      tracking_number: tracking_code
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/channable-order-connection-openapi.json#POST /v1/companies/{company_id}/projects/{project_id}/orders/{order_id}/shipment

@@ -1,0 +1,32 @@
+provider: partstech
+apis_io: https://apis.io/providers/partstech/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: categoryName
+      id: categoryId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/partstech-api-openapi.yml#GET /taxonomy/categories
+    - openapi/_original/partstech-openapi.yaml#GET /taxonomy/categories
+  order:
+    path_segment:
+    - orders
+    - order
+    properties:
+      id: id
+      status: status
+      shipping_address: shippingAddress
+      total: totalPrice
+      total_tax: tax
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/partstech-api-openapi.yml#GET /orders
+    - openapi/_original/partstech-api-openapi.yml#GET /orders/{orderId}
+    - openapi/_original/partstech-api-openapi.yml#GET /partner/orders
+    - openapi/_original/partstech-api-openapi.yml#GET /partner/orders/{orderId}
+    - openapi/_original/partstech-api-openapi.yml#POST /punchout/cart/custom/order

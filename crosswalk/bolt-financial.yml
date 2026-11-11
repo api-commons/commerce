@@ -1,0 +1,22 @@
+provider: bolt-financial
+apis_io: https://apis.io/providers/bolt-financial/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id:
+      - id
+      - order_id
+      status: status
+      created_at: created_at
+      total: total_amount
+      custom_fields: metadata
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/bolt-financial-bolt-api-openapi.yml#GET /v1/subscriptions/orders
+    - openapi/_original/bolt-financial-bolt-api-openapi.yml#POST /v1/merchant/orders
+    - openapi/_original/bolt-financial-embeddable-checkout-v3-openapi.yml#POST /orders

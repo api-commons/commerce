@@ -1,0 +1,86 @@
+provider: aftership
+apis_io: https://apis.io/providers/aftership/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: title
+      description: description
+      images: image_urls
+      created_at: created_at
+      status: published
+      updated_at: updated_at
+      category_ids: categories
+      variants: variants
+      slug:
+      - slug
+      - url
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/aftership-commerce-api-openapi.yml#GET /products
+    - openapi/_original/aftership-commerce-api-openapi.yml#GET /products/{id}
+    - openapi/_original/aftership-commerce-api-openapi.yml#PATCH /products/{id}
+    - openapi/_original/aftership-commerce-api-openapi.yml#POST /products
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      id: id
+      name: title
+      price: price
+      options: options
+      weight: weight
+    core_coverage: 0.429
+    evidence:
+    - openapi/_original/aftership-commerce-api-openapi.yml#DELETE /products/{id}/variants/{variant_id}
+    - openapi/_original/aftership-commerce-api-openapi.yml#GET /products/{id}/variants/{variant_id}
+    - openapi/_original/aftership-commerce-api-openapi.yml#PATCH /products/{id}/variants/{variant_id}
+    - openapi/_original/aftership-commerce-api-openapi.yml#POST /products/{id}/variants
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status:
+      - status
+      - financial_status
+      line_items: items
+      created_at: created_at
+      customer_id: customer
+      shipping_address: shipping_address
+      currency: currency
+      number:
+      - name
+      - number
+      total: order_total
+      total_tax: tax_total
+      billing_address: billing_address
+      custom_fields: custom_fields
+      updated_at: updated_at
+      discount_total: discount_total
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/aftership-commerce-api-openapi.yml#GET /orders
+    - openapi/_original/aftership-commerce-api-openapi.yml#GET /orders/{id}
+    - openapi/_original/aftership-commerce-api-openapi.yml#PATCH /orders/{id}
+    - openapi/_original/aftership-commerce-api-openapi.yml#POST /orders
+  order_item:
+    path_segment:
+    - items
+    properties:
+      quantity: quantity
+      id: id
+      product_id: product_id
+      price: unit_price
+      sku: sku
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/aftership-commerce-api-openapi.yml#DELETE /orders/{id}/items/{item_id}
+    - openapi/_original/aftership-commerce-api-openapi.yml#GET /orders/{id}/items/{item_id}
+    - openapi/_original/aftership-commerce-api-openapi.yml#PATCH /orders/{id}/items/{item_id}
+    - openapi/_original/aftership-commerce-api-openapi.yml#POST /orders/{id}/items

@@ -1,0 +1,14 @@
+provider: pagbank
+apis_io: https://apis.io/providers/pagbank/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/pagseguro-orders-api-openapi.yml#GET /orders
+    - openapi/_original/pagseguro-orders-api-openapi.yml#GET /orders/{order_id}
+    - openapi/_original/pagseguro-orders-api-openapi.yml#POST /orders

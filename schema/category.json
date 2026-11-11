@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/commerce/main/schema/category.json",
+  "title": "Category",
+  "description": "The common category in Commerce, distilled from 66 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.818,
+      "x-commons-providers": 54,
+      "x-commons-spellings": [
+        "name",
+        "title",
+        "categoryName",
+        "Name",
+        "display_name",
+        "category_name",
+        "Title"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.788,
+      "x-commons-providers": 52,
+      "x-commons-spellings": [
+        "id",
+        "categoryId",
+        "category_id",
+        "Id",
+        "CategoryId"
+      ]
+    },
+    "parent_id": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.439,
+      "x-commons-providers": 29,
+      "x-commons-spellings": [
+        "parent",
+        "parent_id",
+        "parentId",
+        "parentCategoryId",
+        "parent_category_id",
+        "ParentId"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.424,
+      "x-commons-providers": 28,
+      "x-commons-spellings": [
+        "description",
+        "body_html",
+        "Description"
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.288,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "slug",
+        "handle",
+        "permalink"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.273,
+      "x-commons-providers": 18,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "update_time",
+        "updated",
+        "modifiedAt",
+        "updatedOn",
+        "modifiedDate"
+      ],
+      "format": "date-time"
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.258,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "createdOn",
+        "create_time",
+        "createdDate"
+      ],
+      "format": "date-time"
+    },
+    "custom_fields": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.227,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "attributes",
+        "metadata",
+        "properties",
+        "custom_attributes",
+        "custom_fields"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "commerce",
+    "concept": "category",
+    "providers": 66,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

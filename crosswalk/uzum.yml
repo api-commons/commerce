@@ -1,0 +1,14 @@
+provider: uzum
+apis_io: https://apis.io/providers/uzum/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      line_items: products
+      customer_id: user_id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/uzum-nasiya-openapi.yaml#POST /api/v1/orders

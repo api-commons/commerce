@@ -1,0 +1,13 @@
+provider: adready-cpxi
+apis_io: https://apis.io/providers/adready-cpxi/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/adready-cpxi-kickstart-openapi.json#GET /api/advertisers/{advertiserId}/flipPixels/{pixelId}/categories
+    - openapi/_original/adready-cpxi-kickstart-openapi.yml#GET /api/advertisers/{advertiserId}/flipPixels/{pixelId}/categories

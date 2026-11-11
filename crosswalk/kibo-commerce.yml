@@ -1,0 +1,163 @@
+provider: kibo-commerce
+apis_io: https://apis.io/providers/kibo-commerce/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    - product
+    properties:
+      name: name
+      description: description
+      type: productType
+      status: isActive
+      category_ids: categories
+      variants: variations
+      price: price
+      sku:
+      - productCode
+      - code
+      custom_fields:
+      - metaData
+      - properties
+      tags: labels
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#DELETE /commerce/catalog/admin/products/{productCode}
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#DELETE /commerce/rules/product/{code}
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#GET /commerce/catalog/admin/products
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#GET /commerce/catalog/admin/products/{productCode}
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#GET /commerce/rules/product
+  product_variant:
+    path_segment:
+    - variations
+    properties:
+      barcode: upc
+      options: options
+    core_coverage: 0.143
+    evidence:
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#DELETE /commerce/catalog/admin/products/{productCode}/variations/{variationKey}
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#GET /commerce/catalog/admin/products/{productCode}/variations
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#GET /commerce/catalog/admin/products/{productCode}/variations/{variationKey}
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#PUT /commerce/catalog/admin/products/{productCode}/variations
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#PUT /commerce/catalog/admin/products/{productCode}/variations/{variationKey}
+  category:
+    path_segment:
+    - categories
+    - category
+    - collection
+    properties:
+      name: name
+      id:
+      - id
+      - categoryId
+      parent_id: parentCategoryId
+      custom_fields: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kibo-commerce-appdevelopement-openapi.yml#GET /platform/appdev/apppackages/collection
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#DELETE /commerce/catalog/admin/categories/{categoryId}
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#GET /commerce/catalog/admin/categories
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#GET /commerce/catalog/admin/categories/{categoryId}
+    - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#GET /commerce/catalog/admin/facets/category
+  customer:
+    path_segment:
+    - customer
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/kibo-commerce-customer-openapi.yml#DELETE /commerce/rules/customer/{code}
+    - openapi/_original/kibo-commerce-customer-openapi.yml#GET /commerce/rules/customer
+    - openapi/_original/kibo-commerce-customer-openapi.yml#GET /commerce/rules/customer/{code}
+    - openapi/_original/kibo-commerce-customer-openapi.yml#POST /commerce/rules/customer
+    - openapi/_original/kibo-commerce-customer-openapi.yml#PUT /commerce/rules/customer/{code}
+  cart:
+    path_segment:
+    - carts
+    - cart
+    properties:
+      id:
+      - id
+      - cartId
+      line_items: items
+      currency: currencyCode
+      customer_id: userId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#DELETE /commerce/carts/{cartId}
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#GET /commerce/carts/{cartId}
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#PUT /commerce/carts/{cartId}
+    - openapi/_original/kibo-commerce-reservation-openapi.yml#GET /commerce/reservation/cart/{cartId}
+    - openapi/_original/openapi_openapi_commerce.json#DELETE /commerce/carts/{cartId}
+  order:
+    path_segment:
+    - orders
+    - order
+    properties:
+      id: id
+      status: status
+      line_items: items
+      customer_id: userId
+      currency: currencyCode
+      number: orderNumber
+      total_tax: taxTotal
+      custom_fields: attributes
+      email: email
+      discount_total:
+      - discountTotal
+      - discounts
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#GET /commerce/orders
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#GET /commerce/orders/{orderId}
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#POST /commerce/orders
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#PUT /commerce/orders/{orderId}
+    - openapi/_original/kibo-commerce-fulfillment-openapi.yml#DELETE /commerce/shipments/order/{orderId}
+  order_item:
+    path_segment:
+    - items
+    properties:
+      quantity: quantity
+      id: id
+      product_id: product
+      price: unitPrice
+      currency: currencyCode
+      type: type
+      custom_fields: attributes
+      tax_total: taxTotal
+      discount_total: discountTotal
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#DELETE /commerce/carts/current/items
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#DELETE /commerce/carts/current/items/{cartItemId}
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#DELETE /commerce/carts/{cartId}/items
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#DELETE /commerce/carts/{cartId}/items/{cartItemId}
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#DELETE /commerce/checkouts/{checkoutId}/items/{itemId}
+  shipment:
+    path_segment:
+    - shipments
+    - fulfillment
+    properties:
+      id:
+      - id
+      - shipmentId
+      status:
+      - status
+      - shipmentStatus
+      tracking_number:
+      - trackingNumber
+      - trackingNumbers
+      carrier: carrier
+      line_items: items
+      order_id: orderId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#DELETE /commerce/orders/{orderId}/shipments/{shipmentId}
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#GET /commerce/orders/{orderId}/shipments/{shipmentId}
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#POST /commerce/orders/{orderId}/shipments
+    - openapi/_original/kibo-commerce-commerce-openapi.yml#PUT /commerce/orders/{orderId}/items/{orderItemId}/fulfillment
+    - openapi/_original/openapi_openapi_commerce.json#DELETE /commerce/orders/{orderId}/shipments/{shipmentId}

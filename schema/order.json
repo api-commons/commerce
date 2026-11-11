@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/commerce/main/schema/order.json",
+  "title": "Order",
+  "description": "The common order in Commerce, distilled from 163 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.736,
+      "x-commons-providers": 120,
+      "x-commons-spellings": [
+        "id",
+        "orderId",
+        "order_id",
+        "uuid",
+        "_id",
+        "orderID",
+        "OrderId",
+        "Id"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.613,
+      "x-commons-providers": 100,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "financial_status",
+        "order_status",
+        "financialStatus",
+        "Status",
+        "orderStatus",
+        "State"
+      ]
+    },
+    "line_items": {
+      "type": "array",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.595,
+      "x-commons-providers": 97,
+      "x-commons-spellings": [
+        "items",
+        "line_items",
+        "products",
+        "lineItems",
+        "order_items",
+        "orderItems",
+        "lines",
+        "orderLines"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.448,
+      "x-commons-providers": 73,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "creationDate",
+        "created_date",
+        "created_on",
+        "creation_date",
+        "date_created"
+      ],
+      "format": "date-time"
+    },
+    "customer_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.387,
+      "x-commons-providers": 63,
+      "x-commons-spellings": [
+        "customer",
+        "customer_id",
+        "customerId",
+        "contact_id",
+        "userId",
+        "contactId",
+        "user_id",
+        "Customer"
+      ]
+    },
+    "shipping_address": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.368,
+      "x-commons-providers": 60,
+      "x-commons-spellings": [
+        "shipping_address",
+        "shipping",
+        "shippingAddress",
+        "delivery_address",
+        "deliveryAddress",
+        "ShippingAddress"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.362,
+      "x-commons-providers": 59,
+      "x-commons-spellings": [
+        "currency",
+        "currencyCode",
+        "currency_code",
+        "currency_iso_code"
+      ]
+    },
+    "number": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.319,
+      "x-commons-providers": 52,
+      "x-commons-spellings": [
+        "name",
+        "orderNumber",
+        "order_number",
+        "number",
+        "increment_id",
+        "display_id",
+        "Number"
+      ]
+    },
+    "total": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.282,
+      "x-commons-providers": 46,
+      "x-commons-spellings": [
+        "total_price",
+        "orderTotal",
+        "totalPrice",
+        "amount",
+        "grand_total",
+        "order_total",
+        "total_amount",
+        "totalAmount"
+      ]
+    },
+    "total_tax": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.245,
+      "x-commons-providers": 40,
+      "x-commons-spellings": [
+        "tax_total",
+        "tax",
+        "taxTotal",
+        "total_tax",
+        "tax_amount",
+        "taxAmount",
+        "taxes",
+        "totalTax"
+      ]
+    },
+    "billing_address": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.239,
+      "x-commons-providers": 39,
+      "x-commons-spellings": [
+        "billing_address",
+        "billingAddress",
+        "billing",
+        "BillingAddress"
+      ]
+    },
+    "custom_fields": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.239,
+      "x-commons-providers": 39,
+      "x-commons-spellings": [
+        "attributes",
+        "metadata",
+        "custom_fields",
+        "properties",
+        "custom_attributes",
+        "customFields",
+        "customAttributes",
+        "metafields"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.227,
+      "x-commons-providers": 37,
+      "x-commons-spellings": [
+        "email",
+        "customer_email",
+        "buyer_email",
+        "customerEmail",
+        "contactEmail"
+      ],
+      "format": "email"
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.221,
+      "x-commons-providers": 36,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "updated_on",
+        "updated",
+        "updatedOn",
+        "updated_date",
+        "update_time",
+        "modified_at"
+      ],
+      "format": "date-time"
+    },
+    "discount_total": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.202,
+      "x-commons-providers": 33,
+      "x-commons-spellings": [
+        "discount_total",
+        "discount",
+        "discounts",
+        "discountTotal",
+        "discountAmount",
+        "discount_amount",
+        "total_discounts",
+        "Discount"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "commerce",
+    "concept": "order",
+    "providers": 163,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

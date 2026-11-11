@@ -1,0 +1,27 @@
+provider: furniture-api
+apis_io: https://apis.io/providers/furniture-api/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      name: name
+      description: description
+      images: image
+      category_ids: category
+      price: price
+      sku: sku
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/furniture-api-openapi.yml#GET /v1/products
+    - openapi/_original/furniture-api-openapi.yml#GET /v1/products/{sku}
+  inventory:
+    path_segment:
+    - stock
+    properties:
+      sku: sku
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/furniture-api-openapi.yml#PATCH /v1/products/stock

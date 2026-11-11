@@ -1,0 +1,84 @@
+provider: shopify-admin
+apis_io: https://apis.io/providers/shopify-admin/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: title
+      description: body_html
+      images: images
+      created_at: created_at
+      type: product_type
+      status: status
+      updated_at: updated_at
+      variants: variants
+      brand: vendor
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/shopify-admin-rest-openapi.yml#DELETE /products/{product_id}.json
+    - openapi/_original/shopify-admin-rest-openapi.yml#GET /products.json
+    - openapi/_original/shopify-admin-rest-openapi.yml#GET /products/{product_id}.json
+    - openapi/_original/shopify-admin-rest-openapi.yml#POST /products.json
+    - openapi/_original/shopify-admin-rest-openapi.yml#PUT /products/{product_id}.json
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      last_name: last_name
+      first_name: first_name
+      created_at: created_at
+      phone: phone
+      addresses:
+      - addresses
+      - default_address
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/shopify-admin-rest-openapi.yml#GET /customers.json
+    - openapi/_original/shopify-admin-rest-openapi.yml#GET /customers/{customer_id}.json
+    - openapi/_original/shopify-admin-rest-openapi.yml#POST /customers.json
+    - openapi/_original/shopify-admin-rest-openapi.yml#PUT /customers/{customer_id}.json
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status:
+      - financial_status
+      - status
+      line_items: line_items
+      created_at: created_at
+      customer_id: customer
+      shipping_address: shipping_address
+      currency: currency
+      number: order_number
+      total: total_price
+      total_tax: total_tax
+      billing_address: billing_address
+      email: email
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/shopify-admin-rest-openapi.yml#GET /orders.json
+    - openapi/_original/shopify-admin-rest-openapi.yml#GET /orders/{order_id}.json
+    - openapi/_original/shopify-admin-rest-openapi.yml#PUT /orders/{order_id}.json
+  inventory:
+    path_segment:
+    - inventory_items
+    - inventory_levels
+    properties:
+      id: id
+      quantity: available
+      sku: sku
+      product_id: inventory_item_id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/shopify-admin-rest-openapi.yml#GET /inventory_items.json
+    - openapi/_original/shopify-admin-rest-openapi.yml#GET /inventory_levels.json

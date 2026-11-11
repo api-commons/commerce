@@ -1,0 +1,52 @@
+provider: listrak
+apis_io: https://apis.io/providers/listrak/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    properties:
+      name: title
+      description: description
+      images: imageUrl
+      status: status
+      category_ids: category
+      brand: brand
+      price: price
+      sku: sku
+      tags: tags
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/listrak-data-openapi.json#POST /v1/Product
+    - openapi/_original/listrak-data-openapi.yml#POST /v1/Product
+  customer:
+    path_segment:
+    - customer
+    properties:
+      email: email
+      last_name: lastName
+      first_name: firstName
+      addresses: address
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/listrak-data-openapi.json#POST /v1/Customer
+    - openapi/_original/listrak-data-openapi.yml#POST /v1/Customer
+  order:
+    path_segment:
+    - order
+    properties:
+      status: status
+      line_items: items
+      customer_id: customer
+      shipping_address: shippingAddress
+      number: orderNumber
+      total: orderTotal
+      total_tax: taxTotal
+      billing_address: billingAddress
+      email: email
+      discount_total: discountTotal
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/listrak-data-openapi.json#POST /v1/Order
+    - openapi/_original/listrak-data-openapi.yml#POST /v1/Order

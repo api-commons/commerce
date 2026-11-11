@@ -1,0 +1,21 @@
+provider: sovrn
+apis_io: https://apis.io/providers/sovrn/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    - products
+    properties:
+      id: id
+      name:
+      - name
+      - title
+      images: imageURL
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/sovrn-get_product-openapi-original.json#GET /product
+    - openapi/_original/sovrn-get_product_recommendations-openapi-original.json#POST /ai-orchestration/products
+    - openapi/_original/sovrn-product-coupons-openapi.yml#GET /product
+    - openapi/_original/sovrn-product-recommendations-openapi.yml#POST /ai-orchestration/products

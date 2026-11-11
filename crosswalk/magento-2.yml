@@ -1,0 +1,47 @@
+provider: magento-2
+apis_io: https://apis.io/providers/magento-2/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/magento-2-openapi.yml#DELETE /V1/products/{sku}
+    - openapi/_original/magento-2-openapi.yml#GET /V1/products
+    - openapi/_original/magento-2-openapi.yml#GET /V1/products/{sku}
+    - openapi/_original/magento-2-openapi.yml#POST /V1/products
+    - openapi/_original/magento-2-openapi.yml#PUT /V1/products/{sku}
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/magento-2-openapi.yml#GET /V1/categories
+    - openapi/_original/magento-2-openapi.yml#GET /V1/categories/{categoryId}
+  customer:
+    path_segment:
+    - customers
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/magento-2-openapi.yml#GET /V1/customers/{customerId}
+    - openapi/_original/magento-2-openapi.yml#POST /V1/customers
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/magento-2-openapi.yml#GET /V1/orders
+    - openapi/_original/magento-2-openapi.yml#GET /V1/orders/{id}
+  order_item:
+    path_segment:
+    - items
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/magento-2-openapi.yml#POST /V1/carts/mine/items

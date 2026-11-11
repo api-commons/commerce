@@ -1,0 +1,40 @@
+provider: orderdesk
+apis_io: https://apis.io/providers/orderdesk/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      line_items: order_items
+      created_at: date_added
+      customer_id: customer
+      shipping_address: shipping
+      total: order_total
+      email: email
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/orderdesk-openapi.yml#DELETE /orders/{order_id}
+    - openapi/_original/orderdesk-openapi.yml#GET /orders
+    - openapi/_original/orderdesk-openapi.yml#GET /orders/{order_id}
+    - openapi/_original/orderdesk-openapi.yml#POST /orders
+    - openapi/_original/orderdesk-openapi.yml#PUT /orders/{order_id}
+  shipment:
+    path_segment:
+    - shipments
+    properties:
+      id: id
+      status: status
+      tracking_number: tracking_number
+      carrier: carrier_code
+      weight: weight
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/orderdesk-openapi.yml#DELETE /orders/{order_id}/shipments/{shipment_id}
+    - openapi/_original/orderdesk-openapi.yml#GET /orders/{order_id}/shipments
+    - openapi/_original/orderdesk-openapi.yml#GET /orders/{order_id}/shipments/{shipment_id}
+    - openapi/_original/orderdesk-openapi.yml#POST /orders/{order_id}/shipments
+    - openapi/_original/orderdesk-openapi.yml#PUT /orders/{order_id}/shipments/{shipment_id}

@@ -1,0 +1,53 @@
+provider: reefapi
+apis_io: https://apis.io/providers/reefapi/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    - products
+    - listings
+    properties:
+      id:
+      - product_id
+      - id
+      type: product_type
+      category_ids:
+      - category
+      - category_id
+      brand:
+      - vendor
+      - brand
+      slug:
+      - url
+      - handle
+      price: price
+      sku: sku
+      tags: tags
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/reefapi-openapi.json#POST /amazon/v1/seller/products
+    - openapi/_original/reefapi-openapi.json#POST /asos/v1/product
+    - openapi/_original/reefapi-openapi.json#POST /asos/v1/products
+    - openapi/_original/reefapi-openapi.json#POST /etsy/v1/shops/listings
+    - openapi/_original/reefapi-openapi.json#POST /flipkart/v1/product
+  category:
+    path_segment:
+    - categories
+    - category
+    - collection
+    - collections
+    properties:
+      id: category_id
+      parent_id: parent
+      slug:
+      - slug
+      - handle
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/reefapi-openapi.json#POST /allegro/v1/category
+    - openapi/_original/reefapi-openapi.json#POST /asos/v1/category
+    - openapi/_original/reefapi-openapi.json#POST /autodoc/v1/categories
+    - openapi/_original/reefapi-openapi.json#POST /bestbuy/v1/categories
+    - openapi/_original/reefapi-openapi.json#POST /ebay/v1/categories

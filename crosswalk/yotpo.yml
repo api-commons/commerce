@@ -1,0 +1,43 @@
+provider: yotpo
+apis_io: https://apis.io/providers/yotpo/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      name: name
+      images: image_url
+      slug: url
+      price: price
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/yotpo-openapi.yml#GET /core/v3/stores/{store_id}/products
+    - openapi/_original/yotpo-openapi.yml#POST /core/v3/stores/{store_id}/products
+  customer:
+    path_segment:
+    - customers
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/yotpo-openapi.yml#GET /customers
+    - openapi/_original/yotpo-openapi.yml#POST /core/v3/stores/{store_id}/customers
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: order_id
+      customer_id: customer
+      currency:
+      - currency
+      - currency_code
+      total: total_price
+      email: customer_email
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/yotpo-openapi.yml#POST /core/v3/stores/{store_id}/orders
+    - openapi/_original/yotpo-openapi.yml#POST /orders

@@ -1,0 +1,19 @@
+provider: viglink
+apis_io: https://apis.io/providers/viglink/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    - products
+    properties:
+      id: id
+      name:
+      - name
+      - title
+      images: imageURL
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/viglink-product-promo-codes-openapi.yml#GET /product
+    - openapi/_original/viglink-product-recommendations-openapi.yml#POST /ai-orchestration/products

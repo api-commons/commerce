@@ -1,0 +1,89 @@
+provider: redefine-meat
+apis_io: https://apis.io/providers/redefine-meat/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    - products
+    properties:
+      id:
+      - guid
+      - id
+      name:
+      - title
+      - name
+      description:
+      - short_description
+      - description
+      images: images
+      type: type
+      status: status
+      category_ids: categories
+      variants: variations
+      slug:
+      - slug
+      - permalink
+      sku: sku
+      custom_fields: attributes
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/redefine-meat-content-openapi.json#DELETE /wp/v2/product/{id}
+    - openapi/_original/redefine-meat-content-openapi.json#GET /wp/v2/product
+    - openapi/_original/redefine-meat-content-openapi.json#GET /wp/v2/product/{id}
+    - openapi/_original/redefine-meat-content-openapi.json#PATCH /wp/v2/product/{id}
+    - openapi/_original/redefine-meat-content-openapi.json#POST /wp/v2/product
+  category:
+    path_segment:
+    - categories
+    - taxonomies
+    properties:
+      name: name
+      id: id
+      parent_id: parent
+      description: description
+      slug:
+      - slug
+      - permalink
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/redefine-meat-content-openapi.json#DELETE /wp/v2/categories/{id}
+    - openapi/_original/redefine-meat-content-openapi.json#GET /wp/v2/block-patterns/categories
+    - openapi/_original/redefine-meat-content-openapi.json#GET /wp/v2/categories
+    - openapi/_original/redefine-meat-content-openapi.json#GET /wp/v2/categories/{id}
+    - openapi/_original/redefine-meat-content-openapi.json#GET /wp/v2/taxonomies
+  cart:
+    path_segment:
+    - cart
+    properties:
+      line_items: items
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/redefine-meat-store-openapi.json#GET /wc/store/v1/cart
+  order:
+    path_segment:
+    - order
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/redefine-meat-store-openapi.json#GET /wc/store/v1/order/{id}
+  order_item:
+    path_segment:
+    - items
+    properties:
+      quantity: quantity
+      id: id
+      name:
+      - name
+      - description
+      sku: sku
+      type: type
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/redefine-meat-store-openapi.json#DELETE /wc/store/v1/cart/items
+    - openapi/_original/redefine-meat-store-openapi.json#DELETE /wc/store/v1/cart/items/{key}
+    - openapi/_original/redefine-meat-store-openapi.json#GET /wc/store/v1/cart/items
+    - openapi/_original/redefine-meat-store-openapi.json#GET /wc/store/v1/cart/items/{key}
+    - openapi/_original/redefine-meat-store-openapi.json#PATCH /wc/store/v1/cart/items/{key}

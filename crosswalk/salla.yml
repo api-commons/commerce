@@ -1,0 +1,88 @@
+provider: salla
+apis_io: https://apis.io/providers/salla/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      images: images
+      type:
+      - type
+      - product_type
+      status: status
+      updated_at: updated_at
+      category_ids: categories
+      brand: brand_id
+      slug: url
+      price: price
+      sku:
+      - sku
+      - mpn
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/salla-merchant-api-openapi.yml#DELETE /products/{product_id}
+    - openapi/_original/salla-merchant-api-openapi.yml#GET /products
+    - openapi/_original/salla-merchant-api-openapi.yml#GET /products/{product_id}
+    - openapi/_original/salla-merchant-api-openapi.yml#POST /products
+    - openapi/_original/salla-merchant-api-openapi.yml#PUT /products/{product_id}
+  product_variant:
+    path_segment:
+    - skus
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salla-merchant-api-openapi.yml#GET /products/{product_id}/skus
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salla-merchant-api-openapi.yml#GET /categories
+    - openapi/_original/salla-merchant-api-openapi.yml#GET /categories/{category_id}
+    - openapi/_original/salla-merchant-api-openapi.yml#POST /categories
+    - openapi/_original/salla-merchant-api-openapi.yml#PUT /categories/{category_id}
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      last_name: last_name
+      first_name: first_name
+      phone: mobile
+      updated_at: updated_at
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/salla-merchant-api-openapi.yml#GET /customers
+    - openapi/_original/salla-merchant-api-openapi.yml#GET /customers/{customer_id}
+    - openapi/_original/salla-merchant-api-openapi.yml#POST /customers
+    - openapi/_original/salla-merchant-api-openapi.yml#PUT /customers/{customer_id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      line_items: items
+      customer_id: customer
+      shipping_address: shipping
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/salla-merchant-api-openapi.yml#GET /orders
+    - openapi/_original/salla-merchant-api-openapi.yml#GET /orders/{order_id}
+    - openapi/_original/salla-merchant-api-openapi.yml#PUT /orders/{order_id}
+  order_item:
+    path_segment:
+    - items
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/salla-merchant-api-openapi.yml#GET /orders/{order_id}/items

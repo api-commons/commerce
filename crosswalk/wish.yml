@@ -1,0 +1,72 @@
+provider: wish
+apis_io: https://apis.io/providers/wish/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    - product
+    properties:
+      id:
+      - product_id
+      - id
+      name: name
+      description: description
+      images: images
+      created_at: created_at
+      status:
+      - state
+      - status
+      updated_at: updated_at
+      category_ids:
+      - category_id
+      - category
+      variants: variations
+      brand: brand_id
+      slug: url
+      custom_fields: attributes
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/wish-marketplace-v3-openapi.json#DELETE /api/v3/products/{id}
+    - openapi/_original/wish-marketplace-v3-openapi.json#GET /api/v3/eu_product_compliance/products
+    - openapi/_original/wish-marketplace-v3-openapi.json#GET /api/v3/products
+    - openapi/_original/wish-marketplace-v3-openapi.json#GET /api/v3/products/{id}
+    - openapi/_original/wish-marketplace-v3-openapi.json#GET /api/v3/ratings/products
+  product_variant:
+    path_segment:
+    - variations
+    properties:
+      id: id
+      product_id: product_id
+      barcode: gtin
+      price: price
+      options:
+      - options
+      - attributes
+    core_coverage: 0.571
+    evidence:
+    - openapi/_original/wish-marketplace-v3-openapi.json#POST /api/v3/products/{id}/variations
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/wish-marketplace-v3-openapi.json#GET /api/v3/products/categories
+    - openapi/_original/wish-marketplace-v3-openapi.json#GET /api/v3/products/categories/{id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: state
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/wish-marketplace-v3-openapi.json#GET /api/v3/orders
+    - openapi/_original/wish-marketplace-v3-openapi.json#GET /api/v3/orders/{id}
+    - openapi/_original/wish-marketplace-v3-openapi.json#PUT /api/v3/orders/{id}

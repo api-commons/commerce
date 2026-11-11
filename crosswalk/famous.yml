@@ -1,0 +1,19 @@
+provider: famous
+apis_io: https://apis.io/providers/famous/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/famous-spring-api-swagger.json#GET /v1/categories/{slug}
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/famous-spring-api-swagger.json#GET /seller/v1/orders

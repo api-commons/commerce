@@ -1,0 +1,1872 @@
+context: commerce
+name: Commerce
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - E-Commerce
+  - E-commerce
+  - Ecommerce
+  - eCommerce
+  - ECommerce
+  - e-commerce
+  - E‑commerce
+  - Commerce
+  - Headless Commerce
+  - Composable Commerce
+  - B2B Commerce
+  - Storefront
+  - Order Management
+  - Shopping Cart
+  - Online Shopping
+  - WooCommerce
+  - Digital Commerce
+  providers_with_harvested_openapi: 401
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded:
+  order:
+    bloomberg-emsx: trading orders (side, ticker, time in force)
+    gemini-trust: exchange trading orders
+    river-markets: trading orders
+    ss-c-technologies: trading orders
+    lianlian-global: /refund/order is a payment refund
+    fraud-net: /risk/order is a fraud-scoring event
+    mile: /track/order is shipment tracking
+    atrato: /integration/.../order is a webhook event feed
+    erply: /resource/{id}/order sets display order
+    apurata: point-of-sale financing order (payments)
+    payflex: buy-now-pay-later order (payments)
+    shopback: in-store payment order (payments)
+    adro1b33: /credits/purchases are credit top-ups
+  product:
+    coveo: /commerce/v2/configurations/listings are search listing-page configurations
+  category:
+    webflow: CMS collections
+    webflow-api-and-documentation-webflow: CMS collections
+    duda: website CMS collections
+    lucidworks: search index collections
+    dotdigital: insight-data collections
+    gameball: settings file collections
+    layup-technologies: debit-order payment collections
+    talon-one: promotion-campaign collections
+    xentral: analytics report collections
+  customer:
+    satispay: /consumers/{phone_number} is a payment-account lookup
+duplicates: {}
+concepts:
+  product:
+    segments_seen:
+      products: 137
+      product: 30
+      listings: 9
+      catalog-items: 1
+    providers_exposing: 154
+    providers_with_readable_schema: 137
+    operations:
+    - operation: GET collection
+      providers: 135
+      share: 0.877
+      tier: core
+    - operation: GET item
+      providers: 123
+      share: 0.799
+      tier: core
+    - operation: POST collection
+      providers: 105
+      share: 0.682
+      tier: core
+    - operation: UPDATE item
+      providers: 75
+      share: 0.487
+      tier: extended
+    - operation: DELETE item
+      providers: 69
+      share: 0.448
+      tier: extended
+    - operation: UPDATE collection
+      providers: 14
+      share: 0.091
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 13
+      share: 0.084
+      tier: long-tail
+    - operation: POST item
+      providers: 9
+      share: 0.058
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 109
+      share: 0.796
+      type: string
+      spellings:
+      - id
+      - product_id
+      - productId
+      - guid
+      - uuid
+      - productID
+      - Id
+      - $id
+    - name: name
+      tier: core
+      providers: 104
+      share: 0.759
+      type: string
+      spellings:
+      - name
+      - title
+      - productName
+      - product_name
+      - Name
+      - displayName
+      - display_name
+      - Product Name
+    - name: description
+      tier: core
+      providers: 80
+      share: 0.584
+      type: string
+      spellings:
+      - description
+      - short_description
+      - body_html
+      - shortDescription
+      - Description
+      - details
+      - longDescription
+      - long_description
+    - name: images
+      tier: extended
+      providers: 63
+      share: 0.46
+      type: array
+      spellings:
+      - images
+      - image_url
+      - image
+      - imageUrl
+      - image_urls
+      - imageURL
+      - pictures
+      - thumbnail
+    - name: created_at
+      tier: extended
+      providers: 60
+      share: 0.438
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - createdOn
+      - created
+      - created_on
+      - create_time
+      - date_created
+      - created_date
+    - name: type
+      tier: extended
+      providers: 59
+      share: 0.431
+      type: string
+      spellings:
+      - type
+      - product_type
+      - productType
+      - kind
+    - name: status
+      tier: extended
+      providers: 58
+      share: 0.423
+      type: string
+      spellings:
+      - status
+      - active
+      - state
+      - published
+      - enabled
+      - is_active
+      - visibility
+      - isActive
+    - name: updated_at
+      tier: extended
+      providers: 57
+      share: 0.416
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - update_time
+      - updated
+      - lastModified
+      - updated_on
+      - lastUpdated
+      - date_modified
+    - name: category_ids
+      tier: extended
+      providers: 56
+      share: 0.409
+      type: array
+      spellings:
+      - categories
+      - category
+      - category_id
+      - collections
+      - categoryId
+      - categoryIds
+      - CategoryId
+      - collection_ids
+    - name: variants
+      tier: extended
+      providers: 53
+      share: 0.387
+      type: array
+      spellings:
+      - variants
+      - skus
+      - variations
+    - name: brand
+      tier: extended
+      providers: 51
+      share: 0.372
+      type: string
+      spellings:
+      - brand
+      - vendor
+      - brand_id
+      - manufacturer
+      - brand_name
+      - brandId
+      - brandName
+      - Manufacturer
+    - name: slug
+      tier: extended
+      providers: 51
+      share: 0.372
+      type: string
+      spellings:
+      - url
+      - slug
+      - handle
+      - permalink
+      - urlKey
+    - name: price
+      tier: extended
+      providers: 45
+      share: 0.328
+      type: number
+      spellings:
+      - price
+      - amount
+      - regularPrice
+      - regular_price
+    - name: sku
+      tier: extended
+      providers: 45
+      share: 0.328
+      type: string
+      spellings:
+      - sku
+      - mpn
+      - code
+      - productCode
+      - partNumber
+    - name: custom_fields
+      tier: extended
+      providers: 44
+      share: 0.321
+      type: array
+      spellings:
+      - attributes
+      - properties
+      - metadata
+      - custom_fields
+      - custom_attributes
+      - customAttributes
+      - metaData
+      - metafields
+    - name: tags
+      tier: extended
+      providers: 34
+      share: 0.248
+      type: array
+      spellings:
+      - tags
+      - tag_ids
+      - labels
+    long_tail_count: 2035
+    long_tail_sample:
+    - barcode
+    - weight
+    - options
+    - currency
+    - external_id
+    - height
+    - limit
+    - quantity
+    - width
+    - sale_price
+    - in_stock
+    - is_deleted
+    - length
+    - published_at
+    - condition
+    - deleted_at
+    - content
+    - dimensions
+    - listing_id
+    - relationships
+    - size
+    - average_rating
+    - error
+    - inventory
+    - link
+    - offset
+    - pagination
+    - prices
+    - retail_price
+    - shop_id
+    - stock
+    - cost
+    - cost_price
+    - is_purchasable
+    - meta_description
+    - parent
+    - price_range
+    - product_ids
+    - review_count
+    - shop
+  product_variant:
+    segments_seen:
+      variants: 17
+      skus: 5
+      variations: 5
+      sku: 3
+    providers_exposing: 27
+    providers_with_readable_schema: 26
+    operations:
+    - operation: POST collection
+      providers: 20
+      share: 0.741
+      tier: core
+    - operation: GET collection
+      providers: 19
+      share: 0.704
+      tier: core
+    - operation: DELETE item
+      providers: 15
+      share: 0.556
+      tier: core
+    - operation: GET item
+      providers: 14
+      share: 0.519
+      tier: core
+    - operation: UPDATE item
+      providers: 13
+      share: 0.481
+      tier: extended
+    - operation: UPDATE collection
+      providers: 4
+      share: 0.148
+      tier: long-tail
+    - operation: POST item
+      providers: 3
+      share: 0.111
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.037
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 20
+      share: 0.769
+      type: string
+      spellings:
+      - id
+    - name: name
+      tier: core
+      providers: 15
+      share: 0.577
+      type: string
+      spellings:
+      - name
+      - title
+      - variantName
+      - Name
+    - name: product_id
+      tier: core
+      providers: 15
+      share: 0.577
+      type: integer
+      spellings:
+      - product_id
+      - productId
+      - itemId
+      - ProductId
+    - name: barcode
+      tier: core
+      providers: 13
+      share: 0.5
+      type: string
+      spellings:
+      - barcode
+      - upc
+      - gtin
+      - ean
+    - name: created_at
+      tier: core
+      providers: 13
+      share: 0.5
+      type: string
+      spellings:
+      - created_at
+      - createdOn
+      - created
+      - createdAt
+      - created_on
+    - name: inventory_quantity
+      tier: core
+      providers: 13
+      share: 0.5
+      type: integer
+      spellings:
+      - inventory_quantity
+      - quantity
+      - stock
+      - inventory_level
+      - available
+    - name: price
+      tier: core
+      providers: 13
+      share: 0.5
+      type: string
+      spellings:
+      - price
+      - regular_price
+      - basePrice
+    - name: options
+      tier: extended
+      providers: 12
+      share: 0.462
+      type: array
+      spellings:
+      - options
+      - option1
+      - attributes
+      - option_values
+    - name: updated_at
+      tier: extended
+      providers: 12
+      share: 0.462
+      type: string
+      spellings:
+      - updated_at
+      - lastUpdated
+      - updatedAt
+      - updatedOn
+      - updated_on
+      - LastModified
+    - name: weight
+      tier: extended
+      providers: 12
+      share: 0.462
+      type: number
+      spellings:
+      - weight
+    - name: height
+      tier: extended
+      providers: 6
+      share: 0.231
+      type: number
+      spellings:
+      - height
+    - name: position
+      tier: extended
+      providers: 6
+      share: 0.231
+      type: integer
+      spellings:
+      - position
+    - name: type
+      tier: extended
+      providers: 6
+      share: 0.231
+      type: string
+      spellings:
+      - type
+    - name: width
+      tier: extended
+      providers: 6
+      share: 0.231
+      type: number
+      spellings:
+      - width
+    long_tail_count: 212
+    long_tail_sample:
+    - compare_at_price
+    - description
+    - weight_unit
+    - images
+    - option2
+    - option3
+    - status
+    - categories
+    - cost
+    - cost_price
+    - depth
+    - image
+    - image_id
+    - length
+    - taxable
+    - allow_backorder
+    - calculated_price
+    - cms_locale_id
+    - custom_fields
+    - dimensions_unit
+    - external_id
+    - field_data
+    - fulfillment_service
+    - grams
+    - handle
+    - image_url
+    - inventory_management
+    - inventory_policy
+    - is_active
+    - is_deleted
+    - last_published
+    - mpn
+    - prices
+    - promotional_price
+    - publish_status
+    - requires_shipping
+    - sale_price
+    - sku_id
+    - stock_management
+    - tags
+  category:
+    segments_seen:
+      categories: 65
+      collections: 15
+      category: 14
+      collection: 5
+      taxonomies: 5
+      departments: 2
+    providers_exposing: 81
+    providers_with_readable_schema: 66
+    operations:
+    - operation: GET collection
+      providers: 73
+      share: 0.901
+      tier: core
+    - operation: GET item
+      providers: 52
+      share: 0.642
+      tier: core
+    - operation: POST collection
+      providers: 40
+      share: 0.494
+      tier: extended
+    - operation: UPDATE item
+      providers: 30
+      share: 0.37
+      tier: extended
+    - operation: DELETE item
+      providers: 27
+      share: 0.333
+      tier: extended
+    - operation: POST item
+      providers: 6
+      share: 0.074
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 5
+      share: 0.062
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 5
+      share: 0.062
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 54
+      share: 0.818
+      type: string
+      spellings:
+      - name
+      - title
+      - categoryName
+      - Name
+      - display_name
+      - category_name
+      - Title
+    - name: id
+      tier: core
+      providers: 52
+      share: 0.788
+      type: string
+      spellings:
+      - id
+      - categoryId
+      - category_id
+      - Id
+      - CategoryId
+    - name: parent_id
+      tier: extended
+      providers: 29
+      share: 0.439
+      type: integer
+      spellings:
+      - parent
+      - parent_id
+      - parentId
+      - parentCategoryId
+      - parent_category_id
+      - ParentId
+    - name: description
+      tier: extended
+      providers: 28
+      share: 0.424
+      type: string
+      spellings:
+      - description
+      - body_html
+      - Description
+    - name: slug
+      tier: extended
+      providers: 19
+      share: 0.288
+      type: string
+      spellings:
+      - slug
+      - handle
+      - permalink
+    - name: updated_at
+      tier: extended
+      providers: 18
+      share: 0.273
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - update_time
+      - updated
+      - modifiedAt
+      - updatedOn
+      - modifiedDate
+    - name: created_at
+      tier: extended
+      providers: 17
+      share: 0.258
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - createdOn
+      - create_time
+      - createdDate
+    - name: custom_fields
+      tier: extended
+      providers: 15
+      share: 0.227
+      type: object
+      spellings:
+      - attributes
+      - metadata
+      - properties
+      - custom_attributes
+      - custom_fields
+    long_tail_count: 454
+    long_tail_sample:
+    - type
+    - image
+    - sort_order
+    - path
+    - children
+    - url
+    - is_active
+    - limit
+    - meta_description
+    - position
+    - subcategories
+    - code
+    - level
+    - link
+    - order
+    - products
+    - taxonomy
+    - version
+    - acf
+    - active
+    - collection_id
+    - collection_type
+    - error
+    - image_url
+    - images
+    - is_deleted
+    - locale
+    - market
+    - meta_keywords
+    - offset
+    - page_title
+    - product_ids
+    - relationships
+    - review_count
+    - sort
+    - status
+    - tags
+    - terms
+    - uri
+    - visibility
+  customer:
+    segments_seen:
+      customers: 68
+      customer: 21
+      consumers: 4
+      buyers: 1
+    providers_exposing: 85
+    providers_with_readable_schema: 80
+    operations:
+    - operation: POST collection
+      providers: 66
+      share: 0.776
+      tier: core
+    - operation: GET collection
+      providers: 64
+      share: 0.753
+      tier: core
+    - operation: GET item
+      providers: 62
+      share: 0.729
+      tier: core
+    - operation: UPDATE item
+      providers: 42
+      share: 0.494
+      tier: extended
+    - operation: DELETE item
+      providers: 33
+      share: 0.388
+      tier: extended
+    - operation: POST item
+      providers: 7
+      share: 0.082
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 5
+      share: 0.059
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 3
+      share: 0.035
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 66
+      share: 0.825
+      type: string
+      spellings:
+      - id
+      - customerId
+      - customer_id
+      - Id
+      - customerID
+      - uuid
+    - name: email
+      tier: core
+      providers: 63
+      share: 0.787
+      type: string
+      spellings:
+      - email
+      - email_address
+      - emailAddress
+      - EmailAddress
+      - Email
+    - name: last_name
+      tier: core
+      providers: 49
+      share: 0.613
+      type: string
+      spellings:
+      - last_name
+      - lastName
+      - lastname
+      - family_name
+      - Surname
+    - name: first_name
+      tier: core
+      providers: 48
+      share: 0.6
+      type: string
+      spellings:
+      - first_name
+      - firstName
+      - firstname
+      - given_name
+    - name: created_at
+      tier: core
+      providers: 42
+      share: 0.525
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+      - creationDate
+      - created_on
+      - date_created
+      - created_date
+      - DateAdded
+    - name: phone
+      tier: extended
+      providers: 39
+      share: 0.487
+      type: string
+      spellings:
+      - phone
+      - phone_number
+      - mobile
+      - PhoneNumber
+      - Mobile
+      - phoneNumber
+      - telephone
+    - name: addresses
+      tier: extended
+      providers: 32
+      share: 0.4
+      type: array
+      spellings:
+      - addresses
+      - address
+      - default_address
+      - shippingAddress
+      - billingAddress
+      - defaultAddress
+      - shipping_address
+      - billing_address
+    - name: updated_at
+      tier: extended
+      providers: 27
+      share: 0.338
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - date_modified
+      - updated_on
+      - modifiedAt
+      - modified_date
+    - name: name
+      tier: extended
+      providers: 25
+      share: 0.312
+      type: string
+      spellings:
+      - name
+      - display_name
+      - Name
+    - name: custom_fields
+      tier: extended
+      providers: 22
+      share: 0.275
+      type: object
+      spellings:
+      - metadata
+      - attributes
+      - custom_attributes
+      - customFields
+      - properties
+    long_tail_count: 948
+    long_tail_sample:
+    - tags
+    - status
+    - city
+    - currency
+    - password
+    - type
+    - company
+    - company_name
+    - gender
+    - note
+    - notes
+    - total_spent
+    - group_id
+    - orders_count
+    - state
+    - country
+    - external_id
+    - customer_number
+    - is_deleted
+    - store_id
+    - version
+    - accepts_marketing
+    - birthday
+    - fax
+    - language
+    - nickname
+    - relationships
+    - code
+    - credit_limit
+    - date_of_birth
+    - deleted_at
+    - description
+    - groups
+    - tax_exempt
+    - website
+    - website_id
+    - active
+    - address1
+    - address2
+    - balance
+  cart:
+    segments_seen:
+      cart: 23
+      carts: 20
+      basket: 3
+    providers_exposing: 41
+    providers_with_readable_schema: 36
+    operations:
+    - operation: POST collection
+      providers: 28
+      share: 0.683
+      tier: core
+    - operation: GET collection
+      providers: 26
+      share: 0.634
+      tier: core
+    - operation: GET item
+      providers: 23
+      share: 0.561
+      tier: core
+    - operation: DELETE item
+      providers: 15
+      share: 0.366
+      tier: extended
+    - operation: UPDATE item
+      providers: 13
+      share: 0.317
+      tier: extended
+    - operation: DELETE collection
+      providers: 6
+      share: 0.146
+      tier: long-tail
+    - operation: POST item
+      providers: 4
+      share: 0.098
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 4
+      share: 0.098
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 24
+      share: 0.667
+      type: string
+      spellings:
+      - id
+      - cartId
+      - cartID
+      - cart_id
+      - guid
+      - _id
+    - name: line_items
+      tier: core
+      providers: 19
+      share: 0.528
+      type: array
+      spellings:
+      - items
+      - lineItems
+      - line_items
+      - lines
+      - products
+      - entries
+    - name: currency
+      tier: extended
+      providers: 14
+      share: 0.389
+      type: string
+      spellings:
+      - currency
+      - currency_code
+      - currencyCode
+    - name: created_at
+      tier: extended
+      providers: 12
+      share: 0.333
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - created_time
+      - createdTime
+      - createdOn
+      - date_created
+      - created_on
+      - createdDate
+    - name: customer_id
+      tier: extended
+      providers: 9
+      share: 0.25
+      type: string
+      spellings:
+      - customerId
+      - customer_id
+      - customerID
+      - userId
+      - customer
+    - name: updated_at
+      tier: extended
+      providers: 9
+      share: 0.25
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
+      - updated_time
+      - updatedTime
+      - updatedOn
+      - modifiedDate
+    long_tail_count: 463
+    long_tail_sample:
+    - custom_fields
+    - status
+    - subtotal
+    - billing_address
+    - coupons
+    - shipping_address
+    - tax_total
+    - total
+    - type
+    - discount_total
+    - quantity
+    - channel_id
+    - discounts
+    - email
+    - fees
+    - name
+    - payment_methods
+    - cross_sells
+    - extensions
+    - external_id
+    - has_calculated_shipping
+    - items_count
+    - items_weight
+    - locale
+    - needs_payment
+    - needs_shipping
+    - payment_requirements
+    - payments
+    - price
+    - promotions
+    - shipping_rates
+    - shipping_total
+    - store_id
+    - totals
+    - url
+    - variant_id
+    - addresses
+    - billing_address_id
+    - cart_lines
+    - checkout_url
+  order:
+    segments_seen:
+      orders: 151
+      order: 43
+      purchases: 4
+      sales_orders: 2
+    providers_exposing: 180
+    providers_with_readable_schema: 163
+    operations:
+    - operation: GET collection
+      providers: 136
+      share: 0.756
+      tier: core
+    - operation: GET item
+      providers: 134
+      share: 0.744
+      tier: core
+    - operation: POST collection
+      providers: 118
+      share: 0.656
+      tier: core
+    - operation: UPDATE item
+      providers: 66
+      share: 0.367
+      tier: extended
+    - operation: DELETE item
+      providers: 34
+      share: 0.189
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 13
+      share: 0.072
+      tier: long-tail
+    - operation: POST item
+      providers: 12
+      share: 0.067
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.006
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 120
+      share: 0.736
+      type: string
+      spellings:
+      - id
+      - orderId
+      - order_id
+      - uuid
+      - _id
+      - orderID
+      - OrderId
+      - Id
+    - name: status
+      tier: core
+      providers: 100
+      share: 0.613
+      type: string
+      spellings:
+      - status
+      - state
+      - financial_status
+      - order_status
+      - financialStatus
+      - Status
+      - orderStatus
+      - State
+    - name: line_items
+      tier: core
+      providers: 97
+      share: 0.595
+      type: array
+      spellings:
+      - items
+      - line_items
+      - products
+      - lineItems
+      - order_items
+      - orderItems
+      - lines
+      - orderLines
+    - name: created_at
+      tier: extended
+      providers: 73
+      share: 0.448
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+      - creationDate
+      - created_date
+      - created_on
+      - creation_date
+      - date_created
+    - name: customer_id
+      tier: extended
+      providers: 63
+      share: 0.387
+      type: string
+      spellings:
+      - customer
+      - customer_id
+      - customerId
+      - contact_id
+      - userId
+      - contactId
+      - user_id
+      - Customer
+    - name: shipping_address
+      tier: extended
+      providers: 60
+      share: 0.368
+      type: object
+      spellings:
+      - shipping_address
+      - shipping
+      - shippingAddress
+      - delivery_address
+      - deliveryAddress
+      - ShippingAddress
+    - name: currency
+      tier: extended
+      providers: 59
+      share: 0.362
+      type: string
+      spellings:
+      - currency
+      - currencyCode
+      - currency_code
+      - currency_iso_code
+    - name: number
+      tier: extended
+      providers: 52
+      share: 0.319
+      type: string
+      spellings:
+      - name
+      - orderNumber
+      - order_number
+      - number
+      - increment_id
+      - display_id
+      - Number
+    - name: total
+      tier: extended
+      providers: 46
+      share: 0.282
+      type: number
+      spellings:
+      - total_price
+      - orderTotal
+      - totalPrice
+      - amount
+      - grand_total
+      - order_total
+      - total_amount
+      - totalAmount
+    - name: total_tax
+      tier: extended
+      providers: 40
+      share: 0.245
+      type: number
+      spellings:
+      - tax_total
+      - tax
+      - taxTotal
+      - total_tax
+      - tax_amount
+      - taxAmount
+      - taxes
+      - totalTax
+    - name: billing_address
+      tier: extended
+      providers: 39
+      share: 0.239
+      type: object
+      spellings:
+      - billing_address
+      - billingAddress
+      - billing
+      - BillingAddress
+    - name: custom_fields
+      tier: extended
+      providers: 39
+      share: 0.239
+      type: object
+      spellings:
+      - attributes
+      - metadata
+      - custom_fields
+      - properties
+      - custom_attributes
+      - customFields
+      - customAttributes
+      - metafields
+    - name: email
+      tier: extended
+      providers: 37
+      share: 0.227
+      type: string
+      spellings:
+      - email
+      - customer_email
+      - buyer_email
+      - customerEmail
+      - contactEmail
+    - name: updated_at
+      tier: extended
+      providers: 36
+      share: 0.221
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - updated_on
+      - updated
+      - updatedOn
+      - updated_date
+      - update_time
+      - modified_at
+    - name: discount_total
+      tier: extended
+      providers: 33
+      share: 0.202
+      type: number
+      spellings:
+      - discount_total
+      - discount
+      - discounts
+      - discountTotal
+      - discountAmount
+      - discount_amount
+      - total_discounts
+      - Discount
+    long_tail_count: 2217
+    long_tail_sample:
+    - placed_at
+    - shipping_total
+    - subtotal
+    - note
+    - type
+    - fulfillment_status
+    - external_id
+    - tags
+    - shipments
+    - order_type
+    - payment_status
+    - store_id
+    - channel
+    - quantity
+    - refunds
+    - fulfillments
+    - payment_method
+    - relationships
+    - cancel_reason
+    - cart
+    - limit
+    - shipping_method
+    - source
+    - tracking_number
+    - code
+    - date
+    - offset
+    - pagination
+    - payment
+    - price
+    - store
+    - token
+    - cancelled_at
+    - cart_id
+    - channel_id
+    - expires_at
+    - payments
+    - phone
+    - promo_code
+    - company
+  order_item:
+    segments_seen:
+      items: 24
+      line_items: 2
+      order_items: 2
+      lines: 1
+      line-items: 1
+    providers_exposing: 30
+    providers_with_readable_schema: 25
+    operations:
+    - operation: POST collection
+      providers: 22
+      share: 0.733
+      tier: core
+    - operation: DELETE item
+      providers: 18
+      share: 0.6
+      tier: core
+    - operation: UPDATE item
+      providers: 17
+      share: 0.567
+      tier: core
+    - operation: GET collection
+      providers: 16
+      share: 0.533
+      tier: core
+    - operation: GET item
+      providers: 12
+      share: 0.4
+      tier: extended
+    - operation: DELETE collection
+      providers: 7
+      share: 0.233
+      tier: extended
+    - operation: UPDATE collection
+      providers: 5
+      share: 0.167
+      tier: long-tail
+    - operation: POST item
+      providers: 3
+      share: 0.1
+      tier: long-tail
+    properties:
+    - name: quantity
+      tier: core
+      providers: 20
+      share: 0.8
+      type: integer
+      spellings:
+      - quantity
+      - qty
+    - name: id
+      tier: core
+      providers: 19
+      share: 0.76
+      type: string
+      spellings:
+      - id
+    - name: product_id
+      tier: core
+      providers: 16
+      share: 0.64
+      type: string
+      spellings:
+      - product_id
+      - product
+      - item_id
+      - productId
+      - itemId
+    - name: price
+      tier: extended
+      providers: 12
+      share: 0.48
+      type: object
+      spellings:
+      - price
+      - unit_price
+      - unitPrice
+      - itemPrice
+    - name: currency
+      tier: extended
+      providers: 10
+      share: 0.4
+      type: string
+      spellings:
+      - currency
+      - currency_code
+      - currencyCode
+    - name: name
+      tier: extended
+      providers: 10
+      share: 0.4
+      type: string
+      spellings:
+      - name
+      - description
+      - product_name
+    - name: sku
+      tier: extended
+      providers: 8
+      share: 0.32
+      type: string
+      spellings:
+      - sku
+    - name: type
+      tier: extended
+      providers: 8
+      share: 0.32
+      type: string
+      spellings:
+      - type
+    - name: custom_fields
+      tier: extended
+      providers: 7
+      share: 0.28
+      type: object
+      spellings:
+      - metadata
+      - attributes
+      - custom_attributes
+    - name: tax_total
+      tier: extended
+      providers: 7
+      share: 0.28
+      type: number
+      spellings:
+      - tax_total
+      - taxTotal
+    - name: created_at
+      tier: extended
+      providers: 6
+      share: 0.24
+      type: string
+      spellings:
+      - created_at
+      - created_time
+      - createdTime
+      - created_on
+      - createdAt
+      - createdDate
+    - name: discount_total
+      tier: extended
+      providers: 6
+      share: 0.24
+      type: number
+      spellings:
+      - discount_total
+      - discountTotal
+    - name: updated_at
+      tier: extended
+      providers: 6
+      share: 0.24
+      type: string
+      spellings:
+      - updated_at
+      - updated_time
+      - updatedTime
+      - updated_on
+      - updatedAt
+      - modifiedDate
+    - name: variant_id
+      tier: extended
+      providers: 6
+      share: 0.24
+      type: string
+      spellings:
+      - variant_id
+    - name: status
+      tier: extended
+      providers: 5
+      share: 0.2
+      type: string
+      spellings:
+      - status
+    long_tail_count: 495
+    long_tail_sample:
+    - discount
+    - discounts
+    - email
+    - order_id
+    - billing_address
+    - customer_id
+    - external_id
+    - item_total
+    - item_type
+    - notes
+    - payments
+    - promotions
+    - shipping_total
+    - tax
+    - total
+    - backorders_allowed
+    - billing_cycle
+    - cart
+    - cart_id
+    - catalog_id
+    - catalog_visibility
+    - channel_id
+    - cost
+    - cost_per_unit
+    - coupons
+    - discount_amount
+    - extensions
+    - fees
+    - frequency
+    - fulfillment
+    - fulfillment_location_code
+    - fulfillment_status
+    - fulfillments
+    - gift_card_total
+    - grand_total
+    - image_url
+    - images
+    - is_deleted
+    - item_data
+    - item_tax_total
+  shipment:
+    segments_seen:
+      shipments: 11
+      fulfillments: 7
+      shipment: 5
+      fulfillment: 2
+    providers_exposing: 24
+    providers_with_readable_schema: 19
+    operations:
+    - operation: POST collection
+      providers: 14
+      share: 0.583
+      tier: core
+    - operation: GET collection
+      providers: 12
+      share: 0.5
+      tier: core
+    - operation: GET item
+      providers: 9
+      share: 0.375
+      tier: extended
+    - operation: UPDATE item
+      providers: 9
+      share: 0.375
+      tier: extended
+    - operation: UPDATE collection
+      providers: 3
+      share: 0.125
+      tier: long-tail
+    - operation: DELETE item
+      providers: 2
+      share: 0.083
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.042
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 13
+      share: 0.684
+      type: string
+      spellings:
+      - id
+      - shipmentId
+      - shipment_id
+    - name: status
+      tier: core
+      providers: 12
+      share: 0.632
+      type: string
+      spellings:
+      - status
+      - shipmentStatus
+      - shipment_status
+      - state
+    - name: tracking_number
+      tier: core
+      providers: 12
+      share: 0.632
+      type: string
+      spellings:
+      - tracking_number
+      - tracking
+      - trackingNumber
+      - tracking_numbers
+      - tracking_code
+      - trackingNumbers
+    - name: created_at
+      tier: extended
+      providers: 8
+      share: 0.421
+      type: string
+      spellings:
+      - created_at
+      - created_date
+      - createdDate
+    - name: updated_at
+      tier: extended
+      providers: 7
+      share: 0.368
+      type: string
+      spellings:
+      - updated_at
+      - modifiedDate
+      - modified_at
+    - name: carrier
+      tier: extended
+      providers: 6
+      share: 0.316
+      type: string
+      spellings:
+      - carrier
+      - tracking_company
+      - carrier_code
+    - name: line_items
+      tier: extended
+      providers: 6
+      share: 0.316
+      type: array
+      spellings:
+      - items
+      - line_items
+    - name: order_id
+      tier: extended
+      providers: 6
+      share: 0.316
+      type: integer
+      spellings:
+      - order_id
+      - orderId
+    - name: tracking_url
+      tier: extended
+      providers: 4
+      share: 0.211
+      type: string
+      spellings:
+      - tracking_url
+      - tracking_urls
+      - trackingUrl
+    - name: weight
+      tier: extended
+      providers: 4
+      share: 0.211
+      type: number
+      spellings:
+      - weight
+    long_tail_count: 403
+    long_tail_sample:
+    - currency
+    - delivery_date
+    - quantity
+    - tax_total
+    - cancelled_date
+    - closed_date
+    - cost
+    - custom_fields
+    - customer
+    - discount_total
+    - email
+    - fulfillment_status
+    - item_tax_total
+    - measurements
+    - number
+    - order_lines
+    - packages
+    - payment_status
+    - shipped_at
+    - shipping_subtotal
+    - shipping_tax_total
+    - shipping_total
+    - subtotal
+    - version
+    - accepted_date
+    - accepts_marketing
+    - actual_fulfillment_date
+    - actual_shipment_mode
+    - additional_data
+    - address
+    - address_id
+    - adjusted_line_item_subtotal
+    - adjustment
+    - alternate_contact
+    - amount_available_for_refund
+    - amount_refunded
+    - amount_remaining_for_payment
+    - audit_info
+    - auto_add_discount_id
+    - available_actions
+  inventory:
+    segments_seen:
+      inventory: 30
+      stock: 8
+      inventory_levels: 4
+      inventories: 4
+      stocks: 3
+      inventory_items: 2
+    providers_exposing: 46
+    providers_with_readable_schema: 35
+    operations:
+    - operation: GET collection
+      providers: 30
+      share: 0.652
+      tier: core
+    - operation: GET item
+      providers: 12
+      share: 0.261
+      tier: extended
+    - operation: POST collection
+      providers: 12
+      share: 0.261
+      tier: extended
+    - operation: UPDATE collection
+      providers: 11
+      share: 0.239
+      tier: extended
+    - operation: UPDATE item
+      providers: 5
+      share: 0.109
+      tier: long-tail
+    - operation: DELETE item
+      providers: 2
+      share: 0.043
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.022
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.022
+      tier: long-tail
+    properties:
+    - name: id
+      tier: extended
+      providers: 13
+      share: 0.371
+      type: string
+      spellings:
+      - id
+      - inventoryId
+      - inventory_id
+    - name: quantity
+      tier: extended
+      providers: 11
+      share: 0.314
+      type: integer
+      spellings:
+      - quantity
+      - available
+      - availableQuantity
+    - name: sku
+      tier: extended
+      providers: 10
+      share: 0.286
+      type: string
+      spellings:
+      - sku
+      - product_code
+    - name: product_id
+      tier: extended
+      providers: 9
+      share: 0.257
+      type: integer
+      spellings:
+      - productId
+      - product_id
+      - inventory_item_id
+      - item_id
+      - itemId
+      - variantId
+    long_tail_count: 197
+    long_tail_sample:
+    - custom_fields
+    - location_id
+    - type
+    - created_at
+    - updated_at
+    - cost
+    - counts
+    - coupons
+    - gtin
+    - inventory_type
+    - name
+    - offset
+    - pagination
+    - payload
+    - relationships
+    - requires_shipping
+    - status
+    - stores
+    - tracked
+    - update_quantity
+    - variants
+    - version
+    - achievements
+    - addresses
+    - adjustments
+    - admin_graphql_api_id
+    - after
+    - allocated
+    - applied_coupons
+    - assigned_sales_reps
+    - availability
+    - availability_code
+    - available_to_sell
+    - average_cost
+    - backorder_limit
+    - backorder_shipment_at
+    - barcode
+    - bathrooms
+    - bedrooms
+    - before

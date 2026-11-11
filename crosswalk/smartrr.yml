@@ -1,0 +1,17 @@
+provider: smartrr
+apis_io: https://apis.io/providers/smartrr/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    - order
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/smartrr-openapi.yml#DELETE /vendor/order/{orderId}
+    - openapi/_original/smartrr-openapi.yml#GET /vendor/customer/{custRelId}/orders
+    - openapi/_original/smartrr-openapi.yml#GET /vendor/order
+    - openapi/_original/smartrr-openapi.yml#GET /vendor/orders/{shopifyId}
+    - openapi/_original/smartrr-openapi.yml#GET /vendor/purchase-state/{shopifySubscriptionId}/orders

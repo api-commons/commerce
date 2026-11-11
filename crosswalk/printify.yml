@@ -1,0 +1,35 @@
+provider: printify
+apis_io: https://apis.io/providers/printify/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: title
+      description: description
+      variants: variants
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/printify-openapi.yml#DELETE /shops/{shop_id}/products/{product_id}.json
+    - openapi/_original/printify-openapi.yml#GET /shops/{shop_id}/products.json
+    - openapi/_original/printify-openapi.yml#GET /shops/{shop_id}/products/{product_id}.json
+    - openapi/_original/printify-openapi.yml#POST /shops/{shop_id}/products.json
+    - openapi/_original/printify-openapi.yml#PUT /shops/{shop_id}/products/{product_id}.json
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      line_items: line_items
+      created_at: created_at
+      total: total_price
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/printify-openapi.yml#GET /shops/{shop_id}/orders.json
+    - openapi/_original/printify-openapi.yml#GET /shops/{shop_id}/orders/{order_id}.json
+    - openapi/_original/printify-openapi.yml#POST /shops/{shop_id}/orders.json

@@ -1,0 +1,29 @@
+provider: reverb
+apis_io: https://apis.io/providers/reverb/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - listings
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/reverb-openapi.yml#GET /api/listings
+    - openapi/_original/reverb-openapi.yml#GET /api/my/listings
+  category:
+    path_segment:
+    - categories
+    - collections
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/reverb-openapi.yml#GET /api/categories
+    - openapi/_original/reverb-openapi.yml#GET /api/collections
+  cart:
+    path_segment:
+    - cart
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/reverb-openapi.yml#GET /api/cart

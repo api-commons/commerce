@@ -1,0 +1,17 @@
+provider: dataforseo
+apis_io: https://apis.io/providers/dataforseo/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - categories
+    properties:
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/dataforseo-app-data-openapi.yml#GET /v3/app_data/apple/app_listings/categories
+    - openapi/_original/dataforseo-app-data-openapi.yml#GET /v3/app_data/apple/categories
+    - openapi/_original/dataforseo-app-data-openapi.yml#GET /v3/app_data/google/app_listings/categories
+    - openapi/_original/dataforseo-app-data-openapi.yml#GET /v3/app_data/google/categories
+    - openapi/_original/dataforseo-business-data-openapi.yml#GET /v3/business_data/business_listings/categories

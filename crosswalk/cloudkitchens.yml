@@ -1,0 +1,26 @@
+provider: cloudkitchens
+apis_io: https://apis.io/providers/cloudkitchens/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      status: status
+      line_items: items
+      customer_id: customer
+      currency: currencyCode
+      total: orderTotal
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/cloudkitchens-public-api-openapi.yml#POST /v1/orders
+    - openapi/_original/cloudkitchens-public-api-openapi.yml#PUT /v1/orders/{orderId}
+  order_item:
+    path_segment:
+    - items
+    properties:
+      currency: currencyCode
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/cloudkitchens-public-api-openapi.yml#PUT /manager/order/v1/sources/{source}/orders/{orderId}/items

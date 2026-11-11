@@ -1,0 +1,27 @@
+provider: salsify
+apis_io: https://apis.io/providers/salsify/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id:
+      - Product ID
+      - product_id
+      - product_ID
+      name:
+      - Product Name
+      - Name
+      - product_name
+      description: Short Description
+      brand: Manufacturer
+      custom_fields: properties
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/salsify-api-settings-openapi.json#GET /{org_id}/products
+    - openapi/_original/salsify-api-settings-openapi.json#GET /{org_id}/products/{salsify:id}
+    - openapi/_original/salsify-write-operations-openapi.json#DELETE /{org_id}/products
+    - openapi/_original/salsify-write-operations-openapi.json#DELETE /{org_id}/products/{product_id}
+    - openapi/_original/salsify-write-operations-openapi.json#POST /{org_id}/products

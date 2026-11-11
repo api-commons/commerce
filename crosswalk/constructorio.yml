@@ -1,0 +1,20 @@
+provider: constructorio
+apis_io: https://apis.io/providers/constructorio/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  category:
+    path_segment:
+    - collections
+    properties:
+      name: display_name
+      id: id
+      updated_at: updated_at
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/constructorio-browse-openapi-original.json#GET /browse/collections
+    - openapi/_original/constructorio-browse-openapi.yml#GET /browse/collections
+    - openapi/_original/constructorio-configuration-openapi-original.json#DELETE /v1/collections/{collection_id}
+    - openapi/_original/constructorio-configuration-openapi-original.json#GET /v1/collections
+    - openapi/_original/constructorio-configuration-openapi-original.json#GET /v1/collections/{collection_id}

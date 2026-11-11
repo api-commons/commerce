@@ -1,0 +1,32 @@
+provider: wix
+apis_io: https://apis.io/providers/wix/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/wix-openapi.yml#GET /stores/v3/products/{id}
+    - openapi/_original/wix-openapi.yml#PATCH /stores/v3/products/{id}
+    - openapi/_original/wix-openapi.yml#POST /stores/v3/products
+  cart:
+    path_segment:
+    - carts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/wix-openapi.yml#DELETE /ecom/v1/carts/{id}
+    - openapi/_original/wix-openapi.yml#GET /ecom/v1/carts/{id}
+    - openapi/_original/wix-openapi.yml#POST /ecom/v1/carts
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/wix-openapi.yml#GET /ecom/v1/orders/{id}
+    - openapi/_original/wix-openapi.yml#POST /ecom/v1/orders
+    - openapi/_original/wix-openapi.yml#POST /ecom/v1/orders/{id}

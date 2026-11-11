@@ -1,0 +1,13 @@
+provider: skai-kenshoo
+apis_io: https://apis.io/providers/skai-kenshoo/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  inventory:
+    path_segment:
+    - inventory
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/skai-kenshoo-api-openapi.yml#POST /api/v1/entities-creator/inventory
+    - openapi/_original/skai-kenshoo-openapi-original.yml#POST /api/v1/entities-creator/inventory

@@ -1,0 +1,30 @@
+provider: maison-safqa-holdings-limited
+apis_io: https://apis.io/providers/maison-safqa-holdings-limited/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      name: title
+      description: body_html
+      images: images
+      type: product_type
+      variants: variants
+      brand: vendor
+      slug: handle
+      tags: tags
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#GET /products/{product_id}
+    - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#POST /products
+    - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#PUT /products/{product_id}
+  inventory:
+    path_segment:
+    - inventory
+    properties:
+      sku: sku
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#PATCH /products/{product_id}/inventory

@@ -1,0 +1,56 @@
+provider: katana
+apis_io: https://apis.io/providers/katana/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      name: name
+      variants: variants
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/katana-openapi-original.json#DELETE /products/{id}
+    - openapi/_original/katana-openapi-original.json#GET /products
+    - openapi/_original/katana-openapi-original.json#GET /products/{id}
+    - openapi/_original/katana-openapi-original.json#PATCH /products/{id}
+    - openapi/_original/katana-openapi-original.json#POST /products
+  customer:
+    path_segment:
+    - customers
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      phone: phone
+      addresses: addresses
+      name: name
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/katana-openapi-original.json#DELETE /customers/{id}
+    - openapi/_original/katana-openapi-original.json#GET /customers
+    - openapi/_original/katana-openapi-original.json#PATCH /customers/{id}
+    - openapi/_original/katana-openapi-original.json#POST /customers
+  order:
+    path_segment:
+    - sales_orders
+    properties:
+      status: status
+      customer_id: customer_id
+      currency: currency
+      custom_fields: custom_fields
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/katana-openapi-original.json#DELETE /sales_orders/{id}
+    - openapi/_original/katana-openapi-original.json#GET /sales_orders
+    - openapi/_original/katana-openapi-original.json#GET /sales_orders/{id}
+    - openapi/_original/katana-openapi-original.json#PATCH /sales_orders/{id}
+    - openapi/_original/katana-openapi-original.json#POST /sales_orders
+  inventory:
+    path_segment:
+    - inventory
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/katana-openapi-original.json#GET /inventory

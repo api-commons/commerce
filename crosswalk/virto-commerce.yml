@@ -1,0 +1,130 @@
+provider: virto-commerce
+apis_io: https://apis.io/providers/virto-commerce/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id:
+      - id
+      - productId
+      name: name
+      images: images
+      created_at: createdDate
+      type: productType
+      status:
+      - isActive
+      - status
+      updated_at: modifiedDate
+      category_ids: categoryId
+      variants: variations
+      brand: vendor
+      sku: code
+      custom_fields: properties
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/virto-commerce-catalog-openapi.json#DELETE /api/catalog/products
+    - openapi/_original/virto-commerce-catalog-openapi.json#GET /api/catalog/products
+    - openapi/_original/virto-commerce-catalog-openapi.json#GET /api/catalog/products/{id}
+    - openapi/_original/virto-commerce-catalog-openapi.json#PATCH /api/catalog/products
+    - openapi/_original/virto-commerce-catalog-openapi.json#PATCH /api/catalog/products/{id}
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: id
+      parent_id: parentId
+      updated_at: modifiedDate
+      created_at: createdDate
+      custom_fields: properties
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/virto-commerce-catalog-openapi.json#DELETE /api/catalog/categories
+    - openapi/_original/virto-commerce-catalog-openapi.json#GET /api/catalog/categories
+    - openapi/_original/virto-commerce-catalog-openapi.json#GET /api/catalog/categories/{id}
+    - openapi/_original/virto-commerce-catalog-openapi.json#PATCH /api/catalog/categories/{id}
+    - openapi/_original/virto-commerce-catalog-openapi.json#POST /api/catalog/categories
+  cart:
+    path_segment:
+    - carts
+    properties:
+      id: id
+      line_items: items
+      currency: currency
+      created_at: createdDate
+      customer_id: customerId
+      updated_at: modifiedDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/virto-commerce-cart-openapi.json#DELETE /api/carts
+    - openapi/_original/virto-commerce-cart-openapi.json#GET /api/carts/{cartId}
+    - openapi/_original/virto-commerce-cart-openapi.json#PATCH /api/carts/{cartId}
+    - openapi/_original/virto-commerce-cart-openapi.json#POST /api/carts
+    - openapi/_original/virto-commerce-cart-openapi.json#PUT /api/carts
+  order:
+    path_segment:
+    - order
+    properties:
+      id: id
+      status: status
+      line_items: items
+      created_at: createdDate
+      customer_id: customerId
+      currency: currency
+      number: number
+      total_tax: taxTotal
+      updated_at: modifiedDate
+      discount_total:
+      - discounts
+      - discountAmount
+      - discountTotal
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/virto-commerce-quote-openapi.json#POST /api/quote/requests/{id}/order
+  order_item:
+    path_segment:
+    - items
+    properties:
+      quantity: quantity
+      id: id
+      product_id: productId
+      currency: currency
+      name: name
+      sku: sku
+      tax_total: taxTotal
+      created_at: createdDate
+      discount_total: discountTotal
+      updated_at: modifiedDate
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/virto-commerce-cart-openapi.json#DELETE /api/carts/{cartId}/items
+    - openapi/_original/virto-commerce-cart-openapi.json#DELETE /api/carts/{cartId}/items/{lineItemId}
+    - openapi/_original/virto-commerce-cart-openapi.json#PATCH /api/carts/patch/{cartId}/items/{lineItemId}
+    - openapi/_original/virto-commerce-cart-openapi.json#POST /api/carts/{cartId}/items
+    - openapi/_original/virto-commerce-cart-openapi.json#PUT /api/carts/{cartId}/items
+  shipment:
+    path_segment:
+    - shipments
+    properties:
+      id: id
+      status: status
+      tracking_number: trackingNumber
+      created_at: createdDate
+      updated_at: modifiedDate
+      line_items: items
+      tracking_url: trackingUrl
+      weight: weight
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/virto-commerce-orders-openapi.json#PATCH /api/order/shipments/{id}
+    - openapi/_original/virto-commerce-orders-openapi.json#POST /api/order/shipments
+  inventory:
+    path_segment:
+    - inventory
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/virto-commerce-inventory-openapi.json#PATCH /api/inventory/{id}

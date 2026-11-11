@@ -1,0 +1,39 @@
+provider: northmill
+apis_io: https://apis.io/providers/northmill/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: Id
+      email: Email
+      created_at: DateAdded
+      phone: Mobile
+      addresses: Addresses
+      name: Name
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/northmill-flo-api-swagger.json#POST /v2/customers
+    - openapi/_original/northmill-flo-api-swagger.json#POST /v2/stores/{externalStoreId}/customers
+    - openapi/_original/northmill-flo-api-swagger.json#PUT /v2/customers
+    - openapi/_original/northmill-flo-api-swagger.json#PUT /v2/stores/{externalStoreId}/customers
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: Id
+      status: State
+      customer_id: Customer
+      shipping_address: ShippingAddress
+      number: Number
+      billing_address: BillingAddress
+      discount_total: Discount
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/northmill-flo-api-swagger.json#GET /v3/orders
+    - openapi/_original/northmill-flo-api-swagger.json#GET /v3/stores/{externalStoreId}/orders
+    - openapi/_original/northmill-flo-api-swagger.json#POST /v2/orders
+    - openapi/_original/northmill-flo-api-swagger.json#POST /v2/stores/{externalStoreId}/orders
+    - openapi/_original/northmill-flo-api-swagger.json#POST /v3/orders

@@ -1,0 +1,12 @@
+provider: drip
+apis_io: https://apis.io/providers/drip/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/drip-openapi.yml#POST /v2/{account_id}/orders

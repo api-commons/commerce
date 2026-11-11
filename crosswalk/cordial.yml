@@ -1,0 +1,60 @@
+provider: cordial
+apis_io: https://apis.io/providers/cordial/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: productID
+      name: productName
+      description: description
+      images: images
+      type: productType
+      status: enabled
+      category_ids: category
+      variants: variants
+      slug: url
+      price: price
+      custom_fields: properties
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cordial-v1-openapi-original.json#DELETE /v1/products/{productID}
+    - openapi/_original/cordial-v1-openapi-original.json#GET /v1/products
+    - openapi/_original/cordial-v1-openapi-original.json#GET /v1/products/{productID}
+    - openapi/_original/cordial-v1-openapi-original.json#POST /v1/products
+    - openapi/_original/cordial-v1-openapi-original.json#PUT /v1/products/{productID}
+  cart:
+    path_segment:
+    - cart
+    properties:
+      id: cartID
+      customer_id: customerID
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/cordial-v1-openapi-original.json#DELETE /v1/contacts/{primary_key}/cart
+    - openapi/_original/cordial-v1-openapi-original.json#POST /v1/contacts/{primary_key}/cart
+    - openapi/_original/cordial-v1-openapi-original.json#PUT /v1/contacts/{primary_key}/cart
+    - openapi/_original/cordial-v2-openapi-original.json#DELETE /v2/contacts/{primary_key}/cart
+    - openapi/_original/cordial-v2-openapi-original.json#POST /v2/contacts/{primary_key}/cart
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: orderID
+      status: status
+      line_items: items
+      customer_id: customerID
+      shipping_address: shippingAddress
+      total_tax: tax
+      billing_address: billingAddress
+      custom_fields: properties
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cordial-v1-openapi-original.json#DELETE /v1/orders/{id}
+    - openapi/_original/cordial-v1-openapi-original.json#GET /v1/orders
+    - openapi/_original/cordial-v1-openapi-original.json#GET /v1/orders/{id}
+    - openapi/_original/cordial-v1-openapi-original.json#POST /v1/orders
+    - openapi/_original/cordial-v1-openapi-original.json#PUT /v1/orders/{id}

@@ -1,0 +1,41 @@
+provider: ordergroove
+apis_io: https://apis.io/providers/ordergroove/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      price: price
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/ordergroove-openapi.yml#GET /products/
+    - openapi/_original/ordergroove-openapi.yml#GET /products/{id}/
+    - openapi/_original/ordergroove-openapi.yml#PUT /products/{id}/
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      last_name: last_name
+      first_name: first_name
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/ordergroove-openapi.yml#GET /customers/
+    - openapi/_original/ordergroove-openapi.yml#GET /customers/{public_id}/
+    - openapi/_original/ordergroove-openapi.yml#POST /customers/
+    - openapi/_original/ordergroove-openapi.yml#PUT /customers/{public_id}/
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      customer_id: customer_id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/ordergroove-openapi.yml#GET /orders/
+    - openapi/_original/ordergroove-openapi.yml#GET /orders/{public_id}/

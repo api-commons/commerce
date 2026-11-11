@@ -1,0 +1,26 @@
+provider: layup-technologies
+apis_io: https://apis.io/providers/layup-technologies/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id:
+      - orderId
+      - _id
+      status:
+      - status
+      - state
+      line_items: products
+      created_at: createdAt
+      number: name
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/layup-technologies-openapi-original.json#DELETE /v1/orders/{_id}
+    - openapi/_original/layup-technologies-openapi-original.json#GET /v1/integrations/cue/user/{cellNumber}/orders
+    - openapi/_original/layup-technologies-openapi-original.json#GET /v1/orders
+    - openapi/_original/layup-technologies-openapi-original.json#GET /v1/orders/{_id}
+    - openapi/_original/layup-technologies-openapi-original.json#POST /v1/integrations/shopify/orders

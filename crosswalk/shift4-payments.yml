@@ -1,0 +1,21 @@
+provider: shift4-payments
+apis_io: https://apis.io/providers/shift4-payments/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      created_at: created
+      phone: phoneNumber
+      custom_fields: metadata
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/shift4-api-openapi.yml#DELETE /customers/{customerId}
+    - openapi/_original/shift4-api-openapi.yml#GET /customers
+    - openapi/_original/shift4-api-openapi.yml#GET /customers/{customerId}
+    - openapi/_original/shift4-api-openapi.yml#POST /customers
+    - openapi/_original/shift4-api-openapi.yml#POST /customers/{customerId}

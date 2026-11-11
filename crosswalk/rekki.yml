@@ -1,0 +1,13 @@
+provider: rekki
+apis_io: https://apis.io/providers/rekki/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  inventory:
+    path_segment:
+    - inventory
+    properties:
+      sku: product_code
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/rekki-supplier-api-openapi-original.json#POST /integration/v3/catalog/inventory

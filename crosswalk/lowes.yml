@@ -1,0 +1,19 @@
+provider: lowes
+apis_io: https://apis.io/providers/lowes/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lowes-product-api-openapi.yml#GET /products
+  inventory:
+    path_segment:
+    - inventory
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/lowes-product-api-openapi.yml#GET /inventory

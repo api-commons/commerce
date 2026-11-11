@@ -1,0 +1,170 @@
+provider: spree-commerce
+apis_io: https://apis.io/providers/spree-commerce/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      images: media
+      created_at: created_at
+      type: type
+      status: status
+      updated_at: updated_at
+      category_ids:
+      - categories
+      - category_ids
+      variants: variants
+      slug:
+      - slug
+      - permalink
+      price: price
+      sku: sku
+      custom_fields:
+      - custom_fields
+      - metadata
+      - attributes
+      tags: tags
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#DELETE /api/v3/admin/products/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/products
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/products/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#PATCH /api/v3/admin/products/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#POST /api/v3/admin/products
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      id: id
+      barcode: barcode
+      price: price
+      options:
+      - options
+      - attributes
+      weight: weight
+      height: height
+      position: position
+      type: type
+      width: width
+    core_coverage: 0.429
+    evidence:
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#DELETE /api/v3/admin/products/{product_id}/variants/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/products/{product_id}/variants
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/products/{product_id}/variants/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#PATCH /api/v3/admin/products/{product_id}/variants/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#POST /api/v3/admin/products/{product_id}/variants
+  category:
+    path_segment:
+    - taxonomies
+    - categories
+    properties:
+      name: name
+      id: id
+      parent_id:
+      - parent_id
+      - parent
+      description: description
+      slug: permalink
+      custom_fields:
+      - attributes
+      - custom_fields
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/spree-commerce-platform-api-openapi.yml#DELETE /api/v2/platform/taxonomies/{id}
+    - openapi/_original/spree-commerce-platform-api-openapi.yml#GET /api/v2/platform/taxonomies
+    - openapi/_original/spree-commerce-platform-api-openapi.yml#GET /api/v2/platform/taxonomies/{id}
+    - openapi/_original/spree-commerce-platform-api-openapi.yml#PATCH /api/v2/platform/taxonomies/{id}
+    - openapi/_original/spree-commerce-platform-api-openapi.yml#POST /api/v2/platform/taxonomies
+  customer:
+    path_segment:
+    - customers
+    properties:
+      email: email
+      last_name: last_name
+      first_name: first_name
+      phone: phone
+      custom_fields: metadata
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#DELETE /api/v3/admin/customers/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/customers
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/customers/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#PATCH /api/v3/admin/customers/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#POST /api/v3/admin/customers
+  cart:
+    path_segment:
+    - carts
+    - cart
+    properties:
+      id: id
+      line_items: items
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/spree-commerce-store-api-openapi.yml#DELETE /api/v3/store/carts/{id}
+    - openapi/_original/spree-commerce-store-api-openapi.yml#GET /api/v3/store/carts
+    - openapi/_original/spree-commerce-store-api-openapi.yml#GET /api/v3/store/carts/{id}
+    - openapi/_original/spree-commerce-store-api-openapi.yml#PATCH /api/v3/store/carts/{id}
+    - openapi/_original/spree-commerce-store-api-openapi.yml#POST /api/v3/store/carts
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: state
+      line_items: items
+      customer_id:
+      - customer_id
+      - user_id
+      shipping_address: shipping_address
+      currency: currency
+      number: number
+      total_tax: tax_total
+      billing_address: billing_address
+      custom_fields:
+      - metadata
+      - attributes
+      email: email
+      discount_total:
+      - discount_total
+      - discounts
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#DELETE /api/v3/admin/orders/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/orders
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/orders/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#PATCH /api/v3/admin/orders/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#POST /api/v3/admin/orders
+  order_item:
+    path_segment:
+    - items
+    properties:
+      quantity: quantity
+      id: id
+      currency: currency
+      custom_fields: metadata
+      tax_total: tax_total
+      discount_total: discount_total
+      variant_id: variant_id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#DELETE /api/v3/admin/orders/{order_id}/items/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/orders/{order_id}/items
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/orders/{order_id}/items/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#PATCH /api/v3/admin/orders/{order_id}/items/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#POST /api/v3/admin/orders/{order_id}/items
+  shipment:
+    path_segment:
+    - fulfillments
+    properties:
+      tracking_number: tracking
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/orders/{order_id}/fulfillments
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#GET /api/v3/admin/orders/{order_id}/fulfillments/{id}
+    - openapi/_original/spree-commerce-admin-api-openapi.yml#PATCH /api/v3/admin/orders/{order_id}/fulfillments/{id}

@@ -1,0 +1,51 @@
+provider: zalando
+apis_io: https://apis.io/providers/zalando/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/zalando-orders-openapi.yml#GET /merchants/{merchant-id}/orders
+    - openapi/_original/zalando-orders-openapi.yml#GET /merchants/{merchant-id}/orders/{order-id}
+    - openapi/_original/zalando-orders-openapi.yml#PATCH /merchants/{merchant-id}/orders/{order-id}
+  order_item:
+    path_segment:
+    - items
+    properties:
+      id: id
+      type: type
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/zalando-orders-openapi.yml#GET /merchants/{merchant-id}/orders/{order-id}/items
+    - openapi/_original/zalando-orders-openapi.yml#GET /merchants/{merchant-id}/orders/{order-id}/items/{order-item-id}
+  shipment:
+    path_segment:
+    - shipments
+    properties:
+      id: shipment_id
+      status: status
+      tracking_number: tracking_number
+      created_at: created_at
+      updated_at: modified_at
+      weight: weight
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/zalando-orders-openapi.yml#GET /merchants/{merchant-id}/orders/{order-id}/shipments
+    - openapi/_original/zalando-orders-openapi.yml#GET /merchants/{merchant-id}/orders/{order-id}/shipments/{shipment-id}
+    - openapi/_original/zalando-orders-openapi.yml#PATCH /merchants/{merchant-id}/orders/{order-id}/shipments/{shipment-id}
+    - openapi/_original/zalando-orders-openapi.yml#POST /merchants/{merchant-id}/orders/{order-id}/shipments
+  inventory:
+    path_segment:
+    - stocks
+    properties:
+      quantity: quantity
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/zalando-stocks-openapi.yml#POST /merchants/{merchant-id}/stocks

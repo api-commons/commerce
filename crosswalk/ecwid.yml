@@ -1,0 +1,63 @@
+provider: ecwid
+apis_io: https://apis.io/providers/ecwid/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      status: enabled
+      category_ids: categoryIds
+      price: price
+      sku: sku
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ecwid-openapi.yml#DELETE /products/{productId}
+    - openapi/_original/ecwid-openapi.yml#GET /products
+    - openapi/_original/ecwid-openapi.yml#GET /products/{productId}
+    - openapi/_original/ecwid-openapi.yml#POST /products
+    - openapi/_original/ecwid-openapi.yml#PUT /products/{productId}
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: id
+      parent_id: parentId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ecwid-openapi.yml#DELETE /categories/{categoryId}
+    - openapi/_original/ecwid-openapi.yml#GET /categories
+    - openapi/_original/ecwid-openapi.yml#GET /categories/{categoryId}
+    - openapi/_original/ecwid-openapi.yml#POST /categories
+    - openapi/_original/ecwid-openapi.yml#PUT /categories/{categoryId}
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/ecwid-openapi.yml#GET /customers
+    - openapi/_original/ecwid-openapi.yml#GET /customers/{customerId}
+    - openapi/_original/ecwid-openapi.yml#POST /customers
+    - openapi/_original/ecwid-openapi.yml#PUT /customers/{customerId}
+  order:
+    path_segment:
+    - orders
+    properties:
+      line_items: items
+      number: orderNumber
+      email: email
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/ecwid-openapi.yml#DELETE /orders/{orderNumber}
+    - openapi/_original/ecwid-openapi.yml#GET /orders
+    - openapi/_original/ecwid-openapi.yml#GET /orders/{orderNumber}
+    - openapi/_original/ecwid-openapi.yml#POST /orders
+    - openapi/_original/ecwid-openapi.yml#PUT /orders/{orderNumber}

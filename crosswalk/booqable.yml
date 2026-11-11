@@ -1,0 +1,60 @@
+provider: booqable
+apis_io: https://apis.io/providers/booqable/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      type: type
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/booqable-openapi.yml#GET /products
+    - openapi/_original/booqable-openapi.yml#GET /products/{id}
+    - openapi/_original/booqable-openapi.yml#PATCH /products/{id}
+    - openapi/_original/booqable-openapi.yml#POST /products
+  category:
+    path_segment:
+    - collections
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/booqable-openapi.yml#GET /collections
+    - openapi/_original/booqable-openapi.yml#POST /collections
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/booqable-openapi.yml#GET /customers
+    - openapi/_original/booqable-openapi.yml#GET /customers/{id}
+    - openapi/_original/booqable-openapi.yml#PATCH /customers/{id}
+    - openapi/_original/booqable-openapi.yml#POST /customers
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/booqable-openapi.yml#GET /orders
+    - openapi/_original/booqable-openapi.yml#GET /orders/{id}
+    - openapi/_original/booqable-openapi.yml#PATCH /orders/{id}
+    - openapi/_original/booqable-openapi.yml#POST /orders
+  inventory:
+    path_segment:
+    - inventory_levels
+    properties:
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/booqable-openapi.yml#GET /inventory_levels

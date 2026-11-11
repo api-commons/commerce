@@ -1,0 +1,103 @@
+provider: nuvemshop
+apis_io: https://apis.io/providers/nuvemshop/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      images: images
+      created_at: created_at
+      status: published
+      updated_at: updated_at
+      category_ids: categories
+      variants: variants
+      slug: handle
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/nuvemshop-openapi.yml#DELETE /products/{id}
+    - openapi/_original/nuvemshop-openapi.yml#GET /products
+    - openapi/_original/nuvemshop-openapi.yml#GET /products/{id}
+    - openapi/_original/nuvemshop-openapi.yml#POST /products
+    - openapi/_original/nuvemshop-openapi.yml#PUT /products/{id}
+  product_variant:
+    path_segment:
+    - variants
+    - sku
+    properties:
+      id: id
+      name: name
+      product_id: product_id
+      created_at: created_at
+      inventory_quantity: stock
+      price: price
+      updated_at: updated_at
+      weight: weight
+    core_coverage: 0.857
+    evidence:
+    - openapi/_original/nuvemshop-openapi.yml#DELETE /products/{product_id}/variants/{id}
+    - openapi/_original/nuvemshop-openapi.yml#GET /products/sku/{sku}
+    - openapi/_original/nuvemshop-openapi.yml#GET /products/{product_id}/variants
+    - openapi/_original/nuvemshop-openapi.yml#GET /products/{product_id}/variants/{id}
+    - openapi/_original/nuvemshop-openapi.yml#PATCH /products/{product_id}/variants
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: id
+      parent_id: parent
+      description: description
+      slug: handle
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/nuvemshop-openapi.yml#DELETE /categories/{id}
+    - openapi/_original/nuvemshop-openapi.yml#GET /categories
+    - openapi/_original/nuvemshop-openapi.yml#GET /categories/{id}
+    - openapi/_original/nuvemshop-openapi.yml#POST /categories
+    - openapi/_original/nuvemshop-openapi.yml#PUT /categories/{id}
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      created_at: created_at
+      phone: phone
+      addresses: addresses
+      name: name
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/nuvemshop-openapi.yml#DELETE /customers/{id}
+    - openapi/_original/nuvemshop-openapi.yml#GET /customers
+    - openapi/_original/nuvemshop-openapi.yml#GET /customers/{id}
+    - openapi/_original/nuvemshop-openapi.yml#POST /customers
+    - openapi/_original/nuvemshop-openapi.yml#PUT /customers/{id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      line_items: products
+      created_at: created_at
+      customer_id: customer
+      currency: currency
+      number: number
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/nuvemshop-openapi.yml#GET /orders
+    - openapi/_original/nuvemshop-openapi.yml#GET /orders/{id}
+    - openapi/_original/nuvemshop-openapi.yml#POST /orders
+    - openapi/_original/nuvemshop-openapi.yml#PUT /orders/{id}
+  inventory:
+    path_segment:
+    - stock
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/nuvemshop-openapi.yml#POST /products/{product_id}/variants/stock

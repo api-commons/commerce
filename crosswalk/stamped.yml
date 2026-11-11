@@ -1,0 +1,57 @@
+provider: stamped
+apis_io: https://apis.io/providers/stamped/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: productId
+      name: title
+      images: images
+      type: type
+      status: status
+      variants: variants
+      brand: vendor
+      slug: handle
+      tags: tags
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/stamped-merchant-data-openapi.json#DELETE /api/v3/merchant/shops/{shopId}/products/{productId}
+    - openapi/_original/stamped-merchant-data-openapi.json#GET /api/v3/merchant/shops/{shopId}/products
+    - openapi/_original/stamped-merchant-data-openapi.json#GET /api/v3/merchant/shops/{shopId}/products/{productId}
+    - openapi/_original/stamped-merchant-data-openapi.json#PATCH /api/v3/merchant/shops/{shopId}/products/{productId}
+    - openapi/_original/stamped-merchant-data-openapi.json#POST /api/v3/merchant/shops/{shopId}/products
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: customerId
+      email: email
+      last_name: lastName
+      first_name: firstName
+      addresses: addresses
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/stamped-merchant-data-openapi.json#DELETE /api/v3/merchant/shops/{shopId}/customers/{customerId}
+    - openapi/_original/stamped-merchant-data-openapi.json#GET /api/v3/merchant/shops/{shopId}/customers
+    - openapi/_original/stamped-merchant-data-openapi.json#GET /api/v3/merchant/shops/{shopId}/customers/{customerId}
+    - openapi/_original/stamped-merchant-data-openapi.json#PATCH /api/v3/merchant/shops/{shopId}/customers/{customerId}
+    - openapi/_original/stamped-merchant-data-openapi.json#POST /api/v3/merchant/shops/{shopId}/customers
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: orderId
+      status: financialStatus
+      line_items: lineItems
+      customer_id: customerId
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/stamped-merchant-data-openapi.json#DELETE /api/v3/merchant/shops/{shopId}/orders/{orderId}
+    - openapi/_original/stamped-merchant-data-openapi.json#GET /api/v3/merchant/shops/{shopId}/orders
+    - openapi/_original/stamped-merchant-data-openapi.json#GET /api/v3/merchant/shops/{shopId}/orders/{orderId}
+    - openapi/_original/stamped-merchant-data-openapi.json#PATCH /api/v3/merchant/shops/{shopId}/orders/{orderId}
+    - openapi/_original/stamped-merchant-data-openapi.json#POST /api/v3/merchant/shops/{shopId}/orders

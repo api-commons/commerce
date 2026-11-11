@@ -1,0 +1,12 @@
+provider: takealot
+apis_io: https://apis.io/providers/takealot/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/takealot-seller-openapi.yml#GET /{version}/sales/orders

@@ -1,0 +1,69 @@
+aid: common-commerce
+name: Commerce
+type: Common
+description: 'The common Commerce vocabulary, distilled from the harvested OpenAPI of 401 providers in APIs.io:
+  shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each
+  provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- E-Commerce
+- E-commerce
+- Ecommerce
+- eCommerce
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/commerce/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-commerce:commerce
+  name: Common Commerce Interface
+  description: The Commerce interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/commerce
+  tags:
+  - E-Commerce
+  - E-commerce
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: product
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/schema/product.json
+  - type: JSONSchema
+    name: product_variant
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/schema/product_variant.json
+  - type: JSONSchema
+    name: category
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/schema/category.json
+  - type: JSONSchema
+    name: customer
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/schema/customer.json
+  - type: JSONSchema
+    name: cart
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/schema/cart.json
+  - type: JSONSchema
+    name: order
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/schema/order.json
+  - type: JSONSchema
+    name: order_item
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/schema/order_item.json
+  - type: JSONSchema
+    name: shipment
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/schema/shipment.json
+  - type: JSONSchema
+    name: inventory
+    url: https://raw.githubusercontent.com/api-commons/commerce/main/schema/inventory.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/commerce/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

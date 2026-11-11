@@ -1,0 +1,16 @@
+provider: koin
+apis_io: https://apis.io/providers/koin/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: order_id
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/koin-payments-openapi.json#GET /v1/payment/orders
+    - openapi/_original/koin-payments-openapi.json#GET /v1/payment/orders/{order_id}
+    - openapi/_original/koin-payments-openapi.json#POST /v1/payment/orders

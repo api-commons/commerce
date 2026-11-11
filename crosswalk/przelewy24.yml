@@ -1,0 +1,14 @@
+provider: przelewy24
+apis_io: https://apis.io/providers/przelewy24/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  cart:
+    path_segment:
+    - basket
+    properties:
+      id: id
+      currency: currency
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/openapi-ekspres.yml#POST /express/v1/transfer/basket

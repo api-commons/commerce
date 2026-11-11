@@ -1,0 +1,17 @@
+provider: accelbyte
+apis_io: https://apis.io/providers/accelbyte/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      status: status
+      customer_id: userId
+      currency:
+      - currency
+      - currencyCode
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/accelbyte-openapi.yml#POST /platform/public/namespaces/{namespace}/users/{userId}/orders

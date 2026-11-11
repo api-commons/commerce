@@ -1,0 +1,39 @@
+provider: ankorstore
+apis_io: https://apis.io/providers/ankorstore/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      type: type
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/products
+    - openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/products/{product}
+    - openapi/_original/ankorstore-main-openapi-original.yml#POST /api/v1/catalog/integrations/operations/{operationId}/products
+  order:
+    path_segment:
+    - orders
+    - order
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/fulfillment/orders
+    - openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/fulfillment/orders/{id}
+    - openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/orders
+    - openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/orders/{order}
+    - openapi/_original/ankorstore-main-openapi-original.yml#POST /api/v1/fulfillment/costs/order
+  inventory:
+    path_segment:
+    - stock
+    properties:
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/ankorstore-main-openapi-original.yml#PATCH /api/v1/product-variants/{productVariant}/stock

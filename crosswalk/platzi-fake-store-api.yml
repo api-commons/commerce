@@ -1,0 +1,40 @@
+provider: platzi-fake-store-api
+apis_io: https://apis.io/providers/platzi-fake-store-api/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: title
+      description: description
+      images: images
+      updated_at: updatedAt
+      category_ids:
+      - category
+      - categoryId
+      slug: slug
+      price: price
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/platzi-fake-store-api-openapi.yml#DELETE /products/{id}
+    - openapi/_original/platzi-fake-store-api-openapi.yml#GET /categories/{id}/products
+    - openapi/_original/platzi-fake-store-api-openapi.yml#GET /products
+    - openapi/_original/platzi-fake-store-api-openapi.yml#GET /products/{id}
+    - openapi/_original/platzi-fake-store-api-openapi.yml#POST /products
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: id
+      slug: slug
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/platzi-fake-store-api-openapi.yml#DELETE /categories/{id}
+    - openapi/_original/platzi-fake-store-api-openapi.yml#GET /categories
+    - openapi/_original/platzi-fake-store-api-openapi.yml#GET /categories/{id}
+    - openapi/_original/platzi-fake-store-api-openapi.yml#POST /categories
+    - openapi/_original/platzi-fake-store-api-openapi.yml#PUT /categories/{id}

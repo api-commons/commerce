@@ -1,0 +1,63 @@
+provider: fourthwall
+apis_io: https://apis.io/providers/fourthwall/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      status: state
+      variants: variants
+      slug: slug
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/fourthwall-openapi.yml#DELETE /open-api/v1.0/products/{productId}
+    - openapi/_original/fourthwall-openapi.yml#GET /open-api/v1.0/collections/{collectionId}/products
+    - openapi/_original/fourthwall-openapi.yml#GET /open-api/v1.0/products
+    - openapi/_original/fourthwall-openapi.yml#GET /open-api/v1.0/products/{productId}
+    - openapi/_original/fourthwall-openapi.yml#GET /v1/collections/{slug}/products
+  category:
+    path_segment:
+    - collections
+    properties:
+      name: name
+      id: id
+      description: description
+      slug: slug
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/fourthwall-openapi.yml#GET /open-api/v1.0/collections
+    - openapi/_original/fourthwall-openapi.yml#GET /open-api/v1.0/collections/{collectionIdOrSlug}
+    - openapi/_original/fourthwall-openapi.yml#GET /v1/collections
+    - openapi/_original/fourthwall-openapi.yml#GET /v1/collections/{slug}
+    - openapi/_original/fourthwall-openapi.yml#POST /open-api/v1.0/collections
+  cart:
+    path_segment:
+    - carts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fourthwall-openapi.yml#GET /v1/carts/{cartId}
+    - openapi/_original/fourthwall-openapi.yml#POST /v1/carts
+  order:
+    path_segment:
+    - order
+    properties:
+      id: id
+      status: status
+      email: email
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/fourthwall-openapi.yml#GET /open-api/v1.0/order
+    - openapi/_original/fourthwall-openapi.yml#GET /open-api/v1.0/order/{orderId}
+  inventory:
+    path_segment:
+    - inventory
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fourthwall-openapi.yml#GET /open-api/v1.0/products/{productId}/inventory

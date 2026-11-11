@@ -1,0 +1,22 @@
+provider: appcharge
+apis_io: https://apis.io/providers/appcharge/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    properties:
+      id: id
+      name:
+      - name
+      - displayName
+      description: description
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/appcharge-openapi.yml#DELETE /components/v1/product/{externalId}
+    - openapi/_original/appcharge-openapi.yml#GET /components/v1/product
+    - openapi/_original/appcharge-openapi.yml#GET /components/v1/product/{externalId}
+    - openapi/_original/appcharge-openapi.yml#POST /components/v1/product
+    - openapi/_original/appcharge-openapi.yml#PUT /components/v1/product/{externalId}

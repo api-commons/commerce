@@ -1,0 +1,21 @@
+provider: gorgias
+apis_io: https://apis.io/providers/gorgias/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      last_name: lastname
+      first_name: firstname
+      name: name
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/gorgias-openapi.yml#DELETE /api/customers/{id}
+    - openapi/_original/gorgias-openapi.yml#GET /api/customers
+    - openapi/_original/gorgias-openapi.yml#GET /api/customers/{id}
+    - openapi/_original/gorgias-openapi.yml#POST /api/customers
+    - openapi/_original/gorgias-openapi.yml#PUT /api/customers/{id}

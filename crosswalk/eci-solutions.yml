@@ -1,0 +1,96 @@
+provider: eci-solutions
+apis_io: https://apis.io/providers/eci-solutions/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id:
+      - productId
+      - id
+      name:
+      - title
+      - productName
+      - displayName
+      description:
+      - description
+      - shortDescription
+      - longDescription
+      status: visibility
+      price: price
+      sku: sku
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/eci-solutions-ecommerce-openapi.json#DELETE /api/v1/products/{productId}
+    - openapi/_original/eci-solutions-ecommerce-openapi.json#GET /api/v1/products
+    - openapi/_original/eci-solutions-ecommerce-openapi.json#GET /api/v1/products/{productId}
+    - openapi/_original/eci-solutions-ecommerce-openapi.json#PATCH /api/v1/products/{productId}
+    - openapi/_original/eci-solutions-ecommerce-openapi.json#POST /api/v1/products
+  category:
+    path_segment:
+    - departments
+    properties:
+      description: description
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/eci-solutions-erp-v1-openapi.json#GET /api/v1/view/Departments
+    - openapi/_original/eci-solutions-erp-v2-1-openapi.json#GET /api/v2.1/departments
+    - openapi/_original/eci-solutions-erp-v2-1-openapi.json#GET /api/v2.1/departments/{id}
+    - openapi/_original/eci-solutions-erp-v2-1-openapi.json#GET /api/v2.1/view/departments
+    - openapi/_original/eci-solutions-erp-v2-openapi.json#GET /api/v2/view/departments
+  customer:
+    path_segment:
+    - customers
+    - customer
+    properties:
+      id:
+      - customerId
+      - id
+      email:
+      - emailAddress
+      - email
+      phone: phone
+      addresses:
+      - address
+      - addresses
+      - billingAddress
+      - shippingAddress
+      name: name
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/eci-solutions-apar-commerce-openapi.json#DELETE /api/v1/customers/{id}
+    - openapi/_original/eci-solutions-apar-commerce-openapi.json#GET /api/v1/customers
+    - openapi/_original/eci-solutions-apar-commerce-openapi.json#GET /api/v1/customers/{id}
+    - openapi/_original/eci-solutions-apar-commerce-openapi.json#PATCH /api/v1/customers/{id}
+    - openapi/_original/eci-solutions-apar-commerce-openapi.json#POST /api/v1/customers
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      customer_id: customer
+      currency: currencyCode
+      number: orderNumber
+      total: orderTotal
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/eci-solutions-financial-v2-openapi.json#POST /api/v2/orders
+    - openapi/_original/eci-solutions-jobboss2-openapi.json#GET /api/v1/orders
+    - openapi/_original/eci-solutions-jobboss2-openapi.json#GET /api/v1/orders/{orderNumber}
+    - openapi/_original/eci-solutions-jobboss2-openapi.json#PATCH /api/v1/orders/{orderNumber}
+    - openapi/_original/eci-solutions-jobboss2-openapi.json#POST /api/v1/orders
+  inventory:
+    path_segment:
+    - inventory
+    properties:
+      id: inventoryId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/eci-solutions-lasso-crm-openapi.yml#DELETE /inventory/{inventoryId}
+    - openapi/_original/eci-solutions-lasso-crm-openapi.yml#GET /inventory
+    - openapi/_original/eci-solutions-lasso-crm-openapi.yml#GET /inventory/{inventoryId}
+    - openapi/_original/eci-solutions-lasso-crm-openapi.yml#POST /inventory
+    - openapi/_original/eci-solutions-lasso-crm-openapi.yml#PUT /inventory/{inventoryId}

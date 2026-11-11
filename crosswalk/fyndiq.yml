@@ -1,0 +1,21 @@
+provider: fyndiq
+apis_io: https://apis.io/providers/fyndiq/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fyndiq-openapi.json#GET /api/v1/sales-funnels/products/{product_id}
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/fyndiq-openapi.json#GET /api/v1/orders
+    - openapi/_original/fyndiq-openapi.json#GET /api/v1/orders/{order_id}
+    - openapi/_original/fyndiq-openapi.json#POST /api/v1/orders

@@ -1,0 +1,106 @@
+provider: ok-capsule
+apis_io: https://apis.io/providers/ok-capsule/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name:
+      - name
+      - product_name
+      description:
+      - long_description
+      - short_description
+      created_at: created_at
+      status: active
+      updated_at: updated_at
+      category_ids: category_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#DELETE /v2/pack-builders/categories/{id}/products/{productId}
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#DELETE /v2/pack-builders/{id}/categories/{categoryId}/products/{productId}
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#DELETE /v2/pack-builders/{id}/products/{productId}
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#DELETE /v2/products/{id}
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#GET /v2/pack-builders/{id}/categories/products
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: category_name
+      id: id
+      updated_at: updated_at
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#DELETE /v2/pack-builders/categories/{id}
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#DELETE /v2/pack-builders/{id}/categories/{categoryId}
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#GET /v2/pack-builders/categories
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#GET /v2/pack-builders/{id}/categories
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#GET /v2/pack-builders/{id}/widget/categories
+  customer:
+    path_segment:
+    - consumers
+    properties:
+      id: id
+      email: email
+      last_name: last_name
+      first_name: first_name
+      created_at: created_at
+      phone: phone_number
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#DELETE /v2/consumers/{id}
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#GET /v2/consumers
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#GET /v2/consumers/{id}
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#POST /v2/consumers
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#PUT /v2/consumers/{id}
+  cart:
+    path_segment:
+    - carts
+    properties:
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#GET /v2/orders/carts
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#GET /v2/pack-builders/carts/{id}
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#POST /v2/pack-builders/carts
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status:
+      - state
+      - status
+      line_items: order_lines
+      created_at: created_at
+      shipping_address: shipping_address
+      number: name
+      email: email
+      updated_at: updated_at
+      discount_total: discount_total
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#DELETE /v2/orders/{id}
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#GET /v2/orders
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#GET /v2/orders/{id}
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#POST /v2/integrations/orders
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#POST /v2/orders
+  shipment:
+    path_segment:
+    - fulfillments
+    properties:
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+      order_id: order_id
+      weight: weight
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/ok-capsule-core-api-v2-openapi.yaml#GET /v2/orders/{id}/fulfillments

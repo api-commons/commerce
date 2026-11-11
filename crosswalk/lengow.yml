@@ -1,0 +1,18 @@
+provider: lengow
+apis_io: https://apis.io/providers/lengow/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      status: status
+      custom_fields: attributes
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lengow-channel-execution-openapi.json#DELETE /v1.0/catalogues/{catalogue_id}/products
+    - openapi/_original/lengow-channel-execution-openapi.json#DELETE /v1.0/catalogues/{catalogue_id}/products/{product_id_value}
+    - openapi/_original/lengow-channel-execution-openapi.json#GET /v1.0/catalogues/{catalogue_id}/products
+    - openapi/_original/lengow-channel-execution-openapi.json#GET /v1.0/catalogues/{catalogue_id}/products/{product_id_value}
+    - openapi/_original/lengow-channel-execution-openapi.json#PATCH /v1.0/catalogues/{catalogue_id}/products

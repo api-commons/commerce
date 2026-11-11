@@ -1,0 +1,13 @@
+provider: convelio
+apis_io: https://apis.io/providers/convelio/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - order
+    properties:
+      id: id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/convelio-shipping-openapi.yml#POST /shipping/order

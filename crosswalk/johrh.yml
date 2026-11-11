@@ -1,0 +1,38 @@
+provider: johrh
+apis_io: https://apis.io/providers/johrh/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    - product
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/johrh-openapi.json#GET /availability/{availability_referer}/products/{product_id}
+    - openapi/_original/johrh-openapi.json#GET /feeds/product/{feed_map}
+    - openapi/_original/johrh-openapi.json#GET /products
+    - openapi/_original/johrh-openapi.json#GET /products/{slug}
+  category:
+    path_segment:
+    - categories
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/johrh-openapi.json#GET /categories
+    - openapi/_original/johrh-openapi.json#GET /categories/{category_id}
+  cart:
+    path_segment:
+    - cart
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/johrh-openapi.json#GET /cart
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/johrh-openapi.json#GET /account/orders

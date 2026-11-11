@@ -1,0 +1,31 @@
+provider: commercelayer
+apis_io: https://apis.io/providers/commercelayer/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/commercelayer-openapi.yml#DELETE /customers/{customerId}
+    - openapi/_original/commercelayer-openapi.yml#GET /customers
+    - openapi/_original/commercelayer-openapi.yml#GET /customers/{customerId}
+    - openapi/_original/commercelayer-openapi.yml#PATCH /customers/{customerId}
+    - openapi/_original/commercelayer-openapi.yml#POST /customers
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/commercelayer-openapi.yml#DELETE /orders/{orderId}
+    - openapi/_original/commercelayer-openapi.yml#GET /orders
+    - openapi/_original/commercelayer-openapi.yml#GET /orders/{orderId}
+    - openapi/_original/commercelayer-openapi.yml#PATCH /orders/{orderId}
+    - openapi/_original/commercelayer-openapi.yml#POST /orders

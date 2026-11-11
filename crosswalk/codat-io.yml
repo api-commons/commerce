@@ -1,0 +1,12 @@
+provider: codat-io
+apis_io: https://apis.io/providers/codat-io/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/codat-io-openapi.yml#GET /companies/{companyId}/connections/{connectionId}/data/customers

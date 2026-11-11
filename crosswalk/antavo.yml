@@ -1,0 +1,33 @@
+provider: antavo
+apis_io: https://apis.io/providers/antavo/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      email: email
+      last_name: last_name
+      first_name: first_name
+      updated_at: updated_at
+      custom_fields:
+      - properties
+      - metadata
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/antavo-customer-openapi.yml#GET /customers
+    - openapi/_original/antavo-customer-openapi.yml#GET /customers/{customer_id}
+    - openapi/_original/antavo-loyalty-read-openapi.yml#GET /v1/customers
+    - openapi/_original/antavo-loyalty-read-openapi.yml#GET /v1/customers/{customer_id}
+  cart:
+    path_segment:
+    - cart
+    properties:
+      id: cartId
+      currency: currency
+      customer_id: customerId
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/antavo-promotion-engine-openapi.yml#POST /v1/cart

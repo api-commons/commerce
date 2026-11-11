@@ -1,0 +1,50 @@
+provider: hubspot
+apis_io: https://apis.io/providers/hubspot/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      slug: url
+      custom_fields: properties
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/hubspot-crm-products-openapi.json#DELETE /crm/objects/2026-03/products/{productId}
+    - openapi/_original/hubspot-crm-products-openapi.json#GET /crm/objects/2026-03/products
+    - openapi/_original/hubspot-crm-products-openapi.json#GET /crm/objects/2026-03/products/{productId}
+    - openapi/_original/hubspot-crm-products-openapi.json#PATCH /crm/objects/2026-03/products/{productId}
+    - openapi/_original/hubspot-crm-products-openapi.json#POST /crm/objects/2026-03/products
+  cart:
+    path_segment:
+    - carts
+    properties:
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/hubspot-crm-carts-openapi.json#DELETE /crm/objects/2026-03/carts/{cartId}
+    - openapi/_original/hubspot-crm-carts-openapi.json#GET /crm/objects/2026-03/carts
+    - openapi/_original/hubspot-crm-carts-openapi.json#GET /crm/objects/2026-03/carts/{cartId}
+    - openapi/_original/hubspot-crm-carts-openapi.json#PATCH /crm/objects/2026-03/carts/{cartId}
+    - openapi/_original/hubspot-crm-carts-openapi.json#POST /crm/objects/2026-03/carts
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      created_at: createdAt
+      custom_fields: properties
+      updated_at: updatedAt
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/hubspot-crm-orders-openapi.json#DELETE /crm/objects/2026-03/orders/{orderId}
+    - openapi/_original/hubspot-crm-orders-openapi.json#GET /crm/objects/2026-03/orders
+    - openapi/_original/hubspot-crm-orders-openapi.json#GET /crm/objects/2026-03/orders/{orderId}
+    - openapi/_original/hubspot-crm-orders-openapi.json#PATCH /crm/objects/2026-03/orders/{orderId}
+    - openapi/_original/hubspot-crm-orders-openapi.json#POST /crm/objects/2026-03/orders

@@ -1,0 +1,87 @@
+provider: keap
+apis_io: https://apis.io/providers/keap/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id:
+      - id
+      - product_id
+      name:
+      - product_name
+      - name
+      description:
+      - description
+      - short_description
+      created_at: create_time
+      status: active
+      updated_at: update_time
+      category_ids: categories
+      slug: url
+      price: price
+      sku: sku
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keap-product-v1-api-openapi.yml#DELETE /rest/v1/products/{productId}
+    - openapi/_original/keap-product-v1-api-openapi.yml#GET /rest/v1/products
+    - openapi/_original/keap-product-v1-api-openapi.yml#GET /rest/v1/products/{productId}
+    - openapi/_original/keap-product-v1-api-openapi.yml#PATCH /rest/v1/products/{productId}
+    - openapi/_original/keap-product-v1-api-openapi.yml#POST /rest/v1/products
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: id
+      description: description
+      updated_at: update_time
+      created_at: create_time
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keap-v1-openapi.json#POST /rest/v1/tags/categories
+    - openapi/_original/keap-v2-openapi.json#DELETE /rest/v2/tags/categories/{tag_category_id}
+    - openapi/_original/keap-v2-openapi.json#GET /rest/v2/tags/categories
+    - openapi/_original/keap-v2-openapi.json#GET /rest/v2/tags/categories/{tag_category_id}
+    - openapi/_original/keap-v2-openapi.json#PATCH /rest/v2/tags/categories/{tag_category_id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      line_items: order_items
+      created_at: creation_date
+      customer_id: contact_id
+      shipping_address: shipping_address
+      custom_fields: custom_fields
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#DELETE /rest/v1/orders/{orderId}
+    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#GET /rest/v1/orders
+    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#GET /rest/v1/orders/{orderId}
+    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#POST /rest/v1/orders
+    - openapi/_original/keap-v1-openapi.json#DELETE /rest/v1/orders/{orderId}
+  order_item:
+    path_segment:
+    - items
+    properties:
+      quantity: quantity
+      id: id
+      product_id:
+      - product
+      - product_id
+      price: price
+      name:
+      - name
+      - description
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#DELETE /rest/v1/orders/{orderId}/items/{orderItemId}
+    - openapi/_original/keap-e-commerce-v1-api-openapi.yml#POST /rest/v1/orders/{orderId}/items
+    - openapi/_original/keap-v1-openapi.json#DELETE /rest/v1/orders/{orderId}/items/{orderItemId}
+    - openapi/_original/keap-v1-openapi.json#POST /rest/v1/orders/{orderId}/items
+    - openapi/_original/keap-v2-openapi.json#DELETE /rest/v2/orders/{order_id}/items/{order_item_id}

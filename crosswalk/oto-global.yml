@@ -1,0 +1,12 @@
+provider: oto-global
+apis_io: https://apis.io/providers/oto-global/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/oto-global-openapi.yml#GET /rest/v2/orders

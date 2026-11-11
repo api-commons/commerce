@@ -1,0 +1,33 @@
+provider: spod
+apis_io: https://apis.io/providers/spod/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      status: state
+      line_items: orderItems
+      shipping_address: shipping
+      billing_address: billingAddress
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/spod-openapi.yml#GET /orders/{orderId}
+    - openapi/_original/spod-openapi.yml#POST /orders
+    - openapi/_original/spod-openapi.yml#PUT /orders/{orderId}
+  shipment:
+    path_segment:
+    - shipments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/spod-openapi.yml#GET /orders/{orderId}/shipments
+  inventory:
+    path_segment:
+    - stock
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/spod-openapi.yml#GET /stock
+    - openapi/_original/spod-openapi.yml#GET /stock/{sku}

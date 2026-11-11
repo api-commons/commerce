@@ -1,0 +1,33 @@
+provider: platzi
+apis_io: https://apis.io/providers/platzi/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      name: title
+      description: description
+      images: images
+      category_ids: categoryId
+      price: price
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/platzi-fake-store-openapi-original.json#DELETE /api/v1/products/{id}
+    - openapi/_original/platzi-fake-store-openapi-original.json#GET /api/v1/categories/{id}/products
+    - openapi/_original/platzi-fake-store-openapi-original.json#GET /api/v1/products
+    - openapi/_original/platzi-fake-store-openapi-original.json#GET /api/v1/products/{id}
+    - openapi/_original/platzi-fake-store-openapi-original.json#POST /api/v1/products
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/platzi-fake-store-openapi-original.json#DELETE /api/v1/categories/{id}
+    - openapi/_original/platzi-fake-store-openapi-original.json#GET /api/v1/categories
+    - openapi/_original/platzi-fake-store-openapi-original.json#GET /api/v1/categories/{id}
+    - openapi/_original/platzi-fake-store-openapi-original.json#POST /api/v1/categories
+    - openapi/_original/platzi-fake-store-openapi-original.json#PUT /api/v1/categories/{id}

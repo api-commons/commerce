@@ -1,0 +1,1695 @@
+context: commerce
+generated: '2026-11-10'
+adopters:
+- provider: 99-minutos
+  apis_io: https://apis.io/providers/99-minutos/
+  crosswalk: crosswalk/99-minutos.yml
+  concepts:
+  - order
+- provider: accelbyte
+  apis_io: https://apis.io/providers/accelbyte/
+  crosswalk: crosswalk/accelbyte.yml
+  concepts:
+  - order
+- provider: adobe-suite
+  apis_io: https://apis.io/providers/adobe-suite/
+  crosswalk: crosswalk/adobe-suite.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - product
+- provider: adready-cpxi
+  apis_io: https://apis.io/providers/adready-cpxi/
+  crosswalk: crosswalk/adready-cpxi.yml
+  concepts:
+  - category
+- provider: advance-auto-parts
+  apis_io: https://apis.io/providers/advance-auto-parts/
+  crosswalk: crosswalk/advance-auto-parts.yml
+  concepts:
+  - cart
+  - inventory
+  - order
+  - product
+- provider: aerofarms
+  apis_io: https://apis.io/providers/aerofarms/
+  crosswalk: crosswalk/aerofarms.yml
+  concepts:
+  - cart
+  - category
+  - product
+- provider: aftership
+  apis_io: https://apis.io/providers/aftership/
+  crosswalk: crosswalk/aftership.yml
+  concepts:
+  - order
+  - order_item
+  - product
+  - product_variant
+- provider: akeneo
+  apis_io: https://apis.io/providers/akeneo/
+  crosswalk: crosswalk/akeneo.yml
+  concepts:
+  - category
+  - product
+- provider: alkemics
+  apis_io: https://apis.io/providers/alkemics/
+  crosswalk: crosswalk/alkemics.yml
+  concepts:
+  - product
+- provider: amazon-seller-central
+  apis_io: https://apis.io/providers/amazon-seller-central/
+  crosswalk: crosswalk/amazon-seller-central.yml
+  concepts:
+  - inventory
+  - shipment
+- provider: ankorstore
+  apis_io: https://apis.io/providers/ankorstore/
+  crosswalk: crosswalk/ankorstore.yml
+  concepts:
+  - inventory
+  - order
+  - product
+- provider: antavo
+  apis_io: https://apis.io/providers/antavo/
+  crosswalk: crosswalk/antavo.yml
+  concepts:
+  - cart
+  - customer
+- provider: appcharge
+  apis_io: https://apis.io/providers/appcharge/
+  crosswalk: crosswalk/appcharge.yml
+  concepts:
+  - product
+- provider: appdirect
+  apis_io: https://apis.io/providers/appdirect/
+  crosswalk: crosswalk/appdirect.yml
+  concepts:
+  - category
+  - order
+  - product
+- provider: avito
+  apis_io: https://apis.io/providers/avito/
+  crosswalk: crosswalk/avito.yml
+  concepts:
+  - inventory
+  - order
+- provider: axlehire
+  apis_io: https://apis.io/providers/axlehire/
+  crosswalk: crosswalk/axlehire.yml
+  concepts:
+  - customer
+- provider: back-market
+  apis_io: https://apis.io/providers/back-market/
+  crosswalk: crosswalk/back-market.yml
+  concepts:
+  - order
+  - product
+- provider: bazaarvoice
+  apis_io: https://apis.io/providers/bazaarvoice/
+  crosswalk: crosswalk/bazaarvoice.yml
+  concepts:
+  - category
+  - product
+- provider: beacon-roofing-supply
+  apis_io: https://apis.io/providers/beacon-roofing-supply/
+  crosswalk: crosswalk/beacon-roofing-supply.yml
+  concepts:
+  - category
+  - order
+- provider: beeketing
+  apis_io: https://apis.io/providers/beeketing/
+  crosswalk: crosswalk/beeketing.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - product
+  - product_variant
+  - shipment
+- provider: bigcommerce
+  apis_io: https://apis.io/providers/bigcommerce/
+  crosswalk: crosswalk/bigcommerce.yml
+  concepts:
+  - cart
+  - category
+  - customer
+  - inventory
+  - order
+  - order_item
+  - product
+  - product_variant
+- provider: bjs-wholesale-club
+  apis_io: https://apis.io/providers/bjs-wholesale-club/
+  crosswalk: crosswalk/bjs-wholesale-club.yml
+  concepts:
+  - inventory
+  - order
+  - product
+- provider: block
+  apis_io: https://apis.io/providers/block/
+  crosswalk: crosswalk/block.yml
+  concepts:
+  - customer
+  - inventory
+  - order
+- provider: bloomreach
+  apis_io: https://apis.io/providers/bloomreach/
+  crosswalk: crosswalk/bloomreach.yml
+  concepts:
+  - category
+- provider: bold-commerce
+  apis_io: https://apis.io/providers/bold-commerce/
+  crosswalk: crosswalk/bold-commerce.yml
+  concepts:
+  - customer
+  - order
+- provider: bolt
+  apis_io: https://apis.io/providers/bolt/
+  crosswalk: crosswalk/bolt.yml
+  concepts:
+  - order
+- provider: bolt-financial
+  apis_io: https://apis.io/providers/bolt-financial/
+  crosswalk: crosswalk/bolt-financial.yml
+  concepts:
+  - order
+- provider: bond-pet-foods
+  apis_io: https://apis.io/providers/bond-pet-foods/
+  crosswalk: crosswalk/bond-pet-foods.yml
+  concepts:
+  - cart
+  - category
+  - order
+  - order_item
+  - product
+- provider: booqable
+  apis_io: https://apis.io/providers/booqable/
+  crosswalk: crosswalk/booqable.yml
+  concepts:
+  - category
+  - customer
+  - inventory
+  - order
+  - product
+- provider: bootic
+  apis_io: https://apis.io/providers/bootic/
+  crosswalk: crosswalk/bootic.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - order_item
+  - product
+  - product_variant
+- provider: boxc
+  apis_io: https://apis.io/providers/boxc/
+  crosswalk: crosswalk/boxc.yml
+  concepts:
+  - order
+  - product
+  - product_variant
+- provider: bread-financial
+  apis_io: https://apis.io/providers/bread-financial/
+  crosswalk: crosswalk/bread-financial.yml
+  concepts:
+  - cart
+- provider: brevo
+  apis_io: https://apis.io/providers/brevo/
+  crosswalk: crosswalk/brevo.yml
+  concepts:
+  - category
+  - order
+  - product
+- provider: broadlume
+  apis_io: https://apis.io/providers/broadlume/
+  crosswalk: crosswalk/broadlume.yml
+  concepts:
+  - customer
+  - order
+- provider: buywhere
+  apis_io: https://apis.io/providers/buywhere/
+  crosswalk: crosswalk/buywhere.yml
+  concepts:
+  - category
+  - product
+- provider: byrd
+  apis_io: https://apis.io/providers/byrd/
+  crosswalk: crosswalk/byrd.yml
+  concepts:
+  - inventory
+  - product
+- provider: canal
+  apis_io: https://apis.io/providers/canal/
+  crosswalk: crosswalk/canal.yml
+  concepts:
+  - order
+  - product
+- provider: cart-com
+  apis_io: https://apis.io/providers/cart-com/
+  crosswalk: crosswalk/cart-com.yml
+  concepts:
+  - cart
+  - category
+  - customer
+  - inventory
+  - order
+  - product
+- provider: channable
+  apis_io: https://apis.io/providers/channable/
+  crosswalk: crosswalk/channable.yml
+  concepts:
+  - order
+  - shipment
+- provider: chargeafter
+  apis_io: https://apis.io/providers/chargeafter/
+  crosswalk: crosswalk/chargeafter.yml
+  concepts:
+  - customer
+  - order
+- provider: clickfunnels
+  apis_io: https://apis.io/providers/clickfunnels/
+  crosswalk: crosswalk/clickfunnels.yml
+  concepts:
+  - category
+  - order
+  - product
+  - product_variant
+- provider: cloudkitchens
+  apis_io: https://apis.io/providers/cloudkitchens/
+  crosswalk: crosswalk/cloudkitchens.yml
+  concepts:
+  - order
+  - order_item
+- provider: codat-io
+  apis_io: https://apis.io/providers/codat-io/
+  crosswalk: crosswalk/codat-io.yml
+  concepts:
+  - customer
+- provider: commerce-layer
+  apis_io: https://apis.io/providers/commerce-layer/
+  crosswalk: crosswalk/commerce-layer.yml
+  concepts:
+  - customer
+  - order
+  - order_item
+  - shipment
+- provider: commercelayer
+  apis_io: https://apis.io/providers/commercelayer/
+  crosswalk: crosswalk/commercelayer.yml
+  concepts:
+  - customer
+  - order
+- provider: commercetools
+  apis_io: https://apis.io/providers/commercetools/
+  crosswalk: crosswalk/commercetools.yml
+  concepts:
+  - cart
+  - category
+  - customer
+  - inventory
+  - order
+  - product
+- provider: constructorio
+  apis_io: https://apis.io/providers/constructorio/
+  crosswalk: crosswalk/constructorio.yml
+  concepts:
+  - category
+- provider: convelio
+  apis_io: https://apis.io/providers/convelio/
+  crosswalk: crosswalk/convelio.yml
+  concepts:
+  - order
+- provider: convertkit
+  apis_io: https://apis.io/providers/convertkit/
+  crosswalk: crosswalk/convertkit.yml
+  concepts:
+  - order
+- provider: copthis
+  apis_io: https://apis.io/providers/copthis/
+  crosswalk: crosswalk/copthis.yml
+  concepts:
+  - order
+- provider: cordial
+  apis_io: https://apis.io/providers/cordial/
+  crosswalk: crosswalk/cordial.yml
+  concepts:
+  - cart
+  - order
+  - product
+- provider: criteo
+  apis_io: https://apis.io/providers/criteo/
+  crosswalk: crosswalk/criteo.yml
+  concepts:
+  - category
+  - product
+- provider: crm-bonus
+  apis_io: https://apis.io/providers/crm-bonus/
+  crosswalk: crosswalk/crm-bonus.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: curie
+  apis_io: https://apis.io/providers/curie/
+  crosswalk: crosswalk/curie.yml
+  concepts:
+  - product
+- provider: dana
+  apis_io: https://apis.io/providers/dana/
+  crosswalk: crosswalk/dana.yml
+  concepts:
+  - order
+- provider: dataforseo
+  apis_io: https://apis.io/providers/dataforseo/
+  crosswalk: crosswalk/dataforseo.yml
+  concepts:
+  - category
+- provider: depict
+  apis_io: https://apis.io/providers/depict/
+  crosswalk: crosswalk/depict.yml
+  concepts:
+  - category
+  - product
+- provider: depictai
+  apis_io: https://apis.io/providers/depictai/
+  crosswalk: crosswalk/depictai.yml
+  concepts:
+  - category
+  - product
+- provider: depop
+  apis_io: https://apis.io/providers/depop/
+  crosswalk: crosswalk/depop.yml
+  concepts:
+  - order
+  - product
+- provider: dotdigital
+  apis_io: https://apis.io/providers/dotdigital/
+  crosswalk: crosswalk/dotdigital.yml
+  concepts:
+  - order
+- provider: drip
+  apis_io: https://apis.io/providers/drip/
+  crosswalk: crosswalk/drip.yml
+  concepts:
+  - order
+- provider: duda
+  apis_io: https://apis.io/providers/duda/
+  crosswalk: crosswalk/duda.yml
+  concepts:
+  - order
+  - product
+- provider: ebay
+  apis_io: https://apis.io/providers/ebay/
+  crosswalk: crosswalk/ebay.yml
+  concepts:
+  - order
+  - product
+- provider: eci-solutions
+  apis_io: https://apis.io/providers/eci-solutions/
+  crosswalk: crosswalk/eci-solutions.yml
+  concepts:
+  - category
+  - customer
+  - inventory
+  - order
+  - product
+- provider: ecwid
+  apis_io: https://apis.io/providers/ecwid/
+  crosswalk: crosswalk/ecwid.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - product
+- provider: elastic-path
+  apis_io: https://apis.io/providers/elastic-path/
+  crosswalk: crosswalk/elastic-path.yml
+  concepts:
+  - cart
+  - customer
+  - inventory
+  - order
+  - order_item
+  - product
+  - product_variant
+- provider: emotive
+  apis_io: https://apis.io/providers/emotive/
+  crosswalk: crosswalk/emotive.yml
+  concepts:
+  - product
+- provider: emporix
+  apis_io: https://apis.io/providers/emporix/
+  crosswalk: crosswalk/emporix.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - order_item
+- provider: epos-now
+  apis_io: https://apis.io/providers/epos-now/
+  crosswalk: crosswalk/epos-now.yml
+  concepts:
+  - category
+  - customer
+  - product
+- provider: erply
+  apis_io: https://apis.io/providers/erply/
+  crosswalk: crosswalk/erply.yml
+  concepts:
+  - category
+  - product
+- provider: etsy
+  apis_io: https://apis.io/providers/etsy/
+  crosswalk: crosswalk/etsy.yml
+  concepts:
+  - inventory
+  - product
+- provider: extensiv
+  apis_io: https://apis.io/providers/extensiv/
+  crosswalk: crosswalk/extensiv.yml
+  concepts:
+  - customer
+  - inventory
+  - order
+- provider: fabric-com
+  apis_io: https://apis.io/providers/fabric-com/
+  crosswalk: crosswalk/fabric-com.yml
+  concepts:
+  - cart
+  - category
+  - customer
+  - inventory
+  - order
+  - order_item
+  - product
+  - product_variant
+- provider: famous
+  apis_io: https://apis.io/providers/famous/
+  crosswalk: crosswalk/famous.yml
+  concepts:
+  - category
+  - order
+- provider: fashionbyu-com
+  apis_io: https://apis.io/providers/fashionbyu-com/
+  crosswalk: crosswalk/fashionbyu-com.yml
+  concepts:
+  - cart
+- provider: fastspring
+  apis_io: https://apis.io/providers/fastspring/
+  crosswalk: crosswalk/fastspring.yml
+  concepts:
+  - order
+  - product
+- provider: finditparts
+  apis_io: https://apis.io/providers/finditparts/
+  crosswalk: crosswalk/finditparts.yml
+  concepts:
+  - cart
+  - order
+  - order_item
+  - product
+- provider: flipp-wishabi
+  apis_io: https://apis.io/providers/flipp-wishabi/
+  crosswalk: crosswalk/flipp-wishabi.yml
+  concepts:
+  - category
+  - product
+- provider: forter
+  apis_io: https://apis.io/providers/forter/
+  crosswalk: crosswalk/forter.yml
+  concepts:
+  - order
+- provider: fourthwall
+  apis_io: https://apis.io/providers/fourthwall/
+  crosswalk: crosswalk/fourthwall.yml
+  concepts:
+  - cart
+  - category
+  - inventory
+  - order
+  - product
+- provider: furniture-api
+  apis_io: https://apis.io/providers/furniture-api/
+  crosswalk: crosswalk/furniture-api.yml
+  concepts:
+  - inventory
+  - product
+- provider: fyndiq
+  apis_io: https://apis.io/providers/fyndiq/
+  crosswalk: crosswalk/fyndiq.yml
+  concepts:
+  - order
+  - product
+- provider: gameball
+  apis_io: https://apis.io/providers/gameball/
+  crosswalk: crosswalk/gameball.yml
+  concepts:
+  - order
+  - product
+- provider: gelato
+  apis_io: https://apis.io/providers/gelato/
+  crosswalk: crosswalk/gelato.yml
+  concepts:
+  - order
+  - product
+- provider: gemini-trust
+  apis_io: https://apis.io/providers/gemini-trust/
+  crosswalk: crosswalk/gemini-trust.yml
+  concepts:
+  - category
+- provider: geniemode
+  apis_io: https://apis.io/providers/geniemode/
+  crosswalk: crosswalk/geniemode.yml
+  concepts:
+  - category
+  - order
+  - product
+  - shipment
+- provider: getresponse
+  apis_io: https://apis.io/providers/getresponse/
+  crosswalk: crosswalk/getresponse.yml
+  concepts:
+  - cart
+  - category
+  - order
+  - product
+  - product_variant
+- provider: goody
+  apis_io: https://apis.io/providers/goody/
+  crosswalk: crosswalk/goody.yml
+  concepts:
+  - category
+  - order
+  - product
+- provider: google-shopping
+  apis_io: https://apis.io/providers/google-shopping/
+  crosswalk: crosswalk/google-shopping.yml
+  concepts:
+  - order
+  - product
+- provider: gorgias
+  apis_io: https://apis.io/providers/gorgias/
+  crosswalk: crosswalk/gorgias.yml
+  concepts:
+  - customer
+- provider: gr4vy
+  apis_io: https://apis.io/providers/gr4vy/
+  crosswalk: crosswalk/gr4vy.yml
+  concepts:
+  - customer
+- provider: hooklogic-criteo
+  apis_io: https://apis.io/providers/hooklogic-criteo/
+  crosswalk: crosswalk/hooklogic-criteo.yml
+  concepts:
+  - category
+  - product
+- provider: hubspot
+  apis_io: https://apis.io/providers/hubspot/
+  crosswalk: crosswalk/hubspot.yml
+  concepts:
+  - cart
+  - order
+  - product
+- provider: huuray
+  apis_io: https://apis.io/providers/huuray/
+  crosswalk: crosswalk/huuray.yml
+  concepts:
+  - inventory
+  - order
+- provider: icon-aircraft
+  apis_io: https://apis.io/providers/icon-aircraft/
+  crosswalk: crosswalk/icon-aircraft.yml
+  concepts:
+  - category
+- provider: infusionsoft
+  apis_io: https://apis.io/providers/infusionsoft/
+  crosswalk: crosswalk/infusionsoft.yml
+  concepts:
+  - category
+  - order
+  - order_item
+  - product
+- provider: instacart
+  apis_io: https://apis.io/providers/instacart/
+  crosswalk: crosswalk/instacart.yml
+  concepts:
+  - order
+  - order_item
+- provider: instamojo
+  apis_io: https://apis.io/providers/instamojo/
+  crosswalk: crosswalk/instamojo.yml
+  concepts:
+  - order
+- provider: johrh
+  apis_io: https://apis.io/providers/johrh/
+  crosswalk: crosswalk/johrh.yml
+  concepts:
+  - cart
+  - category
+  - order
+  - product
+- provider: just-eat
+  apis_io: https://apis.io/providers/just-eat/
+  crosswalk: crosswalk/just-eat.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - product_variant
+- provider: kajabi
+  apis_io: https://apis.io/providers/kajabi/
+  crosswalk: crosswalk/kajabi.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: katana
+  apis_io: https://apis.io/providers/katana/
+  crosswalk: crosswalk/katana.yml
+  concepts:
+  - customer
+  - inventory
+  - order
+  - product
+- provider: keap
+  apis_io: https://apis.io/providers/keap/
+  crosswalk: crosswalk/keap.yml
+  concepts:
+  - category
+  - order
+  - order_item
+  - product
+- provider: kibo-commerce
+  apis_io: https://apis.io/providers/kibo-commerce/
+  crosswalk: crosswalk/kibo-commerce.yml
+  concepts:
+  - cart
+  - category
+  - customer
+  - order
+  - order_item
+  - product
+  - product_variant
+  - shipment
+- provider: klarna
+  apis_io: https://apis.io/providers/klarna/
+  crosswalk: crosswalk/klarna.yml
+  concepts:
+  - order
+- provider: klaviyo
+  apis_io: https://apis.io/providers/klaviyo/
+  crosswalk: crosswalk/klaviyo.yml
+  concepts:
+  - category
+  - product
+- provider: koin
+  apis_io: https://apis.io/providers/koin/
+  crosswalk: crosswalk/koin.yml
+  concepts:
+  - order
+- provider: kurly
+  apis_io: https://apis.io/providers/kurly/
+  crosswalk: crosswalk/kurly.yml
+  concepts:
+  - inventory
+  - order
+- provider: layup-technologies
+  apis_io: https://apis.io/providers/layup-technologies/
+  crosswalk: crosswalk/layup-technologies.yml
+  concepts:
+  - order
+- provider: leaflink
+  apis_io: https://apis.io/providers/leaflink/
+  crosswalk: crosswalk/leaflink.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: lemon-squeezy
+  apis_io: https://apis.io/providers/lemon-squeezy/
+  crosswalk: crosswalk/lemon-squeezy.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: lengow
+  apis_io: https://apis.io/providers/lengow/
+  crosswalk: crosswalk/lengow.yml
+  concepts:
+  - product
+- provider: lightspeed
+  apis_io: https://apis.io/providers/lightspeed/
+  crosswalk: crosswalk/lightspeed.yml
+  concepts:
+  - customer
+  - inventory
+  - product
+- provider: lightspeed-pos
+  apis_io: https://apis.io/providers/lightspeed-pos/
+  crosswalk: crosswalk/lightspeed-pos.yml
+  concepts:
+  - customer
+  - product
+- provider: lily-ai
+  apis_io: https://apis.io/providers/lily-ai/
+  crosswalk: crosswalk/lily-ai.yml
+  concepts:
+  - product
+- provider: liquid-death
+  apis_io: https://apis.io/providers/liquid-death/
+  crosswalk: crosswalk/liquid-death.yml
+  concepts:
+  - product
+- provider: listrak
+  apis_io: https://apis.io/providers/listrak/
+  crosswalk: crosswalk/listrak.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: locus-sh
+  apis_io: https://apis.io/providers/locus-sh/
+  crosswalk: crosswalk/locus-sh.yml
+  concepts:
+  - order
+- provider: logiless
+  apis_io: https://apis.io/providers/logiless/
+  crosswalk: crosswalk/logiless.yml
+  concepts:
+  - order
+- provider: loop-returns
+  apis_io: https://apis.io/providers/loop-returns/
+  crosswalk: crosswalk/loop-returns.yml
+  concepts:
+  - cart
+- provider: loudcrowd
+  apis_io: https://apis.io/providers/loudcrowd/
+  crosswalk: crosswalk/loudcrowd.yml
+  concepts:
+  - order
+- provider: lowes
+  apis_io: https://apis.io/providers/lowes/
+  crosswalk: crosswalk/lowes.yml
+  concepts:
+  - inventory
+  - product
+- provider: magento
+  apis_io: https://apis.io/providers/magento/
+  crosswalk: crosswalk/magento.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - order_item
+  - product
+- provider: magento-2
+  apis_io: https://apis.io/providers/magento-2/
+  crosswalk: crosswalk/magento-2.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - order_item
+  - product
+- provider: mailchimp
+  apis_io: https://apis.io/providers/mailchimp/
+  crosswalk: crosswalk/mailchimp.yml
+  concepts:
+  - cart
+  - customer
+  - order
+  - order_item
+  - product
+  - product_variant
+- provider: maison-safqa-holdings-limited
+  apis_io: https://apis.io/providers/maison-safqa-holdings-limited/
+  crosswalk: crosswalk/maison-safqa-holdings-limited.yml
+  concepts:
+  - inventory
+  - product
+- provider: makeup-land
+  apis_io: https://apis.io/providers/makeup-land/
+  crosswalk: crosswalk/makeup-land.yml
+  concepts:
+  - cart
+  - customer
+  - order
+  - order_item
+  - product
+- provider: mapp
+  apis_io: https://apis.io/providers/mapp/
+  crosswalk: crosswalk/mapp.yml
+  concepts:
+  - cart
+  - product_variant
+- provider: medusa
+  apis_io: https://apis.io/providers/medusa/
+  crosswalk: crosswalk/medusa.yml
+  concepts:
+  - cart
+  - category
+  - customer
+  - order
+  - order_item
+  - product
+  - product_variant
+  - shipment
+- provider: metrilo
+  apis_io: https://apis.io/providers/metrilo/
+  crosswalk: crosswalk/metrilo.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - product
+- provider: mikmak
+  apis_io: https://apis.io/providers/mikmak/
+  crosswalk: crosswalk/mikmak.yml
+  concepts:
+  - cart
+  - product
+- provider: mile
+  apis_io: https://apis.io/providers/mile/
+  crosswalk: crosswalk/mile.yml
+  concepts:
+  - customer
+  - product
+- provider: mirakl
+  apis_io: https://apis.io/providers/mirakl/
+  crosswalk: crosswalk/mirakl.yml
+  concepts:
+  - order
+  - product
+  - shipment
+- provider: misoai
+  apis_io: https://apis.io/providers/misoai/
+  crosswalk: crosswalk/misoai.yml
+  concepts:
+  - product
+- provider: modivo
+  apis_io: https://apis.io/providers/modivo/
+  crosswalk: crosswalk/modivo.yml
+  concepts:
+  - customer
+  - order
+- provider: monocrawl
+  apis_io: https://apis.io/providers/monocrawl/
+  crosswalk: crosswalk/monocrawl.yml
+  concepts:
+  - category
+  - product
+- provider: nacelle
+  apis_io: https://apis.io/providers/nacelle/
+  crosswalk: crosswalk/nacelle.yml
+  concepts:
+  - customer
+- provider: narvar
+  apis_io: https://apis.io/providers/narvar/
+  crosswalk: crosswalk/narvar.yml
+  concepts:
+  - order
+  - shipment
+- provider: neon-commerce
+  apis_io: https://apis.io/providers/neon-commerce/
+  crosswalk: crosswalk/neon-commerce.yml
+  concepts:
+  - order
+- provider: newstore
+  apis_io: https://apis.io/providers/newstore/
+  crosswalk: crosswalk/newstore.yml
+  concepts:
+  - cart
+  - order
+  - order_item
+- provider: northbeam
+  apis_io: https://apis.io/providers/northbeam/
+  crosswalk: crosswalk/northbeam.yml
+  concepts:
+  - order
+- provider: northmill
+  apis_io: https://apis.io/providers/northmill/
+  crosswalk: crosswalk/northmill.yml
+  concepts:
+  - customer
+  - order
+- provider: numeral
+  apis_io: https://apis.io/providers/numeral/
+  crosswalk: crosswalk/numeral.yml
+  concepts:
+  - customer
+  - product
+- provider: nuvemshop
+  apis_io: https://apis.io/providers/nuvemshop/
+  crosswalk: crosswalk/nuvemshop.yml
+  concepts:
+  - category
+  - customer
+  - inventory
+  - order
+  - product
+  - product_variant
+- provider: ok-capsule
+  apis_io: https://apis.io/providers/ok-capsule/
+  crosswalk: crosswalk/ok-capsule.yml
+  concepts:
+  - cart
+  - category
+  - customer
+  - order
+  - product
+  - shipment
+- provider: omniful-inc
+  apis_io: https://apis.io/providers/omniful-inc/
+  crosswalk: crosswalk/omniful-inc.yml
+  concepts:
+  - customer
+  - inventory
+  - order
+  - shipment
+- provider: omnisend
+  apis_io: https://apis.io/providers/omnisend/
+  crosswalk: crosswalk/omnisend.yml
+  concepts:
+  - product
+- provider: onerail
+  apis_io: https://apis.io/providers/onerail/
+  crosswalk: crosswalk/onerail.yml
+  concepts:
+  - order
+  - order_item
+  - product
+- provider: opencart
+  apis_io: https://apis.io/providers/opencart/
+  crosswalk: crosswalk/opencart.yml
+  concepts:
+  - cart
+  - customer
+  - order
+- provider: optimizely
+  apis_io: https://apis.io/providers/optimizely/
+  crosswalk: crosswalk/optimizely.yml
+  concepts:
+  - cart
+  - category
+  - customer
+  - order
+  - product
+- provider: optoro
+  apis_io: https://apis.io/providers/optoro/
+  crosswalk: crosswalk/optoro.yml
+  concepts:
+  - order
+  - product
+- provider: oracle-retail
+  apis_io: https://apis.io/providers/oracle-retail/
+  crosswalk: crosswalk/oracle-retail.yml
+  concepts:
+  - inventory
+  - order
+- provider: orderdesk
+  apis_io: https://apis.io/providers/orderdesk/
+  crosswalk: crosswalk/orderdesk.yml
+  concepts:
+  - order
+  - shipment
+- provider: ordergroove
+  apis_io: https://apis.io/providers/ordergroove/
+  crosswalk: crosswalk/ordergroove.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: ordoro
+  apis_io: https://apis.io/providers/ordoro/
+  crosswalk: crosswalk/ordoro.yml
+  concepts:
+  - cart
+  - order
+  - product
+- provider: oto-global
+  apis_io: https://apis.io/providers/oto-global/
+  crosswalk: crosswalk/oto-global.yml
+  concepts:
+  - order
+- provider: pagbank
+  apis_io: https://apis.io/providers/pagbank/
+  crosswalk: crosswalk/pagbank.yml
+  concepts:
+  - order
+- provider: partstech
+  apis_io: https://apis.io/providers/partstech/
+  crosswalk: crosswalk/partstech.yml
+  concepts:
+  - category
+  - order
+- provider: passport
+  apis_io: https://apis.io/providers/passport/
+  crosswalk: crosswalk/passport.yml
+  concepts:
+  - cart
+  - order
+- provider: paypal
+  apis_io: https://apis.io/providers/paypal/
+  crosswalk: crosswalk/paypal.yml
+  concepts:
+  - order
+  - product
+- provider: picker
+  apis_io: https://apis.io/providers/picker/
+  crosswalk: crosswalk/picker.yml
+  concepts:
+  - category
+  - product
+- provider: pin-payments
+  apis_io: https://apis.io/providers/pin-payments/
+  crosswalk: crosswalk/pin-payments.yml
+  concepts:
+  - customer
+- provider: pixc
+  apis_io: https://apis.io/providers/pixc/
+  crosswalk: crosswalk/pixc.yml
+  concepts:
+  - order
+- provider: platzi
+  apis_io: https://apis.io/providers/platzi/
+  crosswalk: crosswalk/platzi.yml
+  concepts:
+  - category
+  - product
+- provider: platzi-fake-store-api
+  apis_io: https://apis.io/providers/platzi-fake-store-api/
+  crosswalk: crosswalk/platzi-fake-store-api.yml
+  concepts:
+  - category
+  - product
+- provider: primis
+  apis_io: https://apis.io/providers/primis/
+  crosswalk: crosswalk/primis.yml
+  concepts:
+  - order
+  - product
+- provider: princess-beef-heavy-industries
+  apis_io: https://apis.io/providers/princess-beef-heavy-industries/
+  crosswalk: crosswalk/princess-beef-heavy-industries.yml
+  concepts:
+  - product
+- provider: printful
+  apis_io: https://apis.io/providers/printful/
+  crosswalk: crosswalk/printful.yml
+  concepts:
+  - order
+  - product
+- provider: printify
+  apis_io: https://apis.io/providers/printify/
+  crosswalk: crosswalk/printify.yml
+  concepts:
+  - order
+  - product
+- provider: prodigi
+  apis_io: https://apis.io/providers/prodigi/
+  crosswalk: crosswalk/prodigi.yml
+  concepts:
+  - order
+  - product
+- provider: przelewy24
+  apis_io: https://apis.io/providers/przelewy24/
+  crosswalk: crosswalk/przelewy24.yml
+  concepts:
+  - cart
+- provider: recharge-payments
+  apis_io: https://apis.io/providers/recharge-payments/
+  crosswalk: crosswalk/recharge-payments.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: redefine-meat
+  apis_io: https://apis.io/providers/redefine-meat/
+  crosswalk: crosswalk/redefine-meat.yml
+  concepts:
+  - cart
+  - category
+  - order
+  - order_item
+  - product
+- provider: reefapi
+  apis_io: https://apis.io/providers/reefapi/
+  crosswalk: crosswalk/reefapi.yml
+  concepts:
+  - category
+  - product
+- provider: rekki
+  apis_io: https://apis.io/providers/rekki/
+  crosswalk: crosswalk/rekki.yml
+  concepts:
+  - inventory
+- provider: rentle
+  apis_io: https://apis.io/providers/rentle/
+  crosswalk: crosswalk/rentle.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - product
+- provider: reverb
+  apis_io: https://apis.io/providers/reverb/
+  crosswalk: crosswalk/reverb.yml
+  concepts:
+  - cart
+  - category
+  - product
+- provider: rye
+  apis_io: https://apis.io/providers/rye/
+  crosswalk: crosswalk/rye.yml
+  concepts:
+  - order
+- provider: salla
+  apis_io: https://apis.io/providers/salla/
+  crosswalk: crosswalk/salla.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - order_item
+  - product
+  - product_variant
+- provider: salsify
+  apis_io: https://apis.io/providers/salsify/
+  crosswalk: crosswalk/salsify.yml
+  concepts:
+  - product
+- provider: samcart
+  apis_io: https://apis.io/providers/samcart/
+  crosswalk: crosswalk/samcart.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: sap-commerce-cloud
+  apis_io: https://apis.io/providers/sap-commerce-cloud/
+  crosswalk: crosswalk/sap-commerce-cloud.yml
+  concepts:
+  - cart
+  - category
+  - customer
+  - inventory
+  - order
+  - product
+- provider: scalablepress
+  apis_io: https://apis.io/providers/scalablepress/
+  crosswalk: crosswalk/scalablepress.yml
+  concepts:
+  - category
+  - order
+  - product
+- provider: scalapay
+  apis_io: https://apis.io/providers/scalapay/
+  crosswalk: crosswalk/scalapay.yml
+  concepts:
+  - order
+- provider: sendcloud
+  apis_io: https://apis.io/providers/sendcloud/
+  crosswalk: crosswalk/sendcloud.yml
+  concepts:
+  - order
+- provider: serpwow
+  apis_io: https://apis.io/providers/serpwow/
+  crosswalk: crosswalk/serpwow.yml
+  concepts:
+  - product
+- provider: shift4-payments
+  apis_io: https://apis.io/providers/shift4-payments/
+  crosswalk: crosswalk/shift4-payments.yml
+  concepts:
+  - customer
+- provider: shipbob
+  apis_io: https://apis.io/providers/shipbob/
+  crosswalk: crosswalk/shipbob.yml
+  concepts:
+  - inventory
+  - order
+  - product
+  - product_variant
+  - shipment
+- provider: shipcloud
+  apis_io: https://apis.io/providers/shipcloud/
+  crosswalk: crosswalk/shipcloud.yml
+  concepts:
+  - order
+- provider: shipmonk
+  apis_io: https://apis.io/providers/shipmonk/
+  crosswalk: crosswalk/shipmonk.yml
+  concepts:
+  - order
+  - product
+- provider: shippingeasy
+  apis_io: https://apis.io/providers/shippingeasy/
+  crosswalk: crosswalk/shippingeasy.yml
+  concepts:
+  - order
+- provider: shipstation
+  apis_io: https://apis.io/providers/shipstation/
+  crosswalk: crosswalk/shipstation.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: shootproof
+  apis_io: https://apis.io/providers/shootproof/
+  crosswalk: crosswalk/shootproof.yml
+  concepts:
+  - order
+- provider: shopgo
+  apis_io: https://apis.io/providers/shopgo/
+  crosswalk: crosswalk/shopgo.yml
+  concepts:
+  - order
+  - shipment
+- provider: shopify
+  apis_io: https://apis.io/providers/shopify/
+  crosswalk: crosswalk/shopify.yml
+  concepts:
+  - category
+  - customer
+  - inventory
+  - order
+  - product
+  - product_variant
+  - shipment
+- provider: shopify-admin
+  apis_io: https://apis.io/providers/shopify-admin/
+  crosswalk: crosswalk/shopify-admin.yml
+  concepts:
+  - customer
+  - inventory
+  - order
+  - product
+- provider: shoplazza
+  apis_io: https://apis.io/providers/shoplazza/
+  crosswalk: crosswalk/shoplazza.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - product
+  - product_variant
+  - shipment
+- provider: shoppable
+  apis_io: https://apis.io/providers/shoppable/
+  crosswalk: crosswalk/shoppable.yml
+  concepts:
+  - order
+  - product
+- provider: shopper-approved
+  apis_io: https://apis.io/providers/shopper-approved/
+  crosswalk: crosswalk/shopper-approved.yml
+  concepts:
+  - order
+  - product
+- provider: shopware
+  apis_io: https://apis.io/providers/shopware/
+  crosswalk: crosswalk/shopware.yml
+  concepts:
+  - cart
+  - category
+  - customer
+  - order
+  - product
+- provider: skai-kenshoo
+  apis_io: https://apis.io/providers/skai-kenshoo/
+  crosswalk: crosswalk/skai-kenshoo.yml
+  concepts:
+  - inventory
+- provider: smartrr
+  apis_io: https://apis.io/providers/smartrr/
+  crosswalk: crosswalk/smartrr.yml
+  concepts:
+  - order
+- provider: smile-io
+  apis_io: https://apis.io/providers/smile-io/
+  crosswalk: crosswalk/smile-io.yml
+  concepts:
+  - customer
+- provider: snackmagic
+  apis_io: https://apis.io/providers/snackmagic/
+  crosswalk: crosswalk/snackmagic.yml
+  concepts:
+  - order
+  - product
+- provider: snipcart
+  apis_io: https://apis.io/providers/snipcart/
+  crosswalk: crosswalk/snipcart.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: sovrn
+  apis_io: https://apis.io/providers/sovrn/
+  crosswalk: crosswalk/sovrn.yml
+  concepts:
+  - product
+- provider: splio
+  apis_io: https://apis.io/providers/splio/
+  crosswalk: crosswalk/splio.yml
+  concepts:
+  - category
+  - order
+  - product
+- provider: spod
+  apis_io: https://apis.io/providers/spod/
+  crosswalk: crosswalk/spod.yml
+  concepts:
+  - inventory
+  - order
+  - shipment
+- provider: spreadshirt
+  apis_io: https://apis.io/providers/spreadshirt/
+  crosswalk: crosswalk/spreadshirt.yml
+  concepts:
+  - category
+  - inventory
+  - order
+  - shipment
+- provider: spree-commerce
+  apis_io: https://apis.io/providers/spree-commerce/
+  crosswalk: crosswalk/spree-commerce.yml
+  concepts:
+  - cart
+  - category
+  - customer
+  - order
+  - order_item
+  - product
+  - product_variant
+  - shipment
+- provider: square
+  apis_io: https://apis.io/providers/square/
+  crosswalk: crosswalk/square.yml
+  concepts:
+  - customer
+  - inventory
+  - order
+- provider: squarespace
+  apis_io: https://apis.io/providers/squarespace/
+  crosswalk: crosswalk/squarespace.yml
+  concepts:
+  - inventory
+  - order
+  - product
+  - product_variant
+  - shipment
+- provider: stamped
+  apis_io: https://apis.io/providers/stamped/
+  crosswalk: crosswalk/stamped.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: stay-ai
+  apis_io: https://apis.io/providers/stay-ai/
+  crosswalk: crosswalk/stay-ai.yml
+  concepts:
+  - order
+  - product
+- provider: stockx
+  apis_io: https://apis.io/providers/stockx/
+  crosswalk: crosswalk/stockx.yml
+  concepts:
+  - order
+  - product
+  - product_variant
+- provider: stripe
+  apis_io: https://apis.io/providers/stripe/
+  crosswalk: crosswalk/stripe.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: swell-io
+  apis_io: https://apis.io/providers/swell-io/
+  crosswalk: crosswalk/swell-io.yml
+  concepts:
+  - cart
+  - category
+  - inventory
+  - order
+  - order_item
+  - product
+- provider: takealot
+  apis_io: https://apis.io/providers/takealot/
+  crosswalk: crosswalk/takealot.yml
+  concepts:
+  - order
+- provider: talkable
+  apis_io: https://apis.io/providers/talkable/
+  crosswalk: crosswalk/talkable.yml
+  concepts:
+  - order
+- provider: talon-one
+  apis_io: https://apis.io/providers/talon-one/
+  crosswalk: crosswalk/talon-one.yml
+  concepts:
+  - customer
+  - inventory
+- provider: taxjar
+  apis_io: https://apis.io/providers/taxjar/
+  crosswalk: crosswalk/taxjar.yml
+  concepts:
+  - category
+  - customer
+  - order
+- provider: teelaunch
+  apis_io: https://apis.io/providers/teelaunch/
+  crosswalk: crosswalk/teelaunch.yml
+  concepts:
+  - category
+  - order
+  - product
+  - shipment
+- provider: terminal-shop
+  apis_io: https://apis.io/providers/terminal-shop/
+  crosswalk: crosswalk/terminal-shop.yml
+  concepts:
+  - cart
+  - order
+  - product
+- provider: thrivecart
+  apis_io: https://apis.io/providers/thrivecart/
+  crosswalk: crosswalk/thrivecart.yml
+  concepts:
+  - customer
+  - product
+- provider: tickitto
+  apis_io: https://apis.io/providers/tickitto/
+  crosswalk: crosswalk/tickitto.yml
+  concepts:
+  - cart
+- provider: tiendanube
+  apis_io: https://apis.io/providers/tiendanube/
+  crosswalk: crosswalk/tiendanube.yml
+  concepts:
+  - category
+  - customer
+  - order
+  - product
+  - product_variant
+- provider: toys-r-us
+  apis_io: https://apis.io/providers/toys-r-us/
+  crosswalk: crosswalk/toys-r-us.yml
+  concepts:
+  - order
+  - product
+- provider: tradera
+  apis_io: https://apis.io/providers/tradera/
+  crosswalk: crosswalk/tradera.yml
+  concepts:
+  - category
+  - order
+- provider: treez
+  apis_io: https://apis.io/providers/treez/
+  crosswalk: crosswalk/treez.yml
+  concepts:
+  - customer
+  - product
+- provider: triple-whale
+  apis_io: https://apis.io/providers/triple-whale/
+  crosswalk: crosswalk/triple-whale.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: true-fit
+  apis_io: https://apis.io/providers/true-fit/
+  crosswalk: crosswalk/true-fit.yml
+  concepts:
+  - product
+- provider: unmade
+  apis_io: https://apis.io/providers/unmade/
+  crosswalk: crosswalk/unmade.yml
+  concepts:
+  - order
+  - order_item
+  - product
+- provider: uzum
+  apis_io: https://apis.io/providers/uzum/
+  crosswalk: crosswalk/uzum.yml
+  concepts:
+  - order
+- provider: veho
+  apis_io: https://apis.io/providers/veho/
+  crosswalk: crosswalk/veho.yml
+  concepts:
+  - order
+- provider: verifone
+  apis_io: https://apis.io/providers/verifone/
+  crosswalk: crosswalk/verifone.yml
+  concepts:
+  - customer
+  - product
+- provider: versapay
+  apis_io: https://apis.io/providers/versapay/
+  crosswalk: crosswalk/versapay.yml
+  concepts:
+  - customer
+  - order
+- provider: viglink
+  apis_io: https://apis.io/providers/viglink/
+  crosswalk: crosswalk/viglink.yml
+  concepts:
+  - product
+- provider: virto-commerce
+  apis_io: https://apis.io/providers/virto-commerce/
+  crosswalk: crosswalk/virto-commerce.yml
+  concepts:
+  - cart
+  - category
+  - inventory
+  - order
+  - order_item
+  - product
+  - shipment
+- provider: visa
+  apis_io: https://apis.io/providers/visa/
+  crosswalk: crosswalk/visa.yml
+  concepts:
+  - category
+  - customer
+- provider: vtex
+  apis_io: https://apis.io/providers/vtex/
+  crosswalk: crosswalk/vtex.yml
+  concepts:
+  - category
+  - inventory
+  - order
+  - product
+  - product_variant
+- provider: wallapop
+  apis_io: https://apis.io/providers/wallapop/
+  crosswalk: crosswalk/wallapop.yml
+  concepts:
+  - category
+- provider: walmart
+  apis_io: https://apis.io/providers/walmart/
+  crosswalk: crosswalk/walmart.yml
+  concepts:
+  - category
+  - inventory
+  - order
+- provider: watchmaker-genomics
+  apis_io: https://apis.io/providers/watchmaker-genomics/
+  crosswalk: crosswalk/watchmaker-genomics.yml
+  concepts:
+  - customer
+  - order
+- provider: webflow
+  apis_io: https://apis.io/providers/webflow/
+  crosswalk: crosswalk/webflow.yml
+  concepts:
+  - inventory
+  - order
+  - product
+  - product_variant
+- provider: webflow-api-and-documentation-webflow
+  apis_io: https://apis.io/providers/webflow-api-and-documentation-webflow/
+  crosswalk: crosswalk/webflow-api-and-documentation-webflow.yml
+  concepts:
+  - inventory
+  - order
+  - product
+  - product_variant
+- provider: weclapp
+  apis_io: https://apis.io/providers/weclapp/
+  crosswalk: crosswalk/weclapp.yml
+  concepts:
+  - customer
+- provider: whiplash
+  apis_io: https://apis.io/providers/whiplash/
+  crosswalk: crosswalk/whiplash.yml
+  concepts:
+  - customer
+  - order
+  - order_item
+- provider: whiplash-merchandising
+  apis_io: https://apis.io/providers/whiplash-merchandising/
+  crosswalk: crosswalk/whiplash-merchandising.yml
+  concepts:
+  - customer
+  - order
+  - order_item
+- provider: wish
+  apis_io: https://apis.io/providers/wish/
+  crosswalk: crosswalk/wish.yml
+  concepts:
+  - category
+  - order
+  - product
+  - product_variant
+- provider: wix
+  apis_io: https://apis.io/providers/wix/
+  crosswalk: crosswalk/wix.yml
+  concepts:
+  - cart
+  - order
+  - product
+- provider: woolworths-group
+  apis_io: https://apis.io/providers/woolworths-group/
+  crosswalk: crosswalk/woolworths-group.yml
+  concepts:
+  - category
+  - order
+  - product
+  - shipment
+- provider: xentral
+  apis_io: https://apis.io/providers/xentral/
+  crosswalk: crosswalk/xentral.yml
+  concepts:
+  - customer
+  - inventory
+  - product
+- provider: yotpo
+  apis_io: https://apis.io/providers/yotpo/
+  crosswalk: crosswalk/yotpo.yml
+  concepts:
+  - customer
+  - order
+  - product
+- provider: zaius
+  apis_io: https://apis.io/providers/zaius/
+  crosswalk: crosswalk/zaius.yml
+  concepts:
+  - product
+- provider: zalando
+  apis_io: https://apis.io/providers/zalando/
+  crosswalk: crosswalk/zalando.yml
+  concepts:
+  - inventory
+  - order
+  - order_item
+  - shipment
+- provider: zoho-inventory
+  apis_io: https://apis.io/providers/zoho-inventory/
+  crosswalk: crosswalk/zoho-inventory.yml
+  concepts:
+  - order

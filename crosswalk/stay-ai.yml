@@ -1,0 +1,19 @@
+provider: stay-ai
+apis_io: https://apis.io/providers/stay-ai/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/stay-ai-openapi.yml#GET /products/{productId}
+  order:
+    path_segment:
+    - orders
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/stay-ai-openapi.yml#GET /orders

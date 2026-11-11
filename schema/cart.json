@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/commerce/main/schema/cart.json",
+  "title": "Cart",
+  "description": "The common cart in Commerce, distilled from 36 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.667,
+      "x-commons-providers": 24,
+      "x-commons-spellings": [
+        "id",
+        "cartId",
+        "cartID",
+        "cart_id",
+        "guid",
+        "_id"
+      ]
+    },
+    "line_items": {
+      "type": "array",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.528,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "items",
+        "lineItems",
+        "line_items",
+        "lines",
+        "products",
+        "entries"
+      ]
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.389,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "currency",
+        "currency_code",
+        "currencyCode"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "created_time",
+        "createdTime",
+        "createdOn",
+        "date_created",
+        "created_on",
+        "createdDate"
+      ],
+      "format": "date-time"
+    },
+    "customer_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "customerId",
+        "customer_id",
+        "customerID",
+        "userId",
+        "customer"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "updatedAt",
+        "updated_at",
+        "updated_time",
+        "updatedTime",
+        "updatedOn",
+        "modifiedDate"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "commerce",
+    "concept": "cart",
+    "providers": 36,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

@@ -1,0 +1,77 @@
+provider: shipbob
+apis_io: https://apis.io/providers/shipbob/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - product
+    properties:
+      id: id
+      name: name
+      created_at: created_on
+      type: type
+      updated_at: updated_on
+      variants: variants
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/shipbob-openapi.json#DELETE /2026-01/product/{productId}
+    - openapi/_original/shipbob-openapi.json#GET /2026-01/product
+    - openapi/_original/shipbob-openapi.json#GET /2026-01/product/{productId}
+    - openapi/_original/shipbob-openapi.json#PATCH /2026-01/product/{productId}
+    - openapi/_original/shipbob-openapi.json#POST /2026-01/product
+  product_variant:
+    path_segment:
+    - variants
+    properties:
+      id: id
+      name: name
+      barcode:
+      - gtin
+      - upc
+      created_at: created_on
+      updated_at: updated_on
+      weight: weight
+      type: type
+    core_coverage: 0.571
+    evidence:
+    - openapi/_original/shipbob-openapi.json#GET /2026-01/product/{productId}/variants
+    - openapi/_original/shipbob-openapi.json#PATCH /2026-01/product/{productId}/variants
+    - openapi/_original/shipbob-openapi.json#POST /2026-01/product/{productId}/variants
+  order:
+    path_segment:
+    - order
+    properties:
+      id: id
+      status: status
+      line_items: products
+      created_at: created_date
+      number: order_number
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/shipbob-openapi.json#GET /2026-01/order
+    - openapi/_original/shipbob-openapi.json#GET /2026-01/order/{orderId}
+    - openapi/_original/shipbob-openapi.json#POST /2026-01/order
+  shipment:
+    path_segment:
+    - shipment
+    properties:
+      id: id
+      status: status
+      tracking_number: tracking
+      created_at: created_date
+      order_id: order_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/shipbob-openapi.json#GET /2026-01/order/{orderId}/shipment
+    - openapi/_original/shipbob-openapi.json#GET /2026-01/order/{orderId}/shipment/{shipmentId}
+  inventory:
+    path_segment:
+    - inventory
+    properties:
+      id: inventory_id
+      sku: sku
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/shipbob-openapi.json#GET /2026-01/inventory
+    - openapi/_original/shipbob-openapi.json#GET /2026-01/inventory/{inventoryId}

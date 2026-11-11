@@ -1,0 +1,27 @@
+provider: opencart
+apis_io: https://apis.io/providers/opencart/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customer
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/opencart-rest-api.yml#POST /customer
+  cart:
+    path_segment:
+    - cart
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/opencart-rest-api.yml#POST /cart
+  order:
+    path_segment:
+    - order
+    properties:
+      id: order_id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/opencart-rest-api.yml#POST /order

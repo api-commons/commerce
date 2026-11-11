@@ -1,0 +1,15 @@
+provider: axlehire
+apis_io: https://apis.io/providers/axlehire/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  customer:
+    path_segment:
+    - customer
+    properties:
+      email: email
+      phone: phone_number
+      name: name
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/axlehire-jitsu-rest-api.yml#PATCH /v3/shipments/{shipment_id}/customer

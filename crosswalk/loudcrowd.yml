@@ -1,0 +1,18 @@
+provider: loudcrowd
+apis_io: https://apis.io/providers/loudcrowd/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: orderId
+      shipping_address: shipping
+      currency: currency
+      total: amount
+      total_tax: tax
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/loudcrowd-openapi-original.json#GET /api/v1/brand/{account_id}/programs/{program_id}/orders
+    - openapi/_original/loudcrowd-openapi.yml#GET /api/v1/brand/{account_id}/programs/{program_id}/orders

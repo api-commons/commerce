@@ -1,0 +1,40 @@
+provider: kajabi
+apis_io: https://apis.io/providers/kajabi/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      type: type
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/kajabi-public-api-openapi.yml#GET /v1/offers/{offer_id}/relationships/products
+    - openapi/_original/kajabi-public-api-openapi.yml#GET /v1/products
+    - openapi/_original/kajabi-public-api-openapi.yml#GET /v1/products/{id}
+  customer:
+    path_segment:
+    - customers
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/kajabi-public-api-openapi.yml#GET /v1/customers
+    - openapi/_original/kajabi-public-api-openapi.yml#GET /v1/customers/{id}
+  order:
+    path_segment:
+    - orders
+    - purchases
+    properties:
+      id: id
+      custom_fields: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/kajabi-public-api-openapi.yml#GET /v1/orders
+    - openapi/_original/kajabi-public-api-openapi.yml#GET /v1/orders/{id}
+    - openapi/_original/kajabi-public-api-openapi.yml#GET /v1/purchases
+    - openapi/_original/kajabi-public-api-openapi.yml#GET /v1/purchases/{id}

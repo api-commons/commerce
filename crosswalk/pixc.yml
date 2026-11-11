@@ -1,0 +1,18 @@
+provider: pixc
+apis_io: https://apis.io/providers/pixc/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  order:
+    path_segment:
+    - order
+    properties:
+      id: orderId
+      status: status
+      created_at: createdAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/pixc-public-api-swagger-original.json#DELETE /api/order/{orderId}
+    - openapi/_original/pixc-public-api-swagger-original.json#GET /api/order
+    - openapi/_original/pixc-public-api-swagger-original.json#GET /api/order/{orderId}
+    - openapi/_original/pixc-public-api-swagger-original.json#POST /api/order

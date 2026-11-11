@@ -1,0 +1,56 @@
+provider: brevo
+apis_io: https://apis.io/providers/brevo/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: id
+      name: name
+      description: description
+      images: imageUrl
+      created_at: createdAt
+      updated_at: modifiedAt
+      category_ids: categories
+      brand: brand
+      slug: url
+      price: price
+      sku: sku
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/brevo-ecommerce-openapi.yml#GET /products
+    - openapi/_original/brevo-ecommerce-openapi.yml#GET /products/{productId}
+    - openapi/_original/brevo-ecommerce-openapi.yml#POST /products
+    - openapi/_original/brevo-ecommerce-openapi_2.yml#GET /products
+    - openapi/_original/brevo-ecommerce-openapi_2.yml#GET /products/{id}
+  category:
+    path_segment:
+    - categories
+    properties:
+      name: name
+      id: id
+      updated_at: modifiedAt
+      created_at: createdAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/brevo-ecommerce-openapi.yml#GET /categories
+    - openapi/_original/brevo-ecommerce-openapi.yml#POST /categories
+    - openapi/_original/brevo-ecommerce-openapi_2.yml#GET /categories
+    - openapi/_original/brevo-ecommerce-openapi_2.yml#GET /categories/{id}
+    - openapi/_original/brevo-ecommerce-openapi_2.yml#POST /categories
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: id
+      status: status
+      line_items: products
+      created_at: createdAt
+      total: amount
+      email: email
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/brevo-ecommerce-openapi.yml#GET /orders
+    - openapi/_original/brevo-ecommerce-openapi_2.yml#GET /orders
