@@ -19,8 +19,8 @@ concepts:
       - images
       - image_url
       created_at: created_at
-      type: type
       status: state
+      type: type
       updated_at: updated_at
       category_ids:
       - category_id
@@ -35,11 +35,11 @@ concepts:
       slug:
       - url
       - slug
+      price: price
+      sku: mpn
       custom_fields:
       - properties
       - attributes
-      price: price
-      sku: mpn
       tags: tags
     core_coverage: 1.0
     evidence:

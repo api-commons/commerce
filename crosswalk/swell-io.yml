@@ -12,8 +12,8 @@ concepts:
       description: description
       images: images
       created_at: date_created
-      type: type
       status: active
+      type: type
       category_ids:
       - category_id
       - categories

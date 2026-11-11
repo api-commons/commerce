@@ -14,9 +14,9 @@ concepts:
       - status
       - visibility
       updated_at: updated_at
-      custom_fields: custom_attributes
       price: price
       sku: sku
+      custom_fields: custom_attributes
     core_coverage: 0.667
     evidence:
     - openapi/_original/magento-rest-api-openapi.yml#DELETE /V1/products/{sku}

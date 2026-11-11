@@ -12,8 +12,8 @@ concepts:
       description: description
       images: images
       created_at: createdAt
-      type: type
       status: status
+      type: type
       updated_at: updatedAt
       variants: variants
       brand: vendor

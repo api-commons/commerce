@@ -26,8 +26,8 @@ concepts:
     path_segment:
     - inventory
     properties:
-      product_id: product_id
       sku: sku
+      product_id: product_id
     core_coverage: 0.0
     evidence:
     - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#PATCH /inventory/bulk

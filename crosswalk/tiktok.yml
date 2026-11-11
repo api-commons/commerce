@@ -1,0 +1,38 @@
+provider: tiktok
+apis_io: https://apis.io/providers/tiktok/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      id: product_id
+      name: product_name
+      description: description
+      created_at: create_time
+      status: status
+      updated_at: update_time
+      category_ids: category_id
+      variants: skus
+      brand: brand_id
+      price: price
+      sku: code
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tiktok-shop-openapi.yml#GET /product/202309/products
+    - openapi/_original/tiktok-shop-openapi.yml#GET /product/202309/products/{product_id}
+    - openapi/_original/tiktok-shop-openapi.yml#PUT /product/202309/products/{product_id}
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: order_id
+      status: order_status
+      line_items: line_items
+      created_at: create_time
+      email: buyer_email
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tiktok-shop-openapi.yml#GET /order/202309/orders
+    - openapi/_original/tiktok-shop-openapi.yml#GET /order/202309/orders/{order_id}

@@ -63,6 +63,7 @@ adopters:
   crosswalk: crosswalk/amazon-seller-central.yml
   concepts:
   - inventory
+  - order
   - shipment
 - provider: ankorstore
   apis_io: https://apis.io/providers/ankorstore/
@@ -676,6 +677,7 @@ adopters:
   - cart
   - category
   - customer
+  - inventory
   - order
   - order_item
   - product
@@ -844,6 +846,11 @@ adopters:
   - product
   - product_variant
   - shipment
+- provider: melorra
+  apis_io: https://apis.io/providers/melorra/
+  crosswalk: crosswalk/melorra.yml
+  concepts:
+  - product
 - provider: metrilo
   apis_io: https://apis.io/providers/metrilo/
   crosswalk: crosswalk/metrilo.yml
@@ -1483,6 +1490,12 @@ adopters:
   - order
   - product
   - product_variant
+- provider: tiktok
+  apis_io: https://apis.io/providers/tiktok/
+  crosswalk: crosswalk/tiktok.yml
+  concepts:
+  - order
+  - product
 - provider: toys-r-us
   apis_io: https://apis.io/providers/toys-r-us/
   crosswalk: crosswalk/toys-r-us.yml

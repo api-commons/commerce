@@ -10,8 +10,8 @@ concepts:
       id: productId
       name: title
       images: images
-      type: type
       status: status
+      type: type
       variants: variants
       brand: vendor
       slug: handle

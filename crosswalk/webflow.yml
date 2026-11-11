@@ -53,8 +53,8 @@ concepts:
     path_segment:
     - inventory
     properties:
-      id: id
       quantity: quantity
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/webflow-data-api-openapi.yml#GET /collections/{sku_collection_id}/items/{sku_id}/inventory

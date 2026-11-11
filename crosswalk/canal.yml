@@ -11,8 +11,8 @@ concepts:
       name: title
       description: body_html
       images: images
-      type: product_type
       status: status
+      type: product_type
       updated_at: updated_at
       variants: variants
       brand: vendor

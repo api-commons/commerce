@@ -3,6 +3,23 @@ apis_io: https://apis.io/providers/amazon-seller-central/
 context: commerce
 generated: '2026-11-10'
 concepts:
+  order:
+    path_segment:
+    - orders
+    properties:
+      id: orderId
+      status: OrderStatus
+      line_items: orderItems
+      created_at: createdTime
+      shipping_address: ShippingAddress
+      total: OrderTotal
+      total_tax: tax
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/amazon-seller-central-orders-2026-01-01-original.json#GET /orders/2026-01-01/orders
+    - openapi/_original/amazon-seller-central-orders-2026-01-01-original.json#GET /orders/2026-01-01/orders/{orderId}
+    - openapi/_original/amazon-seller-central-orders-v0-original.json#GET /orders/v0/orders
+    - openapi/_original/amazon-seller-central-orders-v0-original.json#GET /orders/v0/orders/{orderId}
   shipment:
     path_segment:
     - shipment
@@ -14,7 +31,9 @@ concepts:
   inventory:
     path_segment:
     - inventory
-    properties: {}
+    properties:
+      quantity: quantity
     core_coverage: 0.0
     evidence:
+    - openapi/_original/amazon-seller-central-fba-inventory-v1-original.json#POST /fba/inventory/v1/items/inventory
     - openapi/_original/amazon-seller-central-fulfillment-outbound-2020-07-01-original.json#GET /fba/outbound/2020-07-01/features/inventory/{featureName}

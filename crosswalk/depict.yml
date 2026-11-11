@@ -7,15 +7,17 @@ concepts:
     path_segment:
     - products
     - listings
+    - product
     properties:
+      id: product_id
       name: title
       description: description
       images:
       - images
       - image_urls
       created_at: created_at
-      type: type
       status: status
+      type: type
       category_ids: collections
       variants:
       - skus
@@ -23,15 +25,15 @@ concepts:
       slug:
       - handle
       - slug
-      custom_fields: metadata
       price: price
-    core_coverage: 0.667
+      custom_fields: metadata
+    core_coverage: 1.0
     evidence:
     - openapi/_original/depict-lite-openapi-original.json#POST /collections/{collection_id}/products
     - openapi/_original/depict-openapi.json#GET /v3/listings
     - openapi/_original/depict-openapi.json#GET /v3/listings/{listing_id}
-    - openapi/_original/depict-openapi.json#POST /v3/recommend/products
-    - openapi/_original/depict-portal-openapi-original.json#GET /api/v1/merchants/{merchant_id}/products/{main_product_id}
+    - openapi/_original/depict-openapi.json#POST /v2/recommend/products/product
+    - openapi/_original/depict-openapi.json#POST /v2/recommend/products/products
   category:
     path_segment:
     - collections

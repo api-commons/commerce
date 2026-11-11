@@ -9,8 +9,8 @@ concepts:
     properties:
       id: product_id
       name: name
-      type: type
       status: status
+      type: type
       slug:
       - url
       - slug

@@ -11,13 +11,13 @@ concepts:
       name: productName
       description: description
       images: images
-      type: productType
       status: enabled
+      type: productType
       category_ids: category
       variants: variants
       slug: url
-      custom_fields: properties
       price: price
+      custom_fields: properties
       tags: tags
     core_coverage: 1.0
     evidence:

@@ -18,15 +18,15 @@ concepts:
       - short_description
       - description
       images: images
-      type: type
       status: status
+      type: type
       category_ids: categories
       variants: variations
       slug:
       - slug
       - permalink
-      custom_fields: attributes
       sku: sku
+      custom_fields: attributes
       tags: tags
     core_coverage: 1.0
     evidence:

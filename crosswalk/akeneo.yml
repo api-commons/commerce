@@ -14,8 +14,8 @@ concepts:
       name: title
       description: description
       created_at: created
-      type: type
       status: enabled
+      type: type
       updated_at: updated
       category_ids: categories
       custom_fields:

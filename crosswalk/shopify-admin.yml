@@ -12,8 +12,8 @@ concepts:
       description: body_html
       images: images
       created_at: created_at
-      type: product_type
       status: status
+      type: product_type
       updated_at: updated_at
       variants: variants
       brand: vendor
@@ -74,10 +74,10 @@ concepts:
     - inventory_items
     - inventory_levels
     properties:
-      id: id
       quantity: available
-      product_id: inventory_item_id
+      id: id
       sku: sku
+      product_id: inventory_item_id
     core_coverage: 0.0
     evidence:
     - openapi/_original/shopify-admin-rest-openapi.yml#GET /inventory_items.json

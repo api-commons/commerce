@@ -11,15 +11,15 @@ concepts:
       description: description
       images: pictures
       created_at: created_at
-      type: product_type
       status: status
+      type: product_type
       updated_at: updated_at
       brand:
       - brand
       - brand_name
       slug: slug
-      custom_fields: attributes
       sku: sku
+      custom_fields: attributes
     core_coverage: 0.667
     evidence:
     - openapi/_original/depop-openapi.yml#DELETE /api/v1/products/{sku}/

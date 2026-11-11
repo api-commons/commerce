@@ -16,7 +16,7 @@ paths:
       tags:
       - Products
       x-commons-tier: core
-      x-commons-share: 0.868
+      x-commons-share: 0.869
       responses:
         '200':
           description: OK
@@ -41,7 +41,7 @@ paths:
       tags:
       - Products
       x-commons-tier: core
-      x-commons-share: 0.675
+      x-commons-share: 0.667
       responses:
         '200':
           description: OK
@@ -62,7 +62,7 @@ paths:
       tags:
       - Products
       x-commons-tier: core
-      x-commons-share: 0.795
+      x-commons-share: 0.797
       responses:
         '200':
           description: OK
@@ -75,7 +75,7 @@ paths:
       tags:
       - Products
       x-commons-tier: extended
-      x-commons-share: 0.483
+      x-commons-share: 0.484
       responses:
         '200':
           description: OK
@@ -93,7 +93,7 @@ paths:
       tags:
       - Products
       x-commons-tier: extended
-      x-commons-share: 0.45
+      x-commons-share: 0.444
       responses:
         '200':
           description: OK
@@ -474,7 +474,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: core
-      x-commons-share: 0.754
+      x-commons-share: 0.762
       responses:
         '200':
           description: OK
@@ -499,7 +499,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: core
-      x-commons-share: 0.659
+      x-commons-share: 0.652
       responses:
         '200':
           description: OK
@@ -520,7 +520,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: core
-      x-commons-share: 0.737
+      x-commons-share: 0.74
       responses:
         '200':
           description: OK
@@ -533,7 +533,7 @@ paths:
       tags:
       - Orders
       x-commons-tier: extended
-      x-commons-share: 0.358
+      x-commons-share: 0.354
       responses:
         '200':
           description: OK
@@ -727,7 +727,7 @@ paths:
       tags:
       - Inventories
       x-commons-tier: core
-      x-commons-share: 0.644
+      x-commons-share: 0.63
       responses:
         '200':
           description: OK
@@ -752,7 +752,7 @@ paths:
       tags:
       - Inventories
       x-commons-tier: extended
-      x-commons-share: 0.267
+      x-commons-share: 0.304
       responses:
         '200':
           description: OK
@@ -773,7 +773,7 @@ paths:
       tags:
       - Inventories
       x-commons-tier: extended
-      x-commons-share: 0.267
+      x-commons-share: 0.261
       responses:
         '200':
           description: OK

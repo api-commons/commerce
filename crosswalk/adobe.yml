@@ -15,8 +15,8 @@ concepts:
       images: images
       status: status
       slug: slug
-      custom_fields: attributes
       sku: sku
+      custom_fields: attributes
     core_coverage: 1.0
     evidence:
     - openapi/_original/adobe-suite-aep-access-control-openapi.yaml#GET /administration/products

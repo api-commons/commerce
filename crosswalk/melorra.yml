@@ -1,0 +1,18 @@
+provider: melorra
+apis_io: https://apis.io/providers/melorra/
+context: commerce
+generated: '2026-11-10'
+concepts:
+  product:
+    path_segment:
+    - products
+    properties:
+      images: images
+      status: status
+      type: type
+      price: price
+      sku: sku
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/melorra-openapi.json#GET /product/products/
+    - openapi/_original/melorra-openapi.json#GET /product/products/{sku}/

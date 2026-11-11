@@ -14,8 +14,8 @@ concepts:
       updated_at: updated_at
       variants: variants
       brand: brand
-      custom_fields: attributes
       price: price
+      custom_fields: attributes
     core_coverage: 0.667
     evidence:
     - openapi/_original/goody-openapi.json#GET /v1/products

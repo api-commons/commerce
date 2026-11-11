@@ -11,10 +11,10 @@ concepts:
       id: productId
       name: title
       created_at: createdAt
-      type: productType
       status:
       - active
       - status
+      type: productType
       updated_at: updatedAt
       brand: brand
       slug: urlKey

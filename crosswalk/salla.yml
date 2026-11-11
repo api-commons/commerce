@@ -11,10 +11,10 @@ concepts:
       name: name
       description: description
       images: images
+      status: status
       type:
       - type
       - product_type
-      status: status
       updated_at: updated_at
       category_ids: categories
       brand: brand_id

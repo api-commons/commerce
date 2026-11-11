@@ -11,8 +11,8 @@ concepts:
       name: name
       description: description
       created_at: createdAt
-      type: productType
       status: state
+      type: productType
       category_ids: categories
       variants: variants
       slug: slug
@@ -97,8 +97,8 @@ concepts:
     path_segment:
     - inventory
     properties:
-      id: id
       quantity: availableQuantity
+      id: id
       sku: sku
     core_coverage: 0.0
     evidence:

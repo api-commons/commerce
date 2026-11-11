@@ -21,10 +21,10 @@ concepts:
       variants: variants
       brand: vendor
       slug: slug
-      custom_fields: custom_attributes
       price:
       - regular_price
       - price
+      custom_fields: custom_attributes
       tags: tags
     core_coverage: 1.0
     evidence:

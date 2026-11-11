@@ -1710,7 +1710,8 @@
    "depict": {
     "segments": [
      "products",
-     "listings"
+     "listings",
+     "product"
     ],
     "operations": [
      "GET collection",
@@ -1753,12 +1754,20 @@
      "content_blocks": "array",
      "displays": "array",
      "error": null,
-     "merchant": "string",
+     "variant": null,
+     "experiment_id": null,
+     "tenant": "string",
      "market": "string",
-     "locale": "string",
-     "product_ids": "array",
+     "locale": null,
      "limit": null,
+     "user_id": null,
      "session_id": null,
+     "dsid": null,
+     "document_referrer": null,
+     "metadata": null,
+     "product_id": "string",
+     "product_ids": "array",
+     "merchant": "string",
      "products": "array",
      "next_cursor": null,
      "has_more": "boolean",
@@ -1777,7 +1786,6 @@
      "size": null,
      "main_image_url": null,
      "hover_image_url": null,
-     "metadata": "array",
      "collections": "array",
      "inventories": "array",
      "price_lists": "array",
@@ -1791,6 +1799,8 @@
      "openapi/_original/depict-lite-openapi-original.json#POST /collections/{collection_id}/products",
      "openapi/_original/depict-openapi.json#GET /v3/listings",
      "openapi/_original/depict-openapi.json#GET /v3/listings/{listing_id}",
+     "openapi/_original/depict-openapi.json#POST /v2/recommend/products/product",
+     "openapi/_original/depict-openapi.json#POST /v2/recommend/products/products",
      "openapi/_original/depict-openapi.json#POST /v3/recommend/products",
      "openapi/_original/depict-portal-openapi-original.json#GET /api/v1/merchants/{merchant_id}/products/{main_product_id}",
      "openapi/_original/depict-portal-openapi-original.json#POST /api/v1/merchants/{merchant_id}/collections/{collection_id}/products",
@@ -1800,7 +1810,8 @@
    "depictai": {
     "segments": [
      "products",
-     "listings"
+     "listings",
+     "product"
     ],
     "operations": [
      "DELETE collection",
@@ -1876,7 +1887,16 @@
      "merchant": "string",
      "locale": "string",
      "product_ids": "array",
-     "session_id": null
+     "session_id": null,
+     "displays": "array",
+     "error": null,
+     "variant": null,
+     "experiment_id": null,
+     "tenant": "string",
+     "user_id": null,
+     "dsid": null,
+     "document_referrer": null,
+     "product_id": "string"
     },
     "evidence": [
      "openapi/_original/depictai-lite-openapi.json#POST /collections/{collection_id}/products",
@@ -1888,6 +1908,8 @@
      "openapi/_original/depictai-storefront-openapi.json#GET /v3/listings",
      "openapi/_original/depictai-storefront-openapi.json#GET /v3/listings/{listing_id}",
      "openapi/_original/depictai-storefront-openapi.json#POST /catalog/v0/products",
+     "openapi/_original/depictai-storefront-openapi.json#POST /v2/recommend/products/product",
+     "openapi/_original/depictai-storefront-openapi.json#POST /v2/recommend/products/products",
      "openapi/_original/depictai-storefront-openapi.json#POST /v3/recommend/products"
     ]
    },
@@ -4006,6 +4028,37 @@
      "openapi/_original/medusa-admin-openapi.yaml#POST /admin/sales-channels/{id}/products",
      "openapi/_original/medusa-store-openapi.yaml#GET /store/products",
      "openapi/_original/medusa-store-openapi.yaml#GET /store/products/{id}"
+    ]
+   },
+   "melorra": {
+    "segments": [
+     "products"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "base_image_path": "string",
+     "products": "array",
+     "sku": "integer",
+     "product_title": "string",
+     "price": "number",
+     "special_price": "number",
+     "discount_message": "string",
+     "wear_type": "string",
+     "type": "string",
+     "category_name": "string",
+     "nav_menu": "string",
+     "trend": "string",
+     "set_name": "string",
+     "melorraProductUrl": "string",
+     "images": "object",
+     "status": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/melorra-openapi.json#GET /product/products/",
+     "openapi/_original/melorra-openapi.json#GET /product/products/{sku}/"
     ]
    },
    "metrilo": {
@@ -7036,6 +7089,40 @@
      "openapi/_original/tiendanube-openapi.yml#GET /products/{id}",
      "openapi/_original/tiendanube-openapi.yml#POST /products",
      "openapi/_original/tiendanube-openapi.yml#PUT /products/{id}"
+    ]
+   },
+   "tiktok": {
+    "segments": [
+     "products"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PUT item"
+    ],
+    "properties": {
+     "products": "array",
+     "next_page_token": "string",
+     "total_count": "integer",
+     "product_id": "string",
+     "product_name": "string",
+     "status": "string",
+     "create_time": "integer",
+     "update_time": "integer",
+     "category_id": "string",
+     "brand_id": "string",
+     "price": "object",
+     "skus": "array",
+     "code": "integer",
+     "message": "string",
+     "data": "object",
+     "description": "string",
+     "main_images": "array"
+    },
+    "evidence": [
+     "openapi/_original/tiktok-shop-openapi.yml#GET /product/202309/products",
+     "openapi/_original/tiktok-shop-openapi.yml#GET /product/202309/products/{product_id}",
+     "openapi/_original/tiktok-shop-openapi.yml#PUT /product/202309/products/{product_id}"
     ]
    },
    "toys-r-us": {
@@ -17327,6 +17414,94 @@
      "openapi/_original/aftership-commerce-api-openapi.yml#POST /orders"
     ]
    },
+   "amazon-seller-central": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "orders": "array",
+     "pagination": "object",
+     "lastUpdatedBefore": "string",
+     "createdBefore": "string",
+     "orderId": "string",
+     "orderAliases": "array",
+     "createdTime": "string",
+     "lastUpdatedTime": "string",
+     "programs": "array",
+     "associatedOrders": "array",
+     "salesChannel": "object",
+     "buyer": "object",
+     "recipient": "object",
+     "proceeds": "object",
+     "payment": "object",
+     "tax": "object",
+     "fulfillment": "object",
+     "orderItems": "array",
+     "packages": "array",
+     "fulfillmentOrders": "array",
+     "Orders": "array",
+     "NextToken": "string",
+     "LastUpdatedBefore": "string",
+     "CreatedBefore": "string",
+     "AmazonOrderId": "string",
+     "SellerOrderId": "string",
+     "PurchaseDate": "string",
+     "LastUpdateDate": "string",
+     "OrderStatus": "string",
+     "FulfillmentChannel": "string",
+     "SalesChannel": "string",
+     "OrderChannel": "string",
+     "ShipServiceLevel": "string",
+     "OrderTotal": "object",
+     "NumberOfItemsShipped": "integer",
+     "NumberOfItemsUnshipped": "integer",
+     "PaymentExecutionDetail": "array",
+     "PaymentMethod": "string",
+     "PaymentMethodDetails": "array",
+     "MarketplaceId": "string",
+     "ShipmentServiceLevelCategory": "string",
+     "EasyShipShipmentStatus": "string",
+     "CbaDisplayableShippingLabel": "string",
+     "OrderType": "string",
+     "EarliestShipDate": "string",
+     "LatestShipDate": "string",
+     "EarliestDeliveryDate": "string",
+     "LatestDeliveryDate": "string",
+     "IsBusinessOrder": "boolean",
+     "IsPrime": "boolean",
+     "IsPremiumOrder": "boolean",
+     "IsGlobalExpressEnabled": "boolean",
+     "ReplacedOrderId": "string",
+     "IsReplacementOrder": "boolean",
+     "PromiseResponseDueDate": "string",
+     "IsEstimatedShipDateSet": "boolean",
+     "IsSoldByAB": "boolean",
+     "IsIBA": "boolean",
+     "DefaultShipFromLocationAddress": "object",
+     "BuyerInvoicePreference": "string",
+     "BuyerTaxInformation": "object",
+     "FulfillmentInstruction": "object",
+     "IsISPU": "boolean",
+     "IsAccessPointOrder": "boolean",
+     "MarketplaceTaxInfo": "object",
+     "SellerDisplayName": "string",
+     "ShippingAddress": "object",
+     "BuyerInfo": "object",
+     "AutomatedShippingSettings": "object",
+     "HasRegulatedItems": "boolean",
+     "ElectronicInvoiceStatus": "string"
+    },
+    "evidence": [
+     "openapi/_original/amazon-seller-central-orders-2026-01-01-original.json#GET /orders/2026-01-01/orders",
+     "openapi/_original/amazon-seller-central-orders-2026-01-01-original.json#GET /orders/2026-01-01/orders/{orderId}",
+     "openapi/_original/amazon-seller-central-orders-v0-original.json#GET /orders/v0/orders",
+     "openapi/_original/amazon-seller-central-orders-v0-original.json#GET /orders/v0/orders/{orderId}"
+    ]
+   },
    "ankorstore": {
     "segments": [
      "orders",
@@ -18670,6 +18845,7 @@
      "orders"
     ],
     "operations": [
+     "GET collection",
      "POST collection",
      "PUT item"
     ],
@@ -18688,9 +18864,12 @@
      "customerPayments": "array",
      "fulfillmentInfo": "object",
      "promotionsDetails": "array",
-     "preparationTime": "object"
+     "preparationTime": "object",
+     "orders": "array",
+     "offsetToken": "string"
     },
     "evidence": [
+     "openapi/_original/cloudkitchens-public-api-openapi.yml#GET /manager/order/v1/orders",
      "openapi/_original/cloudkitchens-public-api-openapi.yml#POST /v1/orders",
      "openapi/_original/cloudkitchens-public-api-openapi.yml#PUT /v1/orders/{orderId}"
     ]
@@ -19792,8 +19971,8 @@
    },
    "geniemode": {
     "segments": [
-     "order",
-     "orders"
+     "orders",
+     "order"
     ],
     "operations": [
      "GET collection",
@@ -19824,6 +20003,9 @@
      "comment": "string",
      "document_url": "string",
      "order_ids": "array",
+     "order_amount_in_dollar": "number",
+     "order_date": "integer",
+     "parent_order_id": "integer",
      "actual_shipment_mode": "string",
      "address_id": "integer",
      "current_status": "string",
@@ -19917,24 +20099,23 @@
      "factory_conversion_rate": "number",
      "factory_currency": "string",
      "factory_po_doc": "object",
-     "parent_order_id": "integer",
      "parents_buyer_po_list": "array",
      "planned_order_shipment_mode": "string",
      "qc_hold": "boolean"
     },
     "evidence": [
+     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/audit/order/product/attribution/orders",
      "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/founder/risk/order/{orderId}",
+     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/orders/lead/order/{leadId}",
+     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/path/risk/order/eligible/orders",
      "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/path/risk/order/{orderId}",
      "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/commission/invoice/find-similar-shipments/{shipmentId}/order/{orderId}",
      "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/excel/report/types/sample/orders",
+     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/gen/order/buyer/po/master/orders",
+     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/gen/order/master/orders",
      "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/logistics/dashboard/order/{orderId}",
      "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/order-group/finance/orders",
-     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/order-traceability/order/{orderId}",
-     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/path/final-invoice/invoiced/orders",
-     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/path/final-invoice/order/{orderId}",
-     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/path/invoice/find-similar-shipments/{shipmentId}/order/{orderId}",
-     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/path/qc_file_check_list/order/{orderId}",
-     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/pre-orders/rm/{id}/orders"
+     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/order-traceability/order/{orderId}"
     ]
    },
    "getresponse": {
@@ -24527,6 +24708,31 @@
      "openapi/_original/tiendanube-openapi.yml#GET /orders/{id}"
     ]
    },
+   "tiktok": {
+    "segments": [
+     "orders"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "orders": "array",
+     "next_page_token": "string",
+     "total_count": "integer",
+     "order_id": "string",
+     "order_status": "string",
+     "create_time": "integer",
+     "paid_time": "integer",
+     "buyer_email": "string",
+     "recipient_address": "object",
+     "line_items": "array"
+    },
+    "evidence": [
+     "openapi/_original/tiktok-shop-openapi.yml#GET /order/202309/orders",
+     "openapi/_original/tiktok-shop-openapi.yml#GET /order/202309/orders/{order_id}"
+    ]
+   },
    "toys-r-us": {
     "segments": [
      "orders"
@@ -24996,7 +25202,11 @@
      "list": "array",
      "facets": "array",
      "paging": "object",
-     "stats": "object"
+     "stats": "object",
+     "f_creationDate": "string",
+     "per_page": "integer",
+     "page": "integer",
+     "q": "string"
     },
     "evidence": [
      "openapi/_original/vtex-checkout-openapi-original.yml#PUT /api/checkout/pub/orders",
@@ -25006,7 +25216,8 @@
      "openapi/_original/vtex-orders-openapi-original.yml#GET /api/oms/pvt/orders",
      "openapi/_original/vtex-orders-openapi-original.yml#GET /api/oms/pvt/orders/{orderId}",
      "openapi/_original/vtex-orders-openapi-original.yml#GET /api/oms/user/orders",
-     "openapi/_original/vtex-orders-openapi-original.yml#GET /api/oms/user/orders/{orderId}"
+     "openapi/_original/vtex-orders-openapi-original.yml#GET /api/oms/user/orders/{orderId}",
+     "openapi/_original/vtex-orders-pii-openapi-original.yml#POST /api/orders/extendsearch/orders"
     ]
    },
    "walmart": {
@@ -27355,6 +27566,7 @@
      "PUT item"
     ],
     "properties": {
+     "lead_ids": "array",
      "actual_shipment_mode": "string",
      "address": "object",
      "address_id": "integer",
@@ -27377,6 +27589,8 @@
     "evidence": [
      "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#GET /api/v1/order/shipments/{orderId}",
      "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#POST /api/v1/order/shipments/{orderId}",
+     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#PUT /api/v1/order/shipments/assign/bulk/shipments/{userId}",
+     "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#PUT /api/v1/order/shipments/unassign/bulk/shipments/{userId}",
      "openapi/_original/geniemode-cataloguing-api-swagger-2.0.json#PUT /api/v1/order/shipments/{orderId}"
     ]
    },
@@ -28217,15 +28431,20 @@
      "inventory"
     ],
     "operations": [
-     "GET item"
+     "GET item",
+     "POST collection"
     ],
     "properties": {
+     "errors": "array",
+     "sellerSku": "string",
      "marketplaceId": "string",
+     "quantity": "integer",
      "featureName": "string",
      "nextToken": "string",
      "featureSkus": "array"
     },
     "evidence": [
+     "openapi/_original/amazon-seller-central-fba-inventory-v1-original.json#POST /fba/inventory/v1/items/inventory",
      "openapi/_original/amazon-seller-central-fulfillment-outbound-2020-07-01-original.json#GET /fba/outbound/2020-07-01/features/inventory/{featureName}"
     ]
    },
@@ -28640,6 +28859,72 @@
     "properties": {},
     "evidence": [
      "openapi/_original/katana-openapi-original.json#GET /inventory"
+    ]
+   },
+   "kibo-commerce": {
+    "segments": [
+     "inventory"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "allocated": "integer",
+     "attributes": "array",
+     "available": "integer",
+     "blockAssignment": "boolean",
+     "countryCode": "string",
+     "directShip": "boolean",
+     "distance": "number",
+     "externalID": "string",
+     "floor": "integer",
+     "futureInventory": "array",
+     "inventoryLocatorName": "string",
+     "locationCode": "string",
+     "locationName": "string",
+     "ltd": "number",
+     "messages": "array",
+     "numResults": "integer",
+     "onHand": "integer",
+     "partNumber": "string",
+     "pending": "integer",
+     "pickup": "boolean",
+     "safetyStock": "integer",
+     "sku": "string",
+     "success": "boolean",
+     "taggedInventory": "array",
+     "tenantID": "integer",
+     "transferEnabled": "boolean",
+     "upc": "string",
+     "deliveryDateAfter": "string",
+     "deliveryDateBefore": "string",
+     "excludeBlockedAssignment": "boolean",
+     "forceDefaultsForUnspecifiedTagCategories": "boolean",
+     "ignoreSafetyStock": "boolean",
+     "includeAttributes": "boolean",
+     "includeFutureInventory": "boolean",
+     "includeInAggregateExport": "boolean",
+     "includeInLocationExport": "boolean",
+     "includeNegativeFutureInventory": "boolean",
+     "includeNegativeInventory": "boolean",
+     "items": "array",
+     "limit": "integer",
+     "locationBlacklist": "array",
+     "locationPriorityList": "array",
+     "locationWhitelist": "array",
+     "pageNum": "integer",
+     "pageSize": "integer",
+     "requestLocation": "object",
+     "sortBy": "string",
+     "sortByEnum": "string",
+     "sortDescending": "boolean",
+     "tags": "object",
+     "type": "string",
+     "userID": "integer"
+    },
+    "evidence": [
+     "openapi/_original/kibo-commerce-inventory-openapi.yml#POST /commerce/inventory/v5/inventory",
+     "openapi/_original/openapi_openapi_inventory.json#POST /commerce/inventory/v5/inventory"
     ]
    },
    "kurly": {
@@ -32452,6 +32737,7 @@
     "aftership",
     "akeneo",
     "alkemics",
+    "amazon-seller-central",
     "ankorstore",
     "antavo",
     "appcharge",
@@ -32562,6 +32848,7 @@
     "makeup-land",
     "mapp",
     "medusa",
+    "melorra",
     "mikmak",
     "mirakl",
     "misoai",
@@ -32652,6 +32939,7 @@
     "thrivecart",
     "tickitto",
     "tiendanube",
+    "tiktok",
     "tradera",
     "treez",
     "triple-whale",
@@ -32747,6 +33035,7 @@
     "makeup-land",
     "mapp",
     "medusa",
+    "melorra",
     "mirakl",
     "misoai",
     "modivo",
@@ -32801,12 +33090,14 @@
     "thrivecart",
     "tickitto",
     "tiendanube",
+    "tiktok",
     "treez",
     "triple-whale",
     "unmade",
     "uzum",
     "verifone",
     "versapay",
+    "vtex",
     "wallapop",
     "watchmaker-genomics",
     "whiplash-merchandising",
@@ -32877,6 +33168,7 @@
     "lucidworks",
     "magento",
     "mapp",
+    "melorra",
     "mikmak",
     "mirakl",
     "modivo",
@@ -32954,9 +33246,11 @@
     "tickitto",
     "veho",
     "versapay",
+    "vtex",
     "zaius"
    ],
    "PascalCase": [
+    "amazon-seller-central",
     "bazaarvoice",
     "beacon-roofing-supply",
     "broadlume",

@@ -11,9 +11,9 @@ concepts:
       description: description
       category_ids: category
       brand: brand
-      custom_fields: custom_fields
       price: price
       sku: sku
+      custom_fields: custom_fields
     core_coverage: 0.667
     evidence:
     - openapi/_original/splio-customer-platform-openapi.json#DELETE /data/products/{id}

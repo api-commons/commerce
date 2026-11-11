@@ -13,16 +13,16 @@ concepts:
       name: name
       images: images
       created_at: createdDate
-      type: productType
       status:
       - isActive
       - status
+      type: productType
       updated_at: modifiedDate
       category_ids: categoryId
       variants: variations
       brand: vendor
-      custom_fields: properties
       sku: code
+      custom_fields: properties
     core_coverage: 0.667
     evidence:
     - openapi/_original/virto-commerce-catalog-openapi.json#DELETE /api/catalog/products

@@ -14,6 +14,7 @@ concepts:
       total: orderTotal
     core_coverage: 0.667
     evidence:
+    - openapi/_original/cloudkitchens-public-api-openapi.yml#GET /manager/order/v1/orders
     - openapi/_original/cloudkitchens-public-api-openapi.yml#POST /v1/orders
     - openapi/_original/cloudkitchens-public-api-openapi.yml#PUT /v1/orders/{orderId}
   order_item:

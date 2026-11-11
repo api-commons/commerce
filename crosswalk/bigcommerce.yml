@@ -16,19 +16,19 @@ concepts:
       description: description
       images: images
       created_at: date_created
-      type: type
       status: state
+      type: type
       updated_at: date_modified
       category_ids: categories
       variants: variants
       brand:
       - brand_id
       - brand_name
-      custom_fields: custom_fields
       price: price
       sku:
       - sku
       - mpn
+      custom_fields: custom_fields
     core_coverage: 1.0
     evidence:
     - openapi/_original/catalog-products-openapi-original.yml#DELETE /catalog/products

@@ -12,19 +12,19 @@ concepts:
       name: productName
       images: images
       created_at: createdAt
-      type: type
       status:
       - status
       - state
+      type: type
       updated_at: updatedAt
       category_ids:
       - categoryId
       - categories
       - collections
       variants: variants
-      custom_fields: attributes
       price: price
       sku: sku
+      custom_fields: attributes
     core_coverage: 0.667
     evidence:
     - openapi/_original/fabric-cart-openapi.yml#PATCH /carts/{cartId}/product
@@ -144,8 +144,8 @@ concepts:
       id:
       - id
       - inventoryId
-      product_id: itemId
       sku: sku
+      product_id: itemId
     core_coverage: 0.0
     evidence:
     - openapi/_original/fabric-cart-openapi.yml#PATCH /carts/{cartId}/inventory

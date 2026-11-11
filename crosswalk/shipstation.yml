@@ -9,8 +9,8 @@ concepts:
     properties:
       id: productId
       name: name
-      type: productType
       status: active
+      type: productType
       price: price
       sku: sku
       tags: tags

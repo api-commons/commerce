@@ -14,12 +14,12 @@ concepts:
       - image
       - images
       created_at: created_at
-      type:
-      - product_type
-      - type
       status:
       - published
       - status
+      type:
+      - product_type
+      - type
       updated_at: updated_at
       category_ids: collection_ids
       variants: variants

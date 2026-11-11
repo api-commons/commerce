@@ -10,17 +10,17 @@ concepts:
     properties:
       name: name
       description: description
-      type: productType
       status: isActive
+      type: productType
       category_ids: categories
       variants: variations
-      custom_fields:
-      - metaData
-      - properties
       price: price
       sku:
       - productCode
       - code
+      custom_fields:
+      - metaData
+      - properties
       tags: labels
     core_coverage: 0.667
     evidence:
@@ -161,3 +161,15 @@ concepts:
     - openapi/_original/kibo-commerce-commerce-openapi.yml#POST /commerce/orders/{orderId}/shipments
     - openapi/_original/kibo-commerce-commerce-openapi.yml#PUT /commerce/orders/{orderId}/items/{orderItemId}/fulfillment
     - openapi/_original/openapi_openapi_commerce.json#DELETE /commerce/orders/{orderId}/shipments/{shipmentId}
+  inventory:
+    path_segment:
+    - inventory
+    properties:
+      quantity:
+      - available
+      - onHand
+      sku: sku
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/kibo-commerce-inventory-openapi.yml#POST /commerce/inventory/v5/inventory
+    - openapi/_original/openapi_openapi_inventory.json#POST /commerce/inventory/v5/inventory

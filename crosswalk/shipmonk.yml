@@ -12,10 +12,10 @@ concepts:
       name: name
       images: image_url
       created_at: created_at
+      status: is_active
       type:
       - product_type
       - type
-      status: is_active
       updated_at: updated_at
       sku: sku
     core_coverage: 0.667

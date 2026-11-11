@@ -95,10 +95,10 @@ concepts:
     path_segment:
     - inventories
     properties:
-      id: id
       quantity:
       - available
       - quantity
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/inventory-legacy.yaml#DELETE /inventories/{product_uuid}

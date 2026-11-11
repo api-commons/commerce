@@ -18,10 +18,10 @@ concepts:
       created_at:
       - created_at
       - created
-      type: type
       status:
       - status
       - is_active
+      type: type
       updated_at:
       - updated_at
       - updated
