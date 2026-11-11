@@ -10,13 +10,13 @@ concepts:
       id: productId
       name: title
       images: images
-      status: status
       type: type
-      variants: variants
+      status: status
       brand: vendor
       slug: handle
+      variants: variants
       tags: tags
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/stamped-merchant-data-openapi.json#DELETE /api/v3/merchant/shops/{shopId}/products/{productId}
     - openapi/_original/stamped-merchant-data-openapi.json#GET /api/v3/merchant/shops/{shopId}/products

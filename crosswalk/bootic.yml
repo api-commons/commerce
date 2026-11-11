@@ -16,17 +16,17 @@ concepts:
       - short_description
       created_at: created_on
       status: status
-      updated_at: updated_on
       category_ids: collections
-      variants: variants
+      updated_at: updated_on
       brand: vendor
       slug: slug
+      variants: variants
       price:
       - regular_price
       - price
       custom_fields: custom_attributes
       tags: tags
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/bootic-v2-openapi.yml#DELETE /products/{id}
     - openapi/_original/bootic-v2-openapi.yml#GET /price_lists/{id}/products
@@ -39,14 +39,15 @@ concepts:
     properties:
       id: id
       name: name
-      product_id: product_id
       price:
       - regular_price
       - price
+      product_id: product_id
       options:
       - option1
       - option_values
       position: position
+      status: status
     core_coverage: 0.667
     evidence:
     - openapi/_original/bootic-v2-openapi.yml#DELETE /products/{product_id}/variants/{id}

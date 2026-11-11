@@ -13,7 +13,8 @@ concepts:
       - name
       - title
       images: imageURL
-    core_coverage: 0.667
+      sku: code
+    core_coverage: 0.75
     evidence:
     - openapi/_original/sovrn-get_product-openapi-original.json#GET /product
     - openapi/_original/sovrn-get_product_recommendations-openapi-original.json#POST /ai-orchestration/products

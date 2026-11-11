@@ -14,10 +14,10 @@ concepts:
       - status
       - visibility
       updated_at: updated_at
-      price: price
       sku: sku
+      price: price
       custom_fields: custom_attributes
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/magento-rest-api-openapi.yml#DELETE /V1/products/{sku}
     - openapi/_original/magento-rest-api-openapi.yml#GET /V1/products
@@ -28,8 +28,8 @@ concepts:
     path_segment:
     - categories
     properties:
-      name: name
       id: id
+      name: name
       parent_id: parent_id
       created_at: created_at
       updated_at: updated_at
@@ -73,8 +73,8 @@ concepts:
       total: grand_total
       total_tax: tax_amount
       billing_address: billing_address
-      email: customer_email
       updated_at: updated_at
+      email: customer_email
       discount_total: discount_amount
     core_coverage: 0.667
     evidence:

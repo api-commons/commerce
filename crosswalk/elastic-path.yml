@@ -10,7 +10,7 @@ concepts:
       id: id
       type: type
       custom_fields: attributes
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/catalog.yaml#GET /catalog/hierarchies/{hierarchy_id}/products
     - openapi/_original/catalog.yaml#GET /catalog/nodes/{node_id}/relationships/products
@@ -63,8 +63,8 @@ concepts:
       - shipping
       - shipping_address
       number: order_number
-      custom_fields: custom_attributes
       billing_address: billing_address
+      custom_fields: custom_attributes
     core_coverage: 0.667
     evidence:
     - openapi/_original/carts.yaml#GET /v2/orders

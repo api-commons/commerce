@@ -12,7 +12,7 @@ concepts:
       description: description
       variants: variants
       tags: tags
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/terminal-shop-openapi.yml#GET /product
     - openapi/_original/terminal-shop-openapi.yml#GET /product/{id}
@@ -21,6 +21,7 @@ concepts:
     - cart
     properties:
       id: id
+      subtotal: subtotal
     core_coverage: 0.5
     evidence:
     - openapi/_original/terminal-shop-openapi.yml#DELETE /cart

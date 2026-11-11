@@ -11,11 +11,11 @@ concepts:
       images: images
       created_at: created_at
       type: product_type
-      updated_at: updated_at
       category_ids: collections
-      variants: variants
+      updated_at: updated_at
       brand: vendor
-    core_coverage: 0.333
+      variants: variants
+    core_coverage: 0.5
     evidence:
     - openapi/_original/triple-whale-openapi.yml#POST /data-in/products
   customer:

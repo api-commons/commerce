@@ -14,11 +14,11 @@ concepts:
       - image_url
       - images
       type: type
-      variants: variants
       brand: vendor
       slug:
       - handle
       - url
+      variants: variants
     core_coverage: 1.0
     evidence:
     - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /ecommerce/stores/{store_id}/products/{product_id}
@@ -32,9 +32,9 @@ concepts:
     properties:
       id: id
       name: title
+      price: price
       product_id: product_id
       inventory_quantity: inventory_quantity
-      price: price
       created_at: created_at
       updated_at: updated_at
     core_coverage: 0.833
@@ -68,8 +68,8 @@ concepts:
     properties:
       id: id
       line_items: lines
-      currency: currency_code
       created_at: created_at
+      currency: currency_code
       customer_id: customer
       updated_at: updated_at
     core_coverage: 1.0

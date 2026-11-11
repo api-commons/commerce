@@ -13,17 +13,17 @@ concepts:
       name: name
       images: images
       created_at: createdDate
+      type: productType
       status:
       - isActive
       - status
-      type: productType
-      updated_at: modifiedDate
       category_ids: categoryId
-      variants: variations
+      updated_at: modifiedDate
       brand: vendor
+      variants: variations
       sku: code
       custom_fields: properties
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/virto-commerce-catalog-openapi.json#DELETE /api/catalog/products
     - openapi/_original/virto-commerce-catalog-openapi.json#GET /api/catalog/products
@@ -34,8 +34,8 @@ concepts:
     path_segment:
     - categories
     properties:
-      name: name
       id: id
+      name: name
       parent_id: parentId
       created_at: createdDate
       updated_at: modifiedDate
@@ -53,10 +53,11 @@ concepts:
     properties:
       id: id
       line_items: items
-      currency: currency
       created_at: createdDate
+      currency: currency
       customer_id: customerId
       updated_at: modifiedDate
+      subtotal: subTotal
     core_coverage: 1.0
     evidence:
     - openapi/_original/virto-commerce-cart-openapi.json#DELETE /api/carts

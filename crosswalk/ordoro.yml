@@ -14,12 +14,12 @@ concepts:
       - images
       created_at: created
       type: type
-      updated_at: updated
       category_ids: category
-      price: price
+      updated_at: updated
       sku: sku
+      price: price
       tags: tags
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/ordoro-ordoro-api-openapi.yml#GET /product/
     - openapi/_original/ordoro-ordoro-api-openapi.yml#GET /product/{sku}/

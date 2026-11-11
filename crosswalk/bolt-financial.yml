@@ -13,7 +13,6 @@ concepts:
       status: status
       created_at: created_at
       total: total_amount
-      custom_fields: metadata
       updated_at: updated_at
     core_coverage: 0.667
     evidence:

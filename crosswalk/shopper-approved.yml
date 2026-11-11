@@ -6,17 +6,20 @@ concepts:
   product:
     path_segment:
     - products
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: product_id
+      name:
+      - product_name
+      - name
+    core_coverage: 0.5
     evidence:
     - openapi/_original/shopper-approved-openapi.yml#GET /products/{site_id}
   order:
     path_segment:
     - orders
     properties:
-      line_items: products
+      id: id
       number: name
-      email: email
     core_coverage: 0.333
     evidence:
     - openapi/_original/shopper-approved-openapi.yml#POST /orders/{site_id}

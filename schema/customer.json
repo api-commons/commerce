@@ -8,22 +8,21 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.85,
-      "x-commons-providers": 68,
+      "x-commons-share": 0.838,
+      "x-commons-providers": 67,
       "x-commons-spellings": [
         "id",
         "customerId",
         "customer_id",
         "Id",
-        "customerID",
         "uuid"
       ]
     },
     "email": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.787,
-      "x-commons-providers": 63,
+      "x-commons-share": 0.775,
+      "x-commons-providers": 62,
       "x-commons-spellings": [
         "email",
         "email_address",
@@ -36,8 +35,8 @@
     "last_name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.613,
-      "x-commons-providers": 49,
+      "x-commons-share": 0.6,
+      "x-commons-providers": 48,
       "x-commons-spellings": [
         "last_name",
         "lastName",
@@ -49,8 +48,8 @@
     "first_name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.6,
-      "x-commons-providers": 48,
+      "x-commons-share": 0.588,
+      "x-commons-providers": 47,
       "x-commons-spellings": [
         "first_name",
         "firstName",
@@ -93,8 +92,8 @@
     "addresses": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.4,
-      "x-commons-providers": 32,
+      "x-commons-share": 0.388,
+      "x-commons-providers": 31,
       "x-commons-spellings": [
         "addresses",
         "address",
@@ -124,8 +123,8 @@
     "name": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.312,
-      "x-commons-providers": 25,
+      "x-commons-share": 0.3,
+      "x-commons-providers": 24,
       "x-commons-spellings": [
         "name",
         "display_name",
@@ -135,11 +134,11 @@
     "custom_fields": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.275,
-      "x-commons-providers": 22,
+      "x-commons-share": 0.263,
+      "x-commons-providers": 21,
       "x-commons-spellings": [
-        "metadata",
         "attributes",
+        "metadata",
         "custom_attributes",
         "customFields",
         "properties"

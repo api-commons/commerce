@@ -8,13 +8,24 @@
     "quantity": {
       "type": "integer",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.4,
-      "x-commons-providers": 14,
+      "x-commons-share": 0.457,
+      "x-commons-providers": 16,
       "x-commons-spellings": [
         "quantity",
         "available",
         "availableQuantity",
         "onHand"
+      ]
+    },
+    "sku": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.371,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "sku",
+        "code",
+        "product_code"
       ]
     },
     "id": {
@@ -28,28 +39,28 @@
         "inventory_id"
       ]
     },
-    "sku": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.314,
-      "x-commons-providers": 11,
-      "x-commons-spellings": [
-        "sku",
-        "product_code"
-      ]
-    },
     "product_id": {
-      "type": "string",
+      "type": "integer",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.286,
-      "x-commons-providers": 10,
+      "x-commons-share": 0.229,
+      "x-commons-providers": 8,
       "x-commons-spellings": [
         "product_id",
-        "productId",
         "inventory_item_id",
         "item_id",
         "itemId",
         "variantId"
+      ]
+    },
+    "location_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "location_id",
+        "storeId",
+        "location"
       ]
     }
   },

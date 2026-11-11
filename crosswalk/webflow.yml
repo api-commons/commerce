@@ -10,9 +10,8 @@ concepts:
       id: id
       created_at: createdOn
       updated_at: lastUpdated
-      variants: skus
       sku: sku
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/webflow-data-api-openapi.yml#GET /sites/{site_id}/products
     - openapi/_original/webflow-data-api-openapi.yml#GET /sites/{site_id}/products/{product_id}
@@ -40,8 +39,8 @@ concepts:
       id: orderId
       status: status
       shipping_address: shippingAddress
-      custom_fields: metadata
       billing_address: billingAddress
+      custom_fields: metadata
     core_coverage: 0.667
     evidence:
     - openapi/_original/webflow-data-api-openapi.yml#GET /sites/{site_id}/orders

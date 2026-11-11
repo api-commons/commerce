@@ -11,11 +11,11 @@ concepts:
       description: description
       images: images
       status: state
-      variants: skus
       slug: url
+      variants: skus
       price: price
       tags: tags
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/etsy-openapi-original.yml#DELETE /v3/application/listings/{listing_id}
     - openapi/_original/etsy-openapi-original.yml#GET /v3/application/listings/batch
@@ -25,7 +25,9 @@ concepts:
   inventory:
     path_segment:
     - inventory
-    properties: {}
+    properties:
+      sku: sku
+      product_id: product_id
     core_coverage: 0.0
     evidence:
     - openapi/_original/etsy-openapi-original.yml#GET /v3/application/listings/{listing_id}/inventory

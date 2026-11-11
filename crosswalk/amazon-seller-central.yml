@@ -33,6 +33,7 @@ concepts:
     - inventory
     properties:
       quantity: quantity
+      sku: code
     core_coverage: 0.0
     evidence:
     - openapi/_original/amazon-seller-central-fba-inventory-v1-original.json#POST /fba/inventory/v1/items/inventory

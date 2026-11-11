@@ -13,7 +13,7 @@ concepts:
       updated_at: updated_at
       variants: variants
       price: price
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/cart-com-online-store-openapi-original.yml#DELETE /products/{id}
     - openapi/_original/cart-com-online-store-openapi-original.yml#GET /products
@@ -23,8 +23,8 @@ concepts:
     path_segment:
     - categories
     properties:
-      name: name
       id: id
+      name: name
       parent_id: parent_category_id
       created_at: created_at
       updated_at: updated_at
@@ -54,8 +54,13 @@ concepts:
   cart:
     path_segment:
     - carts
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      created_at: created_at
+      customer_id: customer_id
+      updated_at: updated_at
+      subtotal: subtotal
+    core_coverage: 0.5
     evidence:
     - openapi/_original/cart-com-online-store-openapi-original.yml#GET /carts
   order:

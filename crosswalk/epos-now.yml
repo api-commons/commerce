@@ -11,7 +11,7 @@ concepts:
       name: Name
       description: Description
       category_ids: CategoryId
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/epos-now-openapi.yml#DELETE /Product/{Id}
     - openapi/_original/epos-now-openapi.yml#GET /Product
@@ -22,8 +22,8 @@ concepts:
     path_segment:
     - category
     properties:
-      name: Name
       id: Id
+      name: Name
       parent_id: ParentId
     core_coverage: 1.0
     evidence:

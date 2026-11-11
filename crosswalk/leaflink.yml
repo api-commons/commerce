@@ -15,16 +15,16 @@ concepts:
       created_at:
       - created_date
       - created_on
-      updated_at: modified_date
       category_ids:
       - category
       - category_id
+      updated_at: modified_date
       brand:
       - brand
       - brand_id
       - manufacturer
       sku: sku
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/leaflink-api-openapi-original.yml#DELETE /products/{id}
     - openapi/_original/leaflink-api-openapi-original.yml#GET /products

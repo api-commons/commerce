@@ -15,13 +15,13 @@ concepts:
       - created
       type: type
       updated_at: updated_at
-      variants: skus
       brand:
       - brand_name
       - manufacturer
       slug: url
+      variants: skus
       sku: code
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/boxc-openapi-original.yml#DELETE /customs/products/{id}
     - openapi/_original/boxc-openapi-original.yml#DELETE /products/{id}
@@ -37,8 +37,8 @@ concepts:
       name: name
       barcode: barcode
       inventory_quantity: quantity
-      created_at: created
       weight: weight
+      created_at: created
       height: height
       width: width
       description: description

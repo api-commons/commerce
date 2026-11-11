@@ -14,14 +14,14 @@ concepts:
       description:
       - description
       - shortDescription
-      updated_at: updatedAt
       category_ids:
       - categories
       - category
-      variants: variants
+      updated_at: updatedAt
       brand: manufacturer
+      variants: variants
       tags: tags
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/xentral-api-openapi-original.json#DELETE /api/v1/products
     - openapi/_original/xentral-api-openapi-original.json#DELETE /api/v1/products/{id}

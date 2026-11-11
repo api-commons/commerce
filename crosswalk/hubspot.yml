@@ -12,7 +12,7 @@ concepts:
       updated_at: updatedAt
       slug: url
       custom_fields: properties
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/hubspot-crm-products-openapi.json#DELETE /crm/objects/2026-03/products/{productId}
     - openapi/_original/hubspot-crm-products-openapi.json#GET /crm/objects/2026-03/products

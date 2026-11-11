@@ -13,13 +13,13 @@ concepts:
       images: image
       created_at: createdOn
       status: status
-      updated_at: updatedAt
       category_ids: category
-      variants: variations
+      updated_at: updatedAt
       brand: brand
       slug: url
-      price: price
+      variants: variations
       sku: partNumber
+      price: price
     core_coverage: 1.0
     evidence:
     - openapi/_original/shoppable-cloud-openapi-original.yml#POST /products
@@ -29,8 +29,8 @@ concepts:
     properties:
       status: status
       number: orderNumber
-      email: email
       updated_at: updatedAt
+      email: email
     core_coverage: 0.333
     evidence:
     - openapi/_original/shoppable-cloud-openapi-original.yml#GET /orders/{orderId}

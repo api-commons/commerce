@@ -7,8 +7,13 @@ concepts:
     path_segment:
     - variants
     properties:
+      price: price
       product_id: product_id
-    core_coverage: 0.167
+      barcode:
+      - gtin
+      - ean
+      status: status
+    core_coverage: 0.5
     evidence:
     - openapi/_original/mapp-product-catalog-openapi.yml#GET /api/product-catalog/v1/catalogs/{catalogId}/products/{productId}/variants
   cart:

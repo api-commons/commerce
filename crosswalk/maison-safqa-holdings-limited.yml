@@ -12,11 +12,11 @@ concepts:
       images: images
       created_at: created
       type: product_type
-      variants: variants
       brand: vendor
       slug: handle
+      variants: variants
       tags: tags
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#GET /products/{product_id}
     - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#POST /products
@@ -27,7 +27,6 @@ concepts:
     - inventory
     properties:
       sku: sku
-      product_id: product_id
     core_coverage: 0.0
     evidence:
     - openapi/_original/maison-safqa-holdings-limited-openapi-original.yml#PATCH /inventory/bulk

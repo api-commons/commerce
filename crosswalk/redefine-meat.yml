@@ -18,13 +18,13 @@ concepts:
       - short_description
       - description
       images: images
-      status: status
       type: type
+      status: status
       category_ids: categories
-      variants: variations
       slug:
       - slug
       - permalink
+      variants: variations
       sku: sku
       custom_fields: attributes
       tags: tags
@@ -40,10 +40,10 @@ concepts:
     - categories
     - taxonomies
     properties:
-      name: name
       id: id
-      parent_id: parent
+      name: name
       description: description
+      parent_id: parent
       slug:
       - slug
       - permalink

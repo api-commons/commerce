@@ -9,11 +9,9 @@ concepts:
     properties:
       id: id
       name: name
-      description: description
-      status: state
-      variants: variants
-      slug: slug
-    core_coverage: 1.0
+      sku: sku
+      price: price
+    core_coverage: 0.5
     evidence:
     - openapi/_original/fourthwall-openapi.yml#DELETE /open-api/v1.0/products/{productId}
     - openapi/_original/fourthwall-openapi.yml#GET /open-api/v1.0/collections/{collectionId}/products
@@ -24,8 +22,8 @@ concepts:
     path_segment:
     - collections
     properties:
-      name: name
       id: id
+      name: name
       description: description
       slug: slug
     core_coverage: 1.0

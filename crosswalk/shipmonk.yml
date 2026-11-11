@@ -12,13 +12,13 @@ concepts:
       name: name
       images: image_url
       created_at: created_at
-      status: is_active
       type:
       - product_type
       - type
+      status: is_active
       updated_at: updated_at
       sku: sku
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/shipmonk-openapi.json#GET /v1/products
     - openapi/_original/shipmonk-openapi.json#POST /v1/integrations/product
@@ -34,8 +34,8 @@ concepts:
       currency: currency_code
       number: order_number
       custom_fields: attributes
-      email: customer_email
       updated_at: updated_at
+      email: customer_email
     core_coverage: 0.667
     evidence:
     - openapi/_original/shipmonk-openapi.json#GET /v1/integrations/orders

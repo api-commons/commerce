@@ -12,7 +12,7 @@ concepts:
       created_at: created_at
       updated_at: updated_at
       tags: tag_ids
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/clickfunnels-openapi.json#DELETE /pages/{id}/products
     - openapi/_original/clickfunnels-openapi.json#GET /products/{id}
@@ -27,8 +27,8 @@ concepts:
       name: name
       product_id: product_id
       inventory_quantity: quantity
-      created_at: created_at
       weight: weight
+      created_at: created_at
       updated_at: updated_at
       height: height
       width: width
@@ -45,8 +45,8 @@ concepts:
     - collections
     - categories
     properties:
-      name: name
       id: id
+      name: name
       description: description
       created_at: created_at
       updated_at: updated_at

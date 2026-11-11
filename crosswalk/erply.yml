@@ -16,17 +16,17 @@ concepts:
       - productName
       - name
       description: description
-      status: status
       type: type
-      updated_at: lastModified
+      status: status
       category_ids: category_id
+      updated_at: lastModified
       brand: brand_id
+      sku: code
       price:
       - amount
       - price
-      sku: code
       custom_fields: attributes
-    core_coverage: 1.0
+    core_coverage: 0.75
     evidence:
     - openapi/_original/erply-assignments-openapi.json#GET /api/v1/report/product
     - openapi/_original/erply-pim-openapi.json#DELETE /v1/assortment/products/{ids}
@@ -37,8 +37,8 @@ concepts:
     path_segment:
     - category
     properties:
-      name: name
       id: id
+      name: name
       parent_id: parent_id
     core_coverage: 1.0
     evidence:

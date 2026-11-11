@@ -10,11 +10,10 @@ concepts:
       id: id
       name: title
       description: description
-      type: kind
       brand: brand
-      price: price
       sku: mpn
-    core_coverage: 1.0
+      price: price
+    core_coverage: 0.75
     evidence:
     - openapi/_original/openapi.yml#DELETE /{merchantId}/products/{productId}
     - openapi/_original/openapi.yml#GET /{merchantId}/products

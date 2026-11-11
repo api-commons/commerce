@@ -7,7 +7,8 @@ concepts:
     path_segment:
     - departments
     - categories
-    properties: {}
+    properties:
+      description: description
     core_coverage: 0.0
     evidence:
     - openapi/_original/walmart-marketplace-reviews-openapi-original.yml#POST /v3/growth/reviews-accelerator/categories
@@ -31,7 +32,9 @@ concepts:
     - inventories
     properties:
       quantity: quantity
-      sku: sku
+      sku:
+      - sku
+      - code
     core_coverage: 0.0
     evidence:
     - openapi/_original/walmart-dropship-vendor-inventory-openapi-original.yml#GET /v3/inventories/{id}

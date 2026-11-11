@@ -12,7 +12,7 @@ concepts:
       created_at: created_at
       type: type
       price: price
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/samcart-openapi.yml#GET /products
     - openapi/_original/samcart-openapi.yml#GET /products/{product_id}

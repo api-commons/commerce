@@ -7,8 +7,14 @@ concepts:
     path_segment:
     - orders
     properties:
+      id:
+      - id
+      - order_id
+      status: status
+      created_at: created
+      currency: currency
       number: name
-    core_coverage: 0.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/channable-order-connection-openapi.json#GET /v1/companies/{company_id}/projects/{project_id}/orders
     - openapi/_original/channable-order-connection-openapi.json#GET /v1/companies/{company_id}/projects/{project_id}/orders/{order_id}

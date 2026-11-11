@@ -31,8 +31,8 @@ concepts:
       currency: currency
       shipping_address: shippingAddress
       number: name
-      custom_fields: customFields
       billing_address: billingAddress
+      custom_fields: customFields
       updated_at: updatedAt
     core_coverage: 0.667
     evidence:

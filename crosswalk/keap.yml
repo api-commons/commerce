@@ -17,13 +17,15 @@ concepts:
       - description
       - short_description
       created_at: create_time
-      status: active
-      updated_at: update_time
+      status:
+      - status
+      - active
       category_ids: categories
+      updated_at: update_time
       slug: url
-      price: price
       sku: sku
-    core_coverage: 1.0
+      price: price
+    core_coverage: 0.75
     evidence:
     - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/discounts/products/{discount_id}
     - openapi/_original/infusionsoft-keap-sdk-v2-swagger-original.yml#DELETE /rest/v2/products/{product_id}
@@ -34,8 +36,8 @@ concepts:
     path_segment:
     - categories
     properties:
-      name: name
       id: id
+      name: name
       description: description
       created_at: create_time
       updated_at: update_time

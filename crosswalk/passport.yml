@@ -8,7 +8,6 @@ concepts:
     - cart
     properties:
       line_items: items
-      currency: currency
     core_coverage: 0.5
     evidence:
     - openapi/_original/passport-public-api-openapi.yml#POST /cart

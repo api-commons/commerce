@@ -13,10 +13,10 @@ concepts:
       status: status
       category_ids: category
       brand: brand
-      price: price
       sku: sku
+      price: price
       tags: tags
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/listrak-data-openapi.json#POST /v1/Product
     - openapi/_original/listrak-data-openapi.yml#POST /v1/Product

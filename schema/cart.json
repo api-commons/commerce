@@ -8,13 +8,13 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.667,
-      "x-commons-providers": 24,
+      "x-commons-share": 0.694,
+      "x-commons-providers": 25,
       "x-commons-spellings": [
         "id",
         "cartId",
-        "cartID",
         "cart_id",
+        "cartID",
         "guid",
         "_id"
       ]
@@ -33,22 +33,11 @@
         "entries"
       ]
     },
-    "currency": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.389,
-      "x-commons-providers": 14,
-      "x-commons-spellings": [
-        "currency",
-        "currency_code",
-        "currencyCode"
-      ]
-    },
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.333,
-      "x-commons-providers": 12,
+      "x-commons-share": 0.361,
+      "x-commons-providers": 13,
       "x-commons-spellings": [
         "createdAt",
         "created_at",
@@ -61,11 +50,22 @@
       ],
       "format": "date-time"
     },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.361,
+      "x-commons-providers": 13,
+      "x-commons-spellings": [
+        "currency",
+        "currency_code",
+        "currencyCode"
+      ]
+    },
     "customer_id": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.25,
-      "x-commons-providers": 9,
+      "x-commons-share": 0.278,
+      "x-commons-providers": 10,
       "x-commons-spellings": [
         "customerId",
         "customer_id",
@@ -77,17 +77,30 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.25,
-      "x-commons-providers": 9,
+      "x-commons-share": 0.278,
+      "x-commons-providers": 10,
       "x-commons-spellings": [
-        "updatedAt",
         "updated_at",
+        "updatedAt",
         "updated_time",
         "updatedTime",
         "updatedOn",
         "modifiedDate"
       ],
       "format": "date-time"
+    },
+    "subtotal": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.222,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "subtotal",
+        "subTotal",
+        "base_amount",
+        "baseAmount",
+        "sub_total"
+      ]
     }
   },
   "required": [

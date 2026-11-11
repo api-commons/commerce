@@ -9,12 +9,12 @@ concepts:
     properties:
       id: product_id
       name: name
-      status: status
       type: type
+      status: status
       slug:
       - url
       - slug
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/thrivecart-api-openapi.yml#GET /products
     - openapi/_original/thrivecart-api-openapi.yml#GET /products/{product_id}

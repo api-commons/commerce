@@ -7,8 +7,8 @@ concepts:
     path_segment:
     - orders
     properties:
-      line_items: products
-      customer_id: user_id
-    core_coverage: 0.333
+      number: name
+      total: amount
+    core_coverage: 0.0
     evidence:
     - openapi/_original/uzum-nasiya-openapi.yaml#POST /api/v1/orders

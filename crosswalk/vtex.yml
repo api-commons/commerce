@@ -11,11 +11,12 @@ concepts:
       id:
       - id
       - Id
-      - productId
+      - ProductId
       name:
       - name
       - Name
       - Title
+      - ProductName
       description:
       - description
       - Description
@@ -24,17 +25,17 @@ concepts:
       status:
       - status
       - IsActive
-      updated_at: updatedAt
       category_ids:
       - categoryIds
       - CategoryId
-      variants: skus
+      updated_at: updatedAt
       brand:
       - brandId
       - brandName
       - BrandId
       - BrandName
       slug: slug
+      variants: skus
       custom_fields: attributes
     core_coverage: 1.0
     evidence:
@@ -51,12 +52,15 @@ concepts:
       name:
       - name
       - Name
+      price:
+      - price
+      - listPrice
       product_id:
       - productId
       - ProductId
       inventory_quantity: available
       updated_at: LastModified
-    core_coverage: 0.5
+    core_coverage: 0.667
     evidence:
     - openapi/_original/vtex-catalog-openapi-original.yml#GET /api/catalog_system/pub/products/variations/{productId}
     - openapi/_original/vtex-legacy-search-openapi-original.yml#GET /api/catalog_system/pub/products/offers/{productId}/sku/{skuId}
@@ -67,16 +71,16 @@ concepts:
     - collection
     - categories
     properties:
-      name:
-      - name
-      - Name
-      - Title
       id:
       - id
       - Id
       - CategoryId
-      parent_id: parentId
+      name:
+      - name
+      - Name
+      - Title
       description: Description
+      parent_id: parentId
     core_coverage: 1.0
     evidence:
     - openapi/_original/vtex-catalog-api-seller-portal-openapi-original.yml#GET /api/catalog-seller-portal/category-tree/categories/{categoryId}
@@ -89,9 +93,12 @@ concepts:
     - orders
     properties:
       id: orderId
-      status: status
+      status:
+      - state
+      - status
       line_items: items
       created_at: creationDate
+      currency: currencyCode
     core_coverage: 1.0
     evidence:
     - openapi/_original/vtex-checkout-openapi-original.yml#PUT /api/checkout/pub/orders

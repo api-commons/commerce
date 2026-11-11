@@ -35,8 +35,8 @@
       "x-commons-providers": 12,
       "x-commons-spellings": [
         "tracking_number",
-        "tracking",
         "trackingNumber",
+        "tracking",
         "tracking_numbers",
         "tracking_code",
         "trackingNumbers"
@@ -66,17 +66,6 @@
       ],
       "format": "date-time"
     },
-    "carrier": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.316,
-      "x-commons-providers": 6,
-      "x-commons-spellings": [
-        "carrier",
-        "tracking_company",
-        "carrier_code"
-      ]
-    },
     "line_items": {
       "type": "array",
       "x-commons-tier": "extended",
@@ -97,15 +86,35 @@
         "orderId"
       ]
     },
+    "carrier": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.263,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "tracking_company",
+        "carrier",
+        "carrier_code"
+      ]
+    },
     "tracking_url": {
       "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.263,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "tracking_url",
+        "trackingUrl",
+        "tracking_urls"
+      ]
+    },
+    "quantity": {
+      "type": "integer",
       "x-commons-tier": "extended",
       "x-commons-share": 0.211,
       "x-commons-providers": 4,
       "x-commons-spellings": [
-        "tracking_url",
-        "tracking_urls",
-        "trackingUrl"
+        "quantity"
       ]
     },
     "weight": {

@@ -18,16 +18,16 @@ concepts:
       created_at:
       - created_at
       - created
+      type: type
       status:
       - status
       - is_active
-      type: type
+      category_ids: categories
       updated_at:
       - updated_at
       - updated
-      category_ids: categories
-      variants: variants
       slug: handle
+      variants: variants
       custom_fields: metadata
       tags: tags
     core_coverage: 1.0
@@ -49,11 +49,11 @@ concepts:
       - ean
       - upc
       inventory_quantity: inventory_quantity
+      weight: weight
       created_at:
       - created_at
       - created
       options: options
-      weight: weight
       updated_at:
       - updated_at
       - updated
@@ -61,6 +61,7 @@ concepts:
       type: type
       width: width
       description: description
+      status: status
     core_coverage: 0.833
     evidence:
     - openapi/_original/medusa-admin-openapi.yaml#DELETE /admin/products/{id}/variants/{variant_id}
@@ -72,8 +73,8 @@ concepts:
     path_segment:
     - collections
     properties:
-      name: title
       id: id
+      name: title
       slug: handle
       created_at: created_at
       updated_at: updated_at
@@ -118,10 +119,11 @@ concepts:
     properties:
       id: id
       line_items: items
-      currency: currency_code
       created_at: created_at
+      currency: currency_code
       customer_id: customer_id
       updated_at: updated_at
+      subtotal: subtotal
     core_coverage: 1.0
     evidence:
     - openapi/_original/medusa-store-openapi.yaml#GET /store/carts/{id}
@@ -142,10 +144,10 @@ concepts:
       shipping_address: shipping_address
       number: display_id
       total_tax: tax_total
-      custom_fields: metadata
       billing_address: billing_address
-      email: email
+      custom_fields: metadata
       updated_at: updated_at
+      email: email
       discount_total: discount_total
     core_coverage: 1.0
     evidence:
@@ -183,6 +185,7 @@ concepts:
       created_at: created_at
       updated_at: updated_at
       line_items: items
+      quantity: quantity
     core_coverage: 0.667
     evidence:
     - openapi/_original/medusa-admin-openapi.yaml#POST /admin/orders/{id}/fulfillments

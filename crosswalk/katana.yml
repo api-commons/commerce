@@ -9,7 +9,7 @@ concepts:
     properties:
       name: name
       variants: variants
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/katana-openapi-original.json#DELETE /products/{id}
     - openapi/_original/katana-openapi-original.json#GET /products

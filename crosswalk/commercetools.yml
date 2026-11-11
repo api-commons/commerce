@@ -11,12 +11,12 @@ concepts:
       name: name
       description: description
       created_at: createdAt
-      status: state
       type: productType
+      status: state
       category_ids: categories
-      variants: variants
       slug: slug
-    core_coverage: 1.0
+      variants: variants
+    core_coverage: 0.75
     evidence:
     - openapi/_original/commercetools-http-api-openapi.yml#DELETE /{projectKey}/products/{id}
     - openapi/_original/commercetools-http-api-openapi.yml#GET /{projectKey}/products
@@ -27,10 +27,10 @@ concepts:
     path_segment:
     - categories
     properties:
-      name: name
       id: id
-      parent_id: parent
+      name: name
       description: description
+      parent_id: parent
       slug: slug
       created_at: createdAt
     core_coverage: 1.0
@@ -63,8 +63,8 @@ concepts:
     properties:
       id: id
       line_items: lineItems
-      currency: currency
       created_at: createdAt
+      currency: currency
       customer_id: customerId
     core_coverage: 1.0
     evidence:
@@ -98,8 +98,8 @@ concepts:
     - inventory
     properties:
       quantity: availableQuantity
-      id: id
       sku: sku
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/commercetools-http-api-openapi.yml#GET /{projectKey}/inventory

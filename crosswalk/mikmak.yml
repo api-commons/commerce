@@ -6,8 +6,13 @@ concepts:
   product:
     path_segment:
     - products
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      name: title
+      description: description
+      images: imageUrl
+      brand: brand
+    core_coverage: 1.0
     evidence:
     - openapi/_original/mikmak-commerce-api-openapi.json#GET /commerce/v1/products/{id}
     - openapi/_original/mikmak-commerce-api-openapi.json#GET /commerce/v1/search/products

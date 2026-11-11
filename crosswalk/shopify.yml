@@ -9,17 +9,25 @@ concepts:
     properties:
       id: id
       name: title
-      description: body_html
+      description:
+      - body_html
+      - description
       images:
       - images
       - image
+      - media
       created_at: created_at
+      type:
+      - product_type
+      - type
       status: status
-      type: product_type
       updated_at: updated_at
-      variants: variants
       brand: vendor
-      slug: handle
+      slug:
+      - handle
+      - url
+      variants: variants
+      price: price
       tags: tags
     core_coverage: 1.0
     evidence:
@@ -34,13 +42,13 @@ concepts:
     properties:
       id: id
       name: title
+      price: price
       product_id: product_id
       barcode: barcode
       inventory_quantity: inventory_quantity
-      price: price
+      weight: weight
       created_at: created_at
       options: option1
-      weight: weight
       updated_at: updated_at
       position: position
       compare_at_price: compare_at_price
@@ -53,8 +61,8 @@ concepts:
     path_segment:
     - collections
     properties:
-      name: title
       id: id
+      name: title
       description: body_html
       slug: handle
       updated_at: updated_at
@@ -104,8 +112,8 @@ concepts:
       total: total_price
       total_tax: total_tax
       billing_address: billing_address
-      email: email
       updated_at: updated_at
+      email: email
       discount_total: total_discounts
     core_coverage: 1.0
     evidence:
@@ -131,9 +139,10 @@ concepts:
     - inventory_levels
     properties:
       quantity: available
-      id: id
       sku: sku
+      id: id
       product_id: inventory_item_id
+      location_id: location_id
     core_coverage: 0.0
     evidence:
     - openapi/_original/shopify-admin-rest-api-openapi.yml#GET /inventory_items.json

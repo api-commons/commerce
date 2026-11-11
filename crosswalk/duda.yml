@@ -11,8 +11,8 @@ concepts:
       name: name
       description: description
       images: images
-      status: status
       type: type
+      status: status
       category_ids: categories
       variants: variations
       sku: sku

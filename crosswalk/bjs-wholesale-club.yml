@@ -37,7 +37,7 @@ concepts:
     path_segment:
     - inventory
     properties:
-      product_id: productId
+      quantity: available
     core_coverage: 0.0
     evidence:
     - openapi/_original/bjs-wholesale-club-openapi.yaml#GET /products/{productId}/inventory

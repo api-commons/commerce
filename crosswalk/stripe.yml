@@ -10,7 +10,7 @@ concepts:
       id: id
       name: name
       created_at: created
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/climate-openapi-original.yml#GET /v1/climate/products
     - openapi/_original/climate-openapi-original.yml#GET /v1/climate/products/{product}

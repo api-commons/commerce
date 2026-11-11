@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.815,
-      "x-commons-providers": 110,
+      "x-commons-share": 0.852,
+      "x-commons-providers": 115,
       "x-commons-spellings": [
         "id",
         "product_id",
@@ -24,8 +24,8 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.77,
-      "x-commons-providers": 104,
+      "x-commons-share": 0.8,
+      "x-commons-providers": 108,
       "x-commons-spellings": [
         "name",
         "title",
@@ -40,8 +40,8 @@
     "description": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.6,
-      "x-commons-providers": 81,
+      "x-commons-share": 0.622,
+      "x-commons-providers": 84,
       "x-commons-spellings": [
         "description",
         "short_description",
@@ -55,18 +55,18 @@
     },
     "images": {
       "type": "array",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.467,
-      "x-commons-providers": 63,
+      "x-commons-tier": "core",
+      "x-commons-share": 0.504,
+      "x-commons-providers": 68,
       "x-commons-spellings": [
         "images",
         "image",
         "image_url",
         "imageUrl",
         "image_urls",
+        "media",
         "imageURL",
-        "pictures",
-        "thumbnail"
+        "pictures"
       ]
     },
     "created_at": {
@@ -86,11 +86,22 @@
       ],
       "format": "date-time"
     },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 60,
+      "x-commons-spellings": [
+        "type",
+        "product_type",
+        "productType"
+      ]
+    },
     "status": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.437,
-      "x-commons-providers": 59,
+      "x-commons-share": 0.43,
+      "x-commons-providers": 58,
       "x-commons-spellings": [
         "status",
         "active",
@@ -102,16 +113,20 @@
         "isActive"
       ]
     },
-    "type": {
-      "type": "string",
+    "category_ids": {
+      "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.437,
-      "x-commons-providers": 59,
+      "x-commons-share": 0.422,
+      "x-commons-providers": 57,
       "x-commons-spellings": [
-        "type",
-        "product_type",
-        "productType",
-        "kind"
+        "categories",
+        "category",
+        "category_id",
+        "categoryId",
+        "collections",
+        "categoryIds",
+        "category_ids",
+        "CategoryId"
       ]
     },
     "updated_at": {
@@ -131,38 +146,11 @@
       ],
       "format": "date-time"
     },
-    "category_ids": {
-      "type": "array",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.415,
-      "x-commons-providers": 56,
-      "x-commons-spellings": [
-        "categories",
-        "category",
-        "category_id",
-        "categoryId",
-        "collections",
-        "categoryIds",
-        "CategoryId",
-        "collection_ids"
-      ]
-    },
-    "variants": {
-      "type": "array",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.4,
-      "x-commons-providers": 54,
-      "x-commons-spellings": [
-        "variants",
-        "variations",
-        "skus"
-      ]
-    },
     "brand": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.385,
-      "x-commons-providers": 52,
+      "x-commons-share": 0.415,
+      "x-commons-providers": 56,
       "x-commons-spellings": [
         "brand",
         "vendor",
@@ -177,8 +165,8 @@
     "slug": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.378,
-      "x-commons-providers": 51,
+      "x-commons-share": 0.385,
+      "x-commons-providers": 52,
       "x-commons-spellings": [
         "url",
         "slug",
@@ -187,29 +175,41 @@
         "urlKey"
       ]
     },
-    "price": {
-      "type": "number",
+    "variants": {
+      "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.333,
-      "x-commons-providers": 45,
+      "x-commons-share": 0.385,
+      "x-commons-providers": 52,
       "x-commons-spellings": [
-        "price",
-        "amount",
-        "regularPrice",
-        "regular_price"
+        "variants",
+        "variations",
+        "skus"
       ]
     },
     "sku": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.333,
-      "x-commons-providers": 45,
+      "x-commons-share": 0.363,
+      "x-commons-providers": 49,
       "x-commons-spellings": [
         "sku",
         "code",
         "mpn",
         "partNumber",
-        "productCode"
+        "productCode",
+        "part_number"
+      ]
+    },
+    "price": {
+      "type": "number",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.356,
+      "x-commons-providers": 48,
+      "x-commons-spellings": [
+        "price",
+        "amount",
+        "regularPrice",
+        "regular_price"
       ]
     },
     "custom_fields": {
@@ -231,8 +231,8 @@
     "tags": {
       "type": "array",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.252,
-      "x-commons-providers": 34,
+      "x-commons-share": 0.274,
+      "x-commons-providers": 37,
       "x-commons-spellings": [
         "tags",
         "tag_ids",

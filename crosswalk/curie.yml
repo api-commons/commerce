@@ -16,7 +16,7 @@ concepts:
       updated_at: updatedAt
       brand: brand
       sku: sku
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/curie-openapi.json#GET /api/products
     - openapi/_original/curie-openapi.json#GET /api/products/{productId}

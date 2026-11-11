@@ -6,8 +6,9 @@ concepts:
   category:
     path_segment:
     - categories
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+    core_coverage: 0.5
     evidence:
     - openapi/_original/spreadshirt-spreadconnect-openapi.json#GET /productTypes/categories
     - openapi/_original/spreadshirt-spreadconnect-openapi.json#GET /productTypes/{productTypeId}/categories

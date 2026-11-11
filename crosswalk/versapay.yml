@@ -27,8 +27,8 @@ concepts:
       currency: currency
       shipping_address: shipping_address
       number: number
-      custom_fields: attributes
       billing_address: billing_address
+      custom_fields: attributes
     core_coverage: 0.333
     evidence:
     - openapi/_original/versapay-api-reference.json#GET /api/exports/order/{identifier}

@@ -12,7 +12,7 @@ concepts:
       description: description
       created_at: createdAt
       updated_at: updatedAt
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/onerail-operations-api-openapi.json#GET /v1/carrier/{carrierId}/products
     - openapi/_original/onerail-operations-api-openapi.json#GET /v1/organization/{organizationId}/product/{productId}

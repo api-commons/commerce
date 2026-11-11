@@ -12,7 +12,7 @@ concepts:
       images: image
       brand: brand
       sku: mpn
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/ebay-catalog-openapi-original.yml#GET /product/{epid}
   order:

@@ -6,7 +6,9 @@ concepts:
   order:
     path_segment:
     - orders
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: order_id
+      customer_id: customer
+    core_coverage: 0.333
     evidence:
     - openapi/_original/takealot-seller-openapi.yml#GET /{version}/sales/orders

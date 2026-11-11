@@ -11,9 +11,9 @@ concepts:
       description: description
       images: image
       category_ids: category
-      price: price
       sku: sku
-    core_coverage: 0.667
+      price: price
+    core_coverage: 0.75
     evidence:
     - openapi/_original/furniture-api-openapi.yml#GET /v1/products
     - openapi/_original/furniture-api-openapi.yml#GET /v1/products/{sku}

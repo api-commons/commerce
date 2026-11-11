@@ -9,12 +9,12 @@ concepts:
     properties:
       id: productId
       name: name
-      status: active
       type: productType
-      price: price
+      status: active
       sku: sku
+      price: price
       tags: tags
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/shipstation-v1-openapi.yml#GET /products
     - openapi/_original/shipstation-v1-openapi.yml#GET /products/{productId}

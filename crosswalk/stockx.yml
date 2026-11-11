@@ -11,15 +11,15 @@ concepts:
       id: productId
       name: title
       created_at: createdAt
-      status:
-      - active
-      - status
       type: productType
+      status:
+      - status
+      - active
       updated_at: updatedAt
       brand: brand
       slug: urlKey
       price: amount
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/stockx-public-openapi-original.json#DELETE /selling/listings/{listingId}
     - openapi/_original/stockx-public-openapi-original.json#GET /catalog/products/{productId}

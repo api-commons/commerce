@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.732,
-      "x-commons-providers": 120,
+      "x-commons-share": 0.768,
+      "x-commons-providers": 126,
       "x-commons-spellings": [
         "id",
         "orderId",
@@ -17,8 +17,8 @@
         "uuid",
         "_id",
         "orderID",
-        "OrderId",
-        "Id"
+        "ID",
+        "OrderId"
       ]
     },
     "status": {
@@ -32,16 +32,16 @@
         "financial_status",
         "order_status",
         "financialStatus",
-        "Status",
         "orderStatus",
-        "OrderStatus"
+        "OrderStatus",
+        "State"
       ]
     },
     "line_items": {
       "type": "array",
       "x-commons-tier": "core",
-      "x-commons-share": 0.61,
-      "x-commons-providers": 100,
+      "x-commons-share": 0.585,
+      "x-commons-providers": 96,
       "x-commons-spellings": [
         "items",
         "line_items",
@@ -49,24 +49,24 @@
         "lineItems",
         "order_items",
         "orderItems",
-        "lines",
-        "orderLines"
+        "orderLines",
+        "order_lines"
       ]
     },
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.451,
-      "x-commons-providers": 74,
+      "x-commons-share": 0.463,
+      "x-commons-providers": 76,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
         "created",
         "creationDate",
         "created_date",
+        "createdOn",
         "created_on",
-        "date_created",
-        "create_time"
+        "date_created"
       ],
       "format": "date-time"
     },
@@ -89,8 +89,8 @@
     "currency": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.36,
-      "x-commons-providers": 59,
+      "x-commons-share": 0.384,
+      "x-commons-providers": 63,
       "x-commons-spellings": [
         "currency",
         "currencyCode",
@@ -101,8 +101,8 @@
     "shipping_address": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.36,
-      "x-commons-providers": 59,
+      "x-commons-share": 0.372,
+      "x-commons-providers": 61,
       "x-commons-spellings": [
         "shipping_address",
         "shipping",
@@ -115,12 +115,12 @@
     "number": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.323,
-      "x-commons-providers": 53,
+      "x-commons-share": 0.341,
+      "x-commons-providers": 56,
       "x-commons-spellings": [
         "name",
-        "orderNumber",
         "order_number",
+        "orderNumber",
         "number",
         "increment_id",
         "display_id",
@@ -130,13 +130,13 @@
     "total": {
       "type": "number",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.287,
-      "x-commons-providers": 47,
+      "x-commons-share": 0.299,
+      "x-commons-providers": 49,
       "x-commons-spellings": [
         "total_price",
         "orderTotal",
-        "totalPrice",
         "amount",
+        "totalPrice",
         "grand_total",
         "order_total",
         "total_amount",
@@ -159,11 +159,23 @@
         "totalTax"
       ]
     },
+    "billing_address": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.238,
+      "x-commons-providers": 39,
+      "x-commons-spellings": [
+        "billing_address",
+        "billingAddress",
+        "billing",
+        "BillingAddress"
+      ]
+    },
     "custom_fields": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.244,
-      "x-commons-providers": 40,
+      "x-commons-share": 0.232,
+      "x-commons-providers": 38,
       "x-commons-spellings": [
         "attributes",
         "metadata",
@@ -175,23 +187,28 @@
         "metafields"
       ]
     },
-    "billing_address": {
-      "type": "object",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.232,
-      "x-commons-providers": 38,
-      "x-commons-spellings": [
-        "billing_address",
-        "billingAddress",
-        "billing",
-        "BillingAddress"
-      ]
-    },
-    "email": {
+    "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.232,
       "x-commons-providers": 38,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "updated_on",
+        "updatedOn",
+        "updated_date",
+        "update_time",
+        "lastUpdated",
+        "modified_at"
+      ],
+      "format": "date-time"
+    },
+    "email": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.22,
+      "x-commons-providers": 36,
       "x-commons-spellings": [
         "email",
         "customer_email",
@@ -200,23 +217,6 @@
         "contactEmail"
       ],
       "format": "email"
-    },
-    "updated_at": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.22,
-      "x-commons-providers": 36,
-      "x-commons-spellings": [
-        "updated_at",
-        "updatedAt",
-        "updated_on",
-        "updated",
-        "updatedOn",
-        "updated_date",
-        "update_time",
-        "modified_at"
-      ],
-      "format": "date-time"
     },
     "discount_total": {
       "type": "number",

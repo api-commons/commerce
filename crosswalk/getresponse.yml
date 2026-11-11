@@ -11,12 +11,12 @@ concepts:
       name: name
       created_at: createdOn
       type: type
-      updated_at: updatedOn
       category_ids: categories
-      variants: variants
+      updated_at: updatedOn
       brand: vendor
       slug: url
-    core_coverage: 0.667
+      variants: variants
+    core_coverage: 0.5
     evidence:
     - openapi/_original/getresponse-open-api-original.json#DELETE /shops/{shopId}/products/{productId}
     - openapi/_original/getresponse-open-api-original.json#GET /shops/{shopId}/products
@@ -28,9 +28,9 @@ concepts:
     - variants
     properties:
       name: name
+      price: price
       barcode: barcode
       inventory_quantity: quantity
-      price: price
       created_at: createdOn
       updated_at: updatedOn
       position: position
@@ -46,8 +46,8 @@ concepts:
     path_segment:
     - categories
     properties:
-      name: name
       id: categoryId
+      name: name
       parent_id: parentId
       created_at: createdOn
       updated_at: updatedOn
@@ -63,8 +63,8 @@ concepts:
     - carts
     properties:
       id: cartId
-      currency: currency
       created_at: createdOn
+      currency: currency
       updated_at: updatedOn
     core_coverage: 0.5
     evidence:

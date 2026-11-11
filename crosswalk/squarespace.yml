@@ -13,8 +13,8 @@ concepts:
       images: images
       created_at: createdOn
       type: type
-      variants: variants
       slug: url
+      variants: variants
       tags: tags
     core_coverage: 1.0
     evidence:
@@ -61,8 +61,10 @@ concepts:
   shipment:
     path_segment:
     - fulfillments
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      tracking_number: trackingNumber
+      tracking_url: trackingUrl
+    core_coverage: 0.333
     evidence:
     - openapi/_original/squarespace-commerce-api-v2-openapi.json#POST /1.0/commerce/orders/{id}/fulfillments
   inventory:

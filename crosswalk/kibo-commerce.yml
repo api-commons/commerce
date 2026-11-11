@@ -10,19 +10,19 @@ concepts:
     properties:
       name: name
       description: description
-      status: isActive
       type: productType
+      status: isActive
       category_ids: categories
       variants: variations
-      price: price
       sku:
       - productCode
       - code
+      price: price
       custom_fields:
       - metaData
       - properties
       tags: labels
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#DELETE /commerce/catalog/admin/products/{productCode}
     - openapi/_original/kibo-commerce-catalog-admin-openapi.yml#DELETE /commerce/rules/product/{code}
@@ -48,10 +48,10 @@ concepts:
     - category
     - collection
     properties:
-      name: name
       id:
       - id
       - categoryId
+      name: name
       parent_id: parentCategoryId
       custom_fields: attributes
     core_coverage: 1.0
@@ -85,6 +85,7 @@ concepts:
       line_items: items
       currency: currencyCode
       customer_id: userId
+      subtotal: subtotal
     core_coverage: 1.0
     evidence:
     - openapi/_original/kibo-commerce-commerce-openapi.yml#DELETE /commerce/carts/{cartId}
@@ -151,9 +152,10 @@ concepts:
       tracking_number:
       - trackingNumber
       - trackingNumbers
-      carrier: carrier
       line_items: items
       order_id: orderId
+      carrier: carrier
+      quantity: quantity
     core_coverage: 1.0
     evidence:
     - openapi/_original/kibo-commerce-commerce-openapi.yml#DELETE /commerce/orders/{orderId}/shipments/{shipmentId}

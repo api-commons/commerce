@@ -9,7 +9,6 @@ concepts:
     properties:
       id: orderId
       status: status
-      line_items: lines
       customer_id: customerId
       currency: currencyCode
       shipping_address: shippingAddress
@@ -17,7 +16,7 @@ concepts:
       total_tax: taxTotal
       email: contactEmail
       discount_total: discountTotal
-    core_coverage: 1.0
+    core_coverage: 0.667
     evidence:
     - openapi/_original/oracle-retail-order-management-openapi.yml#GET /orders
     - openapi/_original/oracle-retail-order-management-openapi.yml#GET /orders/{orderId}
@@ -26,7 +25,8 @@ concepts:
   inventory:
     path_segment:
     - inventory
-    properties: {}
+    properties:
+      location_id: location
     core_coverage: 0.0
     evidence:
     - openapi/_original/oracle-retail-merchandising-openapi.yml#GET /inventory

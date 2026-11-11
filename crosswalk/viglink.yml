@@ -13,7 +13,8 @@ concepts:
       - name
       - title
       images: imageURL
-    core_coverage: 0.667
+      sku: code
+    core_coverage: 0.75
     evidence:
     - openapi/_original/viglink-product-promo-codes-openapi.yml#GET /product
     - openapi/_original/viglink-product-recommendations-openapi.yml#POST /ai-orchestration/products

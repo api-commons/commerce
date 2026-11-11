@@ -17,13 +17,25 @@
     "name": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.6,
-      "x-commons-providers": 15,
+      "x-commons-share": 0.64,
+      "x-commons-providers": 16,
       "x-commons-spellings": [
         "name",
         "title",
         "variantName",
         "Name"
+      ]
+    },
+    "price": {
+      "type": "number",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.6,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "price",
+        "regular_price",
+        "basePrice",
+        "listPrice"
       ]
     },
     "product_id": {
@@ -41,12 +53,12 @@
     "barcode": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.52,
-      "x-commons-providers": 13,
+      "x-commons-share": 0.56,
+      "x-commons-providers": 14,
       "x-commons-spellings": [
         "barcode",
-        "upc",
         "gtin",
+        "upc",
         "ean"
       ]
     },
@@ -63,43 +75,6 @@
         "available"
       ]
     },
-    "price": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.52,
-      "x-commons-providers": 13,
-      "x-commons-spellings": [
-        "price",
-        "regular_price",
-        "basePrice"
-      ]
-    },
-    "created_at": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.48,
-      "x-commons-providers": 12,
-      "x-commons-spellings": [
-        "created_at",
-        "created",
-        "createdOn",
-        "createdAt",
-        "created_on"
-      ],
-      "format": "date-time"
-    },
-    "options": {
-      "type": "array",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.48,
-      "x-commons-providers": 12,
-      "x-commons-spellings": [
-        "options",
-        "option1",
-        "attributes",
-        "option_values"
-      ]
-    },
     "weight": {
       "type": "number",
       "x-commons-tier": "extended",
@@ -109,14 +84,38 @@
         "weight"
       ]
     },
-    "updated_at": {
+    "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
       "x-commons-share": 0.44,
       "x-commons-providers": 11,
       "x-commons-spellings": [
+        "created_at",
+        "created",
+        "createdOn",
+        "created_on"
+      ],
+      "format": "date-time"
+    },
+    "options": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.44,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "options",
+        "option1",
+        "attributes",
+        "option_values"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
         "updated_at",
-        "updatedAt",
         "updatedOn",
         "updated",
         "updated_on",
@@ -177,6 +176,15 @@
       "x-commons-providers": 5,
       "x-commons-spellings": [
         "description"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.2,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "status"
       ]
     },
     "weight_unit": {

@@ -10,7 +10,7 @@ concepts:
       id: id
       type: type
       custom_fields: attributes
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/criteo-retail-media-2026-07-openapi-original.json#GET /2026-07/retail-media/line-items/{line-item-id}/products
     - openapi/_original/criteo-retail-media-api-openapi.yml#GET /2026-07/retail-media/line-items/{line-item-id}/products
@@ -18,8 +18,8 @@ concepts:
     path_segment:
     - categories
     properties:
-      name: name
       id: id
+      name: name
       parent_id: parentId
       custom_fields: attributes
     core_coverage: 1.0

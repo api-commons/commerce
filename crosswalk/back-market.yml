@@ -13,9 +13,9 @@ concepts:
       - productId
       name: title
       status: state
-      price: price
       sku: sku
-    core_coverage: 0.667
+      price: price
+    core_coverage: 0.5
     evidence:
     - openapi/_original/back-market-openapi-original.yml#GET /ws/buyback/v1/listings
     - openapi/_original/back-market-openapi-original.yml#GET /ws/buyback/v1/listings/{buybackListingId}

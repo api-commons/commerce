@@ -12,15 +12,16 @@ concepts:
       type: type
       brand: brand
       custom_fields: properties
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/scalablepress-openapi.yml#GET /v2/products/{productId}
   category:
     path_segment:
     - categories
     properties:
+      id: id
       name: name
-      id: categoryId
+      custom_fields: properties
     core_coverage: 1.0
     evidence:
     - openapi/_original/scalablepress-openapi.yml#GET /v2/categories
@@ -30,10 +31,8 @@ concepts:
     - order
     properties:
       id: orderId
-      status: status
-      line_items: items
       number: name
-    core_coverage: 1.0
+    core_coverage: 0.333
     evidence:
     - openapi/_original/scalablepress-openapi.yml#DELETE /v2/order/{orderId}
     - openapi/_original/scalablepress-openapi.yml#GET /v2/order

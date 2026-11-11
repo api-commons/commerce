@@ -12,9 +12,9 @@ concepts:
       description: description
       category_ids: categoryId
       brand: brand
-      price: price
       sku: partNumber
-    core_coverage: 1.0
+      price: price
+    core_coverage: 0.75
     evidence:
     - openapi/_original/advance-auto-parts-catalog-api-openapi.yml#GET /products
     - openapi/_original/advance-auto-parts-catalog-api-openapi.yml#GET /products/{productId}
@@ -39,7 +39,10 @@ concepts:
     path_segment:
     - inventory
     properties:
-      product_id: productId
+      quantity:
+      - quantity
+      - available
+      location_id: storeId
     core_coverage: 0.0
     evidence:
     - openapi/_original/advance-auto-parts-catalog-api-openapi.yml#GET /inventory

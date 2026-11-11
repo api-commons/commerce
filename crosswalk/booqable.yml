@@ -10,7 +10,7 @@ concepts:
       id: id
       type: type
       custom_fields: attributes
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/booqable-openapi.yml#GET /products
     - openapi/_original/booqable-openapi.yml#GET /products/{id}

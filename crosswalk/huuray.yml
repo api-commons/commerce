@@ -7,7 +7,7 @@ concepts:
     path_segment:
     - order
     properties:
-      status: Status
+      id: ID
     core_coverage: 0.333
     evidence:
     - openapi/_original/huuray-openapi.yml#POST /v4/Order

@@ -14,7 +14,7 @@ concepts:
       brand: brand
       slug: url
       sku: sku
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/crm-bonus-oto-data-api-openapi.json#POST /v1/products
     - openapi/_original/crm-bonus-oto-data-api-openapi.yml#POST /v1/products

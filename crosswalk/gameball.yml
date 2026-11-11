@@ -11,10 +11,9 @@ concepts:
       name: name
       images: imageUrl
       status: status
-      variants: variants
       slug: url
       price: price
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/gameball-openapi.json#DELETE /api/v1/ClientGeneralSettings/products
     - openapi/_original/gameball-openapi.json#GET /api/v1/ClientGeneralSettings/products

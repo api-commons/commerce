@@ -12,7 +12,7 @@ concepts:
       images: images
       category_ids: categoryId
       price: price
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/platzi-fake-store-openapi-original.json#DELETE /api/v1/products/{id}
     - openapi/_original/platzi-fake-store-openapi-original.json#GET /api/v1/categories/{id}/products

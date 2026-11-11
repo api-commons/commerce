@@ -16,9 +16,9 @@ concepts:
       created_at: created_at
       status: published
       updated_at: updated_at
-      variants: variants
       brand: vendor
       slug: handle
+      variants: variants
       custom_fields: metafields
       tags: tags
     core_coverage: 1.0
@@ -34,13 +34,13 @@ concepts:
     properties:
       id: id
       name: title
+      price: price
       product_id: product_id
       barcode: barcode
       inventory_quantity: inventory_quantity
-      price: price
+      weight: weight
       created_at: created_at
       options: option1
-      weight: weight
       updated_at: updated_at
       position: position
       compare_at_price: compare_at_price
@@ -54,8 +54,8 @@ concepts:
     path_segment:
     - collections
     properties:
-      name: title
       id: id
+      name: title
       description: description
       slug: handle
       created_at: created_at
@@ -127,9 +127,9 @@ concepts:
       tracking_number: tracking_number
       created_at: created_at
       updated_at: updated_at
-      carrier: tracking_company
       line_items: line_items
       order_id: order_id
+      carrier: tracking_company
       tracking_url: tracking_url
     core_coverage: 1.0
     evidence:

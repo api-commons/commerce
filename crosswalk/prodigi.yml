@@ -14,9 +14,13 @@ concepts:
     path_segment:
     - orders
     properties:
+      id: id
+      status: status
       line_items: items
+      created_at: created
       custom_fields: metadata
-    core_coverage: 0.333
+      updated_at: lastUpdated
+    core_coverage: 1.0
     evidence:
     - openapi/_original/prodigi-openapi.yml#GET /orders
     - openapi/_original/prodigi-openapi.yml#GET /orders/{orderId}

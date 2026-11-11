@@ -6,8 +6,22 @@ concepts:
   product:
     path_segment:
     - products
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: product_id
+      name: title
+      description: description
+      images:
+      - image_url
+      - images
+      type: product_type
+      brand: brand
+      slug:
+      - handle
+      - url
+      variants: variants
+      price: price
+      tags: tags
+    core_coverage: 1.0
     evidence:
     - openapi/_original/makeup-land-openapi.json#GET /api/v1/products
     - openapi/_original/makeup-land-openapi.yml#GET /api/v1/products

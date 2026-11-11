@@ -6,8 +6,16 @@ concepts:
   product:
     path_segment:
     - products
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      description: short_description
+      images: image
+      brand: manufacturer
+      slug: url
+      variants: variants
+      sku: part_number
+      tags: tags
+    core_coverage: 0.75
     evidence:
     - openapi/_original/finditparts-reseller-api-openapi.yml#GET /products
     - openapi/_original/finditparts-reseller-api-openapi.yml#GET /products/{product_id}
@@ -22,8 +30,14 @@ concepts:
   order:
     path_segment:
     - orders
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      status: state
+      line_items: line_items
+      customer_id: user_id
+      shipping_address: shipping_address
+      number: number
+      billing_address: billing_address
+    core_coverage: 0.667
     evidence:
     - openapi/_original/finditparts-reseller-api-openapi.yml#GET /orders
     - openapi/_original/finditparts-reseller-api-openapi.yml#GET /orders/{order_id}

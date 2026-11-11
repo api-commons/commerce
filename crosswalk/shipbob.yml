@@ -13,7 +13,7 @@ concepts:
       type: type
       updated_at: updated_on
       variants: variants
-    core_coverage: 0.667
+    core_coverage: 0.5
     evidence:
     - openapi/_original/shipbob-openapi.json#DELETE /2026-01/product/{productId}
     - openapi/_original/shipbob-openapi.json#GET /2026-01/product
@@ -29,10 +29,11 @@ concepts:
       barcode:
       - gtin
       - upc
-      created_at: created_on
       weight: weight
+      created_at: created_on
       updated_at: updated_on
       type: type
+      status: status
     core_coverage: 0.5
     evidence:
     - openapi/_original/shipbob-openapi.json#GET /2026-01/product/{productId}/variants
@@ -69,8 +70,8 @@ concepts:
     path_segment:
     - inventory
     properties:
-      id: inventory_id
       sku: sku
+      id: inventory_id
     core_coverage: 0.0
     evidence:
     - openapi/_original/shipbob-openapi.json#GET /2026-01/inventory

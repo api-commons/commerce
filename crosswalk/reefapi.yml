@@ -22,10 +22,10 @@ concepts:
       slug:
       - url
       - handle
-      price: price
       sku: sku
+      price: price
       tags: tags
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/reefapi-openapi.json#POST /amazon/v1/seller/products
     - openapi/_original/reefapi-openapi.json#POST /asos/v1/product

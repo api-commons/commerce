@@ -20,8 +20,7 @@ concepts:
     - shipments
     properties:
       status: status
-      tracking_number: tracking_number
-      carrier: carrier
-    core_coverage: 0.667
+      quantity: quantity
+    core_coverage: 0.333
     evidence:
     - openapi/_original/narvar-order-openapi.yml#PUT /orders/{OrderNumber}/shipments

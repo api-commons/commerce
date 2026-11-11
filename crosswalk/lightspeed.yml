@@ -18,20 +18,20 @@ concepts:
       - image_url
       - images
       created_at: created_at
+      type: type
       status:
       - status
       - active
       - is_active
-      type: type
-      updated_at: updated_at
       category_ids: categories
-      variants: variants
+      updated_at: updated_at
       brand:
       - brand
       - brand_id
       slug: handle
-      price: price
+      variants: variants
       sku: sku
+      price: price
       custom_fields: attributes
       tags: tag_ids
     core_coverage: 1.0
@@ -70,6 +70,7 @@ concepts:
     properties:
       id: id
       product_id: product_id
+      location_id: location_id
     core_coverage: 0.0
     evidence:
     - openapi/_original/lightspeed-x-series-openapi.json#GET /inventory/{product_id}

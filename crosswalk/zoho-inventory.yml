@@ -6,7 +6,10 @@ concepts:
   order:
     path_segment:
     - orders
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: order_id
+      status: order_status
+      number: order_number
+    core_coverage: 0.667
     evidence:
     - openapi/_original/replenishment.yml#GET /replenishments/orders

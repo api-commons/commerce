@@ -10,7 +10,7 @@ concepts:
       id: id
       type: type
       custom_fields: attributes
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/lemon-squeezy-api-openapi.yml#GET /v1/products
     - openapi/_original/lemon-squeezy-openapi.yml#GET /products

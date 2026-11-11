@@ -12,11 +12,11 @@ concepts:
       images: images
       status: status
       updated_at: updated_at
-      variants: variants
       brand: brand
+      variants: variants
       price: price
       custom_fields: attributes
-    core_coverage: 0.667
+    core_coverage: 0.75
     evidence:
     - openapi/_original/goody-openapi.json#GET /v1/products
     - openapi/_original/goody-openapi.json#GET /v1/products/{id}
@@ -25,10 +25,10 @@ concepts:
     - collections
     - categories
     properties:
+      id: id
       name:
       - name
       - title
-      id: id
       slug: slug
     core_coverage: 1.0
     evidence:

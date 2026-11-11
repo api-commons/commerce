@@ -10,7 +10,7 @@ concepts:
       id: id
       type: type
       custom_fields: attributes
-    core_coverage: 0.333
+    core_coverage: 0.25
     evidence:
     - openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/products
     - openapi/_original/ankorstore-main-openapi-original.yml#GET /api/v1/products/{product}

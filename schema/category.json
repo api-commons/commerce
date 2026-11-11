@@ -5,6 +5,19 @@
   "description": "The common category in Commerce, distilled from 64 providers' own OpenAPI. Each property records the share of them that declare it.",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.812,
+      "x-commons-providers": 52,
+      "x-commons-spellings": [
+        "id",
+        "categoryId",
+        "category_id",
+        "Id",
+        "CategoryId"
+      ]
+    },
     "name": {
       "type": "string",
       "x-commons-tier": "core",
@@ -20,17 +33,15 @@
         "Title"
       ]
     },
-    "id": {
+    "description": {
       "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.781,
-      "x-commons-providers": 50,
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.453,
+      "x-commons-providers": 29,
       "x-commons-spellings": [
-        "id",
-        "categoryId",
-        "category_id",
-        "Id",
-        "CategoryId"
+        "description",
+        "body_html",
+        "Description"
       ]
     },
     "parent_id": {
@@ -47,22 +58,11 @@
         "ParentId"
       ]
     },
-    "description": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.406,
-      "x-commons-providers": 26,
-      "x-commons-spellings": [
-        "description",
-        "body_html",
-        "Description"
-      ]
-    },
     "slug": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.281,
-      "x-commons-providers": 18,
+      "x-commons-share": 0.297,
+      "x-commons-providers": 19,
       "x-commons-spellings": [
         "slug",
         "handle",
@@ -72,8 +72,8 @@
     "created_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.25,
-      "x-commons-providers": 16,
+      "x-commons-share": 0.266,
+      "x-commons-providers": 17,
       "x-commons-spellings": [
         "created_at",
         "createdAt",
@@ -86,8 +86,8 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.25,
-      "x-commons-providers": 16,
+      "x-commons-share": 0.266,
+      "x-commons-providers": 17,
       "x-commons-spellings": [
         "updated_at",
         "updatedAt",
@@ -102,8 +102,8 @@
     "custom_fields": {
       "type": "object",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.219,
-      "x-commons-providers": 14,
+      "x-commons-share": 0.234,
+      "x-commons-providers": 15,
       "x-commons-spellings": [
         "attributes",
         "metadata",

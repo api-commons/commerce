@@ -12,15 +12,15 @@ concepts:
       description: description
       images: images
       created_at: date_created
-      status: active
       type: type
+      status: active
       category_ids:
       - category_id
       - categories
-      variants: variants
       slug: slug
-      price: price
+      variants: variants
       sku: sku
+      price: price
       tags: tags
     core_coverage: 1.0
     evidence:
@@ -47,8 +47,9 @@ concepts:
     properties:
       id: id
       line_items: items
-      currency: currency
       created_at: date_created
+      currency: currency
+      subtotal: sub_total
     core_coverage: 1.0
     evidence:
     - openapi/_original/swell-backend-api-openapi.yml#DELETE /carts/{id}
@@ -69,8 +70,8 @@ concepts:
       number: number
       total: grand_total
       total_tax: tax_total
-      custom_fields: metadata
       billing_address: billing
+      custom_fields: metadata
       discount_total: discount_total
     core_coverage: 1.0
     evidence:

@@ -12,18 +12,18 @@ concepts:
       description: description
       images: media
       created_at: created_at
-      status: status
       type: type
-      updated_at: updated_at
+      status: status
       category_ids:
       - categories
       - category_ids
-      variants: variants
+      updated_at: updated_at
       slug:
       - slug
       - permalink
-      price: price
+      variants: variants
       sku: sku
+      price: price
       custom_fields:
       - custom_fields
       - metadata
@@ -41,12 +41,12 @@ concepts:
     - variants
     properties:
       id: id
-      barcode: barcode
       price: price
+      barcode: barcode
+      weight: weight
       options:
       - options
       - attributes
-      weight: weight
       height: height
       position: position
       type: type
@@ -65,12 +65,12 @@ concepts:
     - taxonomies
     - categories
     properties:
-      name: name
       id: id
+      name: name
+      description: description
       parent_id:
       - parent_id
       - parent
-      description: description
       slug: permalink
       custom_fields:
       - attributes
@@ -127,10 +127,10 @@ concepts:
       shipping_address: shipping_address
       number: number
       total_tax: tax_total
+      billing_address: billing_address
       custom_fields:
       - metadata
       - attributes
-      billing_address: billing_address
       email: email
       discount_total:
       - discount_total
